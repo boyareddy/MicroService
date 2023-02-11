@@ -1,0 +1,9 @@
+MSH|^~\&|AVENIO|| COBAS DPRC^12345||20170214080046||OML^O21|726f21e7-4728-4d03-9fcd-23a46000bfdf|P|2.6|
+ORC|NW|Sampleid_1||run1|||||||||||||
+OBR|1|Sampleid_1||^^^dPCRAssay1^1.0^Lightcycler^mRNA Isolation~^^^dPCRAssay2^1.1^Lightcycler^System fluid
+SPM|1|Sampleid_1||SMP
+SAC||||||||P||plateid_1|1
+ORC|NW|Sampleid_3||run1|||||||||||||
+OBR|1|Sampleid_3||^^^dPCRAssay3^1.0^Lightcycler^mRNA Isolation~^^^dPCRAssay4^1.1^Lightcycler^System fluid
+SPM|1|Sampleid_3||SMP 
+SAC||||||||P||plateid_3|2

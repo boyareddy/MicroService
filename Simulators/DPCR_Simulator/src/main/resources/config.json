@@ -1,0 +1,12 @@
+{
+  "labsimulator" : {
+    "equipments" :[
+      {
+        "name": "COBAS DPCR",
+        "serialNumber" : "DPCR-123",
+        "type" : "DPCR",
+        "class": "com.roche.connect.dpcr.sim.DPCRSimulator"
+      }
+   ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+      "consumables":[
+      {
+      "consumableName" : "IC",
+      "value" : "74586563"
+    },
+         {
+            "consumableName":"MasterMix",
+            "value":"Lightcycler;00000001;04193001"
+         },
+         {
+            "consumableName":"Kit",
+            "value":"mRNA Isolation;00000004;04001"
+         },
+         {
+            "consumableName":"Kit",
+            "value":"System fluid;00000004;04002"
+         },
+         {
+            "consumableName":"PI",
+            "value":"Valid"
+         },
+         {
+            "consumableName":"MRReagentCassette",
+            "value":"DNA·Blood·LV;00000000;0040"
+         },
+         {
+            "consumableName":"SR2mlReagentTube",
+            "value":"MGP;00000001;00023"
+         },
+         {
+            "consumableName":"SR2mlReagentTube",
+            "value":"Hexadecane;00000000;01991"
+         },
+         {
+            "consumableName":"SR25mlReagentTube",
+            "value":"Washbuffer;00000002;01001"
+         },
+         {
+            "consumableName":"SR25mlReagentTube",
+            "value":"Washbuffer;00000002;01002"
+         },
+         {
+            "consumableName":"SR25mlReagentTube",
+            "value":"Specimen Diluent;00000000;00033"
+         },
+         {
+            "consumableName":"SR25mlReagentTube",
+            "value":"Lysis;00000000;00001"
+         }
+      ]
+   }
+}

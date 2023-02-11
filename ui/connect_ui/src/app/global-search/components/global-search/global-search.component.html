@@ -1,0 +1,85 @@
+<form class="example" autocomplete="off">
+  <div class="container">
+    <input type="text" class="roboto-regular" [(ngModel)]="searchInput" [placeholder]="'globalSearch.inputPlaceHolder' | translate" name="search" (keyup.enter)="onSearchNavigate();isEnter = true;afterSearchInput = searchInput" (input)="isEnter = false" #gsInput>
+    <mat-icon svgIcon="close" matSuffix class="close-btn" (click)="onClosingSearch()"></mat-icon>
+  </div>
+</form>
+
+<div class="gs-container">
+    <div class="gs-list" *ngIf="isValidSearch && (orders || runResults) && (orders.length > 0 || runResults.length > 0)" style="padding: 20px;padding-bottom: 0px;padding-top: 6px;">
+    <mat-accordion *ngIf="orders && orders.length > 0">
+        <mat-expansion-panel #orderPanel class="gsa-panel" hideToggle="true" [expanded]="true" (closed)="onPanelToggle('order')">
+            <mat-expansion-panel-header class="gs-panel-header">
+                <mat-panel-title>
+                    <div style="display: flex;padding-left:10px">
+                            <img src="assets/Images/groups/orders.svg" alt="Image" height="40" width="40">
+                            <div style="display: flex;flex-direction: column;justify-content: center;">
+                                <span style="padding-left:10px" class="group roboto-regular">
+                                    {{'header.orders' | translate}}
+                                </span>
+                                <span style="padding-left:10px" class="group-length roboto-bold">
+                                    {{totalOrders}} {{'header.' + ('result' | pluralCheck : orders.length) | translate}}
+                                </span>
+                            </div>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-order-table *ngIf="orderPanel.expanded" #orderTable [orders]="orders" [searchQuery]="searchInput"></app-order-table>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion style="padding: 10px" *ngIf="runResults && runResults.length > 0">
+            <mat-expansion-panel #runPanel class="gsa-panel" hideToggle="true" [expanded]="true" (closed)="onPanelToggle('order')">
+                <mat-expansion-panel-header class="gs-panel-header">
+                    <mat-panel-title>
+                        <div style="display: flex;padding-left:10px">
+                            <img src="assets/Images/groups/runs.svg" alt="Image" height="40" width="40">
+                            <div style="display: flex;flex-direction: column;justify-content: center;">
+                                <span style="padding-left:10px" class="group roboto-regular">
+                                    {{'header.runs' | translate}}
+                                </span>
+                                <span style="padding-left:10px" class="group-length roboto-bold">
+                                    {{totalRuns}} {{'header.' + ('result' | pluralCheck : runResults.length) | translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <app-run-table *ngIf="runPanel.expanded" #runTable [runResults]="runResults" [searchQuery]="searchInput"></app-run-table>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <div class="gs-list" *ngIf="isValidSearch && orders && runResults && orders.length === 0 && runResults.length === 0" style="padding: 20px">
+        <div class="zero-data">{{"globalSearch.noResult" | translate}} {{ '"' + afterSearchInput + '"' }}</div>
+    </div>
+
+    <div class="gs-list" *ngIf="!isValidSearch" style="padding: 20px">
+        <div class="zero-data">{{invalidSearchError}}</div>
+    </div>
+</div>
+<app-response-progress *ngIf='isSprinerOn' 
+    [diameterValue]='55' 
+    [marginTop]='200' 
+    [rectPro]='rectPro'
+    [spOverlayHeight]="false"
+    [spOverlayTop]="198"
+    [spOverlayLeft]="20"
+    [spOverlayRight]="20">
+</app-response-progress>
+
+<div class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()">
+</div>
+
+<div class="spin-center" *ngIf="isScrollXhrInProgress">
+    <mat-spinner class="example-spinner"
+      [value]="55"
+      [diameter]= "55"
+      [strokeWidth] = "5"
+      [style.margin-top.px]="5"
+      >
+    </mat-spinner>
+  </div>

@@ -1,0 +1,22 @@
+
+.header-panel {
+    -fx-effect: dropshadow(three-pass-box, derive(gray, 10%), 10, 0, 0, 4);
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets:  0 0 10 0;
+    -fx-background-radius: 0;
+
+}
+
+.content-panel {
+    -fx-background-radius: 3;
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 3;
+    -fx-border-color: #AAAAAA;
+    -fx-effect: dropshadow(three-pass-box, derive(gray, 10%), 10, 0, 2, 2);
+}
+
+
+.background {
+    -fx-background-color: #DDDDDD;
+}
+

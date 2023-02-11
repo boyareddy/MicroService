@@ -1,0 +1,43 @@
+<div class="slideLftRgtCls">
+  <app-header [headerInfo]="headerInfo"></app-header>
+
+  <div class="pending-run-container">
+    <ng-container *ngFor="let runItem of pendingRunList;">
+      <div class="">
+              <div *ngFor="let samplItem of runItem?.runsampledetails" class="box-shadow w-100">
+                <div class="list-header d-flex">
+                          <img [src]="displayImg"
+                                  [alt]="stripLabel" height="40px">
+                          <div class="sample-title">
+                              <div class="card-sub-header-info">
+                                  {{'runWorkflow.runSamplestable.sampleDetails' | translate}}: {{samplItem?.sampledetails?.length ? samplItem?.sampledetails?.length : "0"}} {{'runWorkflow.runSamplestable.samples' | translate}}</div>
+                              <div class="card-main-header-info"> 
+                                  {{'runWorkflow.runSamplestable.' + stripLabel | translate}}: {{ samplItem?.stripId }}</div>
+                          </div>
+                  </div>
+                  <app-sample-list 
+                    [displayedColumns]="displayedColumns" 
+                    [columnsToDisplay]="columnsToDisplay" 
+                    [samplelist]="samplItem.sampledetails"
+                    (commentsResponse)="updatedComments($event)">
+                  </app-sample-list>
+                  <div class="run-link-container">
+                    <a class="run-id-link roboto-bold" routerLink="/workflow/rundetails/{{runItem.runResultId}}">
+                      <span>{{ runItem.deviceRunId }}</span>
+                      <span> <img src="assets/Images/goto.png" alt="goto" class="vertical-middle pl-10" height="17px"> </span>
+                    </a>
+                  </div>
+              </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-response-progress *ngIf='isSprinerOn' 
+[diameterValue]='55' 
+[marginTop]='250' 
+[rectPro]='rectPro'
+[spOverlayHeight]="false"
+[spOverlayTop]="64"
+[spOverlayLeft]="0"
+[spOverlayRight]="20"
+></app-response-progress>

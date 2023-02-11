@@ -1,0 +1,347 @@
+<app-header [headerInfo]="headerInfo"></app-header>
+<div class="main-container-bulkorder">
+  <!-- <div class="button-container">
+      <button mat-raised-button class="roboto-bold font-14 no-shadow btn-color">
+         {{ 'bulkorderPreview.reUpload' | translate }}
+        </button>
+      </div> -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<ng-container matColumnDef="accessioningid">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold mr-20 top-align"> {{ 'bulkorderPreview.accessioningID' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+        <app-show-center-ellipses [data]="element?.order?.accessioningId" [tooltipValue]="element?.order?.accessioningId"></app-show-center-ellipses>
+    </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="assay">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.assayType' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.order?.assayType | translate}} </td>
+</ng-container>
+
+<!-- Weight Column -->
+<ng-container matColumnDef="sampletype">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.sampleType' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.order?.sampleType | translate}} </td>
+</ng-container>
+
+<!-- Symbol Column -->
+<ng-container matColumnDef="retest">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.retestSampleAvailableTitle' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.order?.retestSample === true ? "Yes" : "No"}} </td>
+</ng-container>
+
+<!-- Symbol Column -->
+<ng-container matColumnDef="comments">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.comments' | translate}} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">  
+      <div class="pl-35" *ngIf="emptyCheck(element?.order?.orderComments); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.orderComments"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.orderComments">
+            </app-show-more>
+        </ng-template>
+  </td>
+</ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="matage">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.maternalAge' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular" [class.pl-40] = 'element?.order?.assay?.maternalAge == null'>  
+        <div *ngIf="element?.order?.assay?.maternalAge === 0">
+            {{element?.order?.assay?.maternalAge ? element?.order?.assay?.maternalAge : '0'}}
+        </div>
+        <div *ngIf="element?.order?.assay?.maternalAge !== 0">
+            {{element?.order?.assay?.maternalAge ? element?.order?.assay?.maternalAge : '-'}}
+        </div>
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="gesage">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.gestationalAge' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.order?.assay?.gestationalAgeWeeks ? element?.order?.assay?.gestationalAgeWeeks : '0'}} {{ 'bulkorderPreview.weeks' | translate }} {{element?.order?.assay?.gestationalAgeDays ? element?.order?.assay?.gestationalAgeDays: '0'}} {{ 'bulkorderPreview.days' | translate }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="ivfstatus">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.IVFStatus' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <div class="pl-35" *ngIf="emptyCheck(element?.order?.assay?.ivfStatus); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.assay?.ivfStatus"
+                            [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.assay?.ivfStatus">
+              </app-show-more>
+          </ng-template>
+     </td>
+  </ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="eggdonor">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.eggDonor' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+      <div class="pl-35" *ngIf="emptyCheck(element?.order?.assay?.eggDonor); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.assay?.eggDonor"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.assay?.eggDonor">
+            </app-show-more>
+        </ng-template>
+    </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="eggdonorage">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.eggDonorAge' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular" [class.pl-48] = 'element?.order?.assay?.eggDonorAge == null'> 
+      <!-- <div class="pl-48" *ngIf="emptyCheck(element?.order?.assay?.eggDonorAge); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.assay?.eggDonorAge"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.assay?.eggDonorAge">
+            </app-show-more>
+        </ng-template> -->
+        {{element?.order?.assay?.eggDonorAge ? element?.order?.assay?.eggDonorAge : '-'}}
+        <!-- {{element?.order?.assay?.eggDonorAge ? element?.order?.assay?.eggDonorAge:'-'}} -->
+    </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="testoptions">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.testOptionsTitle' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+        <app-show-more 
+        [data]="checkForTestOptions(element?.order?.assay?.testOptions)" 
+        [isNotMaterialTooltip]="false"
+        [tooltipValue]="checkForTestOptions(element?.order?.assay?.testOptions)">
+      </app-show-more>
+                      
+    </td>
+  </ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="fetus">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.fetus' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+      <div class="pl-60" *ngIf="emptyCheck(element?.order?.assay?.fetusNumber); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.assay?.fetusNumber"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.assay?.fetusNumber">
+            </app-show-more>
+        </ng-template>
+     </td>
+</ng-container>
+
+ <!-- Name Column -->
+ <ng-container matColumnDef="collectiondate">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.collectionDate' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular" [class.pl-48] = 'element?.order?.assay?.collectionDate == null'> 
+      {{(element?.order?.assay?.collectionDate) ? (element?.order?.assay?.collectionDate | date:'dd-MMM-yyy') : '-' }}
+      <!-- <span [appDateTimeZone]='element?.order?.assay?.collectionDate'></span> -->
+  </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="receiveddate">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.receivedDate' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular" [class.pl-48] = 'element?.order?.assay?.receivedDate == null'>
+      {{(element?.order?.assay?.receivedDate) ? (element?.order?.assay?.collectionDate | date:'dd-MMM-yyy') : '-' }}
+      <!-- <span [appDateTimeZone]='element?.order?.assay?.receivedDate'></span> -->
+  </td>
+</ng-container>
+
+
+
+<!-- Name Column -->
+<ng-container matColumnDef="firstname">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.firstName' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+    <div class="pl-35" *ngIf="emptyCheck(element?.order?.patient?.patientFirstName); else show">
+      -
+    </div>
+    <ng-template #show>
+        <app-show-more [data]="element?.order?.patient?.patientFirstName"
+                        [isNotMaterialTooltip]="false"
+                       [tooltipValue]="element?.order?.patient?.patientFirstName">
+        </app-show-more>
+    </ng-template>
+  </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="lastname">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.lastName' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+      <div class="pl-35" *ngIf="emptyCheck(element?.order?.patient?.patientLastName); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.patient?.patientLastName"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.patient?.patientLastName">
+            </app-show-more>
+        </ng-template>
+    </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="dob">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.dob' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <div class="pl-40" *ngIf="emptyCheck(element?.order?.patient?.patientDOB); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.patient?.patientDOB"
+                              [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.patient?.patientDOB">
+              </app-show-more>
+          </ng-template>
+      </td>
+  </ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="mednum">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.medicalRecNo' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+      <div class="pl-80" *ngIf="emptyCheck(element?.order?.patient?.patientMedicalRecNo); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.patient?.patientMedicalRecNo"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.patient?.patientMedicalRecNo">
+            </app-show-more>
+        </ng-template>
+   </td>
+</ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="labid">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.labID' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+        <div class="pl-22" *ngIf="emptyCheck(element?.order?.patient?.labId); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.patient?.labId"
+                              [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.patient?.labId">
+              </app-show-more>
+          </ng-template>
+      </td>
+  </ng-container>
+
+  <ng-container matColumnDef="account">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.accountNumber' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+        <div class="pl-26" *ngIf="emptyCheck(element?.order?.patient?.accountNumber); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.patient?.accountNumber"
+                              [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.patient?.accountNumber">
+              </app-show-more>
+          </ng-template>
+      </td>
+  </ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="refname">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.refClinicianName' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+      <div class="pl-60" *ngIf="emptyCheck(element?.order?.patient?.refClinicianName); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.patient?.refClinicianName"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.patient?.refClinicianName">
+            </app-show-more>
+        </ng-template>
+  </td>
+</ng-container>
+
+<ng-container matColumnDef="clinicname">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.clinicName' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <div class="pl-40" *ngIf="emptyCheck(element?.order?.patient?.clinicName); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.patient?.clinicName"
+                              [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.patient?.clinicName">
+              </app-show-more>
+          </ng-template>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="otherclinician">
+    <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.otherClinician' | translate }} </th>
+    <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <div class="pl-60" *ngIf="emptyCheck(element?.order?.patient?.otherClinicianName); else show">
+            -
+          </div>
+          <ng-template #show>
+              <app-show-more [data]="element?.order?.patient?.otherClinicianName"
+                              [isNotMaterialTooltip]="false"
+                             [tooltipValue]="element?.order?.patient?.otherClinicianName">
+              </app-show-more>
+          </ng-template>
+    </td>
+  </ng-container>
+
+<!-- Name Column -->
+<ng-container matColumnDef="referal">
+  <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold top-align"> {{ 'bulkorderPreview.referalReason' | translate }} </th>
+  <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+      <div class="pl-68" *ngIf="emptyCheck(element?.order?.patient?.reasonForReferral); else show">
+          -
+        </div>
+        <ng-template #show>
+            <app-show-more [data]="element?.order?.patient?.reasonForReferral"
+                            [isNotMaterialTooltip]="false"
+                           [tooltipValue]="element?.order?.patient?.reasonForReferral">
+            </app-show-more>
+        </ng-template>
+  </td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="footer">
+  <mat-toolbar class="header-mat-toolbar">
+    <button class="roboto-bold font-14 prev_btn" (click)= "onRedirectingToUpload()" mat-raised-button>
+      {{ 'bulkorderPreview.retryBtn' | translate }}
+    </button>
+    <span class="order-info roboto-regular font-14" *ngIf ="tempUploadedMapping?.orderParentDTO?.length === 1">
+      {{tempUploadedMapping?.orderParentDTO?.length}} {{ 'bulkorderPreview.sampleTitleSingular' | translate }}
+    </span>
+    <span class="order-info roboto-regular font-14" *ngIf ="tempUploadedMapping?.orderParentDTO?.length > 1">
+        {{tempUploadedMapping?.orderParentDTO?.length}} {{ 'bulkorderPreview.sampleTitle' | translate }}
+      </span>
+    <!-- <span class="order-info">{{ (index + 1)+'/'+allRecords.length }} Orders</span> -->
+    <button class="next_btn roboto-bold font-14" (click)="onConfirming($event)" mat-raised-button>
+      {{ 'bulkorderPreview.confirmAndCreate' | translate }}
+    </button>
+  </mat-toolbar>
+</div>
+
+</div>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_23" data-name="Ellipse 23" cx="16" cy="16" r="16" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17123" data-name="Group 17123" transform="translate(-1206 -590)">
+    <g id="Group_17080" data-name="Group 17080">
+      <g id="Group_17076" data-name="Group 17076" transform="translate(187.074 150)">
+        <g id="Group_17012" data-name="Group 17012" transform="translate(1020.926 442)">
+          <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(0)" fill="#fff" stroke="rgba(89,113,149,0.3)" stroke-width="2">
+            <circle cx="16" cy="16" r="16" stroke="none"/>
+            <circle cx="16" cy="16" r="17" fill="none"/>
+          </g>
+          <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(0)" clip-path="url(#clip-path)">
+            <g id="Rectangle_249" data-name="Rectangle 249" transform="translate(4 11)" fill="rgba(89,113,149,0.5)" stroke="#597195" stroke-width="2">
+              <rect width="24" height="25" rx="3" stroke="none"/>
+              <rect x="1" y="1" width="22" height="23" rx="2" fill="none"/>
+            </g>
+            <rect id="Rectangle_250" data-name="Rectangle 250" width="12" height="4" rx="1" transform="translate(10 10)" fill="#597195"/>
+            <g id="Group_16454" data-name="Group 16454" transform="translate(12.059 16)">
+              <circle id="Ellipse_110" data-name="Ellipse 110" cx="4" cy="4" r="4" transform="translate(-0.059 0)" fill="#597195"/>
+              <g id="Group_17020" data-name="Group 17020" transform="translate(1.601 0.6)">
+                <g id="Group_17079" data-name="Group 17079">
+                  <rect id="Rectangle_251" data-name="Rectangle 251" width="2" height="6" transform="translate(1.341 0.4)" fill="#fff"/>
+                  <rect id="Rectangle_252" data-name="Rectangle 252" width="6" height="2" transform="translate(-0.659 2.4)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="Path_20887" data-name="Path 20887" transform="translate(13 7)" fill="#fff">
+              <path d="M 3 5 C 1.897199988365173 5 1 4.102799892425537 1 3 C 1 1.897199988365173 1.897199988365173 1 3 1 C 4.102799892425537 1 5 1.897199988365173 5 3 C 5 4.102799892425537 4.102799892425537 5 3 5 Z" stroke="none"/>
+              <path d="M 3 2 C 2.448600053787231 2 2 2.448600053787231 2 3 C 2 3.551399946212769 2.448600053787231 4 3 4 C 3.551399946212769 4 4 3.551399946212769 4 3 C 4 2.448600053787231 3.551399946212769 2 3 2 M 3 0 C 4.65684986114502 0 6 1.34315013885498 6 3 C 6 4.65684986114502 4.65684986114502 6 3 6 C 1.34315013885498 6 0 4.65684986114502 0 3 C 0 1.34315013885498 1.34315013885498 0 3 0 Z" stroke="none" fill="#597195"/>
+            </g>
+            <rect id="Rectangle_1118" data-name="Rectangle 1118" width="12" height="2" transform="translate(10 26)" fill="#597195"/>
+            <rect id="Rectangle_1136" data-name="Rectangle 1136" width="12" height="2" transform="translate(10 30)" fill="#597195"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

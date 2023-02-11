@@ -1,0 +1,4 @@
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619125621||RSP^WOS^RSP_K11|bb1680dd-d9aa-442e-9|P|2.5.1||||||UNICODE UTF-8MSA|AA|bb1680dd-d9aa-442e-9QAK|1|OKQPD|WOS^Work Order Step^IHE_LABTF|1SPM|1|9bb57d612e_A1||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||9bb57d612e_A1||||20190619125621ORC|NW|1112|||SC||||20190619125621OBR|1|0||LP PostPCR Protocol^^99ROC||||||||||||0|||||||||S||||0
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619132014||RSP^WOS^RSP_K11|71d78654-c9de-48f1-8|P|2.5.1||||||UNICODE UTF-8MSA|AA|71d78654-c9de-48f1-8QAK|1|OKQPD|WOS^Work Order Step^IHE_LABTF|1SPM|1|46d0dabd13_A1||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||46d0dabd13_A1||||20190619132014ORC|NW|1113|||SC||||20190619132014OBR|1|0||LP PostPCR Protocol^^99ROC||||||||||||0|||||||||S||||0
+

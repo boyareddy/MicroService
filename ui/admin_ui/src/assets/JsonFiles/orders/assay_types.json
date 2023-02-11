@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "assayName": "NIPT"
+    },
+    {
+      "id": 2,
+      "assayName": "ONCOLOGY Tumour Tissue"
+    },
+    {
+      "id": 3,
+      "assayName": "ONCOLOGY ctDNA"
+    }
+  ]
+  

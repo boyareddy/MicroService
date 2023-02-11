@@ -1,0 +1,37 @@
+[
+  {
+    "deviceRunId": "123456",
+    "processStepName": "NA Extraction",
+    "runCompletionTime": "2018-10-23T03:54:06.552Z",
+    "operatorName": "Gautham",
+    "totalSamplecount": "1"
+  },
+  {
+    "deviceRunId": "1234",
+    "processStepName": "LP Pre-PCR",
+    "runCompletionTime": "2018-08-23T03:54:06.552Z",
+    "operatorName": "Gautham",
+    "totalSamplecount": "1"
+  },
+  {
+    "deviceRunId": "1763",
+    "processStepName": "LP Post-PCR",
+    "runCompletionTime": "2018-08-23T03:54:06.552Z",
+    "operatorName": "Gautham",
+    "totalSamplecount": "1"
+  },
+  {
+    "deviceRunId": "6524",
+    "processStepName": "LP Sequencing Prep",
+    "runCompletionTime": "2018-05-23T03:54:06.552Z",
+    "operatorName": "Gautham",
+    "totalSamplecount": "1"
+  },
+  {
+    "deviceRunId": "7338",
+    "processStepName": "Sequencing",
+    "runCompletionTime": "2018-01-23T03:54:06.552Z",
+    "operatorName": "Gautham",
+    "totalSamplecount": "1"
+  }
+]

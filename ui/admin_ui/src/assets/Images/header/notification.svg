@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.033" height="24" viewBox="0 0 24.033 24">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_21171" data-name="Path 21171" d="M264-6919a2,2,0,0,0,2-2,2,2,0,0,0-2-2,2,2,0,0,0-2,2A2,2,0,0,0,264-6919Z" transform="translate(0 7115)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="notificationdd" transform="translate(-1144.69 -21)">
+    <g id="Group" transform="translate(1144.69 18)">
+      <g id="ic_notifications" transform="translate(0 3)">
+        <g id="Icon_24px" data-name="Icon 24px">
+          <g id="ic_notifications_none">
+            <g id="Icon_24px-2" data-name="Icon 24px">
+              <path id="Shape" d="M0,0H24.033V24H0Z" fill="none"/>
+              <path id="Shape-2" data-name="Shape" d="M8.011,20a2,2,0,0,1-2-2h4.006a2,2,0,0,1-2.006,2Zm8.011-3H0V15.97l2-2.06V8.758A7.455,7.455,0,0,1,3.181,4.575,5.535,5.535,0,0,1,6.509,2.246v-.7a1.5,1.5,0,0,1,3,0v.7A5.526,5.526,0,0,1,12.84,4.578a7.467,7.467,0,0,1,1.175,4.18V13.91l2,2.06V17ZM8.011,4A3.653,3.653,0,0,0,5.074,5.383,5.3,5.3,0,0,0,4.006,8.715V15h8.011V8.715a5.3,5.3,0,0,0-1.068-3.332A3.654,3.654,0,0,0,8.011,4Z" transform="translate(4.006 3)" fill="#191919"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Notification_dot" data-name="Notification dot" transform="translate(899 -169.387)" clip-path="url(#clip-path)">
+      <path id="Path_21170" data-name="Path 21170" d="M257-6928h14v14H257Z" transform="translate(0 7115)" fill="#c03"/>
+    </g>
+  </g>
+</svg>

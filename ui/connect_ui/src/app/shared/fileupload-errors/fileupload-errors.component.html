@@ -1,0 +1,21 @@
+<div class="file-container">
+  <div class="file-error-box">
+    <div class="file-error-container">
+      <div class="header-error roboto-bold">
+          <img class="v-align" src="assets/Images/error.png"/>
+          &nbsp;
+          <label class="error-header v-align">
+              {{"containersamples.uploadError" | translate}}
+          </label>
+      </div>
+      <div class="error-container-parent">
+        <div class="error-container" *ngFor="let error of errors;">
+            <label class="roboto-regular" >{{error | translate}}</label>
+        </div>
+      </div>
+      <div class="file-retry-btn">
+          <button button color="primary" class="roboto-bold font-14 no-shadow file-browse-btn btn-bg-color" mat-raised-button (click)="onClickingReTry()">{{"containersamples.retryBtn" | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>

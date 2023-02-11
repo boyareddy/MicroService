@@ -1,0 +1,85 @@
+<div class="slideBtmTopCls">
+<div class="header">
+<mat-toolbar class="header-mat-toolbar">
+  <div class="header-info">   
+    <img *ngIf="headerInfo.isBackRequired" src="assets/Images/close.png" alt="close" class="closebutton" (click)="goBack()">
+    <img *ngIf="headerInfo.headerIcon" [src]="headerInfo.headerIcon" [alt]="headerInfo?.curPage" class="header-icon header-content">
+    <span [class.roboto-bold]="headerInfo.isBackRequired" class="font-18 header-content pr-0" >{{"header.administration" | translate}}</span> 
+    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+    <span class="roboto-regular font-18 header-content pl-0">
+     {{"header.addUser" | translate}}
+    </span>
+  </div>
+</mat-toolbar>
+</div>
+<form class="card-container" [formGroup]="addUserForm">
+<mat-card class="matCard"  style="padding: auto 0px !important">
+  <div class ="card-header-container">
+      <img src="assets/Images/profileIcon.svg" alt="Image" class="card-header-icon">
+      <div class="card-header-title-container">
+        <div class="card-header-title1">{{"header.addUser" | translate}}</div>
+         <div class="card-header-title2">{{"user.title" | translate}}</div>
+      </div>
+  </div>
+  <div class="card-field-container">
+      <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px" >
+          <mat-grid-tile colspan="1" rowspan="1">
+              <mat-form-field appearance="fill" class="width-full font-14" #firstName>
+                  <mat-label class="roboto-regular">{{"user.firstName" | translate}}</mat-label>
+                  <input matInput placeholder="" formControlName="firstName" name="firstName" id="firstName" required="required" autocomplete="off" appTrim appMinMax [parentField]="firstName" maxlength="30">
+                  <mat-error *ngIf="addUserForm.get('firstName').invalid">
+                    {{ addUserForm.get('firstName').errors.errorMsg | translate }}
+                </mat-error>
+              </mat-form-field>
+          </mat-grid-tile>
+      
+          <mat-grid-tile colspan="1" rowspan="1">
+              <mat-form-field appearance="fill" class="width-full roboto-regular font-14" #lastname>
+                  <mat-label class="roboto-regular">{{"user.lastName" | translate}}</mat-label>
+                  <input matInput placeholder="" formControlName="lastName" name="lastname" id="lastname" required="required" autocomplete="off" appTrim appMinMax [parentField]="lastname" maxlength="30">
+                  <mat-error *ngIf="addUserForm.get('lastName').invalid">
+                    {{ addUserForm.get('lastName').errors.errorMsg | translate }}
+                </mat-error>
+              </mat-form-field>
+          </mat-grid-tile>
+      
+          <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+            <mat-form-field appearance="fill" class="width-full roboto-regular font-14" #email>
+                <mat-label class="roboto-regular">{{"user.emailAddress" | translate}}</mat-label>
+                <input matInput placeholder="" formControlName="email" name="email" id="email" required="required" autocomplete="off"  appMinMax  [parentField]="email" maxlength="320" #emailId (keyup)="onCheckingEmailDuplication(emailId)">
+                <mat-error *ngIf="addUserForm.get('email').invalid">
+                    {{ addUserForm.get('email').errors.errorMsg | translate }}
+                </mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+      
+        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+          <mat-form-field appearance="fill" class="width-full roboto-regular font-14" #loginName>
+              <mat-label class="roboto-regular">{{"user.userName" | translate}}</mat-label>
+              <input matInput placeholder="" formControlName="loginName" name="loginName" id="loginName" required="required" autocomplete="off" appMinMax  [parentField]="loginName" maxlength="20" style="text-transform:lowercase" #loginName (keyup)='onCheckingUserNameuplication(loginName)'>
+              <mat-error *ngIf="addUserForm.get('loginName').invalid">
+                {{ addUserForm.get('loginName').errors.errorMsg | translate }}
+            </mat-error>
+          </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list> 
+
+    <div class="test-options roboto-regular" >
+        <div class="test-heading font-14 roboto-bold" required="required">{{"userRole" | translate}} *</div>
+        <div class="test-names">
+          <mat-checkbox color="primary" *ngFor="let userRole of userRoles; let ind = index;" formArrayName="userRole" [value]="userRole.name" (change)="onSelectUserRole($event); onFocusOfTestOption()" >
+            <span class="font-14 roboto-regular role-names" style="padding-right: 10px;">{{userRole.description | translate}}</span>
+          </mat-checkbox>
+        </div>
+        <mat-error *ngIf="isMultiTestNotChecked" class="check-box-error">
+            {{'Please select at least one User role.'}}
+        </mat-error>
+    </div>
+  </div>
+  <div class="actionmenu">
+      <!-- <button mat-button color="primary" disabled class="roboto-bold font-14">Reset Password</button> -->
+      <button mat-raised-button color="primary" class="roboto-bold font-14 save-btn" [disabled]="addUserForm.invalid" (click)="onAddingUser(addUserForm)">{{"button.save" | translate}}</button>
+  </div>
+</mat-card>
+</form>
+</div>

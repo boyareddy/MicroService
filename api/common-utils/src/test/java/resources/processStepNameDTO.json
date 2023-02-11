@@ -1,0 +1,43 @@
+ {
+    "sampleResultId": 565,
+    "accesssioningId": "demo_06",
+    "orderId": 10000350,
+    "outputContainerId": "9e29b7557b",
+    "outputContainerPosition": "F1",
+    "outputKitId": null,
+    "outputContainerType": "96WellPlate",
+    "plateType": null,
+    "runResultId": 43,
+    "deviceId": "MP96-Sr001",
+    "processStepName": "NA Extraction",
+    "runStatus": "Completed",
+    "runFlag": null,
+    "operatorName": "admin",
+    "comments": "Run-1 dpcr",
+    "createdBy": "System",
+    "createdDateTime": "2019-03-26T11:06:24.335Z",
+    "updatedBy": null,
+    "updatedDateTime": null,
+    "runStartTime": "2019-03-26T10:43:40.000Z",
+    "runCompletionTime": "2019-03-26T12:43:40.000Z",
+    "runRemainingTime": null,
+    "protocolName": [
+      "Cellular RNA LV 0.6.4"
+    ],
+    "sampleType": "Plasma",
+    "quantitativeResult": null,
+    "qualitativeResult": null,
+    "runResultsDetailDTO": null,
+    "sampleResultsDetailDTO": [
+      {
+        "sampleResultsDetailId": 0,
+        "attributeName": "lotNo",
+        "attributeValue": "789",
+        "updatedBy": null,
+        "updatedDateTime": null,
+        "createdBy": null,
+        "createdDateTime": null
+      }
+      
+    ]
+  }

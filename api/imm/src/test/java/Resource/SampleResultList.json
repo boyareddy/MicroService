@@ -1,0 +1,65 @@
+[
+	{
+		"accesssioningId": "123456",
+		"orderId": 123123,
+		"inputContainerId": "8tubeid_2222",
+		"inputContainerPosition": "7",
+		"inputKitId": null,
+		"outputContainerId": "container3",
+		"outputContainerPosition": "7",
+		"outputContainerType": "molecularId",
+		"outputKitId": null,
+		"status": "in-progress",
+		"result": "on-going",
+		"flag": "n/a",
+		"receivedDate": null,
+		"verifiedDate": null,
+		"verifiedBy": "admin",
+		"updatedBy": "admin",
+		"updatedDateTime": "2018-10-17T05:44:06.067Z",
+		"runResultsId": 0,
+		"assayType": "NIPTDPCR",
+		"sampleReagentsAndConsumables": [
+			{
+				"type": "Type1",
+				"attributeName": "Name",
+				"attributeValue": "xxxx",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			},
+			{
+				"type": "Type1",
+				"attributeName": "Volume",
+				"attributeValue": "12",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			}
+		],
+		"sampleProtocol": [
+			{
+				"protocolName": "P_1",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			},
+			{
+				"protocolName": "P_2",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			}
+		],
+		"sampleResultsDetail": [
+			{
+				"attributeName": "molecularId",
+				"attributeValue": "abc",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			},
+			{
+				"attributeName": "molecularId",
+				"attributeValue": "abc",
+				"updatedBy": "admin",
+				"updatedDateTime": null
+			}
+		]
+	}
+]

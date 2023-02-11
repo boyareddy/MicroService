@@ -1,0 +1,76 @@
+<div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortDisableClear='true'>
+
+    <!-- AccessioningId Column -->
+    <ng-container matColumnDef="accessioningId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header roboto-bold"> 
+        {{ 'orders.tableHeaders.accessioningID' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <!-- {{element.accessioningId}}  -->
+        <div class="d-flex flex-align-center">
+          <app-warning-required [processStepName]='"unassignedOrders"' [isMandatory]='element.reqFieldMissingFlag'
+            [assayType]='element.assayType'>
+          </app-warning-required>
+          <app-show-center-ellipses [data]="element.accessioningId" [tooltipValue]="element.accessioningId">
+          </app-show-center-ellipses>
+        </div>
+      </td>
+    </ng-container>
+  
+    <!-- AssayType Column -->
+    <ng-container matColumnDef="assayType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header roboto-bold"> 
+          {{ 'orders.tableHeaders.assayType' | translate }}
+       </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        {{element.assayType | translate}} </td>
+    </ng-container>
+  
+    <!-- SampleType Column -->
+    <ng-container matColumnDef="sampleType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header roboto-bold">
+         {{ 'orders.tableHeaders.sampleType' | translate }}
+        </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element.sampleType  | translate}} </td>
+    </ng-container>
+
+    <!-- Priority Column -->
+    <ng-container matColumnDef="priority">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header roboto-bold">
+         {{ 'orders.tableHeaders.priority' | translate }}
+        </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        {{ element?.priority }} 
+      </td>
+    </ng-container>
+  
+    <!-- RegistrationDate Column -->
+    <ng-container matColumnDef="updatedDateTime">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header roboto-bold">
+         {{ 'orders.tableHeaders.dateModified' | translate }}
+        </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+        <span> </span>
+        <span>
+          {{ element.updatedDateTime | date : "dd-MMM-yyy HH:mm:ss " | emptyDataCheck }}
+          <span [appDateTimeZone]='element.updatedDateTime'></span>
+        </span>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Symbol">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+          <img src="assets/Images/right-arrow.png" alt="navigate" (click)="showSelectedItem(element)">
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [class.selectedrow]="selectedId == row.accessioningId" (click)="showSelectedItem(row)"></tr>
+  </table>
+	<div *ngIf="unassignedOrders.length === 0">
+    <div class="zero-data">{{'globalSearch.noFilterResult'| translate}}</div>
+  </div>
+  </div>
+

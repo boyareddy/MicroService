@@ -1,0 +1,145 @@
+[
+	{	"plateId" : "1",
+		"listOfSampleDataDTO" :	[{  
+		 "sampleId":"1",
+		 "assayType":"NIPTDPCR",
+		 "position":null,
+		 "status":null,
+		 "flags":null,
+		 "qualitativeResult":null,
+		 "quantitativeResult":null
+		}]
+	},
+	{	"plateId" : "2",
+		"listOfSampleDataDTO":[
+			{"sampleId":"2",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "3",
+		"listOfSampleDataDTO":[
+			{"sampleId":"3",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "4",
+		"listOfSampleDataDTO":[
+			{"sampleId":"4",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "5",
+		"listOfSampleDataDTO":[
+			{"sampleId":"5",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "6",
+		"listOfSampleDataDTO":[
+			{"sampleId":"6",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "7",
+		"listOfSampleDataDTO":[
+			{"sampleId":"7",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "8",
+		"listOfSampleDataDTO":[
+			{"sampleId":"8",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "9",
+		"listOfSampleDataDTO":[
+			{"sampleId":"9",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "10",
+		"listOfSampleDataDTO":[
+			{"sampleId":"10",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "11",
+		"listOfSampleDataDTO":[
+			{"sampleId":"11",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	},
+	{	"plateId" : "12",
+		"listOfSampleDataDTO":[
+			{"sampleId":"12",
+			 "assayType":"NIPTDPCR",
+			 "position":null,
+			 "status":null,
+			 "flags":null,
+			 "qualitativeResult":null,
+			 "quantitativeResult":null
+			}
+		]
+	}
+]

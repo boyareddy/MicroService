@@ -1,0 +1,115 @@
+.run-info-container-ongoing{
+    margin: 1.25rem 0 1.49% 0;
+}
+.no-data-container {
+    margin: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    margin-bottom: 2.2%;
+    height: 14.13em;
+}
+.no-data {
+    margin-top: 7em;
+}
+.procStepLabel-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 78%;
+    margin:0 auto;
+    color:#656565;
+}
+.procStepLine-container{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 1.49%;
+    width: 70.2%;
+}
+.procStepLine-ctn{
+    display: flex;
+    align-items: center;
+    width: 34%;
+}
+.procStepLabel{
+    display: inline;
+    // width: 15%;
+}
+.htprun-card-main-container{
+    margin: 0 2.447%;
+    width: 97%;
+    box-sizing: border-box;
+}
+.htprun-card-container{
+    width:100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.htprun-card-container_1 {
+    width: 23.239%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1.483%;
+}
+
+.upload-button {
+    padding: 4%;
+    border: 1px dashed #004ea3;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.nomargin {
+    margin-left: 0px !important;
+}
+
+.marginDPRC > div:last-child {
+    margin: 0 0 0 41px;
+}
+
+.marginHTP > div:last-child {
+    margin: 0 0px 0 32px;
+}
+
+.run-info-container-completed {
+    margin: 20px;
+}
+
+// @media only screen and (max-width: 600px) {
+//     .marginDPRC > div:last-child {
+//         margin: 0;
+//     }
+    
+//     .marginHTP > div:last-child {
+//         margin: 0;
+//     }
+
+//     .htprun-card-main-container{
+//         padding-top: 14%;
+//     }
+    
+// }
+
+// @media only screen and (min-width: 600px) and (max-width: 1366px) {
+//     .run-info-container-header-dummy{
+//         top: 18.5%;
+//         height: 130px;
+//     }
+//     .procStepLine-container{
+//         top: 30.8%;
+//     }
+
+// }
+
+// @media only screen and (min-width: 1367px) {
+//     .run-info-container-header-dummy{
+//         top: 15.6%;
+//         height: 134px;
+//     }
+//     .procStepLine-container{
+//         top: 26.6%;
+//     }
+
+// }

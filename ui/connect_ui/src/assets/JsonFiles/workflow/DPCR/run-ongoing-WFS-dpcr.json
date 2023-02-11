@@ -1,0 +1,141 @@
+[
+  {
+    "runResultId": 153,
+    "deviceId": "MP001-12",
+    "processStepName": "Library Preparation",
+    "deviceRunId": "12221",
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": "chan",
+    "comments": "comment",
+    "totalSamplecount": "10",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1230",
+        "samplecounts": "4"
+      },
+     
+      {
+        "stripId": "12347",
+        "samplecounts": "4"
+      },
+      {
+        "stripId": "12348",
+        "samplecounts": "4"
+      },
+      {
+        "stripId": "12349",
+        "samplecounts": "3"
+      }
+    ]
+  },
+  {
+    "runResultId": 153,
+    "deviceId": "MP001-12",
+    "processStepName": "Library Preparation",
+    "deviceRunId": "123456",
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": "chan",
+    "comments": "comment",
+    "totalSamplecount": "10",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1234",
+        "samplecounts": "2"
+      },
+      {
+        "stripId": "1230",
+        "samplecounts": "4"
+      },
+     
+      {
+        "stripId": "12347",
+        "samplecounts": "4"
+      },
+      {
+        "stripId": "12348",
+        "samplecounts": "4"
+      }
+    ]
+  },
+  {
+    "runResultId": 153,
+    "deviceId": "MP001-12",
+    "processStepName": "Library Preparation",
+    "deviceRunId": "1234521",
+    "runStatus": "Inprogress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": "chan",
+    "comments": "comment",
+    "totalSamplecount": "96",
+    "inputcontainerIds": [
+      {
+        "stripId": "1234",
+        "samplecounts": "96"
+      }
+    ],
+    "outputcontainerIds": [
+     
+    ]
+  },
+  {
+    "runResultId": 1,
+    "deviceId": "MP001-11",
+    "processStepName": "NA Extraction",
+    "deviceRunId": "1256",
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "1",
+    "runReagentsAndConsumables": [],
+    "runResultsDetail": [],
+    "outputcontainerIds": [
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      }
+    ]
+  }
+]

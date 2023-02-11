@@ -1,0 +1,15 @@
+<!-- <div class="run-list-container box-shadow" *ngFor="let runListItem of runArchiveDetails">
+    <div class="run-list-container-title roboto-bold">
+            {{ runListItem.weekDetails }}
+    </div>
+    <div>
+       <app-run-archievd-table [archiveTblInfo]="runList"></app-run-archievd-table>
+    </div>
+</div> -->
+
+<div class="run-list-container box-shadow">
+    <app-run-archievd-table [archiveTblInfo]="runArchiveDetailsRes"></app-run-archievd-table>
+    <div *ngIf="runArchiveDetailsRes.length === 0">
+        <div class="zero-data">{{"globalSearch.noFilterResult" | translate}}</div>
+    </div>
+</div>

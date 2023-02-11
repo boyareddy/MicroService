@@ -1,0 +1,29 @@
+<div style="display: flex; flex-direction: column" *ngIf="!data.onlyWarn">
+    <div class="d-flex flex-justify-between">
+        <div class="roboto-regular font-16 content-text">
+          {{data ? data : '' | translate}}?
+        </div>
+        <button mat-icon-button class="conf-close-btn" (click)="onNoClick()"></button>
+    </div>
+  <div class="button-row">
+      <button mat-button color="primary" cdkFocusInitial [mat-dialog-close]="data" (click)="goBack()" class="roboto-bold font-14 btn-color ml-5" autoFocus="false">
+          {{ 'orders.naigationButtons.Ok' | translate}}
+        </button>
+      <button mat-button color="primary" (click)="onNoClick()" class="roboto-bold font-14 btn-color mr-5" autoFocus="false">
+        {{'orders.naigationButtons.Cancel' | translate }}
+      </button> 
+  </div>
+</div>
+<div style="display: flex; flex-direction: column" *ngIf="data.onlyWarn">
+  <div class="d-flex flex-justify-between">
+      <div class="roboto-regular font-16 content-text">
+        {{data.onlyWarn ? data.onlyWarn : '' | translate}}
+      </div>
+      <button mat-icon-button class="conf-close-btn" (click)="onNoClick()"></button>
+  </div>
+  <div class="button-row">
+    <button mat-button color="primary" cdkFocusInitial [mat-dialog-close]="data" (click)="onConfirm()" class="roboto-bold font-14 btn-color ml-5" autoFocus="false">
+        {{ 'orders.naigationButtons.Ok' | translate}}
+      </button>
+  </div>
+</div>

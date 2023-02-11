@@ -1,0 +1,17 @@
+{  
+		"id":1,
+         "maternalAge":5,
+         "gestationalAgeWeeks":13,
+         "gestationalAgeDays":4,
+         "eggDonor":"Self",
+         "ivfStatus":"No",
+         "fetusNumber":"2",
+         "collectionDate":"2018-07-17T18:30:00.000Z",
+         "recievedDate":"2018-07-09T18:30:00.000Z",
+         "activeFlag":"Y",
+         "createdBy":"ADMIN",
+         "createdDateTime":"2018-07-09T18:30:00.000Z",
+         "updatedBy":"ADMIN",
+         "updatedDateTime":"2018-07-09T18:30:00.000Z"
+       
+}

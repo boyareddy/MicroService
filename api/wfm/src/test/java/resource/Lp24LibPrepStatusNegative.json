@@ -1,0 +1,11 @@
+{
+	"deviceSerialNumber": "LP001-12",
+	"sendingApplicationName": "LP24",
+	"receivingApplication": "Connect",
+	"dateTimeMessageGenerated": "20180831150003",
+	"messageType": "QueryMessage",
+	"containerId": "83c8a11b_A1",
+	"statusUpdate": {
+		"orderResult": "InProgress"
+	}
+}

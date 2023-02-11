@@ -1,0 +1,26 @@
+<div class="d-flex" *ngIf='item'>
+    <div class="flex1">
+        <app-field-details [labelName]="'RunProtocol'" [labelValue]="item?.runProtocol?.length > 0 ? item?.runProtocol : ''">
+        </app-field-details>
+    </div>
+    <div class="flex1">
+      <ng-container *ngIf="!(item.processStepName?.toLowerCase() === 'dpcr' && item.status?.toLowerCase() === 'ongoing') ;else runTime">
+          <app-field-details [labelName]="'RunStartedAt'" [labelValue]="item?.runStartedAt" [isDate]="true">
+          </app-field-details>
+      </ng-container>
+      <ng-template #runTime>
+          <app-field-details [labelName]="'estimatedRunTime'" [labelValue]="item?.runRemainingTime" [isDate]="true">
+          </app-field-details>
+      </ng-template>
+    </div>
+    <ng-container *ngIf="item.processStepName?.toLowerCase() === 'sequencing'">
+        <div class="flex1">
+          <app-field-details [labelName]="'protocolName'" [labelValue]="item?.runProtocol?.length > 0 ? item?.runProtocol : ''">
+          </app-field-details>
+        </div>
+        <div class="flex1">
+            <app-field-details [labelName]="'poolTubeId'" [labelValue]="item?.poolTubeId">
+            </app-field-details>
+          </div>
+    </ng-container>
+</div>

@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }  
+
+form.example input[type=text] {
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    float: left;
+    width: 97%;
+    background: #ffffff;
+    color: #191919;
+  }
+
+  input:focus {outline:0;}
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  form{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+    height: 64px;
+  }
+
+  .container{
+    top: 24px;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  form.example input[type=text]::placeholder {
+    color: #bababa;
+    font-size: 16px;
+    font-family: "roboto-regular";
+    opacity: 1; 
+  }
+
+  /deep/ {
+    mat-expansion-panel .mat-expansion-panel-body{
+      padding: 0;
+    }
+  }
+
+  .gs-panel-header{
+    padding: 10px;
+    height: 64px !important;
+  }
+
+  .gs-panel-header img{
+    border-radius: 50%;
+  }
+
+  .gs-list{
+    width: 100%;
+    margin: 0px auto 0;
+    padding-top: 1.25em;
+    padding-bottom: 1%;
+  }
+
+  .group{
+    font-size: 12px;
+    color: #4D4D4D;
+  }
+
+  .group-length{
+    font-size: 14px;
+    color: #4D4D4D;
+  }
+
+  .zero-data{
+    color: #8d8d8d;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: roboto-regular;
+    background: #FFFFFF;
+    height: 14.13em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .gsa-panel{
+    margin: 0 0 !important;
+  }
+
+  .close-btn{
+    font-size: 1em;
+    cursor: pointer;
+  }

@@ -1,0 +1,12 @@
+{
+  "deviceSerialNumber" : "MP001-12",
+  "sendingApplicationName" : "MagnaPure24",
+  "receivingApplication" : "Connect",
+  "dateTimeMessageGenerated" : "20180831145855",
+  "messageType" : "NA-Extraction",
+  "messageControlId" : null,
+  "accessioningId" : "9876793",
+  "containerId" : null,
+  "statusUpdate" : null,
+  "responseMessage" : null
+}

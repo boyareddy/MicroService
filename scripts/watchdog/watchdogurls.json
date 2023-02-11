@@ -1,0 +1,162 @@
+{
+"login_url":"https://www.qa-rocheconnect.com:90/security-web/json/security/login",
+"log_file_path":"/var/log/connect/watchdoglog",
+"watchdog_restart_time":30,
+"service_wait_time":1,
+"shutdown_wait_time":15,
+"urls":[
+  {
+    "servicename": "security-boot-4.4.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:90/security-web/json/users/permissions",
+    "log_file_name":"security.log",
+    "jar_memory":"-Xms512M/-Xmx1024M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_security.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":90
+  },
+  {
+    "servicename": "metadata-boot-4.4.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:91/metadata-web/json/users",
+    "log_file_name":"metadata.log",
+    "jar_memory":"-Xms128M/-Xmx1024M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_metadata.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":60
+  },
+  {
+    "servicename": "administration-api-boot-4.4.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:92/admin-api/json/users/locale",
+    "log_file_name":"administration-api.log",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_adminapi.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "service_start_time":60
+  },
+  {
+    "servicename": "email-api-boot-4.4.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:94/email-web/poll",
+    "log_file_name":"email-api.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_email.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":20
+  },  
+  {
+    "servicename": "management-boot-4.4-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:85/device-management/json/users/locales",
+    "log_file_name":"management-boot-4.4.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_Management.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":20
+  },
+  {
+    "servicename": "audit-trail-boot-4.4.jar",
+    "jar_file_path": "/opt/roche/connect/bin/CARE",
+    "service_url": "https://www.qa-rocheconnect.com:73/audit-trail-boot/getmyaudittrail?limit=1",
+    "log_file_name":"audit-trail-boot.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application_audit.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":20
+  },  
+  {
+    "servicename": "amm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:88/amm/json/rest/api/v1/assay",
+    "log_file_name":"amm.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-amm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":20
+  },
+  {
+    "servicename": "omm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:96/omm/json/rest/api/v1/order/unassignedcount",
+    "log_file_name":"omm.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-omm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":20
+  },
+  {
+    "servicename": "adm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:97/adm/json/rest/api/v1/modules",
+    "log_file_name":"adm.log",
+    "jar_memory":"-Xms512M/-Xmx1024M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-adm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "rmm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:86/rmm/poll",
+    "log_file_name":"rmm.log",
+    "jar_memory":"-Xms512M/-Xmx1024M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-rmm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "wfm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:99/wfm/poll",
+    "log_file_name":"wfm.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-wfm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "imm-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:9090/imm/poll",
+    "log_file_name":"imm.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/application-imm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "adapter-mp24-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:87/roche_camel_adapter/poll",
+    "log_file_name":"mp24.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/mp24_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":5
+  },  
+  {
+    "servicename": "adapter-lp24-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:89/roche_lpcamel_adapter/poll",
+    "log_file_name":"lp.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/lp24_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "adapter-htp-forte-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:98/poll",
+    "log_file_name":"htp.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/htp_forte_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "adapter-dpcr-0.0.1-SNAPSHOT.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:76/adapter-dpcr/poll",
+    "log_file_name":"dpcr.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/dpcr_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  },  
+  {
+    "servicename": "adapter-mp96-0.1.jar",
+    "jar_file_path": "/opt/roche/connect/bin",
+    "service_url": "https://www.qa-rocheconnect.com:79/mp96-adapter/poll",
+    "log_file_name":"mp96.log",
+    "jar_memory":"-Xms128M/-Xmx256M",
+    "yaml_location":"/opt/roche/connect/yaml_runtime/mp_96_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml",
+    "service_start_time":30
+  }
+]
+}

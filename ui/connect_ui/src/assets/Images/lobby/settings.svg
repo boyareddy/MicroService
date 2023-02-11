@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166" height="166" viewBox="0 0 166 166">
+  <defs>
+    <filter id="Ellipse_14" x="0" y="0" width="166" height="166" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_23" data-name="Ellipse 23" cx="70" cy="70" r="70" transform="translate(0 -0.098)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_16765" data-name="Group 16765" transform="translate(7 7)">
+    <g transform="matrix(1, 0, 0, 1, -7, -7)" filter="url(#Ellipse_14)">
+      <g id="Ellipse_14-2" data-name="Ellipse 14" transform="translate(9 9)" fill="#fff" stroke="rgba(89,113,149,0.3)" stroke-width="4">
+        <circle cx="70" cy="70" r="70" stroke="none"/>
+        <circle cx="70" cy="70" r="72" fill="none"/>
+      </g>
+    </g>
+    <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(2 2)" clip-path="url(#clip-path)">
+      <g id="Group_7" data-name="Group 7" transform="translate(-33.511 11.213)">
+        <g id="nut-icon_copy" data-name="nut-icon copy" transform="translate(59.509 14.689)">
+          <circle id="Oval" cx="7.628" cy="7.628" r="7.628" transform="translate(36.003 36.003)" fill="#597195"/>
+          <path id="Shape" d="M49.108,87.872H38.426a2.28,2.28,0,0,1-2.153-1.783L34.279,75.453a33.021,33.021,0,0,1-6-2.5l-8.8,6.021a2.152,2.152,0,0,1-1.214.356,2.222,2.222,0,0,1-1.571-.62L9.15,71.16a2.27,2.27,0,0,1-.26-2.782l6.02-8.8A32.792,32.792,0,0,1,12.363,53.4L1.785,51.418A2.286,2.286,0,0,1,0,49.263V38.584a2.281,2.281,0,0,1,1.785-2.153L12.37,34.448a32.929,32.929,0,0,1,2.492-6.053L8.773,19.5a2.279,2.279,0,0,1,.26-2.784l7.554-7.553a2.218,2.218,0,0,1,1.569-.619,2.138,2.138,0,0,1,1.215.36l8.844,6.05a32.713,32.713,0,0,1,6.06-2.53l2-10.634A2.283,2.283,0,0,1,38.425,0H49.1a2.278,2.278,0,0,1,2.152,1.786l1.974,10.53A32.845,32.845,0,0,1,59.544,14.9L68.5,8.768a2.131,2.131,0,0,1,1.212-.359,2.221,2.221,0,0,1,1.569.619l7.552,7.553a2.274,2.274,0,0,1,.262,2.784L72.974,28.32a32.633,32.633,0,0,1,2.531,6.126l10.585,1.984a2.268,2.268,0,0,1,1.781,2.157V49.267a2.285,2.285,0,0,1-1.781,2.155L75.515,53.4a32.976,32.976,0,0,1-2.586,6.252l6.061,8.856a2.282,2.282,0,0,1-.263,2.785l-7.549,7.547a2.213,2.213,0,0,1-1.57.623,2.135,2.135,0,0,1-1.214-.359l-8.908-6.1a33.15,33.15,0,0,1-6.248,2.546L51.262,86.089A2.284,2.284,0,0,1,49.108,87.872ZM43.933,25.63a18.255,18.255,0,1,0,7.127,1.439A18.183,18.183,0,0,0,43.933,25.63Z" transform="translate(0 0)" fill="#597195"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

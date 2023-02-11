@@ -1,0 +1,41 @@
+#!/bin/bash
+# This `DEBIAN/postinst` script is run post-installation
+sudo systemctl daemon-reload
+#Enable security
+sudo systemctl enable connectsecurity.service
+#Enable metadata
+sudo systemctl enable connectmetadata.service
+#Enable admin-api
+sudo systemctl enable connectadminapi.service
+#Enable email
+sudo systemctl enable connectemail.service
+#Enable management
+sudo systemctl enable connectmanagement.service
+#Enable audittrail
+sudo systemctl enable connectaudittrail.service
+#Enable mailsender
+sudo systemctl enable connectmailsender.service
+#Enable amm
+sudo systemctl enable connectamm.service
+#Enable imm
+sudo systemctl enable connectimm.service
+#Enable omm
+sudo systemctl enable connectomm.service
+#Enable rmm
+sudo systemctl enable connectrmm.service
+#Enable wfm
+sudo systemctl enable connectwfm.service
+#Enable adm
+sudo systemctl enable connectadm.service
+#Enable adapter-mp24
+sudo systemctl enable connectmp24adapter.service
+#Enable adapter-lp24
+sudo systemctl enable connectlp24adapter.service
+#Enable adapter-mp96
+sudo systemctl enable connectmp96adapter.service
+#Enable adapter-dpcr
+sudo systemctl enable connectdpcradapter.service
+#Enable adapter-htp
+sudo systemctl enable connecthtpadapter.service
+#Enable watchdog
+sudo systemctl enable connectwatchdog.service

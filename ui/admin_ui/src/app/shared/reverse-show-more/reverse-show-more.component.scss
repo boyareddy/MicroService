@@ -1,0 +1,25 @@
+.box {
+  padding: 0px 20px 0px 5px;
+}
+
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reverse-ellipsis {
+  position: relative;
+  text-overflow: initial;
+  direction: rtl;
+}
+
+.reverse-ellipsis:after {
+  content: "...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1px 1px;
+  background-color: #fff;
+}

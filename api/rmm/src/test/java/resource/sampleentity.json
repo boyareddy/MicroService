@@ -1,0 +1,91 @@
+{
+  "id": 1,
+  "accesssioningId": "SAMP0001",
+  "orderId": 10,
+  "inputContainerId": "con122",
+  "inputContainerPosition": "",
+  "inputKitId": "",
+  "inputContainerType": "",
+  "outputContainerId": "",
+  "outputContainerPosition": "",
+  "outputKitId": "",
+  "outputContainerType": "",
+  "status": "",
+  "result": "",
+  "flag": "",
+  "receivedDate": "",
+  "verifiedDate": "",
+  "verifiedBy": "",
+  "updatedBy": "",
+  "updatedDateTime": "",
+  "runResultsId": {
+ 	"id":102,
+  "deviceId": "MP001-12",
+  "assayType":"NIPTHTP",
+  "processStepName": "NA-Extraction",
+  "deviceRunId": null,
+  "runStatus": "Inprogress",
+  "dvcRunResult": null,
+  "runFlag": null,
+  "operatorName": "chan",
+  "comments": "comment",
+  "runStartTime": null,
+  "runCompletionTime": null,
+  "runRemainingTime": null,
+  "verifiedDate": null,
+  "verifiedBy": null,
+  "updatedBy": null,
+  "updatedDateTime": null,
+  "sampleResults": [],
+  "runReagentsAndConsumables": [
+    {
+     
+      "type": "R",
+      "attributeName": "Name",
+      "attributeValue": "xyz",
+      "updatedBy": "admin",
+      "updatedDateTime": ""
+    },
+    {
+     
+      "type": "C",
+      "attributeName": "Name",
+      "attributeValue": "xyz",
+      "updatedBy": "admin",
+      "updatedDateTime": ""
+    }
+  ],
+  "runResultsDetail": [
+    {
+    
+      "attributeName": "Name",
+      "attributeValue": "xyz",
+      "updatedBy": "admin",
+      "updatedDateTime": ""
+    }
+  ]
+},
+  "sampleReagentsAndConsumables": [
+    {
+      "id": 1,
+      "attributeName": "abcd",
+      "attributeValue": "xyz",
+      "updatedBy": "admin"
+    }
+  ],
+  "sampleProtocol": [
+    {
+      "id": 1,
+      "protocolName": "smap1001",
+      "updatedBy": "admin"
+    }
+  ],
+  "sampleResultsDetail": [
+    {
+      "id": 1,
+      "attributeName": "abcd",
+      "attributeValue": "xyz",
+      "updatedBy": "admin"
+    }
+  ]
+}

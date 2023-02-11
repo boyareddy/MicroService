@@ -1,0 +1,19 @@
+#progress-loader mat-spinner{
+    margin: 0 auto;
+}
+
+#progress-loader {
+    overflow: hidden;
+    //margin-top: 3em;
+}
+
+// /deep/ {
+//     #progress-loader .cdk-overlay-dark-backdrop{
+//         background: rgba(0,0,0,.32);
+//     }
+
+//     #progress-loader .mat-dialog-container{
+//         box-shadow: unset;
+//         background: unset;
+//     }
+// }

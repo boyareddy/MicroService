@@ -1,0 +1,119 @@
+$connected: rgba(0,153,102,0.15);
+$warning: rgba(255,196,20,0.23);
+$error: rgba(204,0,51,0.15);
+$offline: rgba(141,141,141,0.15);
+
+.online_box{
+    background: $connected;
+}
+
+.connected_idle_box{
+    background: $connected;
+}
+
+.connected_in_progress_box{
+    background: $connected;
+}
+
+.warning_idle_box{
+    background: $warning;
+}
+
+.warning_in_progress_box{
+    background: $warning;
+}
+
+.error_box{
+    background: $error;
+}
+
+.offline_box{
+    background: $offline;
+}
+
+.maintenance_box{
+    background: $offline;
+}
+
+.device-mat-card{
+    width: 17.1em;
+    padding: 0;
+}
+
+.device-top{
+    display: flex; 
+    flex-direction: row; 
+    padding: 12px 20px;
+    align-items: center;
+}
+
+.device-type{
+    font-size: 14px;
+    color: #333333;
+}
+
+.devcie-name{
+    font-size: 18px;
+    color: #191919;
+}
+
+.device-bottom{
+    display: flex; 
+    flex-direction: row; 
+    padding-top: 16px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.device-st-cont{
+    display: flex; 
+    flex-direction: column; 
+    flex: 2;
+}
+
+.st-label{
+    font-size: 12px;
+    color: #8D8D8D;
+}
+
+.st-value{
+    font-size: 14px;
+    color: #191919;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.st-ico{
+    float: right; 
+    margin-top: 0.2em;
+    height: 30px;
+}
+
+.disp-fx{
+    display: flex
+}
+
+.dev-ico{
+    width: 40px;
+    height: 40px;
+    padding-right: 16px;
+}
+
+.mg-lt{
+    margin-left: 1em;
+}
+
+.device-name{
+    color: #191919 !important;
+}
+
+.dev-show-more{
+    width: 247px;
+}
+
+.illumina-type{
+    height: 36px;
+}

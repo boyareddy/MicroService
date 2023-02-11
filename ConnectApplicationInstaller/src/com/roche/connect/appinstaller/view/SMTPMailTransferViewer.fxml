@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="584.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Next &gt;" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="584.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text fill="#191919" layoutX="211.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMTP Mail Transfer">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="209.0" layoutY="65.0" text="Sender's email address" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="210.0" text="Port number" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="205.0" layoutY="282.0" text="Password Authentication">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="501.0" text="Use TLS" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="207.0" layoutY="91.0" prefHeight="13.0" prefWidth="219.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font></TextField>
+             <TextField fx:id="server" layoutX="207.0" layoutY="163.0" prefHeight="13.0" prefWidth="219.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="port" layoutX="206.0" layoutY="234.0" prefHeight="30.0" prefWidth="221.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font></TextField>
+            <RadioButton layoutX="206.0" layoutY="308.0" mnemonicParsing="false" selected="true" text="Yes" textFill="#191919">
+               <toggleGroup>
+                  <ToggleGroup fx:id="psw_auth" />
+               </toggleGroup>
+               <font>
+                  <Font name="Roboto Black" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="316.0" layoutY="308.0" mnemonicParsing="false" text="No" textFill="#191919" toggleGroup="$psw_auth">
+               <font>
+                  <Font name="Roboto Black" size="12.0" />
+               </font></RadioButton>
+             <TextField fx:id="user" layoutX="202.0" layoutY="376.0" prefHeight="30.0" prefWidth="230.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="psw" layoutX="202.0" layoutY="448.0" prefHeight="30.0" prefWidth="229.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <RadioButton layoutX="200.0" layoutY="535.0" mnemonicParsing="false" text="Yes" textFill="#191919">
+               <toggleGroup>
+                  <ToggleGroup fx:id="use_tls" />
+               </toggleGroup>
+               <font>
+                  <Font name="Roboto Black" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="316.0" layoutY="535.0" mnemonicParsing="false" selected="true" text="No" textFill="#191919" toggleGroup="$use_tls">
+               <font>
+                  <Font name="Roboto Black" size="12.0" />
+               </font></RadioButton>
+            <Label layoutX="206.0" layoutY="141.0" text="Server address" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+           
+            <Label layoutX="201.0" layoutY="347.0" text="User name" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="425.0" text="Password" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Text fill="RED" layoutX="202.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check your server credentials and try again." visible="false">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Text>
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+</BorderPane>

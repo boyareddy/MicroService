@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_23" data-name="Ellipse 23" cx="15" cy="15" r="15" transform="translate(2 0)" fill="#fff" stroke="#707070" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17736" data-name="Group 17736" transform="translate(-998 -218)">
+    <g id="Group_17358" data-name="Group 17358" transform="translate(235 21)">
+      <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(764 198)" fill="#fff" stroke="rgba(141,141,141,0.5)" stroke-width="1">
+        <circle cx="15" cy="15" r="15" stroke="none"/>
+        <circle cx="15" cy="15" r="15.5" fill="none"/>
+      </g>
+      <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(762 198)" clip-path="url(#clip-path)">
+        <g id="Group_17065" data-name="Group 17065" transform="translate(7.5 8)">
+          <path id="Path_947" data-name="Path 947" d="M.674-.435H17.563l2.111,2.091V22.565h-19Z" transform="translate(-0.174 0.435)" fill="#8d8d8d"/>
+          <circle id="Ellipse_15" data-name="Ellipse 15" cx="0.5" cy="0.5" r="0.5" transform="translate(2.5 2)" fill="#fff"/>
+          <circle id="Ellipse_488" data-name="Ellipse 488" cx="0.5" cy="0.5" r="0.5" transform="translate(4.5 2)" fill="#fff"/>
+          <circle id="Ellipse_489" data-name="Ellipse 489" cx="0.5" cy="0.5" r="0.5" transform="translate(6.5 2)" fill="#fff"/>
+          <circle id="Ellipse_490" data-name="Ellipse 490" cx="0.5" cy="0.5" r="0.5" transform="translate(8.5 2)" fill="#fff"/>
+          <circle id="Ellipse_491" data-name="Ellipse 491" cx="0.5" cy="0.5" r="0.5" transform="translate(10.5 2)" fill="#fff"/>
+          <circle id="Ellipse_492" data-name="Ellipse 492" cx="0.5" cy="0.5" r="0.5" transform="translate(12.5 2)" fill="#fff"/>
+          <circle id="Ellipse_493" data-name="Ellipse 493" cx="0.5" cy="0.5" r="0.5" transform="translate(14.5 2)" fill="#fff"/>
+          <circle id="Ellipse_494" data-name="Ellipse 494" cx="0.5" cy="0.5" r="0.5" transform="translate(16.5 2)" fill="#fff"/>
+          <rect id="Rectangle_1113" data-name="Rectangle 1113" width="1" height="17" rx="0.5" transform="translate(2.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1218" data-name="Rectangle 1218" width="1" height="17" rx="0.5" transform="translate(4.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1219" data-name="Rectangle 1219" width="1" height="17" rx="0.5" transform="translate(6.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1220" data-name="Rectangle 1220" width="1" height="17" rx="0.5" transform="translate(8.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1221" data-name="Rectangle 1221" width="1" height="17" rx="0.5" transform="translate(10.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1222" data-name="Rectangle 1222" width="1" height="17" rx="0.5" transform="translate(12.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1223" data-name="Rectangle 1223" width="1" height="17" rx="0.5" transform="translate(14.5 5)" fill="#c6c6c6"/>
+          <rect id="Rectangle_1224" data-name="Rectangle 1224" width="1" height="17" rx="0.5" transform="translate(16.5 5)" fill="#c6c6c6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

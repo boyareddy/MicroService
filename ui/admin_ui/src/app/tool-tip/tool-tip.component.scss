@@ -1,0 +1,62 @@
+.tooltip {
+    display: inline-block;
+    font-size: 14px;
+    font-family: roboto-regular;
+    color: #191919;
+    width: 94%;
+}
+
+.tooltip:hover .tooltiptext {
+    
+}
+
+.tooltip .tooltiptext {
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext ul {
+   // list-style: none;
+}
+
+.tooltip .tooltiptext div::before {
+   content: "\2022";
+    color: #191919;
+    font-weight: bold;
+    // display: inline-block; 
+    width: .5rem;
+    // height: .5rem;
+    // vertical-align: middle;
+    // margin-top: -4px;
+}
+
+.tooltip .tooltiptext div {
+    // list-style-type: disc;
+    // list-style-position: inside;
+    font-size: 26px;
+    line-height: 16px;
+    display: inline-flex;
+    margin-bottom: 6px;
+}
+.tooltip .tooltiptext div span {
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 9.3rem;
+    left: -0.68rem;
+    margin-left: -5px;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(90deg);
+}

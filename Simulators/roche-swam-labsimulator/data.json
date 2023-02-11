@@ -1,0 +1,55 @@
+{  
+   "numberOfSamples":"2",
+   "delayBetweenQuery":"1",
+   "samples":[      
+	  {  
+         "sampleID":"28003",
+         "result":"Passed",
+         "flag":"F1",
+         "internalControls":"",
+         "processingCartridge":"",
+         "tipRack":";;00040",
+         "inputContainerId":"",
+         "inputPosition":"",
+         "sampleComments":"For testing jira nov 22",
+         "consumables":[  
+            {  
+               "consumableName":"MRReagentCassette",
+               "value":"DNA Blood LV;00000000;0040"
+            },
+            {  
+               "consumableName":"SR2mlReagentTube",
+               "value":"MGP;00000001;44556"
+            },
+            {  
+               "consumableName":"SR2mlReagentTube",
+               "value":"MGP;00000001;44557"
+            },
+            {  
+               "consumableName":"SR25mlReagentTube",
+               "value":"Washbuffer;00000002;11111"
+            },
+            {  
+               "consumableName":"SR25mlReagentTube",
+               "value":"Washbuffer;00000002;21222"
+            },
+            {  
+               "consumableName":"SR25mlReagentTube",
+               "value":"Specimen Diluent;00000000;23233"
+            },
+            {  
+               "consumableName":"SR25mlReagentTube",
+               "value":"Specimen Diluent;00000000;31234"
+            }
+         ]
+      }  ],
+   
+   "sendingApplication":"MagnaPure24",
+   "sendingFacility":"Roche Diagnostics",
+   "receivingApplication":"Connect",
+   "receivingFacility":"Roche Diagnostics",
+   "processingId":"P",
+   "versionId":"2.5.1",
+   "characterSet":"UTF-8",
+   "messageQueryName":"WOS"
+}

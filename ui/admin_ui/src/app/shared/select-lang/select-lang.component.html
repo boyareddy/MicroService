@@ -1,0 +1,3 @@
+<select #lang [(ngModel)]="selectedLang" (change)="onLangChange(lang.value)">
+  <option *ngFor="let langOption of langOptions;" [value]="langOption.langValue">{{ langOption.langName }}</option>
+</select> 

@@ -1,0 +1,3 @@
+MSH|^~\&|Connect|Roche Diagnostics| COBAS DPRC^12345|Roche Diagnostics|20171204145712||ACK^U01|726f21e7-4728-4d03-9fcd-23a46000bfdf|P|2.6|
+MSA|AA|726f21e7-4728-4d03-9fcd-23a46000bfdf|||
+ERR|||102^Data type error^HL70357|||||Data type error

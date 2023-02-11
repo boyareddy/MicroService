@@ -1,0 +1,67 @@
+<app-admin-ui-header class="no-shadow" [headerInfo]="headerInfo" [isShadowRequired]="true"></app-admin-ui-header>
+
+<!-- <div class="header t-header sub-header">
+  <button mat-raised-button color="primary" class="roboto-bold font-14 save-btn add-dev-place" (click)="loadUnregisteredDevices()">Add device</button>
+</div>
+
+<div class="dashboard-container">
+    <app-device class="device-place" *ngFor="let deviceInfo of deviceList" [deviceInfo]="deviceInfo"></app-device>
+    <h2 *ngIf="deviceList && deviceList.length === 0" class="roboto-regular no-dev-lst"> No device registered yet. </h2>
+</div> -->
+
+<div class="header">
+  <mat-tab-group class="workflow-orders" [selectedIndex]="selectedIndex">
+    <mat-tab [label] = "'deviceMgmt.active' | translate">
+      <ng-template matTabContent>
+        <div class="device-container" [ngClass]="{'device-container_noDevice' : deviceList.active && deviceList.active.length === 0 }">
+          <app-device class="device-place" *ngFor="let deviceInfo of deviceList.active" [deviceInfo]="deviceInfo"></app-device>
+          <div *ngIf="deviceList.active && deviceList.active.length === 0" class="zero-data width-full mt-8">{{'deviceMgmt.noArchiveDevice' | translate}}.</div>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab [label] = "'deviceMgmt.archived' | translate">
+      <ng-template matTabContent>
+        <div class="device-container" [ngClass]="{'device-container_noDevice' : deviceList.acrhived && deviceList.acrhived.length === 0 }">
+          <app-device class="device-place" *ngFor="let deviceInfo of deviceList.acrhived" [deviceInfo]="deviceInfo"></app-device>
+          <div *ngIf="deviceList.acrhived && deviceList.acrhived.length === 0" class="zero-data width-full mt-8">{{'deviceMgmt.noUnArchiveDevice' | translate}}.</div>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab disabled>
+        <ng-template mat-tab-label>
+          <span 
+          matTooltip="{{ 'common.accessRestricted' | translate}}"
+          [matTooltipClass]="'tooltipDetails'"
+          [matTooltipDisabled]="havingAccess">
+            <button mat-raised-button color="primary" class="roboto-bold font-14 save-btn add-dev-place btn-bg-color" [matMenuTriggerFor]="menu" [disabled]="!havingAccess">{{'deviceMgmt.addDev' | translate}}
+              <mat-icon class="add-icon" svgIcon="drop_down"></mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button class="dropdownhover" *ngFor="let deviceType of deviceTypeList;let i = index;" mat-menu-item (click)="loadUnregisteredDevices(deviceType)" [disabled]="deviceTypeDisabledList && deviceTypeDisabledList[i].disabled"
+              [ngClass]="{'disableDeviceType': (deviceTypeDisabledList && deviceTypeDisabledList[i].disabled)}">
+                <span matTooltip="{{ 'deviceMgmt.validation.active_instance_exists' | translate}}"
+                [matTooltipClass]="'tooltipDetails'"
+                [matTooltipDisabled]="!(deviceTypeDisabledList && deviceTypeDisabledList[i].disabled)">  
+                  {{deviceType.name | translate}}
+                </span>
+              </button>
+              <!-- <button mat-menu-item>High Throughput sequencing</button>
+              <button mat-menu-item>LP24</button>
+              <button mat-menu-item>Analysis software</button>
+              <button mat-menu-item>MagnaPure24</button> -->
+            </mat-menu>
+          </span>
+        </ng-template>
+    </mat-tab>
+  
+  </mat-tab-group>
+  </div>
+  <app-response-progress *ngIf='isSpinnerOn' 
+  [diameterValue]='55' 
+  [marginTop]='200' 
+  [rectPro]='rectPro'
+  [spOverlayHeight]="false"
+  [spOverlayTop]="120"
+  [spOverlayLeft]="0"
+  [spOverlayRight]="0"
+  ></app-response-progress>

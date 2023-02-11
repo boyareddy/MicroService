@@ -1,0 +1,139 @@
+[
+    {
+        "stripId":1234567,
+        "batchDetails":[
+            {
+                "sampleId" : 87654321,
+                "position":1,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654322,
+                "position":2,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654323,
+                "position":3,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654324,
+                "position":4,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654325,
+                "position":5,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654326,
+                "position":6,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654327,
+                "position":7,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654328,
+                "position":8,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654329,
+                "position":9,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            }                              
+        ]
+    },
+    {
+        "stripId":1234567,
+        "batchDetails":[
+            {
+                "sampleId" : 87654321,
+                "position":1,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654322,
+                "position":2,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654323,
+                "position":3,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654324,
+                "position":4,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654325,
+                "position":5,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654326,
+                "position":6,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654327,
+                "position":7,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654328,
+                "position":8,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654329,
+                "position":9,
+                "status":"Completed",
+                "flags":"n/a",
+                "comments":""
+            }                              
+        ]
+    }
+
+]

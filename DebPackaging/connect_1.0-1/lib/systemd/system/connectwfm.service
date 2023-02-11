@@ -1,0 +1,16 @@
+[Unit]
+Description=Connect wfm service
+After=syslog.target
+
+[Service]
+User=root
+TimeoutStartSec=0
+ExecStart=/usr/bin/java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-wfm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/wfm-0.0.1-SNAPSHOT.jar
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

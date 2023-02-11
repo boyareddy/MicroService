@@ -1,0 +1,44 @@
+<mat-card class="box-shadow dashboard-cards device-mat-card rc-card" (click)="navigateToDeviceDetail(deviceInfo)">
+
+  <div [attr.class]="statusBasedCss+'_box'+' '+'device-top'">
+    <div *ngIf='deviceStatus.toLowerCase() == "offline"' class="disp-fx">
+      <img class="dev-ico" [attr.src]="'assets/Images/devicelist/'+deviceInfo.deviceType+''+'offline'+'.svg'" />
+    </div>
+    <div *ngIf='deviceStatus.toLowerCase() == "online"' class="disp-fx">
+      <img class="dev-ico" [attr.src]="'assets/Images/devicelist/'+deviceInfo.deviceType+''+'online'+'.svg'" />
+    </div>
+    <div *ngIf='deviceStatus.toLowerCase() == "-"' class="disp-fx">
+      <img class="dev-ico" [attr.src]="'assets/Images/devicelist/'+noregistereddevice+'.png'" />
+    </div>
+    <div>
+      <div class="roboto-regular device-type">
+        <app-show-more [dataLength]="25" [data]="deviceInfo.deviceType" [tooltipValue]="deviceInfo.deviceType" [displayFull]="true"></app-show-more>
+      </div>
+      <div class="roboto-bold device-name dev-show-more">
+        <app-show-more [dataLength]="25" [data]="deviceInfo.deviceName" [tooltipValue]="deviceInfo.deviceName" [displayFull]="true"></app-show-more>
+      </div>
+    </div>
+  </div>
+  <mat-progress-bar *ngIf="deviceInfo.deviceType.toLowerCase().indexOf('illumina') === -1" [ngClass]="statusBasedCss+'_line'+' '+'p-bar-ht'"
+    mode="determinate" value="100"></mat-progress-bar>
+  <div *ngIf="deviceInfo.deviceType.toLowerCase().indexOf('illumina') === -1" class="device-bottom">
+    <div class="device-st-cont">
+      <div class="roboto-regular st-label">{{'deviceMgmt.status' | translate}}</div>
+      <div class="roboto-regular st-value">
+        {{ deviceStatus ? deviceStatus : '-' }}
+        <!-- <app-show-more [dataLength]="25" [data]="deviceStatus" [tooltipValue]="deviceStatus" [displayFull]="true"></app-show-more> -->
+      </div>
+    </div>
+    <div class="flex-1">
+      <img class="v-align st-ico" [attr.src]="'assets/Images/'+statusIcon+'.png'" />
+    </div>
+  </div>
+  <div *ngIf="deviceInfo.deviceType.toLowerCase().indexOf('illumina') > -1" class="device-bottom illumina-type">
+    <div class="device-st-cont">
+      <div class="roboto-regular st-label">{{'deviceMgmt.status' | translate}}</div>
+      <div class="roboto-regular st-value">
+        {{ '-' }}
+      </div>
+    </div>
+  </div>
+</mat-card>

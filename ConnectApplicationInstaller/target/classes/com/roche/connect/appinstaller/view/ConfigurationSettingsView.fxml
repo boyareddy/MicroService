@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.roche.connect.appinstaller.AppInstallerController">
+   <bottom>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="584.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" />
+                  <Button fx:id="config_btn_next" mnemonicParsing="false" prefWidth="80.0" text="Next &gt;" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="584.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text fill="#191919" layoutX="201.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Configuration settings">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#191919" layoutX="236.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="connect will drop problem reports to the configured path" wrappingWidth="400.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="201.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/newfolder.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="config_txt" editable="false" layoutX="208.0" layoutY="155.0" prefHeight="25.0" prefWidth="262.0" />
+            <Button fx:id="browse_btn" layoutX="512.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleBrowseButtonAction" prefHeight="25.0" prefWidth="96.0" text="Browse" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="201.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/newfolder.png" />
+               </image>
+            </ImageView>
+            <Text fill="#191919" layoutX="234.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="connect will drop the system backup to the configured path" wrappingWidth="404.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="config_txt1" editable="false" layoutX="208.0" layoutY="273.0" prefHeight="30.0" prefWidth="262.0" />
+            <Button fx:id="browse_btn1" layoutX="517.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleBackupBrowseButtonAction" prefHeight="25.0" prefWidth="90.0" text="Browse" />
+            <Text fx:id="prblmerrortxt" fill="#fc0303" layoutX="208.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write access is denied for selected folder" visible="false" />
+            <Text fx:id="bkperrortxt" fill="#ff0202" layoutX="208.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write access is denied for selected folder" visible="false" />
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+</BorderPane>

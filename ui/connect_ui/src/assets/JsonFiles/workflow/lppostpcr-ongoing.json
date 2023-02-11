@@ -1,0 +1,3151 @@
+{
+  "runResultId": 2855,
+  "deviceId": "MP001",
+  "processStepName": "LP Post PCR",
+  "deviceRunId": null,
+  "runStatus": "InProgress",
+  "dvcRunResult": null,
+  "runFlag": null,
+  "operatorName": "jimenj15",
+  "comments": null,
+  "assayType": "NIPTHTP",
+  "totalSamplecount": null,
+  "inputcontainerIds": [],
+  "outputcontainerIds": [],
+  "runStartTime": "2018-10-23T13:36:17.548Z",
+  "runCompletionTime": "2018-10-23T13:36:17.548Z",
+  "runRemainingTime": null,
+  "verifiedDate": null,
+  "verifiedBy": null,
+  "updatedBy": "System",
+  "updatedDateTime": "2018-10-23T13:36:17.548Z",
+  "createdBy": null,
+  "createdDateTime": "2018-10-23T13:36:17.548Z",
+  "sampleResults": [
+    {
+      "runResultsId": 2855,
+      "sampleResultId": 87409,
+      "accesssioningId": "338744",
+      "orderId": 107651810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+         "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 30909,
+      "accesssioningId": "903344",
+      "orderId": 18701810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3989,
+      "accesssioningId": "3387644",
+      "orderId": 190801810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 30909,
+      "accesssioningId": "387344",
+      "orderId": 10001810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 390009,
+      "accesssioningId": "386344",
+      "orderId": 10901810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3099,
+      "accesssioningId": "399344",
+      "orderId": 10001810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3989,
+      "accesssioningId": "3399344",
+      "orderId": 107661810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049909",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+         "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3899,
+      "accesssioningId": "3983388",
+      "orderId": 1088810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 32329,
+      "accesssioningId": "39122388",
+      "orderId": 1238810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3822,
+      "accesssioningId": "3982228",
+      "orderId": 10222810,
+      "inputContainerId": "10001",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 390179,
+      "accesssioningId": "3773344",
+      "orderId": 10001810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+         "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 66611,
+      "accesssioningId": "6666",
+      "orderId": 1661810,
+      "inputContainerId": "102772209",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3559,
+      "accesssioningId": "333554",
+      "orderId": 15551810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3944,
+      "accesssioningId": "3344444",
+      "orderId": 14441810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 397709,
+      "accesssioningId": "338844",
+      "orderId": 107891810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+         "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3987,
+      "accesssioningId": "3765344",
+      "orderId": 10861810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 39998,
+      "accesssioningId": "333344",
+      "orderId": 1067555,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169555",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3909876,
+      "accesssioningId": "983344",
+      "orderId": 100875610,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 39086,
+      "accesssioningId": "365344",
+      "orderId": 18701810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 390286,
+      "accesssioningId": "3265344",
+      "orderId": 187012810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3902386,
+      "accesssioningId": "36532344",
+      "orderId": 187201810,
+      "inputContainerId": "10002",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 398709,
+      "accesssioningId": "893344",
+      "orderId": 10761810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 38909,
+      "accesssioningId": "3399844",
+      "orderId": 10001810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3879,
+      "accesssioningId": "376344",
+      "orderId": 1098810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3679,
+      "accesssioningId": "983344",
+      "orderId": 10098810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3789,
+      "accesssioningId": "893344",
+      "orderId": 18901810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+         "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 30909,
+      "accesssioningId": "390344",
+      "orderId": 1089810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+                {
+      "runResultsId": 2855,
+      "sampleResultId": 3977,
+      "accesssioningId": "3376454",
+      "orderId": 18901810,
+      "inputContainerId": "10003",
+      "inputContainerPosition": "1",
+      "inputKitId": null,
+      "outputContainerId": "169049",
+      "outputContainerPosition": "A1",
+      "outputContainerType": "96 Well Plate",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "InProgress",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.658Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8864,
+          "type": null,
+          "attributeName": "reagentCassette",
+          "attributeValue": "DNA Blood LV;00000000;0040",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8865,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8866,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8867,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8868,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8869,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8870,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3805,
+          "protocolName": "LP PrePCR Protocol",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-23T13:36:17.658Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    }
+  ],
+  "runReagentsAndConsumables": [
+    {
+      "runReagentsAndConsumablesId": 10014,
+      "type": null,
+      "attributeName": "reagentCassette",
+      "attributeValue": "DNA Blood LV;00000000;0040",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10015,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10016,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10017,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10018,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+     "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10019,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+     "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 10020,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-23T13:36:17.548Z",
+      "createdBy": null,
+      "createdDateTime": null
+    }
+  ],
+  "runResultsDetail": []
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+#### CONNECT ####
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-amm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/amm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-wfm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/wfm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-omm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/omm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms512M -Xmx1024M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-rmm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/rmm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-imm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/imm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms512M -Xmx1024M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application-adm.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adm-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/htp_forte_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adapter-htp-forte-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/lp24_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adapter-lp24-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/mp24_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adapter-mp24-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/mp_96_adapter_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adapter-mp96-0.1.jar >/dev/null 2>&1 &
+sudo nohup java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/dpcr_application.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/adapter-dpcr-0.0.1-SNAPSHOT.jar >/dev/null 2>&1 &
+echo "Connect microservices have been started."

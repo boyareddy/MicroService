@@ -1,0 +1,39 @@
+<div class="main-container">
+  <mat-card class="custom-card">
+    <div class="download-header">
+      <h4 class="header-up roboto-regular">{{"bulkorder.step" | translate}} 1</h4>
+      <h4 class="header-down roboto-regular">{{"bulkorder.downloadLabel" | translate}}</h4>
+    </div>
+    <hr class="devider" />
+    <div class="download-container">
+      <a class="roboto-regular" mat-raised-button (click)="donwloadConatinerMappingTemplate()">{{"bulkorder.downloadBtn" | translate}}</a>
+    </div>
+  </mat-card>
+
+  <mat-card class="custom-card upload-container">
+    <div class="upload-header">
+      <h4 class="header-up roboto-regular">{{"bulkorder.step" | translate}} 2</h4>
+      <h4 class="header-down roboto-regular">{{"bulkorder.uploadLabel" | translate}}</h4>
+    </div>
+    <hr class="devider" />
+    <div class="file-container" *ngIf="!isAnyUploadError">
+      <div class="file-browse-box"  ng2FileDrop
+      [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+      (fileOver)="fileOverBase($event)"
+      (onFileOver) = "onFileOver($event)"
+      (drop) = "onDrop($event)" [uploader]="uploader">
+        <div *ngIf="!isUploadInProgress" class="file-browse-container" >
+          <h5 class="header-drop roboto-bold">{{"bulkorder.dropFile" | translate}}</h5>
+          <h5 class="header-or roboto-bold"> {{"bulkorder.or" | translate}} </h5>
+          <input type='file' ng2FileSelect accept=".csv" [uploader]="uploader" hidden #uploadFIle (change)="onFileUpload(uploader)"/>
+          <button color="primary" class="file-browse-btn roboto-bold" mat-raised-button (click)="uploadFIle.click()">{{"bulkorder.browseFile" | translate}}</button>
+        </div>
+        <div class="progress-bar" style="margin-bottom: 3em; margin-top: 3.1em;" *ngIf="isUploadInProgress">
+          <div class="roboto-regular font-14 txt-color">{{"bulkorder.uploadProgress" | translate}}</div>
+          <mat-progress-bar class="pg-bar-rule bulkorder-progress-bar" mode="indeterminate"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+    <app-fileupload-errors *ngIf="isAnyUploadError" (onReTrying)="onReTrying($event)" [errors]="uploadErrors"></app-fileupload-errors>
+  </mat-card>
+</div>

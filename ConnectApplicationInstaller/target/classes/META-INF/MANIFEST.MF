@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Built-By: india
+Build-Jdk: 11.0.18
+Class-Path: javax.mail-1.6.2.jar activation-1.1.jar commons-dbcp-1.4.jar
+  commons-pool-1.6.jar commons-validator-1.6.jar commons-beanutils-1.9.2
+ .jar commons-digester-1.8.1.jar commons-logging-1.2.jar commons-collect
+ ions-3.2.2.jar postgresql-9.4-1200-jdbc41.jar waffle-jna-1.7.jar jna-4.
+ 1.0.jar jna-platform-4.1.0.jar slf4j-api-1.7.7.jar guava-18.0.jar slf4j
+ -simple-1.7.7.jar snakeyaml-1.24.jar poi-3.13.jar poi-ooxml-3.13.jar po
+ i-ooxml-schemas-3.13.jar xmlbeans-2.5.0.jar stax-api-1.0.1.jar dom4j-1.
+ 6.1.jar xml-apis-1.0.b2.jar commons-codec-1.12.jar spring-security-core
+ -4.2.4.RELEASE.jar aopalliance-1.0.jar spring-aop-4.3.12.RELEASE.jar sp
+ ring-beans-4.3.12.RELEASE.jar spring-context-4.3.12.RELEASE.jar spring-
+ core-4.3.12.RELEASE.jar spring-expression-4.3.12.RELEASE.jar
+Main-Class: com.roche.connect.appinstaller.AppInstallerMainApp
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+<appender class="org.apache.log4j.ConsoleAppender" name="console">
+
+<param name="Target" value="System.out"/>
+
+
+<layout class="org.apache.log4j.PatternLayout">
+
+<param name="ConversionPattern" value="%-5p %c{1} - %m%n"/>
+
+</layout>
+
+</appender>
+
+
+<appender class="org.apache.log4j.RollingFileAppender" name="file">
+
+<param name="append" value="true"/>
+
+<param name="maxFileSize" value="10MB"/>
+
+<param name="maxBackupIndex" value="10"/>
+
+<param name="file" value="simulator.log"/>
+
+
+<layout class="org.apache.log4j.PatternLayout">
+
+<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+
+</layout>
+
+</appender>
+
+
+-<logger name="com.roche.swam">
+
+<level value="DEBUG"/>
+
+</logger>
+
+
+<logger name="org.eclipse.jetty">
+
+<level value="INFO"/>
+
+</logger>
+
+
+<root>
+
+<priority value="INFO"/>
+
+<appender-ref ref="console"/>
+
+<appender-ref ref="file"/>
+
+</root>
+
+</log4j:configuration>
+
+

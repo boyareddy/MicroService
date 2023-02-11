@@ -1,0 +1,328 @@
+<!-- <app-admin-ui-header class="no-shadow" [headerInfo]="headerInfo"></app-admin-ui-header> -->
+
+<div class="header">
+  <mat-toolbar class="header-mat-toolbar">
+      <div class="header-info">   
+        <img *ngIf="headerInfo.isBackRequired" height="22" src="assets/Images/backbutton.png" alt="close" class="back-button" (click)="goBack()">
+        <img *ngIf="headerInfo.headerIcon" [src]="headerInfo.headerIcon" [alt]="headerInfo?.curPage"  class="header-icon">
+        <!-- <span [class.roboto-bold]="headerInfo.isBackRequired" class="font-18" >{{"header.settings" | translate}}</span>  
+        <span>|</span> -->
+        <span class="roboto-regular font-18">
+         {{(currPage === 'add' ? "deviceMgmt.addDev" : "deviceMgmt.editDev") | translate}}
+        </span>
+      </div>
+    </mat-toolbar>
+  </div>
+
+<div class="header">
+        <div class="card-box" style="background: #FFFFFF;margin-bottom: 20px !important; width: 83.1625%; margin: 5.25em auto 0;">
+
+        <div style="text-align: left;padding: 1em;padding-left: 20px;">
+          <label class="roboto-bold card-title"> {{'deviceMgmt.devDetails' | translate}} </label>
+        </div>
+
+        <hr class="card-sp">
+
+        <div style="padding: 20px">
+          <!-- <app-form-generator #formGen [dyForm]="regDevFormMock" [formName]="addDevForm" [caller]="self"></app-form-generator> -->
+          <form [formGroup]="regDeviceForm">
+            <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+                  
+              <mat-grid-tile colspan="1" rowspan="1">
+                <mat-form-field #serialNo appearance="fill" 
+                                class="width-full roboto-regular font-14"
+                                [class.read-only]="fieldDisabled">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.devSlNo' | translate}}
+                  </mat-label>
+                  <input matInput placeholder="" appMinMax
+                        formControlName="serialNo" name="serialNo" id="serialNo"
+                        required="required" autocomplete="off" maxlength="64"
+                        [readonly]="fieldDisabled" [parentField]="serialNo"
+                        (blur)="duplicateDeviceDetails('serialNo')">
+                  <mat-error *ngIf="regDeviceForm.get('serialNo').invalid">
+                    {{ regDeviceForm.get('serialNo').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+              
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #name appearance="fill" 
+                                class="width-full roboto-regular font-14"
+                                [class.read-only]="isDeviceInProgress || regDeviceForm.controls.state.value === 'INACTIVE'">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.devName' | translate}}
+                  </mat-label>
+                  <input matInput placeholder="" appMinMax
+                        formControlName="name" name="name" id="name" 
+                        required="required" autocomplete="off" maxlength="64" 
+                        [parentField]="name" [readonly]="isDeviceInProgress || regDeviceForm.controls.state.value === 'INACTIVE'"
+                        (blur)="duplicateDeviceDetails('name')">
+                  <mat-error *ngIf="regDeviceForm.get('name').invalid">
+                    {{ regDeviceForm.get('name').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #deviceStatus appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.devStatus' | translate}}
+                  </mat-label>
+                  <input #devComplteStatus matInput placeholder="" appMinMax
+                          formControlName="devComplteStatus" name="devComplteStatus" id="devComplteStatus"
+                          required="required" autocomplete="off" maxlength="64"  
+                          [parentField]="devComplteStatus" [readonly]="true" 
+                          [readonly]="fieldDisabled">
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <input matInput placeholder="" appMinMax
+                          formControlName="deviceStatus" name="deviceStatus" id="deviceStatus"
+                          required="required" autocomplete="off" maxlength="64"  
+                          [parentField]="deviceStatus" [readonly]="true" hidden>
+
+              <mat-grid-tile>
+                <mat-form-field appearance="fill" class="width-full roboto-regular font-14"
+                [class.read-only]="fieldDisabled">
+                  <mat-label>
+                    {{'deviceMgmt.devType' | translate}}
+                  </mat-label>
+                      <mat-select placeholder="" 
+                                  formControlName="deviceType" name="deviceType" id="deviceType"
+                                  required="required" 
+                                  [class.read-only]="fieldDisabled" [disabled]="fieldDisabled"
+                                  (selectionChange)="onDeviceTypeChange($event)">
+                          <mat-option *ngFor="let option of deviceTypeList" [value]="option.deviceTypeId" selected="deviceType">{{option.name}}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="regDeviceForm.get('deviceType').invalid">
+                        {{ regDeviceForm.get('deviceType').errors.errorCode | translate }}.
+                      </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #model appearance="fill" class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.model' | translate}}
+                  </mat-label>
+                  <input matInput placeholder="" appMinMax
+                  formControlName="model" name="model" id="model" 
+                  autocomplete="off" maxlength="64"  
+                  [parentField]="model" [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('model').invalid">
+                    {{ regDeviceForm.get('model').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #make appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.make' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="make" name="make" id="make" 
+                          autocomplete="off" maxlength="64" 
+                          [parentField]="make" [readonly]="true">
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #ipAddress appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.ipAddress' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="ipAddress" name="ipAddress" id="ipAddress"
+                          autocomplete="off" maxlength="64" 
+                          [parentField]="ipAddress" [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('ipAddress').invalid">
+                    {{ regDeviceForm.get('ipAddress').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #hostName appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.hostName' | translate}}
+                  </mat-label>
+                  <input matInput placeholder="" appMinMax
+                         formControlName="hostName" name="hostName" id="hostName"
+                         autocomplete="off" maxlength="64"  
+                         [parentField]="hostName" [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('hostName').invalid">
+                    {{ regDeviceForm.get('hostName').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #swVersion appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.swVersion' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="swVersion" name="swVersion" id="swVersion" autocomplete="off" maxlength="64" 
+                          [parentField]="swVersion"  [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('swVersion').invalid">
+                    {{ regDeviceForm.get('swVersion').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #hwVersion appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.hwVersion' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="hwVersion" name="hwVersion" id="hwVersion" 
+                          autocomplete="off" maxlength="64" 
+                          [parentField]="hwVersion" [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('hwVersion').invalid">
+                    {{ regDeviceForm.get('hwVersion').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #location appearance="fill" 
+                                class="width-full roboto-regular font-14" [class.read-only]="regDeviceForm.controls.state.value === 'INACTIVE'">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.location' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="location" name="location" id="location"
+                          autocomplete="off" maxlength="64" [parentField]="location" [readonly]="regDeviceForm.controls.state.value === 'INACTIVE'">
+                  <mat-error *ngIf="regDeviceForm.get('location').invalid">
+                    {{ regDeviceForm.get('location').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile class="card-checkbox" appearance="fill" colspan="1" rowspan="1">
+                <div class="roboto-regular" >
+                  <div class="font-14 card-cb-label">
+                    {{'deviceMgmt.protocol' | translate}} <sup>*</sup>
+                  </div>
+                  <div>
+                    <ng-container *ngFor="let option of protocols; let ind = index;">
+                            <mat-checkbox color="primary" 
+                                        formArrayName="protocol" 
+                                        [value]="option"
+                                        [checked]="onDefaultChecking(option)"
+                                        [disabled]="true"
+                                        >
+                              <span class="font-14 roboto-regular" style="padding-right: 10px;">
+                                {{option}}
+                              </span>
+                              
+                          </mat-checkbox>
+                    </ng-container>
+                      
+                      <!-- <mat-checkbox *ngFor="let protocol of protocols; let i = index" color="primary" 
+                      (change)="onChange($event)" [value]="protocol">{{protocol}}</mat-checkbox> -->
+                  </div>
+                </div>
+              </mat-grid-tile>
+
+              <!-- <mat-grid-tile *ngIf="regDeviceForm.get('clientId')" appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #clientId appearance="fill" 
+                                class="width-full roboto-regular font-14" [class.read-only]="fieldDisabled">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.clientId' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="clientId" name="clientId" id="clientId"
+                          autocomplete="off" maxlength="64" [parentField]="clientId" [readonly]="fieldDisabled" required>
+                  <mat-error *ngIf="regDeviceForm.get('clientId').invalid">
+                    {{ regDeviceForm.get('clientId').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile *ngIf="regDeviceForm.get('password')" appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #password appearance="fill" 
+                                class="width-full roboto-regular font-14" [class.read-only]="fieldDisabled">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.password' | translate}}
+                  </mat-label>
+                  <input type="password" matInput placeholder="" appMinMax
+                          formControlName="password" name="password" id="password"
+                          autocomplete="off" maxlength="64" [parentField]="password" [readonly]="fieldDisabled" required>
+                  <mat-error *ngIf="regDeviceForm.get('password').invalid">
+                    {{ regDeviceForm.get('password').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile> -->
+
+              <mat-grid-tile appearance="fill" colspan="1" rowspan="1">
+                <mat-form-field #protocolVersion appearance="fill" 
+                                class="width-full roboto-regular font-14 read-only">
+                  <mat-label class="roboto-regular">
+                    {{'deviceMgmt.protocolVersion' | translate}}
+                  </mat-label>
+                  <input  matInput placeholder="" appMinMax
+                          formControlName="protocolVersion" name="protocolVersion" id="protocolVersion"  
+                          autocomplete="off" maxlength="64" 
+                          [parentField]="protocolVersion" [readonly]="true">
+                  <mat-error *ngIf="regDeviceForm.get('protocolVersion').invalid">
+                    {{ regDeviceForm.get('protocolVersion').errors.errorCode | translate }}.
+                  </mat-error>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <!-- <mat-grid-tile class="card-checkbox" colspan="1" rowspan="2">
+                <div class="img-align">
+                  <img src="../../../assets/Images/userIcon.png" alt="Image" height="40" class="img-left-align">
+                  <button mat-raised-button color="primary" class="roboto-bold font-14">Upload Picture</button>
+                </div>
+              </mat-grid-tile> -->
+
+              <!-- <mat-grid-tile class="card-checkbox" appearance="fill" colspan="1" rowspan="1">
+                <div style="display: flex;flex-direction: column;">
+                  <div class="img-align">
+                    <img [attr.src]="devIcon" alt="Image" height="40" class="img-left-align">
+                    <button mat-raised-button color="primary" class="roboto-bold font-14" (click)="onSelectIcon(uploadFile)">Upload Picture</button>
+                    <input type='file' accept=".png" hidden #uploadFile (change)="onFileUpload($event)"/>
+                  </div>
+                  <div>
+                    <label class="roboto-regular font-14">Should be less than 2MB</label>
+                  </div>
+                </div>
+              </mat-grid-tile> -->
+
+            </mat-grid-list> 
+          </form>
+        </div>
+
+        <hr class="card-sp">
+
+        <div class="fm-btn-place" style="padding: 20px;">
+          <button mat-raised-button color="primary" 
+                  class="roboto-bold font-14 btn-bg-color no-shadow" 
+                  [disabled]="!regDeviceForm.valid || regDeviceForm.get('state').value === 'INACTIVE'" 
+                  (click)="addDevice()">
+                  {{'deviceMgmt.save' | translate}}
+          </button>
+          <a *ngIf="currPage === 'edit' && regDeviceForm.get('state').value !== 'INACTIVE'"
+                  class="edit-details roboto-bold font-14" 
+                  (click)="removeDevice()">
+                  {{'deviceMgmt.archive' | translate}}
+          </a>
+          <a *ngIf="currPage === 'edit' && regDeviceForm.get('state').value === 'INACTIVE'" 
+                  class="edit-details roboto-bold font-14" 
+                  (click)="unarchiveDevice()">
+                  {{'deviceMgmt.unArchive' | translate}}
+          </a>
+        </div>
+      </div>
+</div>

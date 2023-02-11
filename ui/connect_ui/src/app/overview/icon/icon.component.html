@@ -1,0 +1,9 @@
+<div class="iconDetail" (click)='navigateTo(IconDetails)'>
+  <div class="circle1 roboto-bold font-12 NCWarning" *ngIf="IconDetails?.count > 0" [ngClass]="{'NCError': IconDetails?.severity === 'Error'}">
+    {{ IconDetails?.count }}
+  </div>
+  <img [src]="IconDetails?.icon" [alt]="IconDetails?.name" class="imgDetails">
+  <div class="roboto-regular font-24 icon-name">
+    {{ 'navigationMenu.' + IconDetails?.localisationKey | translate }}
+  </div>
+</div>

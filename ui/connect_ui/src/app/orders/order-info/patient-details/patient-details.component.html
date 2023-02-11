@@ -1,0 +1,70 @@
+<mat-card>
+    <div class="d-flex flex-align-center pb-20">
+        <div class="img-right-16">
+          <img src="assets/Images/patientInfo.svg" alt="patientIcon" class="vertical-middle" height="44px" width="44px">
+        </div>
+        <div>
+          <div class="card-main-header-info">
+              {{ 'orders.orderCards.patientInformation.title' | translate }}
+          </div>
+        </div>
+      </div>
+    <mat-card-content *ngIf='patientDetails != null'>
+      <app-shared-order-details 
+      [field1]="{'key': 'patientInformation.firstName', 'value': patientDetails.patientFirstName,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': first_name, 'assayType':assayType }" 
+      [field2]="{'key': 'patientInformation.lastName', 'value': patientDetails.patientLastName,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': last_name }">
+      </app-shared-order-details>
+  
+      <app-shared-order-details  
+      [field1]="{'key': 'patientInformation.dob', 'value': patientDetails.patientDOB, 'isOnlyDate': 'true',
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': date_of_birth }"
+      [field2]="{'key': 'patientInformation.medicalRecNo', 'value': patientDetails.patientMedicalRecNo,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': medical_rec_number }">
+      </app-shared-order-details>
+  
+      <app-shared-order-details 
+      [field1]="{'key': 'patientInformation.labId', 'value': patientDetails.labId, 
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': lab_id }"
+      [field2]="{'key': 'patientInformation.accountNumber', 'value': patientDetails.accountNumber,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': acc_number }">
+      </app-shared-order-details>
+  
+      <app-shared-order-details [field1]="{'key': 'patientInformation.otherClinicianName', 'value': patientDetails.otherClinicianName,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': other_clinician }"
+        [field2]="{'key': 'patientInformation.clinicName', 'value': patientDetails.clinicName,
+        'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': clinic_name }">
+      </app-shared-order-details>
+  
+      <app-shared-order-details [field1]="{'key': 'patientInformation.refClinicianName', 'value': patientDetails.refClinicianName,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': referring_clinician }"
+      [singleRow]='true'>
+      </app-shared-order-details>
+  
+      <app-shared-order-details [field1]="{'key': 'patientInformation.reasonForReferral', 'value': patientDetails.reasonForReferral,
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': reason_for_referral }"
+      [singleRow]='true'>
+      </app-shared-order-details>
+  
+  
+      <mat-divider class="bottom-mat-divider mb-16"></mat-divider>
+      <!-- Edit details link to navigating to order edit page-->
+  
+      <!-- <div class="edit-details roboto-bold font-14" (click)="editDetails()" *ngIf="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </div>
+      <div class="edit-details roboto-bold font-14 disabled-text" matTooltip="{{ 'common.accessRestricted' | translate}}" [matTooltipClass]="'tooltipDetails'"
+        [matTooltipDisabled]="havingAccess" *ngIf="!havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </div> -->
+
+      <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14" (click)="editDetails()" *ngIf="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+      <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14 disabled-text" *ngIf="!havingAccess" matTooltip="{{ 'common.accessRestricted' | translate}}"
+      [matTooltipClass]="'tooltipDetails'" [matTooltipDisabled]="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+    </mat-card-content>
+  </mat-card>

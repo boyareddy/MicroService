@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+    		
+    
+    <bean id="customConnectionFactory" class="com.rabbitmq.client.ConnectionFactory">
+  		<property name="host" value="localhost"/>
+  		<property name="port" value="5672"/>
+  		<property name="username" value="userone"/>
+  		<property name="password" value="userone"/>
+	</bean>
+	
+	<camelContext id="CamelContext" xmlns="http://camel.apache.org/schema/spring">
+  		<route id="auditTrailRoute">
+   		 <from uri="direct:auditTrailInfo"/>
+    	 <to uri="rabbitmq://localhost:5672/AuditTrailExchange?connectionFactory=#customConnectionFactory&amp;queue=AuditTrailQueue&amp;autoAck=false&amp;autoDelete=false"/>
+  		</route>
+	</camelContext>
+	
+</beans>

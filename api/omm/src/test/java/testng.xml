@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OrderManagementAPI" verbose="1">
+	<parameter name="OrderManagementAPITest" value="OrderManagementAPITest" />
+	<test name="OrderMgmtAPITest">
+		<classes>
+
+			<class name="com.roche.connect.omm.restassured.OrderCreateITTest">
+				<methods>
+					<include name="testOrderCreationWithCorrectJson" />
+					<include name="testOrderCreationWithInCorrectJson" />
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.restassured.OrderDetailsUpdateITTest">
+				<methods>
+					<include name="testUpdateOrderDetailsForCorrectJson" />
+					<include name="testUpdateOrderDetailsForInCorrectJson" />
+				</methods>
+			</class>
+			<class name="com.roche.connect.omm.restassured.OrderBySampleIdRestITTest">
+				<methods>
+					<include name="getPositiveOrderBySampleIdTest" />
+					<include name="getNegativeOrderBySampleIdTest" />
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.restassured.OrderByOrderIdRestITTest">
+				<methods>
+					<include name="getPositiveOrderByOrderId" />
+					<include name="getNegetiveOrderByOrderId" />
+				</methods>
+			</class>
+
+
+			<class name="com.roche.connect.omm.restassured.OrderListRestITTest">
+				<methods>
+					<include name="getPositiveOrderList" />
+					<include name="getNegativeOrderList" />
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.restassured.OrderMgmtRestTest">
+				<methods>
+					<include name="getPositiveDropDownValuesTest" />
+					<include name="getNagativeDropDownValuesTest" />
+				</methods>
+			</class>
+
+
+
+		</classes>
+	</test>
+	<parameter name="OrderManagementUnitTest" value="OrderManagementUnitTest" />
+	<test name="OrderMgmtUnitTest">
+		<classes>
+			<class name="com.roche.connect.omm.test.UpdatePatientAssayObject">
+				<methods>
+					<include name="positivePatientAssayTest"></include>
+					<include name="negativePatientAssayTest"></include>
+					<include name="positiveTestOptionsTest"></include>
+					<include name="negativeTestOptionsTest"></include>
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.test.UpdateOrderMapperTest">
+				<methods>
+					<include name="testPositiveOrderMapperUpdate"></include>
+					<include name="testPositiveOrderMapperNotNull"></include>
+					<include name="testNegativeOrderMapperUpdate"></include>
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.test.UpdatePatientObjectTest">
+				<methods>
+					<include name="positiveUpdatePatientTest"></include>
+					<include name="negativiPatientUpdateTest"></include>
+				</methods>
+			</class>
+
+
+			<class name="com.roche.connect.omm.test.CreateOrderObjectTest">
+				<methods>
+					<include name="positivePatientTest"></include>
+					<include name="negativevePatientTest"></include>
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.test.CreatePatientAssayObjectTest">
+				<methods>
+					<include name="positivePatientTest"></include>
+					<include name="negativiPatientTest"></include>
+				</methods>
+			</class>
+
+			<class name="com.roche.connect.omm.test.CreatePatientObjectTest">
+				<methods>
+					<include name="positivePatientTest"></include>
+					<include name="negativiPatientTest"></include>
+				</methods>
+			</class>
+
+
+		</classes>
+	</test>
+</suite>

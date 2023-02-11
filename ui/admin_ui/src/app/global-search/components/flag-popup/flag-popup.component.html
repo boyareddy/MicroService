@@ -1,0 +1,50 @@
+<div class="flag-container">
+  <!-- <span mat-button class="text-color" *ngIf='isEmptyFlag(sampleInput?.flags); else emptyFlags'>
+    <img src="assets/Images/flag_no.svg" height="14px" [mdePopoverTriggerFor]="githubPopover" 
+      mdePopoverTriggerOn="hover" style="vertical-align: middle">
+  </span> -->
+
+  <div>
+    <!-- No flag for search -->
+    <img *ngIf="sampleInput.status && sampleInput.status.toLowerCase() === 'flagged' && isEmptyFlag(sampleInput?.flags)" src="assets/Images/flag_no.svg" height="14px" [mdePopoverTriggerFor]="githubPopover" 
+      mdePopoverTriggerOn="hover" style="vertical-align: middle">
+    <span *ngIf="sampleInput.status && sampleInput.status.toLowerCase() !== 'flagged' && isEmptyFlag(sampleInput?.flags)"> {{'-'}} </span>
+    
+    <img *ngIf="!isEmptyFlag(sampleInput?.flags)" [src]="'assets/Images/flag_' + primaryFlagIcon + '.svg'" height="14px" [mdePopoverTriggerFor]="githubPopover" 
+      mdePopoverTriggerOn="hover" style="vertical-align: middle">
+  </div>
+
+  <mde-popover #githubPopover="mdePopover" 
+              [mdePopoverOverlapTrigger]="false" 
+              [mdePopoverCloseOnClick]="false" 
+              class='flags-mdepopover'
+              mdePopoverLeaveDelay='0'>
+    <div *ngIf='!isEmptyFlag(sampleInput?.flags); else noFlags' class="padding-20 flag-popup-menu">
+      <div class="flag-pop-contant" 
+          *ngFor="let flag of flags;let i = index;" 
+          [class.addMgrBtm20]="i != sampleInput?.flags?.split(',').length-1">
+        <div>
+          <div>
+            <img [src]="'assets/Images/flag_' + flag.flagIcon + '.svg'" class="flags-img" 
+                style="vertical-align: top;" alt="Flag" height="14px">
+            <div class="roboto-regular font-14 text-color mtn-10 flag-text">
+              {{ flag.flagCode }}
+            </div>
+          </div>
+          <div *ngIf="flag.flagDescription" class="roboto-regular font-14 text-color mtn-10">
+            {{ flag.flagDescription | translate}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noFlags>
+      <div class="padding-20 flag-popup-menu">
+        <div class="flag-pop-contant">
+          <div class="roboto-regular font-14 text-color mtn-10">
+              {{ 'noFlag' | translate}}
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </mde-popover>
+</div>

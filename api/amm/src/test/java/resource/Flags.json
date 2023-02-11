@@ -1,0 +1,9 @@
+{
+  "AT001": "Run was terminated by fatal error Abort run",
+  "AT002": "Process Head Pipetting Error Abort run",
+  "AT005": "Process Station Error Abort run",
+  "AT006": "Shaker Error Abort run",
+  "AT003": "Reagent Head Pipetting Error Abort run",
+  "AT004": "Cooling Station Error Finish run",
+  "AT007": "Run was terminated by operator Abort run"
+}

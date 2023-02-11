@@ -1,0 +1,8 @@
+[
+    {
+            "fieldName": "Egg Donor Age",
+            "minVal": 12,
+            "maxVal": 76,
+            "expression": "NA"
+    }
+]

@@ -1,0 +1,96 @@
+{  
+   "numberOfSamples":"2",
+   "delayBetweenQuery":"1",
+   "samples":[  
+      {  
+         "sampleID":"22221",
+         "result":"passed",
+         "flag":"",
+         "internalControls":"IC00000033",
+         "processingCartridge":";;00061",
+         "tipRack":";;00040",
+         "inputContainerId":"",
+         "inputPosition":"",
+         "sampleComments":"Dies ist für die Lokalisierung",
+         "consumables":[  
+            {  
+               "consumableName":"reagentCassette",
+               "value":"DNA Blood LV;00000000;0040"
+            },
+            {  
+               "consumableName":"reagent2mlTube",
+               "value":"MGP;00000001;00024"
+            },
+            {  
+               "consumableName":"reagent2mlTube",
+               "value":"MGP;00000001;00023"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Washbuffer;00000002;01001"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Washbuffer;00000002;01002"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Specimen Diluent;00000000;00233"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Specimen Diluent;00000000;01234"
+            }
+         ]
+      },
+	        {  
+         "sampleID":"22225",
+         "result":"aborted",
+         "flag":"",
+         "internalControls":"IC00000033",
+         "processingCartridge":";;00061",
+         "tipRack":";;00040",
+         "inputContainerId":"",
+         "inputPosition":"",
+         "sampleComments":"Dies ist für die Lokalisierung",
+         "consumables":[  
+            {  
+               "consumableName":"reagentCassette",
+               "value":"DNA Blood LV;00000000;0040"
+            },
+            {  
+               "consumableName":"reagent2mlTube",
+               "value":"MGP;00000001;00024"
+            },
+            {  
+               "consumableName":"reagent2mlTube",
+               "value":"MGP;00000001;00023"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Washbuffer;00000002;01001"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Washbuffer;00000002;01002"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Specimen Diluent;00000000;00233"
+            },
+            {  
+               "consumableName":"reagent25mlTube",
+               "value":"Specimen Diluent;00000000;01234"
+            }
+         ]
+      }
+   ],
+   "sendingApplication":"MagnaPure24",
+   "sendingFacility":"Roche Diagnostics",
+   "receivingApplication":"Connect",
+   "receivingFacility":"Roche Diagnostics",
+   "processingId":"P",
+   "versionId":"2.5.1",
+   "characterSet":"UTF-8",
+   "messageQueryName":"WOS"
+}

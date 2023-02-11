@@ -1,0 +1,13 @@
+<div class="footer">
+  <mat-toolbar class="header-mat-toolbar">
+    <button mat-raised-button class="retry-btn roboto-bold" (click)="onRetry()">
+      {{"containersamples.retryBtn" | translate}}
+    </button>
+    <span class="order-info roboto-regular">
+      {{sampleCount}} {{ ('containersamples.' + ('sample' | pluralCheck: (sampleCount))) | translate }}
+    </span>
+    <button class="next_btn roboto-bold btn-bg-color" mat-raised-button color="primary" (click)="onConfirmingUpload()">
+      {{"containersamples.confirm" | translate}}
+    </button>
+  </mat-toolbar>
+</div>

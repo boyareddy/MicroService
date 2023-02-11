@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestResultsSubreport" pageWidth="595" pageHeight="820" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="bd407856-fafb-47d1-a1b4-5fdabff6fa9a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#434141">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#434141">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="sampleQCMetricsDataset" uuid="2e34edce-57d3-441b-a02a-d5a140fb0148">
+		<parameter name="sampleQCResultsDS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="sampleId" class="java.lang.Long"/>
+		<field name="fetalFraction" class="java.lang.String"/>
+		<field name="arrayQuality" class="java.lang.String"/>
+		<field name="signal" class="java.lang.Long"/>
+		<field name="sampleIntegrity" class="java.lang.String"/>
+		<field name="noise" class="java.lang.String"/>
+		<field name="signalToNoise" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="dPCRTestoptionDataset" uuid="38f0bb13-aa96-459f-a70f-2487fce12ecc">
+		<parameter name="dpcrTestOptionsDS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="sampleId" class="java.lang.Long"/>
+		<field name="fs" class="java.lang.String"/>
+		<field name="t13" class="java.lang.String"/>
+		<field name="t18" class="java.lang.String"/>
+		<field name="t21" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="rocheLogo" class="java.lang.String"/>
+	<parameter name="headerImage" class="java.lang.String"/>
+	<parameter name="textDescription" class="java.lang.String"/>
+	<parameter name="sampleQCResultsDS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="dpcrTestOptionsDS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="medianReadLength" class="java.lang.String"/>
+	<field name="hqrYield" class="java.lang.String"/>
+	<field name="sequencingControlReadsPerc" class="java.lang.String"/>
+	<field name="sequencingControlReads" class="java.lang.Long"/>
+	<field name="qcRunTotalSamples" class="java.lang.Long"/>
+	<field name="qcRunSamplesPassed" class="java.lang.Long"/>
+	<field name="runSignalToNoise" class="java.lang.Double"/>
+	<field name="negativeControlResult" class="java.lang.String"/>
+	<field name="positiveControlResult" class="java.lang.String"/>
+	<field name="t21Assessment" class="java.lang.String"/>
+	<field name="acpBarcode" class="java.lang.String"/>
+	<field name="runQCResult" class="java.lang.String"/>
+	<field name="runQCMedianSignal" class="java.lang.String"/>
+	<field name="qcRunNoise" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="627" splitType="Immediate">
+			<textField>
+				<reportElement x="1" y="10" width="162" height="30" forecolor="#434141" uuid="ba596cdd-7740-4ddb-89a3-244f17981ed5"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.testResults}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="74" width="540" height="110" uuid="e5a1c662-1b30-4cfc-b7a3-ced5c221e038"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="540" height="18" forecolor="#FFFFFF" backcolor="#434141" uuid="f307ddc4-cf30-4403-8765-2577703bea80"/>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{label.dPCRData}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="25" width="100" height="17" uuid="b73ea9ba-1949-4e18-8e8f-1f9b2d635008"/>
+					<textFieldExpression><![CDATA[$R{label.medianReadLength}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="42" width="100" height="17" uuid="81e02b05-ba95-4017-9b01-404b16141dda"/>
+					<textFieldExpression><![CDATA[$F{medianReadLength}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="26" width="100" height="17" uuid="3e4a594e-bb61-49cd-bc47-159bb8d7e55d"/>
+					<textFieldExpression><![CDATA[$R{label.hqrYield}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="43" width="100" height="17" uuid="9ba2c560-3ac5-4039-a07d-efabe98cf4d4"/>
+					<textFieldExpression><![CDATA[$F{hqrYield}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="26" width="100" height="17" uuid="aba28ab1-a983-4043-81d0-d832fc631239"/>
+					<textFieldExpression><![CDATA[$R{label.sequencingControlReads}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="43" width="100" height="17" uuid="262b83de-5f29-45fc-be01-19b80a94769d"/>
+					<textFieldExpression><![CDATA[$F{sequencingControlReadsPerc}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="72" width="100" height="17" uuid="8dc5e236-6014-477e-a000-96948d325197"/>
+					<textFieldExpression><![CDATA[$R{label.sequencingControlReads}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="89" width="100" height="17" uuid="35fabcc4-d38f-4e3c-82a8-12507cfa52cb"/>
+					<textFieldExpression><![CDATA[$F{sequencingControlReads}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="211" y="72" width="100" height="17" uuid="94bf66de-4f8c-42b8-a29b-a9376e80b161"/>
+					<textFieldExpression><![CDATA[$R{label.qcRunSamplesPassed}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="215" y="89" width="38" height="17" uuid="01844074-20ed-4ee0-a0ca-7b2def197d5e"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{qcRunSamplesPassed}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="73" width="100" height="17" uuid="cf891fa1-d1f8-4f48-bd2a-aca9116c635c"/>
+					<textFieldExpression><![CDATA[$R{label.runSignaltoNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="90" width="100" height="17" uuid="3d4e57ab-7c2c-4062-8769-3353083349ed"/>
+					<textFieldExpression><![CDATA[$F{runSignalToNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="267" y="89" width="41" height="17" uuid="77e4001a-8b0f-4fe1-815e-3334a6e6a514"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{qcRunTotalSamples}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="255" y="89" width="10" height="17" uuid="a99412ea-c4e9-4c8f-9d6e-faf1ad2d7cdd"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[/]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement x="1" y="53" width="159" height="18" uuid="4d542f2c-8d4d-450a-a6ff-da4d1448ba1f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.runLevelQCMetrics}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="207" width="542" height="60" uuid="9e235631-27af-46e0-9c8c-a25e23ec4e22"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="542" height="18" forecolor="#FFFFFF" backcolor="#434141" uuid="dcfd6572-d1db-4e43-b3a9-5c7bfee6f84d"/>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{label.controlResults}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="25" width="100" height="17" uuid="bfc851c5-d7e3-403c-9a16-5a2956c46ea1"/>
+					<textFieldExpression><![CDATA[$R{label.negativeControlResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="42" width="100" height="17" uuid="4e80d18a-3bab-4ad9-8436-dc8356e5e847"/>
+					<textFieldExpression><![CDATA[$F{negativeControlResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="26" width="100" height="17" uuid="2feb074a-6918-43d9-8d58-425a5f3c4722"/>
+					<textFieldExpression><![CDATA[$R{label.positiveControlResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="43" width="100" height="17" uuid="2555c5b3-9377-4e93-8fa2-c9d3e6a5cfd0"/>
+					<textFieldExpression><![CDATA[$F{positiveControlResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="26" width="100" height="17" uuid="7466fc4d-ff74-45e5-8c68-c150cf1f0124"/>
+					<textFieldExpression><![CDATA[$R{label.t21Assessment}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="43" width="100" height="17" uuid="e23c3df5-eb20-4b0e-8a8f-87200d6e10f0"/>
+					<textFieldExpression><![CDATA[$F{t21Assessment}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="289" width="543" height="110" uuid="e84ead90-58f6-452a-b00d-f97a1ccd7930"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="543" height="18" forecolor="#FFFFFF" backcolor="#434141" uuid="cd73a3a8-2d8b-43d2-8f6e-b539b5841ecc"/>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{label.niptrunData}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="25" width="100" height="17" uuid="f35d20e6-cbd4-4411-b592-e4eff5b1549e"/>
+					<textFieldExpression><![CDATA[$R{label.acpBarcode}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="42" width="100" height="17" uuid="9669c470-86d3-40ce-a8d8-fd70002dedf6"/>
+					<textFieldExpression><![CDATA[$F{acpBarcode}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="26" width="100" height="17" uuid="7cbd087b-acab-4cfa-8800-82c9fcc33a38"/>
+					<textFieldExpression><![CDATA[$R{label.runQCResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="43" width="100" height="17" uuid="c47a0a11-20c1-40b7-9564-b734c3e9ebaa"/>
+					<textFieldExpression><![CDATA[$F{runQCResult}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="26" width="100" height="17" uuid="74b96a22-1ee0-47a8-8383-6f0266b2845c"/>
+					<textFieldExpression><![CDATA[$R{label.runQCMedianSignal}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="43" width="100" height="17" uuid="1e90f1c2-c6fa-46ac-a5ba-7cc443a7d6eb"/>
+					<textFieldExpression><![CDATA[$F{runQCMedianSignal}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="76" width="100" height="17" uuid="0d7e8288-6912-4091-9d43-e095e12f966d"/>
+					<textFieldExpression><![CDATA[$R{label.qcrunSignalToNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="93" width="100" height="17" uuid="8af28c3a-bcfc-49f4-92a0-70def6a91fb3"/>
+					<textFieldExpression><![CDATA[$F{qcRunNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="212" y="93" width="100" height="17" uuid="98533660-af0a-435e-a1b1-5b0a1af325e6"/>
+					<textFieldExpression><![CDATA[$F{runSignalToNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="76" width="100" height="17" uuid="f4042fa7-aa58-480d-999e-bea6abf93bc6"/>
+					<textFieldExpression><![CDATA[$R{label.qcRunNoise}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="75" width="100" height="17" uuid="27d39fd7-c649-4e31-b50f-8e46a0298664"/>
+					<textFieldExpression><![CDATA[$R{label.qcRunSamplesPassed}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="11" y="92" width="39" height="16" uuid="ed5e2f0d-c19e-4fa0-87f7-074bcea33bbb"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{qcRunSamplesPassed}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="52" y="93" width="17" height="16" uuid="9b9a0e88-062c-42d4-be7a-d2c501bcc630"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[/]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="71" y="92" width="40" height="18" uuid="b47d172e-3424-4065-86c2-ab331d753536"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{qcRunTotalSamples}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement x="1" y="433" width="179" height="17" uuid="78ddd4c0-414e-41a4-968d-e5727c070d5a"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.sampleLevelQCMetrics}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="526" width="189" height="17" uuid="89eaa6d6-d7ac-4798-95af-05ba55216d1d"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.fsandtrisomy}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="1" y="453" width="542" height="47" uuid="c38670cf-2b45-43a1-afa0-b825637548d8">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="sampleQCMetricsDataset" uuid="bb02fcd9-d0ce-4b1b-b7d7-882bf6668243">
+						<dataSourceExpression><![CDATA[$P{sampleQCResultsDS}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="b88db118-10d1-4084-95f1-b8eb8a08687d">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="ad94492f-d868-4621-be46-7773ea4aa4a4"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Sample ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="20" uuid="bcf9215f-9313-426a-bf4c-e67e6395c1e5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sampleId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d08287d1-c0c6-4ce5-94b3-d33e767aaf28">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="20" forecolor="#FFFFFF" uuid="4e8f777e-28fa-4224-85cb-0832432981d8"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Fetal fraction]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="7065d73f-c01e-4592-a71a-77d8042760c4"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{fetalFraction}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="fcd49507-020f-44f7-ab5f-3cc1a7bf6283">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="f9eed69d-715d-4bde-a94c-8919198e9702"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Array quality]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="20" uuid="ead69d64-eb5b-4ac9-a868-970d1036750e"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{arrayQuality}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="66" uuid="adff1234-5fd7-4dd2-9500-c657ed3f0149">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="20" forecolor="#FFFFFF" uuid="4678155f-34b4-40bc-9a1a-14317d21eda6"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Signal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="66" height="20" uuid="17d34f45-20fd-43e2-8281-631b469e2d99"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{signal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="88" uuid="2730427d-0166-4da3-bbf2-1b44071f9e9a">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="88" height="20" forecolor="#FFFFFF" uuid="ea0ecadd-dcf3-4703-b50f-a13a4b3d156a"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Sample integrity]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="88" height="20" uuid="22e74a52-ad02-4b1c-b316-2387272ae162"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sampleIntegrity}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="1d01f7cd-6f69-420b-b136-1f6db8e58b59">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="1ed60c94-2595-455e-b098-d1f3afb9461f"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Noise]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="20" uuid="8083f57f-0cbf-4794-bf3e-fff9c3d0da07"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{noise}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="78" uuid="b445be49-b488-40b4-904b-082a9372a591">
+						<jr:columnHeader style="Table_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="78" height="20" forecolor="#FFFFFF" uuid="723b60d0-0067-465b-8dfd-bdc2993a59bd"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Signal to noise]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="78" height="20" uuid="93becb0c-94a8-40ba-9151-2736f1cfe796"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{signalToNoise}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement x="0" y="546" width="543" height="44" uuid="542c1b24-7765-4773-9801-034fb48df60b">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dPCRTestoptionDataset" uuid="5401b0d9-7044-4061-8cc4-e9c27c6e4f15">
+						<dataSourceExpression><![CDATA[$P{dpcrTestOptionsDS}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="100" uuid="220aa382-9be3-4a32-a4be-6030bc43f7e9">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="7fac11f2-b01f-43f7-91a2-88d415ebcb02"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Sample ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="20" uuid="fd49947b-aadc-4ad1-b199-d33d973bc6d1"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sampleId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="297a8899-2689-40b8-a8c8-e3c9c12cf68f">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="0ca2cd49-9d27-4449-bfcc-59650a5c3405"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[FS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="20" uuid="bfe8613e-d225-4e0d-bacf-5807ca80c5cb"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{fs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="46a56012-1839-47e8-a4cb-41b9d33fb740">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="20" forecolor="#FFFFFF" uuid="0bbe163d-569a-450b-acbf-f0d8fa2b60f3"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[T13]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="20" uuid="a29997ec-d62a-4d4f-8a56-5a36e75b32de"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{t13}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="f97755af-078f-4ae9-a288-9a3f86491069">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="20" forecolor="#FFFFFF" uuid="ea86ebe8-6667-453c-9315-070e72d48b22"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[T18]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="20" uuid="a1cf6e4d-9f7c-4ebb-bca2-06d696c173a4"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{t18}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="113" uuid="9612adba-5e15-404c-8c8b-4b2f6ca327ce">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<staticText>
+								<reportElement x="0" y="0" width="113" height="20" forecolor="#FFFFFF" uuid="e9bcab2c-4ade-4c42-b3c6-2d7716347540"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[T21]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="113" height="20" uuid="950d1bfa-6716-44c1-b7d0-44601d92f32a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{t21}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

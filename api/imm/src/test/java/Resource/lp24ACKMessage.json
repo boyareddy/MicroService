@@ -1,0 +1,9 @@
+{
+   "status":"SUCCESS",
+   "deviceSerialNumber":"LP001-12",
+   "sendingApplicationName":"CONNECT",
+   "receivingApplication":"dPCRLP24",
+   "dateTimeMessageGenerated":"Tue Nov 13 18:56:17 IST 2018",
+   "messageType":"AcknowledgementMessage",
+   "containerId":"6e75e9b8_A1"
+}

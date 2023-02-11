@@ -1,0 +1,8 @@
+{
+  "deviceId" : "MPCZC8380G5K",
+  "accessioningId":"600001",
+  "processStepName": "dPCR",
+  "messageType" : "ESU",
+  "containerId":"RV-1234_A1",
+  "status":"InProgress"
+}

@@ -1,0 +1,22 @@
+<div style="flex-direction: row;" [class.d-flex]="listCount && unassignedOrders?.length > 0">
+  <div class="unassigned-container" [ngClass]='{"addHeight":listCount == 0}'>
+    
+    <app-order-list *ngIf="listCount > 0; else noOrders" class="order-list-table" 
+      [unassignedOrders]= "unassignedOrders | filter:filterOption:'updatedDateTime':'orderComments'">
+
+    </app-order-list>
+    <ng-template #noOrders>
+        <div class="no-data">{{ 'No unassigned orders currently' | translate}}</div>
+      </ng-template>
+  </div>
+  <app-filter #unassignedFilter [toggleComponent]="toggleUnassignedFilter" [entityList] = "unassignedOrders" [tab]="'unassigned'" (onFilter)="onFilter($event)" (onFilterOptionCount)="onFilterOptionCount($event)"></app-filter>
+</div>
+<app-response-progress *ngIf='isSprinerOn' 
+[diameterValue]='55' 
+[marginTop]='200' 
+[rectPro]='rectPro'
+[spOverlayHeight]="false"
+[spOverlayTop]="198"
+[spOverlayLeft]="20"
+[spOverlayRight]="20"
+></app-response-progress>

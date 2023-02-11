@@ -1,0 +1,180 @@
+/*
+*   Admin UI header container
+*/
+.header-mat-toolbar{
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow:0px 2px 3px rgba(0, 0, 0, .16); 
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.no-shadow{
+    box-shadow: none;
+}
+
+/*
+*   Admin UI header sub container to left section
+*/
+.header-info{
+    display: flex;
+    align-items: center;
+}
+
+/*
+*   Admin UI header sub container to left section
+*   Padding will be applicable for all the child element inside the sub container
+*/
+.header-info *{
+    padding: 10px;
+    padding-left: 10px;
+}
+
+.apps{
+    padding: 0px !important;
+    cursor: pointer;
+    height:21px;
+    width:21px;
+}
+
+.header-logo{
+    padding-right: 0px !important;
+}
+
+/*
+*   Admin UI header sub container to right section
+*/
+.header-info-right div.iconsDetails {
+    padding-right:20px;
+}
+
+.header-info-right div.iconsDetails:last-child {
+    padding-right:0px;
+}
+
+.header-info-right div.iconsDetails img{
+    vertical-align: middle;
+}
+
+.change-password-btn {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #004ea3;
+}
+
+.changePassword{
+    margin: 0px 20px 20px 20px;
+}
+
+
+mat-card-content span{
+    font-family: Roboto-bold;
+}
+
+mat-card-content div{
+    cursor: pointer;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.pt-6 {
+    padding-top: 6px;
+}
+
+.pt-15 {
+    padding-top: 15px !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.header-name {
+    padding-right: 0px !important;
+}
+
+.header-currentPage {
+    padding-left: 0px !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    left: 11px;
+    top: 4px;
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 50px;
+  }
+
+.badgeError{
+    background-color: #cc0033;
+}
+
+.badgeWarning{
+    background-color: #ffc414;
+    color: #191919;
+}
+
+  .flex-column {
+    flex-direction: column;
+}
+
+.userProfile .userName{
+  margin-top: 4px;
+}
+
+.userProfile .userRole {
+    margin-top: 12px;
+}
+
+.userProfile {
+    padding: 0 10px;
+}
+
+.useractions {
+    width: 100%;
+}
+
+.manageProfile {
+  min-width : 195px;
+  padding : 8.5px 0;
+}
+
+.useractions {
+    border-top: 1px solid #d3d3d3;
+    margin-top: 10px;
+}
+
+.useractions div:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+.count {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.16);
+}
+
+.no-padding-right {
+    padding-right: 0px !important;
+}

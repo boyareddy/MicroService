@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="584.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Install" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="582.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text fill="#191919" layoutX="207.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Configuration">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="211.0" layoutY="87.0" text="Rabbit MQ IP address" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="155.0" text="Port number" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="242.0" text="Tomcat server address" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="215.0" layoutY="319.0" text="Port number" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="214.0" layoutY="107.0" prefHeight="28.0" prefWidth="210.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font></TextField>
+            <TextField layoutX="215.0" layoutY="175.0" prefHeight="26.0" prefWidth="209.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font></TextField>
+            <TextField layoutX="214.0" layoutY="265.0" prefHeight="25.0" prefWidth="210.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font></TextField>
+            <TextField layoutX="211.0" layoutY="339.0" prefHeight="28.0" prefWidth="214.0" />
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,8 @@
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619125647||ACK^U03^ACK|29609107-f3ac-4470-9|P|2.5.1||||||UNICODE UTF-8MSA|AA|29609107-f3ac-4470-9
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619125741||ACK^U03^ACK|2f537cd6-5342-4062-a|P|2.5.1||||||UNICODE UTF-8MSA|AA|2f537cd6-5342-4062-a
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619132037||ACK^U03^ACK|3a77fb88-52db-4850-8|P|2.5.1||||||UNICODE UTF-8MSA|AA|3a77fb88-52db-4850-8
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12-Post^M|Roche Diagnostics|20190619132130||ACK^U03^ACK|6fbcf9f2-3209-4dd5-a|P|2.5.1||||||UNICODE UTF-8MSA|AA|6fbcf9f2-3209-4dd5-a
+

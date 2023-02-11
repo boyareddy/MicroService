@@ -1,0 +1,115 @@
+mat-toolbar .header-mat-toolbar{
+    box-shadow: none !important;
+}
+
+.disableDeviceType{
+    background: #e8e8e8 !important;
+    color: #BABABA !important;
+}
+
+.add-dev-place{
+    margin-right: 1.4em;
+    margin-top: 0.64em;
+}
+
+.no-shadow{
+    box-shadow: none;
+}
+
+.sub-header{
+    margin-top: 4em;
+    height: 3.375em;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    text-align: right;
+    border-top: 1px solid #d3d3d3;
+}
+
+.dashboard-container{
+    padding-top: 8em; 
+    padding-right: 4em; 
+    padding-left: 4em;
+}
+
+.device-place{
+    padding: 0.6em; 
+    // float: left;
+}
+
+.t-header{
+    background: #fff !important;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)!important;
+}
+
+.no-dev-lst{
+    color: gray;
+    text-align: center;
+    margin-top: 6em;
+}
+
+.save-btn{
+    background-color: #004ea3;
+}
+
+.dropdownhover:hover {
+    background-color: #e8e8e8;
+    }
+    
+.device-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 87%;
+    margin: 0px auto 0;
+    padding-top: 18px;
+    padding-bottom: 1%;
+}
+.device-container_noDevice{
+     display: flex;
+     flex-wrap: wrap;
+     width: 97%;
+    // margin: 0px auto 0;
+    // padding-top: 18px;
+    // padding-bottom: 1%;
+     margin: 20px 20px 2.2%;
+    // background: #fff;
+    // box-shadow: 0 2px 3px rgba(0,0,0,.16);
+    // overflow: hidden;
+    //padding: 0px 20px 0px 20px;
+}
+
+.add-icon{
+    width: 15px;
+    height: 23px;
+    padding-left: 5px;
+}
+
+/deep/{
+    // .cdk-overlay-connected-position-bounding-box{
+    //     right: 81.6094px !important;
+    // }
+
+    .cdk-overlay-pane{
+        right: 81.6094px !important;
+    }
+
+    .mat-menu-content{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .mat-menu-item{
+        font-family: "roboto-regular" !important;
+        font-size: 16px !important;
+        color: #191919 !important;
+    }
+    
+    .mat-elevation-z2{
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+    }
+
+    .mt-8 {
+        margin-top: 8px !important;
+    }
+}

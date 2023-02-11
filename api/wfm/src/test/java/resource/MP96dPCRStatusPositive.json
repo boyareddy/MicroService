@@ -1,0 +1,26 @@
+{
+	  "deviceSerialNumber" : "12345",
+  "sendingApplicationName" : "MagNA Pure 96",
+  "messageType" : "OUL",
+  "accessioningId" : "00023",
+  "runResultsId" : "99999",
+  "runResultStatus" : "Passed",
+  "oulSampleResultMessage" : {
+    "time" : "20181024191916",
+    "operator" : "admin",
+    "accessioningId" : "929292",
+    "outputContainerId" : "83c8a11b-",
+    "reagentKitName" : "Cellular RNA LV",
+    "reagentVesion" : "0.2",
+    "runStartTime" : "20181024171916",
+    "runEndTime" : "20181024191916",
+    "outputPlateType" : "96WellPlate",
+    "protocal" : "Cellular RNA LV 0.6.4",
+    "sampleVolume" : "200",
+    "elevateVolume" : "50",
+    "softwareVersion" : "1.0.0",
+    "serialNo" : "506 ",
+    "position" : "A1",
+    "sampleResult" : "P"
+  }
+}

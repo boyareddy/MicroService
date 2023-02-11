@@ -1,0 +1,4 @@
+<div *ngIf="display" style="cursor: pointer" (click)="toggleComponent()">
+  <mat-icon class="icon" svgIcon="filter"></mat-icon>
+  <span *ngIf="optionCount !== 0" class="badge font-12 roboto-regular">{{optionCount}}</span>
+</div>

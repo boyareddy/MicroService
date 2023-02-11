@@ -1,0 +1,126 @@
+<mat-card>
+  <div class="d-flex flex-align-center pb-20">
+    <div class="img-right-16">
+      <img src="assets/Images/assayDetails.svg" alt="assayDetails" class="vertical-middle" height="44px" width="44px">
+    </div>
+    <div>
+      <div class="card-main-header-info">
+          {{ 'orders.orderCards.assayDetails.title' | translate }}
+      </div>
+    </div>
+  </div>
+  <mat-card-content *ngIf='assayDetails != null'>
+
+    <div class="pb-20 line-height">
+        <div class="label_name">
+          {{ 'orders.orderCards.assayDetails.assayType' | translate }}
+        </div>
+        <div class="label_value">{{ assayDetails.assayType | translate }}</div>
+      </div>
+
+    <div class="pb-20 line-height d-flex">
+      <div class="flex1">
+          <div class="label_name">
+              {{ 'orders.orderCards.assayDetails.maternalAge' | translate }}
+          </div>
+          <div class="label_value">
+            <app-warning-required
+              *ngIf='assayDetails.assay.maternalAge === "" || assayDetails.assay.maternalAge === null || assayDetails.assay.maternalAge === undefined'
+              [processStepName]='processStepNameInfo'
+              [fieldName]='maternalAge'
+              [assayType]='assayType'
+              [fieldValue]='assayDetails.assay.maternalAge'
+              [requiredMandatoryInfo]='patientConfigFile'>
+            </app-warning-required>
+            <ng-container *ngIf='(assayDetails.assay.maternalAge === "" || assayDetails.assay.maternalAge === null || assayDetails.assay.maternalAge === undefined);else showEmptyCheck'>
+                <ng-container *ngIf='is_maternalAgeFieldValid; else showEmptyCheck'>
+                    <span>{{ missingText }}</span>
+                </ng-container>
+            </ng-container>
+            <ng-template #showEmptyCheck>
+              {{ assayDetails.assay.maternalAge }}
+            </ng-template>
+          </div>
+      </div>
+      <div class="flex1">
+        <div class="label_name">
+          {{ 'orders.orderCards.assayDetails.gestationalAge' | translate }}
+        </div>
+        <div class="label_value">
+          <ng-container *ngIf='assayDetails.assay.gestationalAgeWeeks ||  (assayDetails.assay.gestationalAgeDays !== null);else gesAgeInfo'>
+              {{ (assayDetails.assay.gestationalAgeWeeks ? assayDetails.assay.gestationalAgeWeeks : '-') }} {{ 'orders.orderCards.assayDetails.weeks' | translate }} {{ (assayDetails.assay.gestationalAgeDays !== null ? assayDetails.assay.gestationalAgeDays : '-')
+              }} {{ 'orders.orderCards.assayDetails.days' | translate }}
+          </ng-container>
+          <ng-template #gesAgeInfo>
+            <app-warning-required
+            *ngIf='assayDetails.assay.gestationalAgeWeeks === "" || assayDetails.assay.gestationalAgeWeeks === null || assayDetails.assay.gestationalAgeWeeks === undefined'
+              [processStepName]='processStepNameInfo'
+              [fieldName]='gestational_age'
+              [fieldValue]='assayDetails.assay.gestationalAgeWeeks'
+              [assayType]='assayType'
+              [requiredMandatoryInfo]='patientConfigFile'>
+            </app-warning-required>
+            <ng-container *ngIf='is_gestational_ageFieldValid; else showEmptyCheckGes'>
+                <span>{{ missingText }}</span>
+            </ng-container>
+            <ng-template #showEmptyCheckGes>
+              -
+            </ng-template>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+    <!-- <app-shared-order-details 
+      [field1]="{'key': 'assayDetails.maternalAge', 'value': assayDetails.assay.maternalAge }" 
+      [field2]="{'key': 'assayDetails.gestationalAge', 'value': assayDetails.assay.gestationalAgeWeeks+ '' }">
+      </app-shared-order-details> -->
+      
+    <app-shared-order-details 
+        [field1]="{'key': 'assayDetails.IVFStatus', 'value': assayDetails.assay.ivfStatus, 
+          'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': ivf_status }" 
+        [field2]="{'key': 'assayDetails.eggDonor', 'value': assayDetails.assay.eggDonor }">
+    </app-shared-order-details>
+
+    <app-shared-order-details 
+        [field1]="{'key': 'assayDetails.eggDonorAge', 'value': assayDetails.assay.eggDonorAge }" 
+        [field2]="{'key': 'assayDetails.numberOfFetus', 'value': assayDetails.assay.fetusNumber, 
+        'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': number_of_fetus }">
+    </app-shared-order-details>
+
+    <app-shared-order-details 
+      [field1]="{'key': 'assayDetails.collectionDate', 'value': assayDetails.assay.collectionDate, 'isOnlyDate': 'true' }"
+      [field2]="{'key': 'assayDetails.receivedDate', 'value': assayDetails.assay.receivedDate, 'isOnlyDate': 'true'  }">
+    </app-shared-order-details>
+
+    <div class="last_column">
+      <div class="label_name">
+        {{ 'orders.orderCards.assayDetails.testOptionsTitle' | translate }}
+      </div>
+      <div class="mat-chip-list-cont">
+        <mat-chip-list class="output_cont_mat_chip" focused='false'>
+          <div class="mat-chip-container-1" [class.w-62]="!(assayDetails?.assayType?.toLowerCase().indexOf('dpcr') !== -1)">
+            <div *ngFor="let key of objectKeys(assayDetails.assay.testOptions)">
+              <mat-chip *ngIf="assayDetails.assay.testOptions[key]" color="primary" class="pl-0 pt-0 pb-0 bg-light{{ key }} bg-light" disabled='true'>
+                <span class="circle bg-{{ key }} bg-key"></span>
+                <span class="pl-1 pr-1 font-12 roboto-regular chip-color mat-chip-name">
+                  {{ key | translate}}
+                </span>
+              </mat-chip>
+            </div>
+          </div>
+        </mat-chip-list>
+      </div>
+    </div>
+
+    <mat-divider class="bottom-mat-divider"></mat-divider>
+    <!-- Edit details link to navigating to order edit page-->
+    <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14" (click)="editDetails()" *ngIf="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+      <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14 disabled-text" *ngIf="!havingAccess" matTooltip="{{ 'common.accessRestricted' | translate}}"
+      [matTooltipClass]="'tooltipDetails'" [matTooltipDisabled]="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+  </mat-card-content>
+</mat-card>

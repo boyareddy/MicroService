@@ -1,0 +1,45 @@
+[{
+	"deviceType": "MP96",
+	"processStepSeq": 1,
+	"processStepName": "NA Extraction",
+	"inputContainerType": "96 Well plate",
+	"outputContainerType": "96 Well plate",
+	"manualVerificationFlag": "Y",
+	"assayType": "NIPTDPCR",
+	"sampleVolume": "200",
+	"eluateVolume": "50",
+	"reagent": "Cellular RNA LV"
+  }, {
+	"deviceType": "LP24",
+	"processStepSeq": 2,
+	"processStepName": "Library Preparation",
+	"inputContainerType": "96 Well plate",
+	"outputContainerType": "dPCR Chip",
+	"manualVerificationFlag": "Y",
+	"assayType": "NIPTDPCR",
+	"sampleVolume": "50",
+	"eluateVolume": "40",
+	"reagent": "LP24_dPCR Protocol"
+  }, {
+	"deviceType": "",
+	"processStepSeq": 3,
+	"processStepName": "dPCR Analysis",
+	"inputContainerType": "",
+	"outputContainerType": "",
+	"manualVerificationFlag": "Y",
+	"assayType": "NIPTDPCR",
+	"sampleVolume": "",
+	"eluateVolume": "",
+	"reagent": ""
+  }, {
+	"deviceType": "",
+	"processStepSeq": 4,
+	"processStepName": "Analysis",
+	"inputContainerType": "",
+	"outputContainerType": "",
+	"manualVerificationFlag": "Y",
+	"assayType": "NIPTDPCR",
+	"sampleVolume": "",
+	"eluateVolume": "",
+	"reagent": ""
+  }]

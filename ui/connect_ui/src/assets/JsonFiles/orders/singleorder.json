@@ -1,0 +1,47 @@
+{
+  "order": {
+    "orderId": 10000145,
+    "patientId": 146,
+    "patientSampleId": 291,
+    "accessioningId": "nipt-dpcr-24",
+    "orderStatus": "unassigned",
+    "assayType": "NIPTDPCR",
+    "sampleType": "Plasma",
+    "retestSample": true,
+    "orderComments": "Run-1 dpcr",
+    "priority": "Normal",
+    "activeFlag": "Y",
+    "createdBy": "admin#@#hcl.com",
+    "createdDateTime": "2019-05-09T10:24:23.660Z",
+    "updatedBy": null,
+    "updatedDateTime": "2019-05-09T10:24:23.660Z",
+    "assay": {
+      "patientAssayid": 146,
+      "maternalAge": 56,
+      "gestationalAgeWeeks": 2,
+      "gestationalAgeDays": 1,
+      "ivfStatus": "No",
+      "eggDonorAge": null,
+      "eggDonor": null,
+      "fetusNumber": "Missing",
+      "collectionDate": "2018-02-05T18:30:00.000Z",
+      "receivedDate": "2018-02-05T18:30:00.000Z",
+      "testOptions": {
+        "Harmony Prenatal Test (T21, T18, T13)": false,
+        "Fetal Sex": true
+      }
+    },
+    "patient": {
+      "patientLastName": "james",
+      "patientFirstName": "bond",
+      "patientDOB": "",
+      "patientMedicalRecNo": "Jame12",
+      "labId": "RMN",
+      "accountNumber": "NA111",
+      "otherClinicianName": "SASS",
+      "clinicName": "NMSAS",
+      "refClinicianName": "annsdnand",
+      "reasonForReferral": "no reason just for fun purpose"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+	"order": {
+				"harmony": false,
+				"scap": false,
+				"fetalSex": false,
+				"mx": true
+	
+		},
+		"patient": {
+			"patientLastName": "sanga",
+			"patientFirstName": "mithiran",
+			"patientGender": "Male",
+			"patientMedicalRecNo": "213213123123123",
+			"patientDOB": "2018-07-02T18:30:00.000Z",
+			"patientContactNo": "213213123123123",
+			"treatingDoctorName": "asdasda",
+			"treatingDoctorContactNo": "213213123123123",
+			"refClinicianName": "asdas",
+			"refClinicianFaxNo": "213213123123123",
+			"otherClinicianName": "edfsd",
+			"otherClinicianFaxNo": "213213123123123",
+			"refClinicianClinicName": "asdasda"
+		}
+	}
+}

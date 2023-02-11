@@ -1,0 +1,28 @@
+.order-info-container{
+    margin-bottom: 7.4%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 423px);
+    padding: 20px;
+}
+
+.mt-4 {
+    margin-top: 4.2em;
+}
+
+.order-creation-accordion .mat-expansion-panel-header-description {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.app-order-details , .app-assay-details , .app-patient-details{
+    min-height: 95.4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-order-details , .app-assay-details , .app-patient-details{
+        display: block;
+    }
+}

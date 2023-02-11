@@ -1,0 +1,13 @@
+{
+	"pasjars" : "/opt/roche/connect/bin/CARE",
+	"connectjars" : "/opt/roche/connect/bin",
+	"tempfile" : "/opt/roche/connect/scripts/Backup_scripts/DB_FULL_BACKUP",
+	"pgwalfiles" : "/home/rconnect/roche/pg_wal_archivedir",
+	"dbbase" : "/var/lib/postgresql/9.6/main",
+	"webapps" : "/var/lib/tomcat8",
+	"dbconf" : "/etc/postgresql/9.6/main",
+	"resultlocation": "/opt/roche/connect/scripts/Backup_scripts",
+	"yaml": "/opt/roche/connect/yaml_runtime",
+	"restorejson": "/opt/roche/connect/scripts/Backup_scripts",
+	"postgrespassword" : "postgres123"
+}

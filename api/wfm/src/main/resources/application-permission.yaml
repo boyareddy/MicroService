@@ -1,0 +1,108 @@
+---
+#Logger Service
+    
+LoggerService: 
+  setLogLevel: 
+    preauthorize: isAuthenticated()
+  getLogLevel: 
+    preauthorize: isAuthenticated()
+
+#Tenant Unaware Entity Service
+
+TenantUnawareUnifiedJsonDataService: 
+  fetchEntity: 
+    preauthorize: isAuthenticated()
+  fetchEntities: 
+    preauthorize: isAuthenticated()  
+  createEntity: 
+    preauthorize: isAuthenticated()
+  updateEntity: 
+    preauthorize: isAuthenticated()
+  deleteEntity: 
+    preauthorize: isAuthenticated()
+
+#Tenant Unaware Entity Data table Service
+
+TenantUnawareUnifiedDataTableService: 
+  fetchEntities: 
+    preauthorize: isAuthenticated()
+    
+#Entity Service
+
+UnifiedJsonDataService: 
+  fetchEntity: 
+    preauthorize: isAuthenticated()
+  fetchEntities: 
+    preauthorize: isAuthenticated()  
+  createEntity: 
+    preauthorize: isAuthenticated()
+  updateEntity: 
+    preauthorize: isAuthenticated()
+  deleteEntity: 
+    preauthorize: isAuthenticated()
+
+#Data List Service
+
+UnifiedDataTableService: 
+  fetchEntities: 
+    preauthorize: isAuthenticated()
+
+#Company Rest Service
+
+CompanyRestService: 
+  getCompanyId: 
+    preauthorize: permitAll()
+  createCompany: 
+    preauthorize: hasAuthority('Create_Company')
+  getMyDescendants: 
+    preauthorize: hasAuthority('Read_Company')
+  getDescendantsCompaniesLike: 
+    preauthorize: hasAuthority('Read_Company')
+    
+        
+#Application  User service
+
+UserRestService: 
+  getUserId: 
+    preauthorize: permitAll()
+  createUser: 
+    preauthorize: hasAuthority('Create_User')
+  deleteUser: 
+    preauthorize: hasAuthority('Delete_User')
+  fetchLocales: 
+    preauthorize: isAuthenticated()
+  fetchLoggedinUserLocale: 
+    preauthorize: hasAuthority('Read_User')
+  fetchUserLocale: 
+    preauthorize: permitAll()
+  fetchUserMobileNumber: 
+    preauthorize: permitAll()
+  updateUser: 
+    preauthorize: hasAuthority('Update_User')
+  getUsers: 
+    preauthorize: hasAuthority('Read_User')
+  sendPasswordReserMail: 
+    preauthorize: isAuthenticated()
+  sendForgotPasswordMail: 
+    preauthorize: permitAll()
+    
+#Application User/Company sync service
+
+ApplicationCompanyAndUserSyncService: 
+  createCompany: 
+    preauthorize: hasAuthority('Create_Company')
+  createUser: 
+    preauthorize: hasAuthority('Create_User')
+  updateUser: 
+    preauthorize: hasAuthority('Update_User')
+  deleteUser: 
+    preauthorize: hasAuthority('Delete_User')
+#Deleting AuditTrail history data
+    
+AuditTrailHistory: 
+  deleteHistoryData: 
+    preauthorize: hasAuthority('Delete_History_Data')
+  deleteRangeHistoryData: 
+    preauthorize: hasAuthority('Delete_History_Data')
+  fetchHistory: 
+    preauthorize: isAuthenticated()

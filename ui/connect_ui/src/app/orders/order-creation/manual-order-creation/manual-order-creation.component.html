@@ -1,0 +1,811 @@
+<div [class.slideLftRgtCls]="orderId">
+    <app-header [headerInfo]="headerInfo" *ngIf='orderId'></app-header>
+    <form [formGroup]="orderInfo">
+    <div class="accordion-container expansion-data" [class.accord-top]='!orderId'>
+            <mat-accordion class="order-creation-accordion" formGroupName="order">
+    
+                <!-- Order Information -->
+                <mat-expansion-panel hideToggle="true" [expanded]="step === 0" (opened)="setStep(0)" class="firstExpansionPanel">
+                    <mat-expansion-panel-header class="acc-panel-header">
+                        <mat-panel-title>
+                            <img src="assets/Images/orderInfo.svg" class="img-right-16" alt="Image" >
+                            <span class="card-main-header-info">
+                                {{'orders.orderForm.orderDetails.accordionHeading' | translate}}
+                            </span>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                                <app-warning-required-order-info
+                                *ngIf="orderInfo.get('order.orderId').value !== null"
+                                [orderInfo]="{'orderComments': orderInfo.get('order.orderComments').value}" 
+                                [assayDetails]="orderInfo.get('order.assayType').value"
+                                [patientConfigInfo]= "patientConfigInfo"
+                                [stepName]="orderSectionName"
+                                [processStepName]='processStepNameInfo'
+                                (isWarningRequired)="handleWarningIcon($event)"
+                                >
+                            </app-warning-required-order-info>
+                            <img *ngIf="isValidOrder()" src="assets/Images/completed.png" class="img-height" alt="completed">
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+                        <!-- Order Id -->
+                        <input type="hidden" formControlName="orderId">
+    
+                        <!-- Accessioning ID with validations Required -->
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular"
+                                            [class.read-only]='(isDisabled() || isAvailableInCSV)' #accessioningId>
+                                <mat-label>
+                                    {{'orders.orderForm.orderDetails.accessioningID' | translate}}
+                                </mat-label>
+                                <input type="text" matInput 
+                                       placeholder="" name="accessioningId" id="accessioningId" formControlName="accessioningId" 
+                                       autocomplete="off" [readonly]='(isDisabled() || isAvailableInCSV)'  (blur)="duplicateAccessioningIdValidation()" 
+                                       [errorStateMatcher]="matcher" required="required"
+                                       appTrim appMinMax [parentField]="accessioningId" maxlength="20">
+                                <mat-error *ngIf="orderInfo.get('order.accessioningId').invalid">
+                                    {{ orderInfo.get('order.accessioningId').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Assay Type Dropdown values coming from API -->
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular"
+                                            [class.read-only]='(isDisabled() || isAvailableInCSV)'>
+                                <mat-label>
+                                    {{'orders.orderForm.orderDetails.assayType' | translate}}
+                                </mat-label>
+                                <mat-select placeholder="" name="assayType" id="assayType" 
+                                            required="required" formControlName="assayType"
+                                            [errorStateMatcher]="matcher" (selectionChange)="onAssayTypeChange($event)"
+                                            [disabled]='(isDisabled() || isAvailableInCSV)'>
+    
+                                            <mat-option *ngFor="let assay of assayTypeList" 
+                                                        [value]="assay.assayType" 
+                                                        selected="assayType">{{assay.assayType | translate}}</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="orderInfo.get('order.assayType').invalid">
+                                    {{ orderInfo.get('order.assayType').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Retest Sample Available Angular material toggle(default yes) -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="retest-grid-item roboto-regular mat-grid-tile-margin">
+                            <span>
+                                {{'orders.orderForm.orderDetails.retestSampleAvailableTitle' | translate}}
+                            </span>
+                            <mat-slide-toggle   style="margin-left: 2em;" 
+                                                formControlName="retestSample" 
+                                                color="primary">
+                            </mat-slide-toggle>
+                            <span *ngIf='!orderInfo.get("order.retestSample").value' class="margin-10">
+                                    {{'orders.orderForm.orderDetails.retestSampleAvailableNo' | translate}}
+                            </span>
+                            <span *ngIf='orderInfo.get("order.retestSample").value' class="margin-10">
+                                {{'orders.orderForm.orderDetails.retestSampleAvailableYes' | translate}}
+                            </span>
+                        </mat-grid-tile>
+    
+                        <!-- Based on Assay Type sample type will be auto populated -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular"  
+                                            [class.read-only]='isDisabled()'>
+                                <mat-label>
+                                    {{'orders.orderForm.orderDetails.sampleType' | translate}}
+                                </mat-label>
+                                <mat-select #sampleType placeholder="" 
+                                            name="sampleType" id="sampleType" formControlName="sampleType" 
+                                            required="required" [errorStateMatcher]="matcher" [disabled]='isDisabled()'>
+                                    <mat-option *ngFor="let sample of sampleTypeList" 
+                                                [value]="sample.sampleType" 
+                                                selected="sampleType">{{sample.sampleType | translate}}</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="orderInfo.get('order.sampleType').invalid">
+                                    {{ orderInfo.get('order.sampleType').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                    </mat-grid-list>
+    
+                    <!-- Comments section -->
+                    <mat-form-field appearance="fill" class="width-full roboto-regular margin-tb-20" #orderComments>
+                        <mat-label>
+                            {{'orders.orderForm.orderDetails.comments' | translate}}
+                        </mat-label>
+                        <textarea appTrim matInput placeholder="" 
+                                  name="orderComments" id="orderComments" formControlName="orderComments" 
+                                  rows="4"  appMinMax [parentField] = "orderComments" maxlength="150">
+                        </textarea>
+                        
+                        <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                            <app-warning-required *ngIf="!orderInfo.get('order.orderComments').value"
+                                [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                [fieldName]="commentsField" 
+                                [fieldValue]="orderInfo.get('order.orderComments').value" 
+                                [requiredMandatoryInfo]="patientConfigInfo">
+                            </app-warning-required>
+                        </span>
+
+                        <mat-error *ngIf="orderInfo.get('order.orderComments').invalid">
+                            {{ orderInfo.get('order.orderComments').errors.errorMsg | translate }}
+                        </mat-error>
+                    </mat-form-field>
+    
+                    <mat-action-row style="margin:0" 
+                                    class="navigation-buttons" 
+                                    *ngIf="orderInfo.get('order.orderId').value == null">
+                        <button  mat-button color = "primary" 
+                                 (click)="nextStep()" type="button" 
+                                 [disabled]="!isValidOrder()" class="roboto-bold font-14">
+                                    {{ 'orders.naigationButtons.next' | translate }}
+                        </button>
+    
+                    </mat-action-row>
+    
+                </mat-expansion-panel>
+    
+    
+                <!-- Assay details -->
+                <mat-expansion-panel    hideToggle="true" [expanded]="step === 1" 
+                                        (opened)="setStep(1)" formGroupName="assay"
+                                        [disabled]="!isValidOrder()" class="secondExpansionPanel ">
+                    <mat-expansion-panel-header class="acc-panel-header">
+                        <mat-panel-title>
+                            <img src="assets/Images/assayDetails.svg" class="img-right-16" alt="assayDetails" >
+                            <span class="card-main-header-info">
+                                {{ 'orders.orderForm.assayDetails.accordionHeading' | translate }}
+                            </span>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <app-warning-required-order-info 
+                                    *ngIf="orderInfo.get('order.orderId').value !== null"
+                                    [orderInfo]="orderInfo.get('order.assay').value" 
+                                    [assayDetails]="orderInfo.get('order.assayType').value"
+                                    [patientConfigInfo]= "patientConfigInfo"
+                                    [stepName]="assaySectionName"
+                                    [processStepName]='processStepNameInfo'
+                                    (isWarningRequired)="handleWarningIcon($event)">
+                            </app-warning-required-order-info>
+                            <ng-container *ngIf="orderInfo.get('order.assay').valid">
+                                <img src="assets/Images/completed.png" class="img-height" alt="completed" *ngIf='!assayWarningSymbolInfo'>
+                            </ng-container>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+    
+                        <!-- Maternal Age Validation from 1 to 100 number -->
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #maternalAge>
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.maternalAge' | translate }}
+                                </mat-label>
+                            <input  type="number" appTrim matInput appMinMax numbersOnly
+                                    placeholder="" 
+                                    name="maternalAge" id="maternalAge" formControlName="maternalAge" 
+                                    [min]='maternal[0]?.minVal' [max]='maternal[0]?.maxVal' 
+                                    [parentField] = "maternalAge" maxlength="3" 
+                                    (keyup)="updatedmaternalAgeValidation()"
+                                    (mouseup)="updatedmaternalAgeValidation()"
+                                    pattern="\d*" max="999" autocomplete="off" [errorStateMatcher]="numberMatcher">
+                            
+                                    <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                        <app-warning-required *ngIf="!orderInfo.get('order.assay.maternalAge').value"
+                                            [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                            [fieldName]="maternal_ageField" 
+                                            [fieldValue]="orderInfo.get('order.assay.maternalAge').value" 
+                                            [requiredMandatoryInfo]="patientConfigInfo">
+                                        </app-warning-required>
+                                    </span>
+    
+                                <mat-error *ngIf="orderInfo.get('order.assay.maternalAge').invalid">
+                                    {{ orderInfo.get('order.assay.maternalAge').errors.errorMsg | translate}}
+                                </mat-error>
+                            </mat-form-field> 
+                        </mat-grid-tile>
+    
+                        <!-- Ivf status data coming from the API -->
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular">
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.IVFStatus' | translate }}
+                                </mat-label>
+                                <mat-select placeholder="" 
+                                            name="ivfStatus" id="ivfStatus" formControlName="ivfStatus" 
+                                            [errorStateMatcher]="matcher" 
+                                            (selectionChange)="onIVFStatusChange($event)">
+                                        <mat-option *ngFor="let ivfStatus of ivfStatusValues" 
+                                                    [value]="ivfStatus.value">{{ivfStatus.value | translate}}</mat-option>
+                                </mat-select>
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.assay.ivfStatus').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="iVF_statusField" 
+                                        [fieldValue]="orderInfo.get('order.assay.ivfStatus').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+    
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Gestational Age in weeks -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+                            
+                        <!-- Gestational Age in weeks -->
+                            <mat-form-field appearance="fill" class="width-full roboto-regular gesweeks" #gestationalAgeWeeks>
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.gestationalAgeWeeks' | translate }}
+                                </mat-label>
+                                
+                                <input type="number" matInput appMinMax numbersOnly
+                                        placeholder=""
+                                        name="gestationalAgeWeeks" id="gestationalAgeWeeks" formControlName="gestationalAgeWeeks"
+                                        [min]='gestationalWeeks[0]?.minVal' [max]='gestationalWeeks[0]?.maxVal' 
+                                        [parentField] = "gestationalAgeWeeks" maxlength="3" pattern="\d*" 
+                                        max="999" autocomplete="off"
+                                        [errorStateMatcher]="numberMatcher">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.assay.gestationalAgeWeeks').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="gestational_ageField" 
+                                        [fieldValue]="orderInfo.get('order.assay.gestationalAgeWeeks').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+            
+                                <mat-error *ngIf="orderInfo.get('order.assay.gestationalAgeWeeks').invalid">
+                                    {{ orderInfo.get('order.assay.gestationalAgeWeeks').errors.errorMsg | translate}}
+                                </mat-error>
+                        </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Number of fetus data  getting from API -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+
+                            <mat-form-field appearance="fill" class="width-full roboto-regular">
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.NumberOfFetus' | translate }}
+                                </mat-label>
+                                <mat-select placeholder="" 
+                                            name="fetusNumber" id="fetusNumber" formControlName="fetusNumber" 
+                                            [errorStateMatcher]="matcher" 
+                                            (focus)="focusOutCalender(collectionDate, 'assay.collectionDate');">
+                                        <mat-option *ngFor="let fetuse of fetusesValues" 
+                                                    [value]="fetuse.value">{{fetuse.value |translate}}</mat-option>
+                                </mat-select>
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+										<app-warning-required *ngIf="!orderInfo.get('order.assay.fetusNumber').value"
+											[processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+											[fieldName]="number_of_fetusField" 
+											[fieldValue]="orderInfo.get('order.assay.fetusNumber').value" 
+											[requiredMandatoryInfo]="patientConfigInfo">
+										</app-warning-required>
+                                </span>
+    
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+                            <!-- Gestational age in days -->
+                        <mat-form-field appearance="fill" class="width-full roboto-regular gesdays" #gestationalAgeDays>
+                            <mat-label>
+                                {{ 'orders.orderForm.assayDetails.gestationalAgedays' | translate }}
+                            </mat-label>
+                            
+                            <input  type="number" matInput appMinMax numbersOnly
+                                    placeholder=""
+                                    name="gestationalAgeDays" id="gestationalAgeDays" formControlName="gestationalAgeDays"  
+                                    [min]='gestationalDays[0]?.minVal' [max]='gestationalDays[0]?.maxVal' 
+                                    [parentField] = "gestationalAgeDays" maxlength="3" pattern="\d*" 
+                                    max="999" autocomplete="off" [errorStateMatcher]="numberMatcher">
+                            
+                            <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                <app-warning-required *ngIf="!orderInfo.get('order.assay.gestationalAgeDays').value"
+                                    [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                    [fieldName]="gestational_ageField" 
+                                    [fieldValue]="orderInfo.get('order.assay.gestationalAgeDays').value" 
+                                    [requiredMandatoryInfo]="patientConfigInfo">
+                                </app-warning-required>
+                            </span>
+
+                            <mat-error *ngIf="orderInfo.get('order.assay.gestationalAgeDays').invalid">
+                                {{ orderInfo.get('order.assay.gestationalAgeDays').errors.errorMsg | translate}}
+                            </mat-error>
+                    </mat-form-field>
+                        </mat-grid-tile>
+    
+    
+                        <!-- Collection date mandatory field -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin-10">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular">
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.collectionDate' | translate }}
+                                </mat-label>
+                                <input  tabindex="-1" matInput 
+                                        [matDatepicker]="collectionDate" 
+                                        [max]='collectionDateMax' 
+                                        placeholder="" 
+                                        name="collectionDate" id="collectionDate" formControlName="collectionDate"
+                                        required="required" autocomplete="off" readonly 
+                                        (click)="setFocusCalender(collectionDate, 'assay.collectionDate')"
+                                        [errorStateMatcher]="matcher" (keypress)="_keyPress($event)">
+                                <mat-datepicker-toggle  matSuffix [for]="collectionDate" 
+                                                        (focusin)="focusOutCalender(collectionDate, 'assay.collectionDate');
+                                                        focusOutCalender(receivedDate, 'assay.receivedDate');">
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #collectionDate 
+                                                (closed)="focusOutCalender(collectionDate, 'assay.collectionDate');
+                                                focusOutCalender(receivedDate, 'assay.receivedDate');">
+                                </mat-datepicker>
+                                <mat-error *ngIf="orderInfo.get('order.assay.collectionDate').invalid && isCollectionDateError">
+                                    {{'Please select the Collection date.' | translate}}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Egg donar data coming from API -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="eggDonor mat-grid-tile-margin-10">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular eggDonorField" [class.read-only]='isDisabledEggDonorField'>
+                                <mat-label #eggDonnerLabel>
+                                    {{ 'orders.orderForm.assayDetails.eggDonor' | translate }}
+                                </mat-label>
+                                <mat-select placeholder="" 
+                                            name="eggDonor" id="eggDonor" formControlName="eggDonor" 
+                                            (focus)="focusOutCalender(collectionDate, 'assay.collectionDate');" 
+                                            [errorStateMatcher]="matcher" [disabled]='isDisabledEggDonorField'
+                                            [class.read-only]='isDisabledEggDonorField'
+                                            [required]="!isDisabledEggDonorField ? 'required' : 'false'"
+                                            (selectionChange)="eggDonorChange($event)">
+                                
+                                <mat-option *ngFor="let eggDonner of eggDonnerValues" 
+                                            [value]="eggDonner.value">{{eggDonner.value | translate}}</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="orderInfo.get('order.assay.eggDonor').invalid">
+                                    {{'Please select the egg donor.' | translate}}
+                                </mat-error>
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="fill" class="width-full roboto-regular eggDonorAge" 
+                                            #eggDonorAge 
+                                            [class.read-only]='(isDisabledEggDonorAgeField || isDisabledEggDonorField)'>
+                                <mat-label>
+                                    {{ 'orders.orderForm.assayDetails.eggDonorAge' | translate }} 
+                                </mat-label>
+                                <input  type="number" matInput appMinMax numbersOnly
+                                        placeholder="" 
+                                        name="eggDonorAge" id="eggDonorAge" formControlName="eggDonorAge" 
+                                        [min]='eggDonorAgeValues?.minVal' [max]='eggDonorAgeValues?.maxVal'
+                                        [parentField] = "eggDonorAge" maxlength="3" pattern="\d*" max="999" 
+                                        autocomplete="off"  [errorStateMatcher]="matcher"
+                                        [readonly]="(isDisabledEggDonorAgeField || isDisabledEggDonorField)"
+                                        [required]="!(isDisabledEggDonorAgeField || isDisabledEggDonorField) ? 'required' : 'false'">
+    
+                                <mat-error *ngIf="orderInfo.get('order.assay.eggDonorAge').invalid">
+                                    {{ orderInfo.get('order.assay.eggDonorAge').errors.errorMsg | translate}}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Received Date Mandatory field-->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin-15">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular">
+                                <mat-label> 
+                                    {{ 'orders.orderForm.assayDetails.receivedDate' | translate }}
+                                </mat-label>
+                                <input  matInput tabindex="-1" 
+                                        [matDatepicker]="receivedDate" [max]='receivedDateMax' 
+                                        placeholder="" 
+                                        name="receivedDate" id="receivedDate" formControlName="receivedDate" 
+                                        required="required" autocomplete="off" readonly
+                                        [errorStateMatcher]="matcher" 
+                                        (click)="setFocusCalender(receivedDate, 'assay.receivedDate')" 
+                                        (keypress)="_keyPress($event)">
+                                <mat-datepicker-toggle  matSuffix [for]="receivedDate" 
+                                                        (focusin)="focusOutCalender(collectionDate, 'assay.collectionDate');
+                                                        focusOutCalender(receivedDate, 'assay.receivedDate');">
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #receivedDate 
+                                                (closed)="focusOutCalender(receivedDate, 'assay.receivedDate')">
+                                </mat-datepicker>
+                                <mat-error *ngIf="orderInfo.get('order.assay.receivedDate').invalid">
+                                    {{ orderInfo.get('order.assay.receivedDate').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <!-- Test options at least one checkbox selected -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="testoptions-chips mat-grid-tile-margin-15">
+                            <div class="test-options roboto-regular">
+                                <div class="test-heading">
+                                    {{ 'orders.orderForm.assayDetails.testOptionsTitle' | translate }}
+                                    <sup style="font-size:12px">*</sup>
+                                </div>
+                                <div class="test-names">
+                                        
+                                    <mat-checkbox (focusin)="focusOutCalender(collectionDate, 'assay.collectionDate');" color="primary" 
+                                    *ngFor="let option of testOptionsArr" 
+                                    formArrayName="testOption" 
+                                    [checked] = "checkValueChecked(option)" 
+                                    [value]="option" 
+                                    (change)="onSelectOfTestOption($event)"
+                                    [disabled]='isDisabled()'
+                                    (focusout)="onFocusOfTestOption()"
+                                    #tstOpCheckboxes>
+                                        <span class="chip bg-{{ option.testName | lowercase}}">
+                                            {{ option.testDescription | translate}}
+                                        </span>
+                                    </mat-checkbox>
+    
+                                </div>
+                                <mat-error *ngIf="isMultiTestNotChecked" class="check-box-error">
+                                    {{'Please select at least one test option.' | translate}}
+                                </mat-error>
+                            </div>
+                        </mat-grid-tile>
+    
+                    </mat-grid-list>
+    
+                    <!-- next and previous navigation buttons when id = null -->
+                    <mat-action-row style="margin:0"  *ngIf="orderInfo.get('order.orderId').value == null" class="mat-action-row-margin-4">
+                        <button mat-button color="primary" (click)="prevStep()"  type="button" class="roboto-bold font-14">
+                            {{ 'orders.naigationButtons.previous' | translate }} 
+                        </button>
+                        <button mat-button color="primary" (click)="nextStep()" type="button" 
+                                [disabled]="orderInfo.get('order.assay').invalid" class="roboto-bold font-14">
+                            {{ 'orders.naigationButtons.next' | translate }}
+                        </button>
+                    </mat-action-row>
+    
+                </mat-expansion-panel>
+    
+                <!-- Patient Information section -->
+                <mat-expansion-panel    hideToggle="true" [expanded]="step === 2"
+                                        (opened)="setStep(2)" formGroupName="patient"
+                                        [disabled]="(!isValidOrder() || orderInfo.get('order.assay').invalid)">
+                    <mat-expansion-panel-header class="acc-panel-header">
+                        <mat-panel-title>
+                            <img src="assets/Images/patientInfo.svg" class="img-right-16" alt="Image">
+                            <span class="card-main-header-info">
+                                    {{ 'orders.orderForm.patientInformation.accordionHeading' | translate }}
+                            </span>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <app-warning-required-order-info
+                                *ngIf="orderInfo.get('order.orderId').value !== null"
+                                [orderInfo]="orderInfo.get('order.patient').value" 
+                                [assayDetails]="orderInfo.get('order.assayType').value"
+                                [patientConfigInfo]= "patientConfigInfo"
+                                [stepName]="patientSectionName"
+                                [processStepName]='processStepNameInfo'
+                                (isWarningRequired)="handleWarningIcon($event)">
+                            </app-warning-required-order-info>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+    
+                    <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+                    <!-- First name with validations -->
+                        <mat-grid-tile colspan=1 rowspan=1>
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #patientFirstName>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.firstName' | translate }}
+                                </mat-label>
+                                <input  matInput appMinMax appTrim placeholder="" 
+                                        name="patientFirstName" id="patientFirstName" formControlName="patientFirstName" 
+                                        autocomplete="off" [errorStateMatcher]="matcher" 
+                                        [parentField]="patientFirstName" maxlength="30">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.patientFirstName').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="first_nameField" 
+                                        [fieldValue]="orderInfo.get('order.patient.patientFirstName').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+            
+                                <mat-error *ngIf="orderInfo.get('order.patient.patientFirstName').invalid">
+                                    {{ orderInfo.get('order.patient.patientFirstName').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+                    
+                        <!-- Last name with validations -->
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #patientLastName>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.lastName' | translate }}
+                                </mat-label>
+                                <input type="text" appTrim matInput appMinMax
+                                       name="patientLastName" id="patientLastName" formControlName="patientLastName" 
+                                       autocomplete="off" [errorStateMatcher]="matcher" 
+                                       [parentField]="patientLastName" maxlength="30">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.patientLastName').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="last_nameField" 
+                                        [fieldValue]="orderInfo.get('order.patient.patientLastName').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+    
+                                <mat-error *ngIf="orderInfo.get('order.patient.patientLastName').invalid">
+                                    {{ orderInfo.get('order.patient.patientLastName').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                         <!-- Date of birth -->
+                         <mat-grid-tile colspan="1" rowspan="1"  class="mat-grid-tile-margin">
+                                <mat-form-field appearance="fill" class="width-full roboto-regular">
+                                    <mat-label>
+                                        {{ 'orders.orderForm.patientInformation.dob' | translate }}
+                                    </mat-label>
+                                    <input  matInput [matDatepicker]="patientDOB" 
+                                            (click)="patientDOB.open()" 
+                                            name="patientDOB" id="patientDOB" formControlName="patientDOB" 
+                                            [errorStateMatcher]="matcher" [min]="minDate" [max]="maxDate"
+                                            (dateChange)="dobChange($event)" class="dobClass" #dobInput maxlength="10" autocomplete="off">
+                                    <mat-datepicker-toggle matSuffix [for]="patientDOB">
+                                    </mat-datepicker-toggle>
+                                    
+                                    <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                            <app-warning-required *ngIf="!orderInfo.get('order.patient.patientDOB').value"
+                                                [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                                [fieldName]="dOBField" 
+                                                [fieldValue]="orderInfo.get('order.patient.patientDOB').value" 
+                                                [requiredMandatoryInfo]="patientConfigInfo">
+                                            </app-warning-required>
+                                    </span>
+        
+                                    <mat-datepicker #patientDOB ></mat-datepicker>
+                                    <mat-error *ngIf="orderInfo.get('order.patient.patientDOB').invalid">
+                                        {{ orderInfo.get('order.patient.patientDOB').errors.errorMsg | translate }}
+                                    </mat-error>
+                                </mat-form-field>
+                        </mat-grid-tile>
+    
+    
+                        <!-- medical record number contains alphanumeric data -->
+                        <mat-grid-tile colspan="1" rowspan="1"  class="mat-grid-tile-margin">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #patientMedicalRecNo>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.medicalRecNo' | translate }}
+                                </mat-label>
+                                <input  type="text" appTrim matInput appMinMax
+                                        placeholder=""
+                                        name="patientMedicalRecNo" id="patientMedicalRecNo" formControlName="patientMedicalRecNo"
+                                        autocomplete="off" [errorStateMatcher]="matcher" [parentField]="patientMedicalRecNo" maxlength="15">
+
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.patientMedicalRecNo').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="medical_record_numberField" 
+                                        [fieldValue]="orderInfo.get('order.patient.patientMedicalRecNo').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+    
+                                <mat-error *ngIf="orderInfo.get('order.patient.patientMedicalRecNo').invalid">
+                                    {{ orderInfo.get('order.patient.patientMedicalRecNo').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+    
+    <!-- Update fields -->                    
+                        <!-- Lab Id -->
+                        <mat-grid-tile colspan="1" rowspan="1"  class="mat-grid-tile-margin-10">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #labId>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.labId' | translate }}
+                                </mat-label>
+                                <input  type="text" appTrim matInput appMinMax
+                                        placeholder="" 
+                                        name="labId" id="labId" formControlName="labId"
+                                        autocomplete="off" [errorStateMatcher]="matcher" 
+                                        [parentField]="labId" maxlength="20">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                        <app-warning-required *ngIf="!orderInfo.get('order.patient.labId').value"
+                                            [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                            [fieldName]="laboratory_IDField" 
+                                            [fieldValue]="orderInfo.get('order.patient.labId').value" 
+                                            [requiredMandatoryInfo]="patientConfigInfo">
+                                        </app-warning-required>
+                                </span>
+            
+                                <mat-error *ngIf="orderInfo.get('order.patient.labId').invalid">
+                                    {{ orderInfo.get('order.patient.labId').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- Account -->
+                        <mat-grid-tile colspan="1" rowspan="1"  class="mat-grid-tile-margin-10">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #accountNumber>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.accountNumber' | translate }}
+                                </mat-label>
+                                <input  type="text" appTrim matInput appMinMax
+                                        placeholder="" 
+                                        name="accountNumber" id="accountNumber" formControlName="accountNumber"
+                                        autocomplete="off" [errorStateMatcher]="matcher" 
+                                        [parentField]="accountNumber" maxlength="20">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.accountNumber').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="accountField" 
+                                        [fieldValue]="orderInfo.get('order.patient.accountNumber').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+    
+                                
+                                <mat-error *ngIf="orderInfo.get('order.patient.accountNumber').invalid">
+                                    {{ orderInfo.get('order.patient.accountNumber').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                        <!-- other clinician name -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin-15">
+                                <mat-form-field appearance="fill" class="width-full roboto-regular" #otherClinicianName>
+                                    <mat-label> 
+                                        {{ 'orders.orderForm.patientInformation.otherClinicianName' | translate }}
+                                    </mat-label>
+                                    <input  type="text" appTrim matInput appMinMax 
+                                            placeholder="" autocomplete="off" 
+                                            name="otherClinicianName" id="otherClinicianName" formControlName="otherClinicianName"
+                                            [errorStateMatcher]="matcher" [parentField]="otherClinicianName" maxlength="30">
+                                    
+                                    <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                            <app-warning-required *ngIf="!orderInfo.get('order.patient.otherClinicianName').value"
+                                                [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                                [fieldName]="other_clinicianField" 
+                                                [fieldValue]="orderInfo.get('order.patient.otherClinicianName').value" 
+                                                [requiredMandatoryInfo]="patientConfigInfo">
+                                            </app-warning-required>
+                                    </span>
+        
+                                    <mat-error *ngIf="orderInfo.get('order.patient.otherClinicianName').invalid">
+                                        {{ orderInfo.get('order.patient.otherClinicianName').errors.errorMsg | translate }}
+                                    </mat-error>
+                                </mat-form-field>
+                        </mat-grid-tile>
+    
+    
+                        <!-- clinician name -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin-15">
+                                <mat-form-field appearance="fill" class="width-full roboto-regular" #clinicName>
+                                    <mat-label> 
+                                        {{ 'orders.orderForm.patientInformation.clinicName' | translate }}
+                                    </mat-label>
+                                    <input  type="text" appTrim matInput appMinMax 
+                                            placeholder="" autocomplete="off" 
+                                            name="clinicName" id="clinicName" formControlName="clinicName"
+                                            [errorStateMatcher]="matcher" [parentField]="clinicName" maxlength="30">
+                                    
+                                    <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+										<app-warning-required *ngIf="!orderInfo.get('order.patient.clinicName').value"
+											[processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+											[fieldName]="clinic_nameField" 
+											[fieldValue]="orderInfo.get('order.patient.clinicName').value" 
+											[requiredMandatoryInfo]="patientConfigInfo">
+										</app-warning-required>
+                                    </span>
+    
+                                    <mat-error *ngIf="orderInfo.get('order.patient.clinicName').invalid">
+                                        {{ orderInfo.get('order.patient.clinicName').errors.errorMsg | translate }}
+                                    </mat-error>
+                                </mat-form-field>
+                        </mat-grid-tile>
+    
+    
+                        <!-- referring clinician name -->
+                        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin-20">
+                            <mat-form-field appearance="fill" class="width-full roboto-regular" #refClinicianName>
+                                <mat-label>
+                                    {{ 'orders.orderForm.patientInformation.refClinicianName' | translate }}
+                                </mat-label>
+                                <input  type="text" appTrim matInput appMinMax
+                                        placeholder="" autocomplete="off" 
+                                        name="refClinicianName" id="refClinicianName" formControlName="refClinicianName"
+                                        [errorStateMatcher]="matcher" [parentField]="refClinicianName" maxlength="30">
+                                
+                                <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.refClinicianName').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="referring_clinicianField" 
+                                        [fieldValue]="orderInfo.get('order.patient.refClinicianName').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+    
+                                <mat-error *ngIf="orderInfo.get('order.patient.refClinicianName').invalid">
+                                    {{ orderInfo.get('order.patient.refClinicianName').errors.errorMsg | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+    
+                    </mat-grid-list>
+    
+                    <mat-form-field appearance="fill" class="width-full roboto-regular mat-action-row-margin-4" #reasonForReferral>
+                            <mat-label>
+                                {{'orders.orderForm.patientInformation.reasonForReferral' | translate}}
+                            </mat-label>
+                            <textarea appTrim matInput placeholder="" 
+                                        name="reasonForReferral" id="reasonForReferral" formControlName="reasonForReferral" 
+                                        rows="4"  appMinMax [parentField] = "reasonForReferral" maxlength="40">
+                            </textarea>
+                            
+                            <span matPrefix *ngIf="orderInfo.get('order.orderId').value">
+                                    <app-warning-required *ngIf="!orderInfo.get('order.patient.reasonForReferral').value"
+                                        [processStepName]='processStepNameInfo'  [assayType]="orderInfo.get('order.assayType').value"
+                                        [fieldName]="reason_for_ReferralField"
+                                        [fieldValue]="orderInfo.get('order.patient.reasonForReferral').value" 
+                                        [requiredMandatoryInfo]="patientConfigInfo">
+                                    </app-warning-required>
+                                </span>
+
+                            <mat-error *ngIf="orderInfo.get('order.patient.reasonForReferral').invalid">
+                                {{ orderInfo.get('order.patient.reasonForReferral').errors.errorMsg | translate }}
+                            </mat-error>
+                    </mat-form-field>
+    
+                </mat-expansion-panel>
+            </mat-accordion>
+    </div>
+    <!-- save button when order id contains data -->
+    <mat-action-row class="navigation-buttons update-order box-shadowbottom" *ngIf="orderInfo.get('order.orderId').value != null">
+            <span matTooltip=" {{ findInvalidFormDetails() | translate }} "
+            [matTooltipDisabled]="orderInfo.valid" 
+            [matTooltipPosition]="'above'"
+            [matTooltipClass]="'tooltipDetails'">
+                    <button mat-raised-button color="primary" style="margin-right:2px" class="roboto-bold font-14 no-shadow btn-bg-color"
+                    type="submit" (click)="onUpdateOrderDetils()" 
+                    [disabled]="!orderInfo.valid"> 
+                        {{ 'orders.naigationButtons.save' | translate }}
+                    </button>
+            </span>
+    </mat-action-row>
+    
+    
+    <!-- Save / save and create order buttons when order id = null  -->
+    <mat-action-row class="navigation-buttons update-order box-shadowbottom" *ngIf="orderInfo.get('order.orderId').value == null">
+            <span matTooltip=" {{ findInvalidFormDetails() | translate  }} "
+            [matTooltipDisabled]="orderInfo.valid" 
+            [matTooltipPosition]="'above'"
+            [matTooltipClass]="'tooltipDetails'">
+                <button mat-button color="primary"
+                    [disabled]="!orderInfo.valid"
+                    class="roboto-bold font-14 mr-5"
+                    (click)="onSaveAndCreate()">
+                {{ 'orders.naigationButtons.saveAndCreate' | translate }}
+                </button>
+            </span>
+    
+            <span matTooltip=" {{ findInvalidFormDetails() | translate }} "
+                [matTooltipDisabled]="orderInfo.valid" 
+                [matTooltipPosition]="'above'"
+                [matTooltipClass]="'tooltipDetails'">
+                <button mat-raised-button color="primary"
+                        [disabled]="!orderInfo.valid" 
+                        class="roboto-bold font-14 no-shadow btn-bg-color ml-5"
+                        type="submit" 
+                        (click)="onSave()">
+                {{ 'orders.naigationButtons.save' | translate }}
+                </button>
+            </span>
+    </mat-action-row>
+    
+    </form>
+    </div>
+    

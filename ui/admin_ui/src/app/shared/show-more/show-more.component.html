@@ -1,0 +1,9 @@
+<span *ngIf="tooltipValue && tooltipValue.length < dataLength">
+  {{data}}
+</span>
+<span class="show-ellipsis" *ngIf="tooltipValue && tooltipValue.length >= dataLength" [matTooltip]="tooltipValue" [matTooltipClass]="displayFull ? 'tool-full' : null">
+    {{data}}
+</span>
+<span class="show-ellipsis" *ngIf="tooltipValue === ''" [matTooltip]="tooltipValue" [matTooltipClass]="displayFull ? 'tool-full' : null">
+  {{data}}
+</span>

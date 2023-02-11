@@ -1,0 +1,49 @@
+.myprofile-container{
+    width: 83.1625%;
+    margin: 0 auto;
+    margin-top: 1.2em;
+    margin-bottom: 5px;
+  }
+.usericonlogo{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3; 
+    padding:0 20px 13px 20px;
+  }
+  .textarea-full-width{
+    width: 100%;
+    padding-top: 20px;
+  }
+  .address{
+      height:60px;
+  }
+  .actionmenu{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-top: 1px solid #d3d3d3; 
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+  .img-left-align{
+    padding: 25px;
+    border: 1px solid;
+    margin-right: 20px;
+    border-color: #c7e0f9;
+  }
+  .img-align{
+    display: flex;
+    align-items: center
+  }
+  .header-name{
+    padding-left:20px;
+    color:#191919;
+  }
+  .profile-content{
+    margin:20px;
+  }
+  .addusercard{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}

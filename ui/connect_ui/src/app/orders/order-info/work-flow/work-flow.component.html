@@ -1,0 +1,50 @@
+<div class="workflow-accordion-container-new">
+  <div class="accordion-container">
+    <mat-accordion class="workflow-accordion" multi="true">
+      <mat-expansion-panel hideToggle="true" *ngFor="let item of workFlowDetails" [disabled]="item?.status?false:true"
+        [expanded]="item.isOpenOnLoad">
+        <mat-expansion-panel-header class="acc-panel-header" 
+        [collapsedHeight]="'40px'"
+        [expandedHeight]="'40px'">
+          <mat-panel-title>
+            <img [src]="item.statusImage" [alt]="item.status" height="30px" width="30px" *ngIf='item.statusImage' class="img-right-16">
+            <img [src]="pendingImage" alt="pending" height="30px" width="30px" *ngIf='!item.statusImage' class="img-right-16">
+            <div>
+              <div class="card-sub-header-info">
+                {{ (item.status ? item.status : 'Pending') | translate }}
+              </div>
+              <div class="card-main-header-info">
+                {{ item.processStepName | translate }}
+              </div>
+            </div>
+          </mat-panel-title>
+          <mat-panel-description  *ngIf="item.status">
+              <img  *ngIf="item.flag" [src]="'assets/Images/flags/flag_' + flagIconList[item.processStepName] + '.svg'" class="flags-img" style="vertical-align: center;" 
+                alt="Flag" height="30px">
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px" class="workflow-panel-body padding-0">
+            <div *ngIf="item?.status?.toLowerCase() === 'ongoing'">
+                <app-ongoing [item]='item'></app-ongoing>
+            </div>
+            <div *ngIf="item?.status?.toLowerCase() !== 'ongoing'">
+                <app-not-ongoing [item]='item'></app-not-ongoing> 
+            </div>
+        </mat-grid-list>
+        <mat-action-row style="margin:0">
+            <!-- <div (click)="$event.stopPropagation();navigate(['workflow', 'rundetails', item.runResultId])" style="width: 82px;display: flex;justify-content: space-between;margin-right: 12px;cursor: pointer;">
+                <a class="font-14 roboto-bold" style="padding-right:10px">
+                    {{ 'workflowPage.viewRun' | translate }}
+                </a>
+                <div class="sample-run-btn"></div>
+            </div> -->
+            <button mat-button color='primary' class="font-14 roboto-bold height-36" 
+            (click)="$event.stopPropagation();navigate(['workflow', 'rundetails', item.runResultId])">
+              <span> {{ 'workflowPage.viewRun' | translate }}</span>
+              <span> <img src="assets/Images/goto.png" alt="goto" class="vertical-middle pl-10" height="17px"> </span>
+            </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="slideLftRgtCls">
+    <app-header [headerInfo]="headerInfo"></app-header>
+    <mat-tab-group  [selectedIndex]="isRedirectingToUpload !== 'true' ? null : 1"> 
+    <mat-tab>
+        <ng-template mat-tab-label>
+            {{'orders.manual' | translate}}
+        </ng-template>
+        <app-manual-order-creation></app-manual-order-creation>
+    </mat-tab>
+   
+        <mat-tab [disabled]="!havingAccess">
+            <ng-template mat-tab-label>
+                <span 
+                    matTooltip="{{ 'common.accessRestricted' | translate}}"
+                    [matTooltipClass]="'tooltipDetails'"
+                    [matTooltipDisabled]="havingAccess">
+                    {{'orders.csvupload' | translate}}
+                </span>
+            </ng-template>
+            <app-bulk-order-upload></app-bulk-order-upload>
+        </mat-tab>
+    </mat-tab-group>
+</div>

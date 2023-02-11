@@ -1,0 +1,61 @@
+<mat-card class="card-mg card-pd backup-box">
+  <mat-card-header class="card-header-pd">
+    <mat-card-title class="roboto-bold font-16 card-titlle-mg card-title-lb-color"> {{ 'backupandrestore.backup' | translate }} </mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="backupform" (ngSubmit)="onSubmit()">
+    <div class="label-align">
+      <label class="roboto-regular font-14 align-text text-color">{{'backupandrestore.manualBackup' | translate}}</label>
+      <span matTooltip="{{ defaultMessage | translate}}" 
+            [matTooltipDisabled]='!((backupDetails?.Status?.toLowerCase() === "inprogress") || isBackupDisabled || isOutputLocationEnabled)'
+            [matTooltipPosition]="'above'" 
+            [matTooltipClass]="'tooltipDetails'">
+        
+          <button mat-raised-button class="roboto-bold font-14 btn-bg-color" 
+                  type="submit" color="primary" 
+                  [disabled]='(backupDetails?.Status?.toLowerCase() === "inprogress") || isBackupDisabled || isOutputLocationEnabled'>
+                    {{'backupandrestore.backupSystem' | translate}}
+          </button>
+      </span>
+    </div>
+    <div class="label-align">
+      <label class="roboto-regular font-14 align-text text-color">{{'backupandrestore.lastBackupDate' | translate}}</label>
+      <label class="roboto-regular font-14 text-color">{{backupDetails?.LastBackupDate | date : "dd-MMM-yyyy"}}</label>
+    </div>
+    <div class="label-align">
+      <label class="roboto-regular font-14 align-text text-color">{{'backupandrestore.automatedBackup' | translate}}</label>
+      <mat-radio-group formControlName="backup_interval">
+        <ng-container *ngFor="let backup of autoBackup">
+          <mat-radio-button class="roboto-regular font-14 pr-20 text-color" [checked]="backup?.toLowerCase() === backupDetails?.backup_interval?.toLowerCase()"
+             [value]="backup" >{{ backup | translate}} </mat-radio-button>
+        </ng-container>
+      </mat-radio-group>
+    </div>
+    <div class="label-align">
+      <label class="roboto-regular font-14 align-text text-color">{{'backupandrestore.nextScheduledbackup' | translate}}</label>
+      <label class="roboto-regular font-14">{{backupDetails?.NextBackupDate | date : "dd-MMM-yyyy"}}
+      </label>
+    </div>
+    <div class="form-group">
+      <div class="label-align choose-btn">
+        <label class="roboto-regular font-14 align-text text-color vl-top">{{'backupandrestore.outputLocation' | translate}} *</label>
+        <div class="roboto-regular font-14 path">
+          <mat-form-field appearance="fill" class="width-full font-14" #choose>
+            <!-- <mat-label class="roboto-regular text-color">{{'backupandrestore.outputLocation' | translate}}</mat-label> -->
+            <input matInput formControlName="choose" autocomplete="off" (keyup)="onOutputLocationChange()" [value]='backupDetails?.backup_location'>
+            <mat-error *ngIf="backupform.get('choose').invalid">
+              {{'backupandrestore.validation.outputLocation' | translate}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <mat-toolbar class="header-mat-toolbar" >    
+        <button class="save-btn roboto-bold font-14" mat-raised-button type="button" (click)="onOutputLocatiosave(backupform)" [disabled]="isSaveEnabled">
+          {{'orders.naigationButtons.save' | translate}}
+        </button>
+      </mat-toolbar>
+    </div>
+  </form>
+</mat-card>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WorkflowSubReporttest" pageWidth="595" pageHeight="830" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0918e709-ffe9-43d2-a806-27ff36a16bf2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="rocheLogo" class="java.lang.String"/>
+	<parameter name="headerImage" class="java.awt.image.BufferedImage"/>
+	<parameter name="textDescription" class="java.lang.String"/>
+	<parameter name="subReport2DS" class="java.util.List"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="subReport1" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subReport2" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="testResultsSubreportDS" class="java.util.List"/>
+	<parameter name="subReport4" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="dpcrSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="dpcrResultsData" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="assayType" class="java.lang.String"/>
+	<field name="completionDate" class="java.util.Date"/>
+	<field name="numOfSamples" class="java.lang.Long"/>
+	<field name="qcResult" class="java.lang.String"/>
+	<field name="samplesPassedQC" class="java.lang.String"/>
+	<field name="comments" class="java.lang.String"/>
+	<field name="naExtractionData" class="java.util.List"/>
+	<field name="qcResultsDTO" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="142">
+			<image>
+				<reportElement x="0" y="4" width="90" height="54" uuid="77405670-aa2b-446e-8eb9-d037661726a8"/>
+				<imageExpression><![CDATA[$P{headerImage}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="458" y="4" width="88" height="54" uuid="1040f5e2-b2e4-4415-98be-4088c058ee41"/>
+				<imageExpression><![CDATA[$P{rocheLogo}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="60" width="230" height="76" uuid="8002a478-dafd-4319-9b09-9235d9d70d93"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{textDescription}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="636" splitType="Stretch">
+			<textField>
+				<reportElement x="95" y="16" width="330" height="39" forecolor="#434141" uuid="8ba13fda-8570-4e88-94f7-71d68579be11"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.workflowReportName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="75" width="119" height="19" forecolor="#00AEFF" uuid="9e50409a-aa50-44da-b967-2ddf74984d71"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.assayType}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="186" y="94" width="119" height="19" forecolor="#000000" uuid="edc4750d-95d9-4647-ba69-b15e2c3fe71b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{assayType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="144" width="119" height="19" forecolor="#00AEFF" uuid="955314e6-b42e-4c87-b527-703c853f5654"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.completionDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="163" width="119" height="19" forecolor="#000000" uuid="9a367524-99cf-456c-9b9f-0107df52825d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{completionDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["MM/dd/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="214" width="119" height="19" forecolor="#00AEFF" uuid="dce1e86e-c14b-4537-9368-9aac8dea9b15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.numOfSamples}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="186" y="233" width="119" height="19" forecolor="#000000" uuid="94fd0b26-eae2-4d7b-a996-bcb20df6c52a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numOfSamples}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="284" width="119" height="19" forecolor="#00AEFF" uuid="9d4184e8-32ae-4d3f-b365-814f7bf25850"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.QCResult}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="303" width="119" height="19" forecolor="#000000" uuid="7cea80f4-f5ea-4f4f-873a-f3cc01e36458"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qcResult}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="354" width="119" height="19" forecolor="#00AEFF" uuid="65872e0b-bcd4-48b5-b3ba-7d19bb9c9a10"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.samplesPassedQC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="186" y="373" width="119" height="19" forecolor="#000000" uuid="f79844e1-4192-4864-a7d8-0bf61c17568d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{samplesPassedQC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="409" width="119" height="19" forecolor="#00AEFF" uuid="c14f1a84-b114-47b1-a3b3-93bb29edebe1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{lable.comments}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="186" y="428" width="119" height="19" forecolor="#000000" uuid="aaa21f39-c80f-4b85-b554-a745cfdc10bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{comments}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="449" width="530" height="3" uuid="6fde0d28-7fb1-4fd2-b2cc-741d6c276bf7"/>
+			</line>
+			<subreport runToBottom="true">
+				<reportElement positionType="Float" x="-15" y="605" width="337" height="5" isRemoveLineWhenBlank="true" uuid="2750ca5a-4ab3-451c-bcf6-ce0abbb9b8f8"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{naExtractionData})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{subReport1}]]></subreportExpression>
+			</subreport>
+			<subreport runToBottom="true">
+				<reportElement positionType="Float" x="-15" y="616" width="337" height="5" isRemoveLineWhenBlank="true" uuid="080e34d1-2797-4378-8701-ce3204c13a62"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{subReport2DS})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{subReport2}]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement positionType="Float" x="11" y="477" width="530" height="3" uuid="53377960-b487-47c8-9799-9cb61c6a5e20"/>
+			</line>
+			<line>
+				<reportElement x="11" y="502" width="530" height="3" uuid="2d93c9f2-7b0d-40e4-8d73-10368ae214d8"/>
+			</line>
+			<subreport runToBottom="true">
+				<reportElement positionType="Float" x="-15" y="626" width="337" height="4" isRemoveLineWhenBlank="true" uuid="2e1edc90-d4fc-4fdb-8b86-394b121e8df1"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dpcrResultsData})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{dpcrSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch">
+			<printWhenExpression><![CDATA[java.lang.Boolean.FALSE]]></printWhenExpression>
+		</band>
+	</summary>
+</jasperReport>

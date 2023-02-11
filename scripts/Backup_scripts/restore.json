@@ -1,0 +1,19 @@
+{
+	"dbbase" : "/var/lib/postgresql/9.6/main",
+	"dbbasetemp" : "/var/lib/postgresql/9.6",
+	"dbbeforerestore" : "/opt/roche/connect/scripts/Backup_scripts/DB_BEFORE_RESTORE",
+	"pasjars" : "/opt/roche/connect/bin/CARE",
+	"pasjarstemp" : "/opt/roche/connect/bin",
+	"connectjars" : "/opt/roche/connect/bin",
+	"connectjarstemp" : "/opt/roche/connect",
+	"dbconf" : "/etc/postgresql/9.6/main",
+	"pgwalfiles" : "/home/rconnect/roche/pg_wal_archivedir",
+	"pgwalfilestemp" : "/home/rconnect/roche",
+	"tempfolder" : "/opt/roche/connect/temp_folder",
+	"webapps" : "/var/lib/tomcat8/webapps",
+	"webappstemp" : "/var/lib/tomcat8",
+	"yaml": "/opt/roche/connect/yaml_runtime",
+	"yamltemp": "/opt/roche/connect",
+	"restorejson": "/opt/roche/connect/scripts/Backup_scripts",
+	"instancelist": "administration-api-boot,administration-ui-boot,audit-trail-boot,email-api-boot,mailsender-boot,management-boot,metadata-boot,security-boot,adapter-dpcr,adapter-htp-forte,adapter-lp24,adapter-mp24,adapter-mp96,adm-,amm-,imm-,omm-,rmm-,wfm-"
+}

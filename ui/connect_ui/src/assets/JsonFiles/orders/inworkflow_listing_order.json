@@ -1,0 +1,167 @@
+[
+  {
+    "accessioningId": "1234567811234567812",
+    "orderComments": null,
+    "orderId": 10000030,
+    "workflowType": "NA Extraction",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "Pending",
+    "priority": "High",
+    "flags": "F1,F2"
+  },
+  {
+    "accessioningId": "123456782",
+    "orderComments": null,
+    "orderId": 10000031,
+    "workflowType": "LP Pre-PCR",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "completed",
+    "priority": "High",
+    "flags": ""
+  },
+  {
+    "accessioningId": "123456783",
+    "orderComments": null,
+    "orderId": 10000032,
+    "workflowType": "LP Post PCR",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "in progress",
+    "priority": "Normal",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456784",
+    "orderComments": null,
+    "orderId": 10000033,
+    "workflowType": "Sequencing",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "error",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456785",
+    "orderComments": null,
+    "orderId": 10000034,
+    "workflowType": "Sequencing Prep",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "warning",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456786",
+    "orderComments": null,
+    "orderId": 10000035,
+    "workflowType": "NA Extraction",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "completed",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456787",
+    "orderComments": null,
+    "orderId": 10000036,
+    "workflowType": "LP Pre-PCR",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "IN progress",
+    "priority": "Normal",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456787",
+    "orderComments": null,
+    "orderId": 10000036,
+    "workflowType": "LP Post-PCR",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "IN progress",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456787",
+    "orderComments": null,
+    "orderId": 10000036,
+    "workflowType": "Lp Seq-Pep",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "Completed",
+    "priority": "Normal",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456787",
+    "orderComments": null,
+    "orderId": 10000036,
+    "workflowType": "Sequencing",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "IN progress",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "123456787",
+    "orderComments": null,
+    "orderId": 10000036,
+    "workflowType": "LP Post-PCR",
+    "assaytype": "NIPTHTP",
+    "sampletype": "Plasma",
+    "workflowStatus": "IN progress",
+    "priority": "High",
+    "flags": "F1"
+  },
+  {
+    "accessioningId": "103",
+    "comments": "In workflow",
+    "orderId": 10000162,
+    "workflowType": "NA Extraction",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "Failed",
+    "priority": "Normal",
+    "flags": "F3"
+  },
+  {
+    "accessioningId": "101",
+    "comments": null,
+    "orderId": 10000160,
+    "workflowType": "NA Extraction",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "Failed",
+    "priority": "High",
+    "flags": "F1,F2"
+  },
+  {
+    "accessioningId": "101",
+    "comments": null,
+    "orderId": 10000160,
+    "workflowType": "NA Extraction",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "Aborted",
+    "priority": "High",
+    "flags": "F1,F2"
+  },
+  {
+    "accessioningId": "101",
+    "comments": null,
+    "orderId": 10000160,
+    "workflowType": "Library Preparation",
+    "assaytype": "NIPTDPCR",
+    "sampletype": "Plasma",
+    "workflowStatus": "Failed",
+    "priority": "Normal",
+    "flags": null
+  }
+]

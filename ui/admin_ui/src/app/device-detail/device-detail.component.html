@@ -1,0 +1,138 @@
+<app-admin-ui-header class="no-shadow" [headerInfo]="headerInfo"></app-admin-ui-header>
+
+<div class="header" *ngIf="device">
+    <!-- <mat-tab-group class="activeusers-page"> -->
+      <!-- <mat-tab [label]='"Details" | translate' disabled> -->
+        <div class="dev-det-cont">
+        <form class="dev-det-form" [formGroup]="deviceDetailForm">
+          <div [ngClass]="'dev-det-hd'">
+              <div>
+                <div class="roboto-regular lb-ifo-dn">{{ device && device.description ? device.description : '-' }}</div>
+                <div class="roboto-bold lb-ifo-tp">{{ device && device.name ? device.name : '-' }}</div>
+              </div>
+          </div>
+          <!-- <mat-progress-bar  [ngClass]="deviceBaseCss + '_line'+' '+'p-bar-ht'" mode="determinate" value="100"></mat-progress-bar> -->
+          <div class="p-bar-ht"></div>
+          <div class="bg-wh">
+            <div [ngClass]="toggleEdit ? 'dev-ifo-cont dy-bt' : 'dev-ifo-cont'">
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.devSlNo' | translate}}</div>
+                  <div class="dev-cel-vl">
+                      <app-show-more [data]="device.serialNo" [tooltipValue]="device.serialNo" [displayFull]="true">{{'deviceMgmt.serialNo' | translate}}</app-show-more>
+                  </div>
+                </div>
+                <div *ngIf="!toggleEdit" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.devName' | translate}}</div>
+                  <div class="dev-cel-vl">
+                      <app-show-more [data]="device.name" [tooltipValue]="device.name" [displayFull]="true">{{ device && device.name ? device.name : '-' }}</app-show-more>
+                  </div>
+                </div>
+                <div *ngIf="toggleEdit" class="roboto-regular dev-ifo-cell">
+                  <mat-form-field appearance="fill" class="wd-80 font-14" #name>
+                    <mat-label class="roboto-regular">{{"Device name"}}</mat-label>
+                    <input matInput placeholder="" formControlName="name" name="name" id="name" required="required" autocomplete="off">
+                    <a *ngIf="deviceDetailForm.controls.name.value" matSuffix class="font-14 forgetPassword roboto-bold" (click)="resetDeviceName()">{{'Reset'}}</a>
+                    <mat-error *ngIf="deviceDetailForm.get('name').invalid">
+                      {{ deviceDetailForm.get('name').errors.errorCode }}
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.devStatus' | translate}}</div>
+                  <div class="dev-cel-vl">{{ deviceCompleteStatus ? (deviceCompleteStatus | valueAlter:device.state:'INACTIVE') : '-' }}</div>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.devType' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.deviceType && device.deviceType.description ? device.deviceType.description : '-' }}</div>
+                </div>
+            </div>
+
+            <div class="dev-ifo-cont">
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.model' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.model ? device.attributes.model : '-' }}</div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.make' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.make ? device.attributes.make : '-' }}</div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.ipAddress' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.ipAddress ? device.ipAddress : '-' }}</div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.hostName' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.hostName ? device.attributes.hostName : '-' }}</div>
+              </div>
+            </div>
+
+            <div class="dev-ifo-cont">
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.swVersion' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.swVersion ? device.attributes.swVersion : '-' }}</div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.hwVersion' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.hwVersion ? device.attributes.hwVersion : '-' }}</div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.location' | translate}}</div>
+                <div class="dev-cel-vl">
+                    <app-show-more [data]="device.attributes.location" [tooltipValue]="device.attributes.location" [displayFull]="true">{{ device && device.attributes && device.attributes.location ? device.attributes.location : '-' }}</app-show-more>
+                </div>
+              </div>
+              <div class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.protocol' | translate}}</div>
+                <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.protocol ? (device.attributes.protocol | wordSeparator:', ') : '-' }}</div>
+              </div>
+            </div>
+
+            <div class="dev-ifo-cont">
+              <div *ngIf="device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === '')" class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.protocolVersion' | translate}}</div>
+                <div class="dev-cel-vl">{{ device.attributes.protocolVersion === '' ? '-' : device.attributes.protocolVersion }}</div>
+              </div>
+
+              <!-- Commented for REST Auth requirement descope from Sprint 9 later it may used. -->
+              <!-- <div *ngIf="device && device.attributes && (device.attributes.clientId || device.attributes.clientId === '')" class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">Client ID</div>
+                <div class="dev-cel-vl">{{ device.attributes.clientId === '' ? '--' : device.attributes.clientId }}</div>
+              </div>
+              <div *ngIf="device && device.attributes && (device.attributes.password || device.attributes.password === '')" class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">Password</div>
+                <div class="dev-cel-vl">{{ device.attributes.password === '' ? '--' : device.attributes.password }}</div>
+              </div> -->
+
+              <div *ngIf="!(device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === ''))" class="roboto-regular dev-ifo-cell">
+              </div>
+              <div *ngIf="!(device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === ''))" class="roboto-regular dev-ifo-cell">
+              </div>
+              <div *ngIf="!(device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === ''))" class="roboto-regular dev-ifo-cell">
+              </div>
+
+              <!-- Commented for REST Auth requirement descope from Sprint 9 later it may used. -->
+              <!-- <div *ngIf="!(device && device.attributes && (device.attributes.clientId || device.attributes.clientId === ''))" class="roboto-regular dev-ifo-cell">
+              </div>
+              <div *ngIf="!(device && device.attributes && (device.attributes.password || device.attributes.password === ''))" class="roboto-regular dev-ifo-cell">
+              </div> -->
+
+              <div class="roboto-regular dev-ifo-cell">
+              </div>
+            </div>
+
+            <!-- <div class="dev-det-btn flex-cont-right">
+                <button *ngIf="!toggleEdit" mat-button class="roboto-bold" (click)="toggleEditting()">{{'deviceMgmt.edit' | translate}}</button>
+                <button *ngIf="toggleEdit" mat-raised-button color="primary" class="roboto-bold sv-btn" (click)="updateDeviceDetail()" [disabled]="!deviceDetailForm.valid">{{'deviceMgmt.save' | translate}}</button>
+            </div> -->
+          </div>
+          <div class="p-bar-ht"></div>
+          <div style="height: 54px;background: #FFFFFF;display: flex;justify-content: flex-end;">
+            <div style="padding-right: 20px">
+              <button style="margin-top: 9px;" button color="primary" mat-button class="btn-color roboto-bold" (click)="toggleEditting()">{{'deviceMgmt.edit' | translate}}</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- </mat-tab> -->
+    <!-- </mat-tab-group> -->
+</div>

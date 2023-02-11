@@ -1,0 +1,16 @@
+{
+	"job_protocol": "Plasma | Tissue",
+	"sample_details": [{
+
+		"sample_id": "string",
+		"input_dna_qratio": 54.2,
+		"input_dna_mass": 54.2,
+		"isolated_dna_mass": 54.2,
+		"tissue_sample_primer_plate": "A",
+		"tissue_sample_primer": "A1",
+		"plasma_sample_adapter": "actg",
+		"panel": "…",
+		"filter_set": "RocheDefault",
+		"sample_collection_date": "date - time"
+	}]
+}

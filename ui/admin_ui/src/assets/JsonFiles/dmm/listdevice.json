@@ -1,0 +1,61 @@
+[{
+  "name": "High Throughput sequencing",
+  "description": "High Throughput sequencing",
+  "active": true,
+  "isRetired": "N",
+  "attributes": {"supportedProtocols": ["HL7","REST"]},
+  "parentDeviceType": null,
+  "editedBy": "admin#@#hcl.com",
+  "createdBy": null,
+  "createdDate": "2018-11-17 13:03:57",
+  "modifiedDate": "2018-11-17 13:03:57",
+  "deviceTypeId": "39746f3e-2646-4fc2-ac1e-e8a13bb1b4be"
+}, {
+  "name": "Analyzer",
+  "description": "Analyzer",
+  "active": true,
+  "isRetired": "N",
+  "attributes": {"supportedProtocols": ["HL7","REST"]},
+  "parentDeviceType": null,
+  "editedBy": "admin#@#hcl.com",
+  "createdBy": null,
+  "createdDate": "2018-11-17 13:04:16",
+  "modifiedDate": "2018-11-17 13:04:16",
+  "deviceTypeId": "1fb02202-db3a-4fa3-bbc7-8392f966d924"
+}, {
+  "name": "NA Extraction-MP24",
+  "description": "NA Extraction-MP24",
+  "active": true,
+  "isRetired": "N",
+  "attributes": {"supportedProtocols": ["HL7"]},
+  "parentDeviceType": null,
+  "editedBy": "admin#@#hcl.com",
+  "createdBy": null,
+  "createdDate": "2018-11-17 13:01:29",
+  "modifiedDate": "2018-11-17 13:01:29",
+  "deviceTypeId": "fa99cb08-76bf-40c2-8dc7-9c44116dee78"
+}, {
+  "name": "Library preparation",
+  "description": "Library preparation",
+  "active": true,
+  "isRetired": "N",
+  "attributes": {"supportedProtocols": ["HL7","REST"]},
+  "parentDeviceType": null,
+  "editedBy": "admin#@#hcl.com",
+  "createdBy": null,
+  "createdDate": "2018-11-17 13:03:08",
+  "modifiedDate": "2018-11-17 13:03:08",
+  "deviceTypeId": "7cd184f7-8989-4322-9ee4-33e68472aaf7"
+}, {
+  "name": "NA Extraction-MP26",
+  "description": "NA Extraction-MP96",
+  "active": true,
+  "isRetired": "N",
+  "attributes": {"supportedProtocols": ["HL7"]},
+  "parentDeviceType": null,
+  "editedBy": "admin#@#hcl.com",
+  "createdBy": "admin#@#hcl.com",
+  "createdDate": "2018-12-03 21:17:52",
+  "modifiedDate": "2018-12-03 21:17:52",
+  "deviceTypeId": "fddf0abb-ba4f-463f-b100-accbc2ee6e62"
+}]

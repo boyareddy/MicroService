@@ -1,0 +1,33 @@
+.order-list-container{
+    width: 100%;
+    background: #fff;
+}
+input[type=text] {
+    width: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border:none;
+    background-color: white;
+    background-image: url('../../../assets/Images/search.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    cursor:pointer;
+}
+
+input[type=text]:focus {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+.workflowMgr_tab_count{
+    color:#8d8d8d;
+}
+
+.order-btn {
+    background-color: #004EA3;
+    display: flex;
+  }
+  

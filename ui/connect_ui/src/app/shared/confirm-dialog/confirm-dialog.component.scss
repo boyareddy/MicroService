@@ -1,0 +1,26 @@
+
+.button-row {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+}
+
+.conf-close-btn{
+  background-image: url('../../../assets/Images/close.png');
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  cursor: pointer;
+  margin-top: -7px;
+  background-size: 10px 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.content-text {
+  color: #191919 !important;
+}

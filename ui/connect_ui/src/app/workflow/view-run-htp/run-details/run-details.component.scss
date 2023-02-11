@@ -1,0 +1,60 @@
+.sampletube-info-img {
+    background-image: url("../../../../assets/Images/sampleTube.png");
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+  }
+  
+  .list-header {
+    padding: 20px 20px 0px;
+    justify-content: space-between;
+    background: #fff;
+  }
+
+  .title{
+    padding-left: 14px;
+    vertical-align: super;
+  }
+
+
+.sample-container{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.extraction-container{
+    width:26%;
+}
+
+.run-info-card{
+    margin-top: 90px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.sample-title{
+    padding-left: 16px;
+}
+
+.sample-title-dis{
+    display: flex;
+    align-items: center;
+    width: 24%;
+}
+
+.progress{
+    width: 80%;
+}
+
+.runcard{
+    width: 30%;
+}
+
+.text-color {
+    color: #333333;
+}
+
+.strip-color {
+    color: #191919;
+}

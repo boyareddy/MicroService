@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+		
+ <groupId>com.roche</groupId>
+  <artifactId>simulator</artifactId>  
+  <packaging>pom</packaging>
+  <version>3.9</version>
+  <name>simulator</name>
+
+	<properties>
+		<!-- dependencies version control -->
+		
+	</properties>
+  <modules>
+    <module>DPCR_Simulator</module>
+    <module>LP24_simulator</module>
+    <module>MP96_simulator</module>
+    <module>roche_forte_simulator</module>	
+    <module>roche_htp_simulator</module>    
+    <module>roche-swam-labsimulator</module>
+    
+    </modules>
+</project>

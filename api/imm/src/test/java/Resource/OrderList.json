@@ -1,0 +1,38 @@
+[{
+    "orderId": 343556,
+    "accessioningId": "1222",
+    "assayType": "NIPTDPCR",
+    "sampleType": "Plasma",
+    "retestSample": true,
+    "orderComments": "",
+    "assay": {
+      "maternalAge": 10,
+      "gestationalAgeWeeks": 2,
+      "gestationalAgeDays": 1,
+      "eggDonor": "Self",
+      "ivfStatus": "Yes",
+      "fetusNumber": "2",
+      "collectionDate": "2018-11-22T18:30:00.000Z",
+      "receivedDate": "2018-11-22T18:30:00.000Z",
+      "testOptions": {
+        "Harmony Prenatal Test (T21, T18, T13)": true,
+        "Fetal Sex": false
+      }
+    },
+    "patient": {
+      "patientLastName": "",
+      "patientFirstName": "",
+      "patientGender": "Female",
+      "patientMedicalRecNo": "",
+      "patientDOB": "",
+      "patientContactNo": "",
+      "treatingDoctorName": "",
+      "treatingDoctorContactNo": "",
+      "refClinicianName": "",
+      "refClinicianFaxNo": "",
+      "otherClinicianName": "",
+      "otherClinicianFaxNo": "",
+      "refClinicianClinicName": ""
+    }
+  }
+]

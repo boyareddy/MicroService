@@ -1,0 +1,77 @@
+.header-mat-toolbar{
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow:0px 2px 3px rgba(0, 0, 0, .16); 
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.pl-0 {
+    padding-left: 0px;
+}
+.pr-0 {
+    padding-right: 0px;
+}
+.header-info{
+    display: flex;
+    align-items: center;
+    color:#191919;
+}
+.header-content {
+    padding: 10px;
+}
+.closebutton{
+    cursor: pointer;
+    height: 18px;
+    padding: 10px;
+    padding-left: 10px;
+}
+.card-container{
+    width: 83.1625%;
+    margin: 0 auto;
+    margin-top: 5.25em;
+}
+.test-names{
+      display: flex;
+      justify-content: space-between;
+}
+.actionmenu{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-top: 1px solid #d3d3d3; 
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+.test-heading{
+    margin: 10px 0 ; 
+    margin-bottom: 24px;
+}
+
+.addusercard{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.save-btn{
+    background-color: #004ea3;
+}
+
+.test-options{
+    width:47%;
+}
+
+.test-heading{
+    margin: 4px 0 10px 0; color:#191919
+}
+  
+@media only screen and (max-width: 600px) {
+    .test-names{
+        flex-direction: column;
+    }
+}
+.role-names{
+    line-height: 15px;
+    display: flex;
+    color: #191919;
+}

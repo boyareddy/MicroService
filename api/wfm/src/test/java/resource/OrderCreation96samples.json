@@ -1,0 +1,40 @@
+{
+	"order": {
+		"orderId": null,
+		"accessioningId": "1010121",
+		"assayType": "NIPTDPCR",
+		"sampleType": "Plasma",
+		"retestSample": true,
+		"orderComments": "All information contained herein is, and remains the property of COMPANY",
+		"assay": {
+			"maternalAge": "4",
+			"gestationalAgeWeeks": 7,
+			"gestationalAgeDays": 6,
+			"eggDonor": "Self",
+			"eggDonorAge": 13,
+			"ivfStatus": "Yes",
+			"fetusNumber": "2",
+			"collectionDate": "2019-01-08T18:30:00.000Z",
+			"receivedDate": "2019-01-08T18:30:00.000Z",
+			"testOptions": {
+				"Harmony Prenatal Test (T21, T18, T13)": true,
+				"Fetal Sex": true
+			}
+		},
+		"patient": {
+			"patientLastName": "FLETCHER",
+			"patientFirstName": "DUNCAN",
+			"patientGender": "Female",
+			"patientMedicalRecNo": "21321312312ABC",
+			"patientDOB": "1973-02-05T18:30:00.000Z",
+			"patientContactNo": "2132434342",
+			"treatingDoctorName": "asdasdasa",
+			"treatingDoctorContactNo": "+213232344242",
+			"refClinicianName": "asasasa",
+			"refClinicianFaxNo": "+213232344242",
+			"otherClinicianName": "dasasa",
+			"otherClinicianFaxNo": "+213232344242",
+			"refClinicianClinicName": "sdada"
+		}
+	}
+}

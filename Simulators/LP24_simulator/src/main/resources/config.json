@@ -1,0 +1,12 @@
+{
+  "labsimulator" : {
+    "equipments" :[
+      {
+        "name": "LP24-1",
+        "serialNumber" : "LP001-12",
+        "type" : "LP24",
+        "class": "com.roche.swam.labsimulator.lpx.LpxSimulator"
+      }
+   ]
+  }
+}

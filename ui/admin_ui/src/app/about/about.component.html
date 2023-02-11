@@ -1,0 +1,19 @@
+<div class="about-info-container">
+  <h1 class="about-header">{{'about.versionDetails' | translate}}</h1>
+  <hr class="about-line" />
+  <div class="sw-group" style="column-count: 3">
+    <div *ngFor="let swGroup of parsedConnectSwInfo">
+      <div class="sw-grp-container" *ngIf="swGroup.softwares.length === 1">
+        <h3 class="sw-header">{{'about.' + swGroup.swGroup | translate}}</h3>
+        <div class="sw-version sw-version-sgl">{{swGroup?.softwares[0]?.version}}</div>
+      </div>
+      <div *ngIf="swGroup.softwares.length > 1">
+        <h3 class="sw-header">{{'about.' + swGroup.swGroup | translate}}</h3>
+        <div class="sw-grp-container" *ngFor="let software of swGroup.softwares">
+          <div class="sw-name">{{'about.' + software.swName | translate}}</div>
+          <div class="sw-version">{{software.version}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

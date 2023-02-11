@@ -1,0 +1,239 @@
+
+MSH|^~\&|||||20190128211350||ORM^O01|MPCZC8380G5K|P|2.4
+ORC|1|RND19289023024
+OBR|1|898983|WP 983^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||All information contained herein is, and remains the property of COMPANY
+OBR|2|898984|WP 983^A2|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|2||All information contained herein is, and remains the property of COMPANY
+OBR|3|898985|WP 983^A3|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|3||All information contained herein is, and remains the property of COMPANY
+
+MSH|^~\&|||||20190128214729||ORM^O01|MPCZC8380G5K|P|2.4
+ORC|1|RND19289224926
+OBR|1|898600|WP 600600601^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||All information contained herein is, and remains the property of COMPANY
+
+MSH|^~\&|||||20190130130935||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+
+MSH|^~\&|||||20190130131035||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+
+MSH|^~\&|||||20190206121055||ORM^O01|MPCZC8380G5K|P|2.4
+ORC|1|RND1963525504
+OBR|1|6060606|WP 601^A2|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||All information contained herein is, and remains the property of COMPANY
+OBR|2|6060605|WP 601^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|2||All information contained herein is, and remains the property of COMPANY
+
+MSH|^~\&|||||20190208164616||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+
+MSH|^~\&|||||20190208164930||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+
+MSH|^~\&|||||20190214115144||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214115820||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214115942||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214131346||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214131507||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214131536||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214132209||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190214132310||ORM^O01|20181004125419|P|2.4
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate
+NTE|8||Comment Sample 3
+
+MSH|^~\&|||||20190218194056||ORM^O01|MPCZC8380G6K|P|2.4
+ORC|1|RND19189905690
+OBR|1|test1|WP 433^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||test1
+OBR|2|test2|WP 433^B1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|2||test2
+OBR|3|test3|WP 433^C1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|3||test3
+
+MSH|^~\&|||||20190218194845||ORM^O01|MPCZC8380G6K|P|2.4
+ORC|1|RND19189952543
+OBR|1|test1|WP 433^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||test1
+OBR|2|test2|WP 433^B1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|2||test2
+OBR|3|test3|WP 433^C1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|3||test3
+
+MSH|^~\&|||||20190218201503||ORM^O01|MPCZC8380G6K|P|2.4
+ORC|1|RND19180110332
+OBR|1|sarath1|WP599^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||sara
+
+MSH|^~\&|||||20190218205618||ORM^O01|MP96-001|P|2.4
+ORC|1|RND19180357898
+OBR|1|soorya1|WP597^A1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|1||soorya testing
+OBR|2|soorya2|WP597^B1|Cellular RNA LV^0.2|||||||||||Cellular RNA LV^0.6.4|||200|50
+NTE|2||soorya testing

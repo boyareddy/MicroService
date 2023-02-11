@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_109" data-name="Ellipse 109" cx="15" cy="15" r="15" transform="translate(0)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17734" data-name="Group 17734" transform="translate(-811 -218)">
+    <g id="Group_17356" data-name="Group 17356" transform="translate(176 26)">
+      <g id="Ellipse_108" data-name="Ellipse 108" transform="translate(636 193)" fill="#fff" stroke="rgba(141,141,141,0.5)" stroke-width="1">
+        <circle cx="15" cy="15" r="15" stroke="none"/>
+        <circle cx="15" cy="15" r="15.5" fill="none"/>
+      </g>
+      <g id="Mask_Group_5" data-name="Mask Group 5" transform="translate(636 193)" clip-path="url(#clip-path)">
+        <path id="Path_1006" data-name="Path 1006" d="M277.281-19.563l-1.029-10.823h3.913l-1.028,10.823a.883.883,0,0,1-.995.653A.844.844,0,0,1,277.281-19.563Z" transform="translate(-256.166 42.386)" fill="rgba(141,141,141,0.5)" fill-rule="evenodd"/>
+        <path id="Path_20882" data-name="Path 20882" d="M277.281-19.563l-1.029-10.823h3.913l-1.028,10.823a.883.883,0,0,1-.995.653A.844.844,0,0,1,277.281-19.563Z" transform="translate(-260.666 42.386)" fill="rgba(141,141,141,0.5)" fill-rule="evenodd"/>
+        <path id="Path_20883" data-name="Path 20883" d="M277.281-19.563l-1.029-10.823h3.913l-1.028,10.823a.883.883,0,0,1-.995.653A.844.844,0,0,1,277.281-19.563Z" transform="translate(-265.166 42.386)" fill="rgba(141,141,141,0.5)" fill-rule="evenodd"/>
+        <path id="Path_20886" data-name="Path 20886" d="M277.281-19.563l-1.029-10.823h3.913l-1.028,10.823a.883.883,0,0,1-.995.653A.844.844,0,0,1,277.281-19.563Z" transform="translate(-274.166 42.386)" fill="rgba(141,141,141,0.5)" fill-rule="evenodd"/>
+        <path id="Path_20885" data-name="Path 20885" d="M277.281-19.563l-1.029-10.823h3.913l-1.028,10.823a.883.883,0,0,1-.995.653A.844.844,0,0,1,277.281-19.563Z" transform="translate(-269.666 42.386)" fill="rgba(141,141,141,0.5)" fill-rule="evenodd"/>
+        <path id="Path_21131" data-name="Path 21131" d="M.984,0H30.016c.544,0,.984.3.984.667v.667C31,1.7,30.559,2,30.016,2H.984C.441,2,0,1.7,0,1.333V.667C0,.3.441,0,.984,0Z" transform="translate(-4.5 10)" fill="#8d8d8d"/>
+        <rect id="Rectangle_182" data-name="Rectangle 182" width="1" height="5" transform="translate(25.5 10)" fill="#8d8d8d"/>
+      </g>
+    </g>
+  </g>
+</svg>

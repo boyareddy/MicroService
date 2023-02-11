@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <signal id="s1" name="s1"></signal>
+  <signal id="s2" name="s2"></signal>
+  <signal id="signalMp96" name="signalMp96"></signal>
+  <signal id="s3" name="s3"></signal>
+  <signal id="s4" name="s4"></signal>
+  <signal id="signallp24" name="signallp24"></signal>
+  <signal id="s9" name="s9"></signal>
+  <signal id="s5" name="s5"></signal>
+  <signal id="s8" name="s8"></signal>
+  <signal id="s6" name="s6"></signal>
+  <signal id="s7" name="s7"></signal>
+  <signal id="signalanalyzer" name="signalanalyzer"></signal>
+  <process id="NIPTDPCR_Wfm_v1" name="NIPTDPCR_Wfm_v1" isExecutable="true">
+    <startEvent id="start1" name="Start"></startEvent>
+    <serviceTask id="serviceTask1" name="Receive Work Order Query Request" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.mp96.GetWorkOrderRequest"></serviceTask>
+    <serviceTask id="serviceTask2" name="Send Query Response to MP96" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.mp96.SendMP96WorkOrderImport"></serviceTask>
+    <intermediateCatchEvent id="intermediateCatcheEvent1" name="Wait Signal for ACK">
+      <signalEventDefinition signalRef="s1"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <serviceTask id="serviceTask3" name="Receive ACK from MP96" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.mp96.GetMp96ACKResponse"></serviceTask>
+    <intermediateCatchEvent id="intermediateCatcheEvent2" name="Wait Signal for Results">
+      <signalEventDefinition signalRef="s2"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <serviceTask id="serviceTask4" name="Update MP96 Result" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.mp96.UpdateMp96Result"></serviceTask>
+    <serviceTask id="serviceTask5" name="Send Result ACK to MP96" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.mp96.SendMp96ACKResponse"></serviceTask>
+    <userTask id="userTask1" name="Wait for Manual verification" activiti:assignee="${accessioningId}"></userTask>
+    <intermediateCatchEvent id="intermediateCatchFailedMP" name="MP96 Sample Failed">
+      <signalEventDefinition signalRef="signalMp96"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <sequenceFlow id="flow4" sourceRef="intermediateCatcheEvent1" targetRef="serviceTask3"></sequenceFlow>
+    <sequenceFlow id="flow1" sourceRef="start1" targetRef="serviceTask1"></sequenceFlow>
+    <exclusiveGateway id="gateway1"></exclusiveGateway>
+    <sequenceFlow id="flow5" sourceRef="serviceTask3" targetRef="intermediateCatcheEvent2"></sequenceFlow>
+    <sequenceFlow id="flow8" sourceRef="serviceTask5" targetRef="gateway1"></sequenceFlow>
+    <sequenceFlow id="flow9" name="status==&quot;Completed&quot;" sourceRef="gateway1" targetRef="userTask1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="Completed"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow7" sourceRef="serviceTask4" targetRef="serviceTask5"></sequenceFlow>
+    <sequenceFlow id="flow6" sourceRef="intermediateCatcheEvent2" targetRef="serviceTask4"></sequenceFlow>
+    <intermediateCatchEvent id="intermediateCatcheEvent3" name="LP24 Event">
+      <signalEventDefinition signalRef="s3"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <serviceTask id="serviceTask6" name="Get Order By 96wellplateID &amp; Position" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.lp24.FindOrderBy96WellPlateId"></serviceTask>
+    <serviceTask id="serviceTask7" name="Send Query Response to LP24" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.lp24.SendLP24QBPResponse"></serviceTask>
+    <serviceTask id="serviceTask8" name="Update LP24 Result" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.lp24.UpdateLP24Result"></serviceTask>
+    <serviceTask id="serviceTask9" name="Send LP24 Result ACK" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.lp24.SendLP24U03Response"></serviceTask>
+    <userTask id="userTask2" name="Wait for Manual verification" activiti:assignee="${accessioningId}"></userTask>
+    <exclusiveGateway id="gateway2"></exclusiveGateway>
+    <intermediateCatchEvent id="intermediateCatcheEvent4" name="LP24 U03 Event">
+      <signalEventDefinition signalRef="s4"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <sequenceFlow id="flowFailedMP96" name="status == &quot;Failed&quot;" sourceRef="gateway1" targetRef="intermediateCatchFailedMP">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="Failed"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow3" sourceRef="serviceTask2" targetRef="intermediateCatcheEvent1"></sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="userTask1" targetRef="intermediateCatcheEvent3"></sequenceFlow>
+    <sequenceFlow id="flow11" sourceRef="intermediateCatcheEvent3" targetRef="serviceTask6"></sequenceFlow>
+    <sequenceFlow id="flow12" sourceRef="serviceTask6" targetRef="serviceTask7"></sequenceFlow>
+    <sequenceFlow id="flow13" sourceRef="serviceTask7" targetRef="intermediateCatcheEvent4"></sequenceFlow>
+    <sequenceFlow id="flow14" sourceRef="intermediateCatcheEvent4" targetRef="serviceTask8"></sequenceFlow>
+    <sequenceFlow id="flow15" sourceRef="serviceTask8" targetRef="serviceTask9"></sequenceFlow>
+    <intermediateCatchEvent id="intermediateCatchFailedLP" name="LP24 sample Aborted">
+      <signalEventDefinition signalRef="signallp24"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <serviceTask id="serviceTask10" name="Receive Query Message" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.GetSampleSetupQBPMessage"></serviceTask>
+    <serviceTask id="serviceTask12" name="Send Sample Setup to dPCR Analyzer " activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.SenddPCRAnalyzerOMLResponse"></serviceTask>
+    <serviceTask id="serviceTask14" name="Run Status Update Message" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.GetRunStatusUpdate"></serviceTask>
+    <serviceTask id="serviceTask15" name="Send run status update ACK" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.SendRunResultACK"></serviceTask>
+    <userTask id="userTask3" name="Wait for Manual verification" activiti:assignee="${accessioningId}"></userTask>
+    <intermediateCatchEvent id="intermediateCatcheEvent10" name="Analysis">
+      <signalEventDefinition signalRef="s9"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <intermediateCatchEvent id="intermediateCatcheEvent5" name="dPCR Analyzer Event">
+      <signalEventDefinition signalRef="s5"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <serviceTask id="serviceTask11" name="Send Query ACK to dPCR Analyzer" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.SenddPCRAnalyzerACKResponse"></serviceTask>
+    <serviceTask id="serviceTask13" name="Receive Sample Setup ACK" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.GetSampleSetupACKMessage"></serviceTask>
+    <sequenceFlow id="flow16" sourceRef="serviceTask9" targetRef="gateway2"></sequenceFlow>
+    <sequenceFlow id="flow17" name="status == &quot;InProgress&quot;" sourceRef="gateway2" targetRef="intermediateCatcheEvent4">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="InProgress"}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="serviceTask16" name="Final Run Results (ORU)" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.GetFinalRunResultORU"></serviceTask>
+    <serviceTask id="serviceTask17" name="Send  Run Result ACK" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.SendRunResultACK"></serviceTask>
+    <serviceTask id="serviceTask18" name="Final Results File (ESU)" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.GetFinalRunResultsESU"></serviceTask>
+    <serviceTask id="serviceTask19" name="Send  Results File ACK" activiti:class="com.roche.connect.wfm.nipt.dpcr.wfmtask.dpcranalyzer.SendRunResultACK"></serviceTask>
+    <intermediateCatchEvent id="intermediateCatcheEvent9" name="Wait Signal for Results file">
+      <signalEventDefinition signalRef="s8"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <sequenceFlow id="flow19" sourceRef="userTask2" targetRef="intermediateCatcheEvent5"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="serviceTask1" targetRef="serviceTask2"></sequenceFlow>
+    <intermediateCatchEvent id="sid-9901EC81-B291-47DF-80FF-C9F87FD2BD11" name="Wait Signal for ACK">
+      <signalEventDefinition signalRef="s6"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="gateway3"></exclusiveGateway>
+    <intermediateCatchEvent id="sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD" name="Wait Signal for Results">
+      <signalEventDefinition signalRef="s7"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <sequenceFlow id="flow18" name="status == &quot;Completed&quot;" sourceRef="gateway2" targetRef="userTask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="Completed"}]]></conditionExpression>
+    </sequenceFlow>
+    <intermediateCatchEvent id="sid-3C552112-5CF5-4D5B-A325-A289BDD62F23" name="dPCR Analyzer sample Aborted">
+      <signalEventDefinition signalRef="signalanalyzer"></signalEventDefinition>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="gateway4"></exclusiveGateway>
+    <sequenceFlow id="sid-783F4FA2-C1BB-403E-A9B9-B9249EAD05BC" name="status == &quot;Aborted&quot;" sourceRef="gateway4" targetRef="sid-3C552112-5CF5-4D5B-A325-A289BDD62F23">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input == "Aborted"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow20" sourceRef="intermediateCatcheEvent5" targetRef="serviceTask10"></sequenceFlow>
+    <sequenceFlow id="flow21" sourceRef="serviceTask10" targetRef="serviceTask11"></sequenceFlow>
+    <sequenceFlow id="flow22" sourceRef="serviceTask11" targetRef="serviceTask12"></sequenceFlow>
+    <sequenceFlow id="flow23" sourceRef="serviceTask12" targetRef="sid-9901EC81-B291-47DF-80FF-C9F87FD2BD11"></sequenceFlow>
+    <sequenceFlow id="flow24" sourceRef="sid-9901EC81-B291-47DF-80FF-C9F87FD2BD11" targetRef="serviceTask13"></sequenceFlow>
+    <sequenceFlow id="flow25" sourceRef="serviceTask13" targetRef="sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD"></sequenceFlow>
+    <sequenceFlow id="flow26" sourceRef="sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD" targetRef="gateway3"></sequenceFlow>
+    <sequenceFlow id="flow27" name="MessageType == &quot;ESU&quot;" sourceRef="gateway3" targetRef="serviceTask14">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="ESU"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow28" sourceRef="serviceTask14" targetRef="serviceTask15"></sequenceFlow>
+    <sequenceFlow id="flow29" sourceRef="serviceTask15" targetRef="sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD"></sequenceFlow>
+    <sequenceFlow id="flow30" name="MessageType == &quot;ORU&quot;" sourceRef="gateway3" targetRef="serviceTask16">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="ORU"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow31" sourceRef="serviceTask16" targetRef="serviceTask17"></sequenceFlow>
+    <sequenceFlow id="flow32" sourceRef="serviceTask17" targetRef="intermediateCatcheEvent9"></sequenceFlow>
+    <sequenceFlow id="flow33" sourceRef="intermediateCatcheEvent9" targetRef="serviceTask18"></sequenceFlow>
+    <sequenceFlow id="flow34" sourceRef="serviceTask18" targetRef="serviceTask19"></sequenceFlow>
+    <sequenceFlow id="flow35" sourceRef="serviceTask19" targetRef="gateway4"></sequenceFlow>
+    <sequenceFlow id="flow36" name="status == &quot;Completed&quot;" sourceRef="gateway4" targetRef="userTask3">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input=="Completed"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow37" sourceRef="userTask3" targetRef="intermediateCatcheEvent10"></sequenceFlow>
+    <sequenceFlow id="flowAbortedLP" name="status == &quot;Failed&quot;" sourceRef="gateway2" targetRef="intermediateCatchFailedLP">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${input == "Failed"}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_NIPTDPCR_Wfm_v1">
+    <bpmndi:BPMNPlane bpmnElement="NIPTDPCR_Wfm_v1" id="BPMNPlane_NIPTDPCR_Wfm_v1">
+      <bpmndi:BPMNShape bpmnElement="start1" id="BPMNShape_start1">
+        <omgdc:Bounds height="30.0" width="30.0" x="857.6525260178042" y="25.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask1" id="BPMNShape_serviceTask1">
+        <omgdc:Bounds height="80.0" width="100.0" x="960.5015147047832" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask2" id="BPMNShape_serviceTask2">
+        <omgdc:Bounds height="80.0" width="100.0" x="1136.277807561602" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent1" id="BPMNShape_intermediateCatcheEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="1333.8538419264028" y="25.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask3" id="BPMNShape_serviceTask3">
+        <omgdc:Bounds height="80.0" width="100.0" x="1446.7544329920033" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent2" id="BPMNShape_intermediateCatcheEvent2">
+        <omgdc:Bounds height="30.0" width="30.0" x="1481.7544329920033" y="152.23582871933525"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask4" id="BPMNShape_serviceTask4">
+        <omgdc:Bounds height="80.0" width="99.99999999999977" x="1237.8601065034475" y="127.23582871933525"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask5" id="BPMNShape_serviceTask5">
+        <omgdc:Bounds height="80.0" width="100.0" x="1065.0" y="127.23582871933525"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="userTask1" id="BPMNShape_userTask1">
+        <omgdc:Bounds height="80.0" width="100.0" x="936.9269209632014" y="285.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatchFailedMP" id="BPMNShape_intermediateCatchFailedMP">
+        <omgdc:Bounds height="30.0" width="30.0" x="795.0" y="152.23582871933525"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="gateway1" id="BPMNShape_gateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="966.9269209632014" y="147.23582871933525"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent3" id="BPMNShape_intermediateCatcheEvent3">
+        <omgdc:Bounds height="30.0" width="30.0" x="1093.8271792284754" y="310.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask6" id="BPMNShape_serviceTask6">
+        <omgdc:Bounds height="80.0" width="100.0" x="1196.707841567741" y="285.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask7" id="BPMNShape_serviceTask7">
+        <omgdc:Bounds height="80.0" width="100.0" x="1381.8930337784195" y="285.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask8" id="BPMNShape_serviceTask8">
+        <omgdc:Bounds height="80.0" width="100.0" x="1628.8066233926572" y="285.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask9" id="BPMNShape_serviceTask9">
+        <omgdc:Bounds height="80.0" width="99.99999999999977" x="1834.567948071189" y="285.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="userTask2" id="BPMNShape_userTask2">
+        <omgdc:Bounds height="80.0" width="100.0" x="1279.0123714391539" y="415.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="gateway2" id="BPMNShape_gateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="1546.5020935212447" y="435.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent4" id="BPMNShape_intermediateCatcheEvent4">
+        <omgdc:Bounds height="30.0" width="30.0" x="1551.5020935212447" y="310.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatchFailedLP" id="BPMNShape_intermediateCatchFailedLP">
+        <omgdc:Bounds height="30.0" width="30.0" x="1551.5020935212447" y="585.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask10" id="BPMNShape_serviceTask10">
+        <omgdc:Bounds height="80.0" width="99.99999999999989" x="750.0" y="675.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask12" id="BPMNShape_serviceTask12">
+        <omgdc:Bounds height="80.0" width="100.0" x="1125.0" y="675.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask14" id="BPMNShape_serviceTask14">
+        <omgdc:Bounds height="80.0" width="100.0" x="1920.0" y="675.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask15" id="BPMNShape_serviceTask15">
+        <omgdc:Bounds height="80.0" width="99.99999999999977" x="1920.0000000000002" y="539.7883187786056"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="userTask3" id="BPMNShape_userTask3">
+        <omgdc:Bounds height="80.0" width="100.0" x="390.94651688920976" y="880.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent10" id="BPMNShape_intermediateCatcheEvent10">
+        <omgdc:Bounds height="30.0" width="30.0" x="267.4897220820909" y="905.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent5" id="BPMNShape_intermediateCatcheEvent5">
+        <omgdc:Bounds height="30.0" width="30.0" x="660.0" y="700.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask11" id="BPMNShape_serviceTask11">
+        <omgdc:Bounds height="80.0" width="100.0" x="936.9269209632014" y="675.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask13" id="BPMNShape_serviceTask13">
+        <omgdc:Bounds height="80.0" width="100.0" x="1425.0" y="675.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask16" id="BPMNShape_serviceTask16">
+        <omgdc:Bounds height="80.0" width="100.0" x="1365.0" y="880.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask17" id="BPMNShape_serviceTask17">
+        <omgdc:Bounds height="80.0" width="99.99999999999977" x="1196.7078415677413" y="880.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask18" id="BPMNShape_serviceTask18">
+        <omgdc:Bounds height="80.0" width="100.0" x="936.9269209632014" y="880.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="serviceTask19" id="BPMNShape_serviceTask19">
+        <omgdc:Bounds height="80.0" width="99.99999999999977" x="773.2510467606223" y="880.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="intermediateCatcheEvent9" id="BPMNShape_intermediateCatcheEvent9">
+        <omgdc:Bounds height="30.0" width="30.0" x="1100.0" y="905.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-9901EC81-B291-47DF-80FF-C9F87FD2BD11" id="BPMNShape_sid-9901EC81-B291-47DF-80FF-C9F87FD2BD11">
+        <omgdc:Bounds height="30.0" width="30.0" x="1314.0123714391539" y="700.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="gateway3" id="BPMNShape_gateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="1680.0" y="695.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD" id="BPMNShape_sid-2002E1AC-6625-4993-9FD3-90BA4E384FFD">
+        <omgdc:Bounds height="30.0" width="30.0" x="1605.0" y="700.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-3C552112-5CF5-4D5B-A325-A289BDD62F23" id="BPMNShape_sid-3C552112-5CF5-4D5B-A325-A289BDD62F23">
+        <omgdc:Bounds height="30.0" width="30.0" x="675.3703844213567" y="1094.7736961176852"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="gateway4" id="BPMNShape_gateway4">
+        <omgdc:Bounds height="40.0" width="40.0" x="670.3703844213567" y="900.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
+        <omgdi:waypoint x="1970.0" y="675.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1970.0" y="619.7883187786056"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow29" id="BPMNEdge_flow29">
+        <omgdi:waypoint x="1920.0000000000002" y="579.6757018102334"></omgdi:waypoint>
+        <omgdi:waypoint x="1620.0" y="579.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1620.0" y="700.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow24" id="BPMNEdge_flow24">
+        <omgdi:waypoint x="1344.0123714391539" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1425.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
+        <omgdi:waypoint x="1525.0" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1605.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
+        <omgdi:waypoint x="1635.0" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1680.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow27" id="BPMNEdge_flow27">
+        <omgdi:waypoint x="1720.0" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1920.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-783F4FA2-C1BB-403E-A9B9-B9249EAD05BC" id="BPMNEdge_sid-783F4FA2-C1BB-403E-A9B9-B9249EAD05BC">
+        <omgdi:waypoint x="690.3703844213567" y="940.0"></omgdi:waypoint>
+        <omgdi:waypoint x="690.3703844213567" y="1094.7736961176852"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="887.6525260178042" y="40.0"></omgdi:waypoint>
+        <omgdi:waypoint x="960.5015147047832" y="40.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="1060.5015147047832" y="40.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1136.277807561602" y="40.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="1236.277807561602" y="40.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1333.8538419264028" y="40.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="1363.8538419264028" y="40.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1446.7544329920033" y="40.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="1496.7544329920033" y="80.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1496.7544329920033" y="152.23582871933525"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="1481.7544329920033" y="167.23582871933525"></omgdi:waypoint>
+        <omgdi:waypoint x="1337.8601065034472" y="167.23582871933525"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow20" id="BPMNEdge_flow20">
+        <omgdi:waypoint x="690.0" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="750.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="1237.8601065034475" y="167.23582871933525"></omgdi:waypoint>
+        <omgdi:waypoint x="1165.0" y="167.23582871933525"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
+        <omgdi:waypoint x="849.9999999999999" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="936.9269209632014" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+        <omgdi:waypoint x="1065.0" y="167.23582871933525"></omgdi:waypoint>
+        <omgdi:waypoint x="1006.9269209632014" y="167.23582871933525"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
+        <omgdi:waypoint x="1036.9269209632014" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1125.0" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="986.9269209632014" y="187.23582871933525"></omgdi:waypoint>
+        <omgdi:waypoint x="986.9269209632014" y="285.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
+        <omgdi:waypoint x="1225.0" y="715.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1314.0123714391539" y="715.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow17" id="BPMNEdge_flow17">
+        <omgdi:waypoint x="1566.5020935212447" y="435.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1566.5020935212447" y="340.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow18" id="BPMNEdge_flow18">
+        <omgdi:waypoint x="1546.5020935212447" y="455.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1379.0123714391539" y="455.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow19" id="BPMNEdge_flow19">
+        <omgdi:waypoint x="1279.0123714391539" y="455.0"></omgdi:waypoint>
+        <omgdi:waypoint x="675.0" y="455.0"></omgdi:waypoint>
+        <omgdi:waypoint x="675.0" y="700.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow13" id="BPMNEdge_flow13">
+        <omgdi:waypoint x="1481.8930337784195" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1551.5020935212447" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow35" id="BPMNEdge_flow35">
+        <omgdi:waypoint x="773.2510467606223" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="710.3703844213567" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+        <omgdi:waypoint x="1581.5020935212447" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1628.8066233926572" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow36" id="BPMNEdge_flow36">
+        <omgdi:waypoint x="670.3703844213567" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="490.94651688920976" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow15" id="BPMNEdge_flow15">
+        <omgdi:waypoint x="1728.8066233926572" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1834.567948071189" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow37" id="BPMNEdge_flow37">
+        <omgdi:waypoint x="390.94651688920976" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="297.4897220820909" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow16" id="BPMNEdge_flow16">
+        <omgdi:waypoint x="1884.3931948185152" y="365.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1884.0" y="455.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1586.5020935212447" y="455.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flowAbortedLP" id="BPMNEdge_flowAbortedLP">
+        <omgdi:waypoint x="1566.5020935212447" y="475.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1566.5020935212447" y="585.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flowFailedMP96" id="BPMNEdge_flowFailedMP96">
+        <omgdi:waypoint x="966.9269209632014" y="167.23582871933525"></omgdi:waypoint>
+        <omgdi:waypoint x="825.0" y="167.23582871933525"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow31" id="BPMNEdge_flow31">
+        <omgdi:waypoint x="1365.0" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1296.707841567741" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="1036.9269209632014" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1093.8271792284754" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow32" id="BPMNEdge_flow32">
+        <omgdi:waypoint x="1196.7078415677413" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1130.0" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
+        <omgdi:waypoint x="1123.8271792284754" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1196.707841567741" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
+        <omgdi:waypoint x="1100.0" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1036.9269209632014" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow12" id="BPMNEdge_flow12">
+        <omgdi:waypoint x="1296.707841567741" y="325.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1381.8930337784195" y="325.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
+        <omgdi:waypoint x="936.9269209632014" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="873.2510467606221" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow30" id="BPMNEdge_flow30">
+        <omgdi:waypoint x="1700.0" y="735.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1700.0" y="920.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1465.0" y="920.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="default-padding">
+    <mat-form-field class="roboto-regular font-14">
+      <mat-label> {{ 'dialog.addComments' | translate }} </mat-label>
+      <textarea matInput 
+                name="comment" 
+                [(ngModel)]="comment" 
+                placeholder="" 
+                [matAutosizeMinRows]="1" 
+                [matAutosizeMaxRows]="5"
+                [matTextareaAutosize]='true'
+                appTrim> 
+    </textarea>
+    </mat-form-field>
+  </div>
+  <div class="actions">
+    <button mat-button type="button" color="primary" (click)="onCancel()"
+    class="roboto-bold font-14">
+      {{ 'orders.naigationButtons.Cancel' | translate }}
+    </button>
+    <button mat-button type="submit" color="primary"
+    class="roboto-bold font-14">
+      {{ 'orders.naigationButtons.save' | translate }}
+    </button>
+  </div>
+</form>

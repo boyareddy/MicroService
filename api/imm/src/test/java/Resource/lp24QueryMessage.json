@@ -1,0 +1,21 @@
+{
+   "deviceSerialNumber":"LP001-12",
+   "sendingApplicationName":"LP24",
+   "sendingFacility":null,
+   "receivingApplication":"Connect",
+   "receivingFacility":null,
+   "dateTimeMessageGenerated":"20181113184006",
+   "processingId":null,
+   "versionId":null,
+   "messageControlId":null,
+   "accessioningId":"707075",
+   "runResultsId":null,
+   "orderId":null,
+   "characterSet":null,
+   "messageQueryName":null,
+   "queryDefId":null,
+   "queryDefDesc":null,
+   "queryDefEncodingSystem":null,
+   "messageType":"QueryMessage",
+   "containerId":"6e75e9b8_A1"
+}

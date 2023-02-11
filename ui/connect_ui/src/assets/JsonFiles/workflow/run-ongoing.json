@@ -1,0 +1,231 @@
+[
+  {
+    "runResultId": 1,
+    "deviceId": "MP001-11",
+    "processStepName": "NA-Extraction",
+    "deviceRunId": "123456",
+    "runStatus": "Inprogress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "1",
+    "inputcontainerIds": [
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ],
+    "runReagentsAndConsumables": [],
+    "runResultsDetail": []
+  },
+  {
+    "runResultId": 1,
+    "deviceId": "MP001-11",
+    "processStepName": "NA-Extraction",
+    "deviceRunId": "123456",
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "1",
+    "runReagentsAndConsumables": [],
+    "runResultsDetail": [],
+    "outputcontainerIds": [
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      }
+    ]
+  },
+  {
+    "runResultId": 153,
+    "deviceId": "MP001-12",
+    "processStepName": "LP pre-PCR",
+    "deviceRunId": 123456,
+    "runStatus": "Inprogress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": "chan",
+    "comments": "comment",
+    "totalSamplecount": "1",
+    "inputcontainerIds": [
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      },
+      {
+        "stripId": "1234",
+        "sampletotalSamplecounts": "8"
+      }
+    ],
+    "outputcontainerIds": [
+     
+    ]
+  },
+  {
+    "runResultId": 153,
+    "deviceId": "MP001-12",
+    "processStepName": "LP pre-PCR",
+    "deviceRunId": 123456,
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": "chan",
+    "comments": "comment",
+    "totalSamplecount": "1",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "LP post-PCR",
+    "deviceRunId": 123456,
+    "runStatus": "InProgress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "LP post-PCR",
+    "deviceRunId": 123456,
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "LP Sequencing Prep",
+    "deviceRunId": 123456,
+    "runStatus": "InProgress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "LP Sequencing Prep",
+    "deviceRunId": 123456,
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "sequencing",
+    "deviceRunId": 123456,
+    "runStatus": "InProgress",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  },
+  {
+    "runResultId": 252,
+    "deviceId": "MP24",
+    "processStepName": "sequencing",
+    "deviceRunId": 123456,
+    "runStatus": "completed",
+    "dvcRunResult": null,
+    "runFlag": null,
+    "operatorName": null,
+    "comments": null,
+    "totalSamplecount": "2",
+    "inputcontainerIds": [
+      "11111",
+      "8tubeid_222"
+    ],
+    "outputcontainerIds": [
+      "362067364",
+      "96wellplate_122"
+    ]
+  }
+]

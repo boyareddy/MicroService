@@ -1,0 +1,29 @@
+<div class="d-flex pb-20">
+    <div class="flex1">
+        <!-- {{ field1?.processStepName + field1?.fieldName }} -->
+        <app-field-details 
+            [labelName]='field1.key' 
+            [labelValue]='field1.value' 
+            [isOrderPage]='true' 
+            [isDate]='field1?.isDate' 
+            [isOnlyDate]='field1?.isOnlyDate'
+            [processStepName]='field1?.processStepName'
+            [fieldName]='field1?.fieldName'
+            [assayType]='field1?.assayType'
+            [patientConfigFile]='field1?.patientConfigFile'>
+        </app-field-details>
+    </div>
+    <div class="flex1" *ngIf='!singleRow'>
+        <app-field-details 
+            [labelName]='field2.key' 
+            [labelValue]='field2.value' 
+            [isOrderPage]='true' 
+            [isDate]='field2?.isDate' 
+            [isOnlyDate]='field2?.isOnlyDate'
+            [processStepName]='field2?.processStepName'
+            [fieldName]='field2?.fieldName'
+            [assayType]='field2?.assayType'
+            [patientConfigFile]='field2?.patientConfigFile'>
+        </app-field-details>
+    </div>
+</div>

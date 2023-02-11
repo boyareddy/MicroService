@@ -1,0 +1,14 @@
+[
+    {
+        "deviceType": "MP24",
+        "processStepSeq": 1,
+        "processStepName": "NA Extraction",
+        "inputContainerType": "Plasma tube",
+        "outputContainerType": "8-tube strip",
+        "manualVerificationFlag": "Y",
+        "assayType": "NIPTHTP",
+        "sampleVolume": "200",
+        "eluateVolume": "100",
+        "reagent": null
+    }
+]

@@ -1,0 +1,8 @@
+MSH|^~\&|COBAS DPCR||AVENIO||20170214080046||ORU^R01|MSG000001|P|2.6|
+ORC|RE|s002||run1|||||20180109121314|operator|releasedBy|||||runNotes|||sentBy
+OBR|1|s002||assay1^ap1^apVersion^kit1234
+OBX|1||assay1||2.6|ml|||||F
+NTE|1||L|
+OBX|2||assay1||Negative||||||F
+NTE|1||L|
+SPM|1|plateid1||||||engineSN1|fluidid1||||||||20181226131415

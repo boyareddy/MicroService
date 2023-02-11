@@ -1,0 +1,150 @@
+.backup-box{
+    width: 40%;
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 4px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.card-header-pd{
+    padding: 26px 20px 20px 15px !important;
+}
+
+
+/deep/{
+    .mat-card-header-text{
+        margin: 0 5px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .backup-box{
+        width: 92%;
+    }
+  }
+
+.label-align {
+    padding: 0px 20px 25px 20px;
+}
+
+.align-text {
+    width: 35%;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.text-color {
+    color: #191919;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    color: #004ea3;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.path {
+    width: 52%;
+    display: inline-block;
+}
+
+.error-align {
+    display: flex;
+    justify-content: flex-end   ;
+    margin-right: 86px;
+}
+
+.vl-top {
+    vertical-align: super;
+}
+.backup-box{
+    width: 40%;
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 4px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.card-header-pd{
+    padding: 26px 20px 20px 15px !important;
+}
+
+
+/deep/{
+    .mat-card-header-text{
+        margin: 0 5px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .backup-box{
+        width: 92%;
+    }
+  }
+
+.label-align {
+    padding: 0px 20px 25px 20px;
+}
+
+.align-text {
+    width: 35%;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.text-color {
+    color: #191919;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    color: #004ea3;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.path {
+    width: 52%;
+    display: inline-block;
+}
+
+.error-align {
+    display: flex;
+    justify-content: flex-end   ;
+    margin-right: 86px;
+}
+
+.vl-top {
+    vertical-align: super;
+}
+
+.header-mat-toolbar{
+    background-color: #fff;
+    width: 100%;
+    height:54px;
+    padding-right: 21px;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 20px;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.16);
+    font-size: 14px;
+    font-family: "roboto-bold" !important;
+}
+
+.save-btn {
+    background-color: #004ea3;
+    color: #fff;
+}

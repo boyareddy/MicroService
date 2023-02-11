@@ -1,0 +1,101 @@
+.header-mat-toolbar{
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow:0px 2px 3px rgba(0, 0, 0, .16); 
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.resetBtn{
+    margin-left: 10px;
+}
+.header-info{
+    display: flex;
+    align-items: center;
+    color:#191919;
+}
+.header-content {
+    padding: 10px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+.closebutton{
+    cursor: pointer;
+    height: 18px;
+    padding: 10px;
+    padding-left: 10px;
+}
+.card-container{
+    width: 83.1625%;
+    margin: 0 auto;
+    margin-top: 5.25em;
+  }
+.test-names{
+      display: flex;
+      justify-content: space-between;
+  }
+.usericonlogo{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3; 
+    padding:0 20px 13px 20px;
+  }
+.actionmenu{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #d3d3d3; 
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+.field-container{
+    margin:20px;
+    margin-top:28px;
+}
+.test-heading{
+    margin: 10px 0 ; 
+    margin-bottom: 24px;
+}
+
+.addusercard{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.save-btn{
+    background-color: #004ea3;
+}
+
+.reset-btn{
+    color: #004ea3;
+}
+
+.name-header{
+    padding-left:20px;
+}
+
+.test-options{
+    width:47%;
+}
+
+.test-heading{
+    margin: 10px 0; 
+    color:#191919;
+}
+  
+  
+@media only screen and (max-width: 600px) {
+    .test-names{
+        flex-direction: column;
+    }
+}
+.role-names{
+    line-height: 15px;
+    display: flex;
+    color: #191919;
+}

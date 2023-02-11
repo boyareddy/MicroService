@@ -1,0 +1,30 @@
+<div class="ad-dev-tp">
+  <span class="roboto-bold ad-dev-btn">Add device</span>
+  <img src="assets/Images/close.png" alt="close" class="closebutton" (click)="closePopUp()">
+</div>
+<hr class="devider" />
+<div>
+  <div *ngFor="let unRegDevice of unRegDeviceList; let i = index;">
+    <div class="disp-fx">
+      <div class="ad-dev-cell">
+        <div class="roboto-regular ad-dev-cell-lb">Serial no</div>
+        <div class="roboto-bold ad-dev-cell-vl">{{unRegDevice?.serialNo}}</div>
+      </div>
+      <div class="ad-dev-cell">
+        <div class="roboto-regular ad-dev-cell-lb">Device type</div>
+        <div class="roboto-bold ad-dev-cell-vl">{{unRegDevice?.deviceType}}</div>
+      </div>
+      <div class="ad-dev-cell">
+        <div class="roboto-regular ad-dev-cell-lb">Device name</div>
+        <div class="roboto-bold ad-dev-cell-vl">{{unRegDevice?.deviceName}}</div>
+      </div>
+      <div class="ad-dev-cell-btn">
+        <button mat-button color="primary" class="roboto-bold reg-dev-btn" (click)="addUnRegDeviceDevice(unRegDevice)">Register</button>
+      </div>
+    </div>
+    <hr class="ad-dev-cell-ln" *ngIf="i !== unRegDeviceList.length" />
+  </div>
+  <mat-spinner class="ad-dev-spin" *ngIf="!unRegDeviceList" diameter="60"></mat-spinner>
+  <h2 *ngIf="unRegDeviceList && unRegDeviceList.length === 0" class="roboto-regular no-data"> No device found. </h2>
+</div>
+

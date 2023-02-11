@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.roche.connect.appinstaller.AppInstallerMainApp">
+   <bottom>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="584.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" visible="false" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Next &gt;" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="583.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="189.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Connect Installer Wizard">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="189.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The information contained in this document is the property of HCL Technologies Limited. Except as specifically authorized in writing by HCL Technologies Limited, the holder of this document shall: (1) Keep all information contained herein confidential and shall protect the same in whole or in part from disclosure and dissemination to all third parties and, (2) Use the same for operating and maintenance purposes only" wrappingWidth="400.0">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Text>
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+</BorderPane>

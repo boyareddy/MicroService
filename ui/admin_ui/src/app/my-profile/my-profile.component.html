@@ -1,0 +1,52 @@
+<div class="myprofile-container" [formGroup]="myProfileForm">
+  <mat-card class="addusercard" style="padding: auto 0px !important">
+    <div class="usericonlogo">
+      <img src="assets/Images/userIcon1.png" alt="Image" height="50">
+      <span class="roboto-bold font-16 header-name">{{"user.title" | translate}}</span>
+    </div>
+    <div class="profile-content" formGroupName="contact" >
+      <mat-grid-list cols="2" rowHeight="80px" gutterSize="20px">
+
+        <!-- <mat-grid-tile class="box-photo" colspan="1" rowspan="2">
+          <div class="img-align">
+            <img src="../../../assets/Images/userIcon.png" alt="Image" height="50" class="img-left-align">
+            <button mat-raised-button color="primary" class="roboto-bold font-14">Upload Picture</button>
+          </div>
+        </mat-grid-tile> -->
+
+        <!-- <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="fill" class="width-full roboto-regular">
+            <mat-label>Date Of birth</mat-label>
+            <input matInput [matDatepicker]="userDOB" name="userDOB" id="userDOB" (focus)="userDOB.open()">
+            <mat-datepicker-toggle matSuffix [for]="userDOB"></mat-datepicker-toggle>
+            <mat-datepicker #userDOB></mat-datepicker>
+          </mat-form-field>
+        </mat-grid-tile> -->
+
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="fill" class="width-full" #mobile>
+            <mat-label class="roboto-regular font-14">{{"user.contactNumber" | translate}}</mat-label>
+            <input type="text" matInput placeholder="" formControlName="mobile" name="mobile" id="mobile"  appTrim maxlength="20">
+           <mat-error *ngIf="myProfileForm.get('contact.mobile').invalid">
+              {{ myProfileForm.get('contact.mobile').errors.errorMsg | translate }}
+          </mat-error> 
+          </mat-form-field>
+        </mat-grid-tile>
+     </mat-grid-list>
+
+      <mat-form-field class="textarea-full-width" appearance="fill" #address1>
+        <mat-label class="roboto-regular font-14">{{"user.address" | translate}}</mat-label>
+        <textarea matInput placeholder="" class="width-full roboto-regular address" formControlName="address1" name="address1" id="address1" appTrim appMinMax maxlength="50" [parentField]="address1"></textarea>
+        <mat-error *ngIf="myProfileForm.get('contact.address1').invalid">
+          {{ myProfileForm.get('contact.address1').errors.errorMsg | translate }}
+        </mat-error>
+      </mat-form-field>
+     
+
+    </div>
+    <div class="actionmenu">
+      <button mat-raised-button color="primary" class="btn-bg-color roboto-bold font-14" (click)="saveMyProfile()" [disabled]="myProfileForm.invalid">{{"button.save" | translate}}</button>
+    </div>
+
+  </mat-card>
+</div>

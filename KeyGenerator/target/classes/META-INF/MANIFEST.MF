@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: india
+Build-Jdk: 11.0.18
+Class-Path: . lib/snakeyaml-1.21.jar
+Main-Class: com.roche.connect.keygen.KeyGenUtil
+Created-By: Maven Integration for Eclipse
+

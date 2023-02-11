@@ -1,0 +1,7 @@
+/target
+/.settings
+.project
+.classpath
+.factorypath
+/test-output
+/.apt_generated/

@@ -1,0 +1,24 @@
+.full-width{
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.group-header{
+    padding-bottom: 10px;
+    font-family: roboto-bold;
+}
+
+.checkbox-tile.mat-grid-tile{
+    height: 40px !important;
+}
+
+.special-check{
+    font-size: 14px; 
+    color: #191919;
+    font-family: roboto-regular !important;
+}
+
+.outerfilter {
+    display: flex; 
+    flex-direction: column;
+}

@@ -1,0 +1,18 @@
+MSH|^~\&|||||20181004125419||ORM^O01|20181004125419|P|2.4|
+ORC|1|HL7-7|Order Comment 11|||||||admin
+OBR|1|Sample ID 22|0404161000720130^A1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|1||Comment Sample 1
+OBR|2|Sample ID 2|0404161000720130^B1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|2||Comment Sample 2
+OBR|3|Sample ID 3|0404161000720130^C1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|3||Comment Sample 3
+OBR|4|Sample ID 4|0404161000720130^D1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|4||Comment Sample 3
+OBR|5|Sample ID 5|0404161000720130^E1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|5||Comment Sample 3
+OBR|6|Sample ID 6|0404161000720130^F1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|6||Comment Sample 3
+OBR|7|Sample ID 7|0404161000720130^G1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|7||Comment Sample 3
+OBR|8|Sample ID 8|0404161000720130^H1|DNA/Viral NA LV^2.0|||||500||||MP96 Output Plate||cfNA ds 4000^3.1|||4000|100|MP96 Output Plate|
+NTE|8||Comment Sample 3

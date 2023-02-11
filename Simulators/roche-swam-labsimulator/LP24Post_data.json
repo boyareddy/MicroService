@@ -1,0 +1,1851 @@
+{
+  "samples" : [ {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "A1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "B1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "C1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "D1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "E1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "F1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "G1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "H1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "A2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "B2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "C2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "D2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "E2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "F2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "G2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "H2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "A3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "B3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "C3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "D3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "E3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "F3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "G3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "814281324",
+    "inputPosition" : "H3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "A1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "B1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "C1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "D1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "E1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "F1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "G1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "H1",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "A2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "B2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "C2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "D2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "E2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "F2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "G2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "H2",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "A3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "B3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "C3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  }, {
+    "inputContainerId" : "155980327",
+    "inputPosition" : "D3",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passed",
+    "internalControls" : "IC00000033",
+    "processingCartridge" : ";;00061",
+    "tipRack" : ";;00040",
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagentCassette",
+      "value" : "DNA Blood LV;00000000;0040"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00024"
+    }, {
+      "consumableName" : "reagent2mlTube",
+      "value" : "MGP;00000001;00023"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01001"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Washbuffer;00000002;01002"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;00233"
+    }, {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "processingId" : "P",
+    "characterSet" : "UTF-8",
+    "versionId" : "2.5.1"
+  } ]
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_107" data-name="Ellipse 107" cx="15" cy="15" r="15" transform="translate(0 0)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17738" data-name="Group 17738" transform="translate(-1196 -218)">
+    <g id="Group_17354" data-name="Group 17354" transform="translate(332 -54)">
+      <g id="Group_17064" data-name="Group 17064" transform="translate(865 273)">
+        <g id="Path_21132" data-name="Path 21132" fill="#fff">
+          <path d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" stroke="none"/>
+          <path d="M 15 0 C 6.715730667114258 0 0 6.715730667114258 0 15 C 0 23.28426933288574 6.715730667114258 30 15 30 C 23.28426933288574 30 30 23.28426933288574 30 15 C 30 6.715730667114258 23.28426933288574 0 15 0 M 15 -1 C 19.27375030517578 -1 23.29170989990234 0.6642894744873047 26.3137092590332 3.686290740966797 C 29.3357105255127 6.708290100097656 31 10.72624969482422 31 15 C 31 19.27375030517578 29.3357105255127 23.29170989990234 26.3137092590332 26.3137092590332 C 23.29170989990234 29.3357105255127 19.27375030517578 31 15 31 C 10.72624969482422 31 6.708290100097656 29.3357105255127 3.686290740966797 26.3137092590332 C 0.6642894744873047 23.29170989990234 -1 19.27375030517578 -1 15 C -1 10.72624969482422 0.6642894744873047 6.708290100097656 3.686290740966797 3.686290740966797 C 6.708290100097656 0.6642894744873047 10.72624969482422 -1 15 -1 Z" stroke="none" fill="rgba(141,141,141,0.5)"/>
+        </g>
+        <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <g id="Group_17068" data-name="Group 17068" transform="translate(3.5 7.5)">
+            <g id="Group_678" data-name="Group 678" transform="translate(1.5 1.5)">
+              <rect id="Rectangle_1158" data-name="Rectangle 1158" width="20" height="22" rx="3" fill="#8d8d8d"/>
+              <path id="Path_948" data-name="Path 948" d="M-.25,21.572v0Z" transform="translate(0.25 0.428)" fill="#8d8d8d"/>
+              <path id="Path_20857" data-name="Path 20857" d="M0,0" transform="translate(17.38 2.043) rotate(90)" fill="none" stroke="#707070" stroke-width="1"/>
+              <g id="Group_17139" data-name="Group 17139" transform="translate(3 3)">
+                <path id="Path_20858" data-name="Path 20858" d="M383.95,262.658h-12a1,1,0,0,1-1-1.04V249.142a1,1,0,0,1,1-1.04h12a1,1,0,0,1,1,1.04v12.476A1,1,0,0,1,383.95,262.658Z" transform="translate(-370.95 -248.102)" fill="#c6c6c6"/>
+                <g id="Group_17140" data-name="Group 17140" transform="translate(2 10.427)">
+                  <g id="Group_17137" data-name="Group 17137">
+                    <circle id="Ellipse_37" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17136" data-name="Group 17136" transform="translate(3)">
+                    <circle id="Ellipse_37-2" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17138" data-name="Group 17138" transform="translate(9)">
+                    <circle id="Ellipse_37-3" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17135" data-name="Group 17135" transform="translate(6)">
+                    <circle id="Ellipse_37-4" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                </g>
+                <g id="Group_17141" data-name="Group 17141" transform="translate(2 3.128)">
+                  <g id="Group_17137-2" data-name="Group 17137">
+                    <circle id="Ellipse_37-5" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17136-2" data-name="Group 17136" transform="translate(3)">
+                    <circle id="Ellipse_37-6" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17138-2" data-name="Group 17138" transform="translate(9)">
+                    <circle id="Ellipse_37-7" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                  <g id="Group_17135-2" data-name="Group 17135" transform="translate(6)">
+                    <circle id="Ellipse_37-8" data-name="Ellipse 37" cx="0.5" cy="0.5" r="0.5" fill="#fff"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

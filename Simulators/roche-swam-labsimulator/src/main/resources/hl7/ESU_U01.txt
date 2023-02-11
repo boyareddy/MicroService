@@ -1,0 +1,2 @@
+MSH|^~\&|MagnaPure24^MP001-12^M|Roche Diagnostics|Connect|Roche Diagnostics|20151020162814||ESU^U01|123456789|P|2.5.1||||||UNICODE UTF-8 
+EQU|12345|20151020170800|IN

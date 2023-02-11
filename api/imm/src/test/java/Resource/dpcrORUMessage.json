@@ -1,0 +1,204 @@
+{
+	"dateTimeMessageGenerated": "20190315114431",
+	"messageControlId": "103d0cfb-d688-4769-a",
+	"messageType": "ORU",
+	"deviceId": "DPCR-133",
+	"runId": "RND19152705741",
+	"operatorName": "Admin",
+	"releasedBy": "Admin",
+	"sentBy": "Admin",
+	"oruSampleDetails": [
+		{
+			"accessioningId": "desk_08",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "AP1",
+					"version": "1.0",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_07",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_06",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_05",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_04",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_03",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_02",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		},
+		{
+			"accessioningId": "desk_01",
+			"flag": "",
+			"assayList": [
+				{
+					"name": "dPCRAnalyzerAssay1",
+					"packageName": "ap1",
+					"version": "AP1",
+					"kit": "System fluid",
+					"quantitativeValue": "2.6ml",
+					"quantitativeResult": "F",
+					"qualitativeValue": "Positive",
+					"qualitativeResult": "F"
+				}
+			],
+			"partitionEngineList": [
+				{
+					"plateId": "plateId",
+					"serialNumber": "engineSN1",
+					"fluidId": "fluidId1",
+					"dateandTime": "20190315114316"
+				}
+			]
+		}
+	]
+}

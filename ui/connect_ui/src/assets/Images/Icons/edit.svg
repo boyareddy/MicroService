@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_20253" data-name="Path 20253" d="M99-4622.335V-4614h8.332l24.574-24.574-8.332-8.332L99-4622.335Zm39.35-22.686a2.215,2.215,0,0,0,0-3.135l-5.2-5.2a2.212,2.212,0,0,0-3.133,0l-4.066,4.064,8.332,8.334,4.066-4.066Z" transform="translate(0 7115)" fill="#191919" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Edit" transform="translate(-99 -2460.998)" clip-path="url(#clip-path)">
+    <path id="Path_20252" data-name="Path 20252" d="M94-4659h62.219v62.217H94Z" transform="translate(-6.11 7108.892)" fill="#191919"/>
+  </g>
+</svg>

@@ -1,0 +1,332 @@
+<div class="procStep-card roboto-medium" *ngIf="sampleruncard">
+  <mat-card class="box-shadow">
+    <div class="step-header" [ngClass]="sampleruncard?.color.color">
+      <div>
+        <img src="assets/Images/{{sampleruncard?.imagePath}}" [alt]="sampleruncard?.status"
+          height="44px" class="img-right-16">
+      </div>
+      <div>
+        <div class="card-sub-header-info">
+          {{sampleruncard?.deviceRunId ? sampleruncard?.deviceRunId : '-'}}
+        </div>
+        <div class="card-main-header-info">
+          {{(sampleruncard?.processStepName ? sampleruncard?.processStepName : '-') | translate }}
+        </div>
+      </div>
+    </div>
+    <mat-progress-bar mode="determinate" [value]="sampleruncard?.color.transistionValue" [ngClass]="sampleruncard?.color.color" class="progressbar">
+    </mat-progress-bar>
+    <div class="d-flex flex-justify-between padding-20 pb-16">
+      <div>
+        <div class="status-data">
+          <div class="small roboto-regular font-12 process-text-color pb-6">
+            {{'runWorkflow.runSamplecard.runstatus' | translate}}
+          </div>
+          <div class="mb-20 d-flex flex-align-center">
+            <img src="assets/Images/{{(sampleruncard?.status?.toLowerCase()).split(' ').join('')}}.png"
+              class="completed-icon" alt="{{(sampleruncard?.status?.toLowerCase()).split(' ').join('')}}">
+            <span class="roboto-bold" [ngClass]="'text-'+sampleruncard?.color.color">
+              <ng-container *ngIf='sampleruncard?.status?.toLowerCase().indexOf("ongoing") !== -1; else status'>
+                {{'Run in progress' | translate}}
+              </ng-container>
+              <ng-template #status>
+                {{((sampleruncard?.status ? 'Run '+(sampleruncard?.status | lowercase ) : '-') | translate)}}
+              </ng-template>
+            </span>
+          </div>
+        </div>
+        <div *ngIf='(sampleruncard?.processStepName?.toLowerCase() === "sequencing" && (sampleruncard?.status?.toLowerCase().indexOf("completed") !== -1 || (sampleruncard?.status?.toLowerCase().indexOf("failed") !== -1)))' class="mb-20">
+          <app-single-row-details [i18key]='"position"' [value]="sampleruncard?.laneNo" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- Start time -->
+        <div class="mb-20">
+            <app-single-row-details [i18key]='"startTime"' [value]="sampleruncard?.runStartTime" [isDate]="true"  [inputFor]='inputSampleCardKey'>
+              </app-single-row-details>
+        </div>
+
+<!-- Completion time -->
+        <div *ngIf='getCompleteionTime()' [class.mb-20]="getCompleteionTime()">
+          <app-single-row-details [i18key]='"completionTime"' [value]="sampleruncard?.runCompletionTime" [isDate]="true"  [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- Consumable device ID -->        
+        <div *ngIf='(sampleruncard?.processStepName?.toLowerCase() === "sequencing" && (sampleruncard?.status?.toLowerCase().indexOf("completed") !== -1 || (sampleruncard?.status?.toLowerCase().indexOf("failed") !== -1)))' class="mb-20">
+          <app-single-row-details [i18key]='"consumableDeviceId"' [value]="sampleruncard?.consumableDevicePartNumber" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+    
+
+<!-- operator name -->
+        <div *ngIf='!(sampleruncard?.processStepName?.toLowerCase() === "dpcr" && sampleruncard?.status?.toLowerCase().indexOf("ongoing") !== -1)'
+        class="mb-20">
+          <app-single-row-details [i18key]='"operatorID"' [value]="sampleruncard?.operatorName" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- sample volume -->
+        <div *ngIf='!(sampleruncard?.processStepName?.toLowerCase() === "sequencing" ||
+                        sampleruncard?.processStepName?.toLowerCase() === "dpcr")'
+        class="mb-20">
+          <app-single-row-details 
+          [i18key]='"sampleVolume"' 
+          value="{{samplevol?.sampleVolume ? samplevol?.sampleVolume + ' &mu;L' : ''}}" 
+          [inputFor]='inputSampleCardKey'>
+            </app-single-row-details>
+        </div>
+
+<!-- eluate volume -->        
+        <div *ngIf='!(sampleruncard?.processStepName?.toLowerCase() === "sequencing" ||
+                      sampleruncard?.processStepName?.toLowerCase() === "dpcr")'
+        class="mb-20">
+          <app-single-row-details 
+          [i18key]='"eluateVolume"' 
+          value="{{samplevol?.eluateVolume ? samplevol.eluateVolume + ' &mu;L' : ''}}" 
+          [inputFor]='inputSampleCardKey'>
+            </app-single-row-details>
+        </div>
+
+<!-- protocal name -->        
+        <div class="mb-20">
+          <app-single-row-details [i18key]='"protocolName"' [value]="sampleruncard?.protocolName" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- output format -->        
+        <div *ngIf='getoutputContainerType()' class="mb-20">
+          <app-single-row-details [i18key]='"outputFormat"' [value]="sampleruncard?.outputContainerType" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- output folder location -->        
+        <div *ngIf=' ((sampleruncard?.processStepName?.toLowerCase() === "sequencing" || sampleruncard?.processStepName?.toLowerCase() === "dpcr") && (sampleruncard?.status?.toLowerCase().indexOf("completed") !== -1 || sampleruncard?.status?.toLowerCase().indexOf("aborted") !== -1 || sampleruncard?.status?.toLowerCase().indexOf("failed") !== -1))'
+        class="mb-20" style="word-break: break-all">
+          <app-single-row-details [i18key]='"outputFileLocation"' [value]="sampleruncard?.output_folder" [inputFor]='inputSampleCardKey' *ngIf='sampleruncard?.processStepName?.toLowerCase() === "dpcr"'>
+          </app-single-row-details>
+          <app-single-row-details [i18key]='"fileOutputLocation"' [value]="sampleruncard?.output_folder" [inputFor]='inputSampleCardKey'  *ngIf='sampleruncard?.processStepName?.toLowerCase() === "sequencing"'>
+          </app-single-row-details>
+        </div>
+
+<!-- Run flags -->        
+        <div *ngIf='getRunFlags()' class="mb-20">
+          <app-single-row-details [i18key]='"runFlags"' [value]="sampleruncard.runFlag" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- Samples count -->        
+        <div class="mb-20">
+          <app-single-row-details i18key="{{ ('sample' | pluralCheck: (sampleruncard?.totalSampleCount ? sampleruncard?.totalSampleCount
+          : '0')) }}" [value]="sampleruncard?.totalSampleCount" [inputFor]='inputSampleCardKey'>
+          </app-single-row-details>
+        </div>
+
+<!-- comments -->        
+        <div class="small roboto-regular font-12 process-text-color">
+          {{'runWorkflow.runSamplecard.comments' | translate}}
+        </div>
+        <div class="small roboto-regular font-14 list-color comments-code" [satPopoverAnchorFor]="p" [class.mbc-16]="sampleruncard.comments">  
+          
+          <ng-container *ngIf="sampleruncard.comments">
+              <span style="cursor:pointer">{{sampleruncard.comments}}</span>
+              <button  mat-icon-button aria-label="Edit comments" 
+                        (click)="p.open()" style="position: absolute;right: 20px;">
+                  <mat-icon svgIcon="rc-edit-icon" class="rc-icon19"></mat-icon>
+              </button>
+          </ng-container>
+            <span class="add-comment cursor" *ngIf="!sampleruncard.comments"  (click)="p.open()">
+                {{ 'dialog.addComments' | translate }}
+            </span>
+  
+            <sat-popover #p
+                hasBackdrop
+                xAlign="start"
+                yAlign="start"
+                (closed)="update(element, $event)">
+                <app-inline-edit  [value]="sampleruncard.comments"></app-inline-edit>
+            </sat-popover>
+        </div>
+      </div>
+    </div>
+    <div id="view-device">
+      <div class="d-flex d-flex-reverse">
+        <span class="d-flex vd-cont" (click)="navigate(sampleruncard.deviceId)">
+          <button mat-button color="primary" class="roboto-bold font-14 height-36">
+              <span>{{sampleruncard.deviceId}}</span>
+              <img src="assets/Images/goto.png" height="17" alt='goto' class="pl-10">
+          </button>
+          <!-- <a class="font-14 forgetPassword roboto-bold">
+            {{sampleruncard.deviceId}}
+          </a>
+          <img src="assets/Images/goto.png" height="17"> -->
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class="procStep-second roboto-medium supplies-card mb-20" *ngIf="sampleruncard">
+  <mat-card class="box-shadow">
+    <div class="step-header1 pb-0">
+      <div>
+        <img src="assets/Images/Containers/supplies.svg" alt="supplies" height="44px" class="img-right-16">
+      </div>
+      <div>
+        <div class="card-sub-header-info">
+          {{sampleruncard?.deviceRunId ? sampleruncard?.deviceRunId : '-'}}
+        </div>
+        <div class="card-main-header-info">
+          {{ 'runWorkflow.runSamplesuppliesCard.supplies' | translate }}
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf='sampleruncard?.assayType?.toLowerCase().indexOf("htp") !== -1'>
+      <ng-container *ngIf='sampleruncard?.status?.toLowerCase().indexOf("ongoing") === -1; else noStatus1'>
+        <div class="pl-20 pr-20 pt-20 pb-20" *ngIf='sampleruncard?.uniqueReagentsAndConsumables.length > 0; else noStatus1'>
+          <ng-container *ngIf='!(sampleruncard?.processStepName?.toLowerCase() === "sequencing" && (sampleruncard?.status?.toLowerCase().indexOf("completed") !== -1) || sampleruncard?.status?.toLowerCase().indexOf("failed") !== -1)'>
+            <!-- <ng-container *ngIf='!(sampleruncard?.processStepName.toLowerCase() === "sequencing" && sampleruncard?.status?.toLowerCase().indexOf("ongoing") !== -1); else noStatus1'> -->
+            <div *ngFor="let item of sampleruncard?.uniqueReagentsAndConsumables" class="nm">
+              <div class="small roboto-bold font-14 list-color">
+                {{ item?.attributeName ? item?.attributeName : '-' }}
+              </div>
+              <div class="small roboto-regular font-14 process-text-color">
+                <app-single-row-details [i18key]='"name"' [value]="item?.attributeValue.split(';')[0]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                  </app-single-row-details>
+              </div>
+              <div class="small roboto-regular font-14 process-text-color">
+                <app-single-row-details [i18key]='"lot"' [value]="item?.attributeValue.split(';')[1]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                  </app-single-row-details>
+              </div>
+              <div class="small roboto-regular font-14 process-text-color mb-20 no-margin">
+                <app-single-row-details [i18key]='"serialNumber"' [value]="item?.attributeValue.split(';')[2]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                  </app-single-row-details>
+              </div>
+            </div>
+            <!-- </ng-container> -->
+          </ng-container>
+
+          <ng-container *ngIf='(sampleruncard?.processStepName?.toLowerCase() === "sequencing" && 
+                                  (sampleruncard?.status?.toLowerCase().indexOf("completed") > -1 ||
+                                    sampleruncard?.status?.toLowerCase().indexOf("failed") > -1))'>
+            <div class="dpcrAssay">
+              <div *ngFor="let item of reagentslist" class="nm mb-20">
+                <div class="small roboto-bold font-14 list-color">
+                    {{ 'runWorkflow.runSamplesuppliesCard.' + item.attributeName | translate }} :
+                </div>
+                <div *ngIf="item1 !== 'attributeName'">
+                    <app-single-row-details [i18key]='"partNumber"' [value]="item.partNumber" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                    <app-single-row-details [i18key]='"expiration"' [value]="item.expiration" [singleRow]='true' [inputFor]='inputReagentCardKey' [isDate]="true">
+                    </app-single-row-details>
+                  </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-template #noStatus1>
+        <div class="padding-20 pb-16 font-14 process-text-color d-flex flex-justify-center">
+          {{'runWorkflow.runSamplesuppliesCard.noSupplydetailsAvailable' | translate}}
+        </div>
+      </ng-template>
+    </div>
+
+    <div *ngIf='sampleruncard?.assayType?.toLowerCase().indexOf("dpcr") !== -1' class="dpcrAssay">
+      <ng-container *ngIf='sampleruncard?.status?.toLowerCase().indexOf("ongoing") === -1; else noStatus'>
+      <div class="padding-20 pb-16" *ngIf='sampleruncard?.uniqueReagentsAndConsumables.length > 0; else noStatus'>
+
+        <ng-container *ngIf='(sampleruncard?.processStepName?.toLowerCase().indexOf("extraction") === -1)'>
+            <ng-container *ngFor="let item of sampleruncard.uniqueReagentsAndConsumables">
+              <div *ngIf='(sampleruncard?.processStepName?.toLowerCase().indexOf("library preparation") > -1 || 
+                              (sampleruncard?.processStepName?.toLowerCase().indexOf("dpcr") > -1 && 
+                              item?.attributeName === "plateID"))' class="nm mb-20">
+
+                <div class="small roboto-bold font-14 list-color">
+                  <ng-container *ngIf='sampleruncard?.processStepName?.toLowerCase().indexOf("library preparation") > -1; else dpcrdata'>
+                    {{item?.attributeName ? item?.attributeName : '-'}}
+                  </ng-container>
+                  <ng-template #dpcrdata>
+                    {{ 'runWorkflow.runSamplestable.plateId' | translate }}: {{ item?.attributeValue.split(';')[0] }}
+                  </ng-template>
+                </div>
+
+                <div>
+                  <ng-container *ngIf='sampleruncard?.processStepName?.toLowerCase().indexOf("library preparation") > -1; else dpcr1'>
+                    <app-single-row-details [i18key]='"name"' [value]="item?.attributeValue.split(';')[0]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-container>
+                  <ng-template #dpcr1>
+                    <app-single-row-details [i18key]='"peSerialNumber"' [value]="item?.attributeValue.split(';')[1]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-template>
+                </div>
+
+                <div>
+                  <ng-container *ngIf='sampleruncard?.processStepName?.toLowerCase().indexOf("library preparation") > -1; else dpcr2'>
+                    <app-single-row-details [i18key]='"lot"' [value]="item?.attributeValue.split(';')[1]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-container>
+                  <ng-template #dpcr2>
+                    <app-single-row-details [i18key]='"partFluidId"' [value]="item?.attributeValue.split(';')[2]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-template>
+                </div>
+
+                <div>
+                  <ng-container *ngIf='sampleruncard?.processStepName?.toLowerCase().indexOf("library preparation") > -1; else dpcr3'>
+                    <app-single-row-details [i18key]='"serialNumber"' [value]="item?.attributeValue.split(';')[2]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-container>
+
+                  <ng-template #dpcr3>
+                    <app-single-row-details [i18key]='"partitioningTime"' [value]="item?.attributeValue.split(';')[3]" [singleRow]='true'
+                      [isDate]="true" [inputFor]='inputReagentCardKey'>
+                    </app-single-row-details>
+                  </ng-template>
+                </div>
+              </div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf='(sampleruncard?.processStepName?.toLowerCase().indexOf("extraction") !== -1 && newReagentsList.length > 0);'>
+          <ng-container *ngFor='let reagent of newReagentsList'>
+              <div class="small roboto-bold font-14 list-color" *ngIf='reagent?.attributeName === "internalControl" || reagent?.attributeName === "reagents"'>
+                  {{ ('runWorkflow.runSamplesuppliesCard.' + (reagent?.attributeName ? reagent?.attributeName : '-')) | translate }}
+              </div>
+              <ng-container *ngIf='reagent?.attributeName === "internalControl"'>
+                  <div *ngFor='let reagentvalue of reagent?.attributeValue' class="mb-20">
+                      <app-single-row-details [i18key]='"ICBarcode"' [value]="reagentvalue.split(';')[1]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                      </app-single-row-details>
+                      <app-single-row-details [i18key]='"ICLot"' [value]="reagentvalue.split(';')[0]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                      </app-single-row-details>
+                      <app-single-row-details [i18key]='"volume"' [value]="reagentvalue.split(';')[2]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                      </app-single-row-details>
+                      <app-single-row-details [i18key]='"ICExpDate"' [value]="reagentvalue.split(';')[3]" [singleRow]='true' [inputFor]='inputReagentCardKey' [isDate]="true">
+                      </app-single-row-details>
+                  </div>
+              </ng-container>
+              <ng-container *ngIf='reagent?.attributeName === "reagents"'>
+                  <div *ngFor='let reagentvalue of reagent?.attributeValue' class="mb-20">
+                      <app-single-row-details [i18key]='"name"' [value]="reagentvalue.split(';')[0]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                      </app-single-row-details>
+                      <app-single-row-details [i18key]='"version"' [value]="reagentvalue.split(';')[1]" [singleRow]='true' [inputFor]='inputReagentCardKey'>
+                      </app-single-row-details>
+                  </div>
+              </ng-container>
+              
+          </ng-container>
+        </ng-container>
+      </div>
+      </ng-container>
+      <ng-template #noStatus>
+        <div class="padding-20 pb-16 font-14 process-text-color d-flex flex-justify-center">
+          {{'runWorkflow.runSamplesuppliesCard.noSupplydetailsAvailable' | translate}}
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+
+
+</div>

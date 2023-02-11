@@ -1,0 +1,62 @@
+<!-- <div class="slideLftRgtAnimCls" [@slideLftRgtAnim]> -->
+
+    <!-- Providing input to Header component-->
+<div class="slideLftRgtCls">
+    <app-header [headerInfo]="headerInfo"></app-header>
+    <div class="order-details-tab expansion-data">
+    <mat-tab-group [selectedIndex]="selectedIndex"> 
+       
+        <mat-tab>
+            <ng-template mat-tab-label>
+                {{ 'tabHeaders.details' | translate }}
+            </ng-template>
+            <div class="order-info-container">
+                <!-- Providing input to Order Details component-->
+                <app-order-details 
+                    [orderDetails]="orderInformation"
+                    [processStepNameInfo] = 'processStepNameInfo'
+                    [patientConfigFile]='patientConfigInfo'
+                    [assayType]='assayType'
+                    class="app-order-details">
+                </app-order-details>
+                <!-- Providing input to Assay Details component-->
+                <app-assay-details 
+                    [assayDetails]="assayDetails"
+                    [processStepNameInfo] ='processStepNameInfo'
+                    [patientConfigFile]='patientConfigInfo'
+                    [assayType]='assayType'
+                    class="app-assay-details">
+                </app-assay-details>
+                <!-- Providing input to Patient Details component-->
+                <app-patient-details 
+                    [patientDetails]="patientInformation"
+                    [processStepNameInfo] = 'processStepNameInfo'
+                    [patientConfigFile]='patientConfigInfo'
+                    [assayType]='assayType'
+                    class="app-patient-details">
+                </app-patient-details>
+            </div>
+            <!-- Footer page initiation -->
+            <app-footer [orderStatus]="orderStatus"></app-footer>
+        </mat-tab>
+        <mat-tab *ngIf="!isWorkFlowEnabled">
+                <ng-template mat-tab-label>
+                    {{ 'tabHeaders.Workflow' | translate }}
+                </ng-template>
+                <app-work-flow [workFlowDetails]="workFlowDetails_Avail"></app-work-flow>
+        </mat-tab>
+        <mat-tab disabled>
+            <ng-template mat-tab-label>
+                <button mat-icon-button (click)='closeSnackbar($event)' class="nt-close m-20 no-hover-circle">
+                    <img src="assets/Images/logindots.svg" alt="CPRMenu" [mdePopoverTriggerFor]="CPRMenu" mdePopoverTriggerOn="click" mdePopoverPositionX="-300" class="width-3 cursor mat-menu-btn-img">
+                </button>
+            </ng-template>
+            <mde-popover #CPRMenu="mdePopover" class="CPRPopupover" style="padding-right:0 !important">
+                <div class="mat-menu-decoration-text" (click)="goToProblemReport()">
+                    {{ 'problemReport.createreport' | translate }}
+                </div>
+            </mde-popover>
+        </mat-tab>
+    </mat-tab-group>
+    </div>
+</div>

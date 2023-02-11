@@ -1,0 +1,39 @@
+<div class="slideBtmTopCls">
+  <app-header [headerInfo]="headerInfo"></app-header>
+
+  <div class="plate-container">
+    <!-- <div>
+      <div class="plate-cont-header">
+        <img src="assets/Images/patientInfo.png" alt="Image" height="50">
+        <div class="header-info">
+          <label>96 Well plates</label>
+          <label class="info-buttom">12344AFS546</label>
+        </div>
+      </div>
+      <table mat-table [dataSource]="tableData" class="samples-table">
+        <ng-container matColumnDef="accessioningId">
+          <th mat-header-cell *matHeaderCellDef> Accessioning ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.accessioningId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> Position </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div> -->
+    <!-- <app-mapped-container *ngFor="let container of uploadedContainer;" [containerInfo]="container"></app-mapped-container> -->
+    <div class="mapped-container" *ngFor="let containerId of containerIds;let ind = index;" [ngClass]="{'m-bottom': i === containerIds.length}"> 
+      <app-mapped-container [containerId]="containerId" 
+                            [containerType]="uploadedContainer?.containers[containerId][0]?.containerType" 
+                            [samples]="uploadedContainer?.containers[containerId]"
+                            [labelsInfo]='labelsInfo'>
+      </app-mapped-container>
+    </div>
+  </div>
+
+  <app-container-mapping-footer [sampleCount]="uploadedContainer?.sampleCount" (onReTrying)="onReTrying($event)" (onConfirming)="onConfirming($event)"></app-container-mapping-footer>
+</div>

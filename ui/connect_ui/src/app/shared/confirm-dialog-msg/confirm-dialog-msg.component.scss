@@ -1,0 +1,17 @@
+
+.button-row {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+  
+  .pointer {
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  
+  .content-text {
+    color: #191919 !important;
+  }
+  

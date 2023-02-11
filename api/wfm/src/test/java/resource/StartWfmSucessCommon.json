@@ -1,0 +1,12 @@
+
+{
+  "deviceSerialNumber": "MP001-22",
+  "sendingApplicationName": "MagnaPure24",
+  "receivingApplication": "LIS",
+  "dateTimeMessageGenerated": "20151020162814",
+  "messageType": "NA-Extraction",
+  "messageCotrolId": "123456787",
+  "accessioningId": "8000",
+  "rspMessage": null,
+  "statusUpdate": null
+}

@@ -1,0 +1,78 @@
+<div class="slideLftRgt">
+  <app-header [headerInfo]='headerInfo'></app-header>
+
+  <div class="container">
+
+    <div class="d-flex list-header flex-justify-between">
+      <div class="d-flex flex-align-center">
+        <div class="mr-20">
+          <img src="assets/Images/Containers/RunDetails/96wellPlate.svg" alt="NAExtraction" height="44px" class="vertical-middle">
+        </div>
+        <div>
+          <div class="card-sub-header-info"> {{ 'runWorkflow.cards.wellPlate' | translate }} </div>
+          <div class="card-main-header-info"> {{ containerId }} </div>
+        </div>
+      </div>
+      <div>
+        <!-- <button mat-raised-button class="roboto-bold" (click)="deleteContSamples(containerId)">{{'Delete mapping' | translate}}</button> -->
+        <span
+        matTooltip="{{ 'common.accessRestricted' | translate}}"
+        [matTooltipClass]="'tooltipDetails'"
+        [matTooltipDisabled]="havingAccess">
+        <button mat-raised-button class="roboto-bold" (click)="deleteContSamples(containerId)" [disabled]="!havingAccess">
+         <!--  {{ 'Delete mapping' | translate}} -->
+          {{ 'runWorkflow.runOngoingcard.deleteMapping' | translate}}
+        </button>
+        </span>
+      </div>
+    </div>
+
+    <table mat-table [dataSource]='dataSource' class="w-100" matSort matSortDisableClear='true' matSortDirection="asc">
+      <!-- for Accessioning Id Column -->
+      <ng-container matColumnDef='accessioningID'>
+        <th mat-header-cell *matHeaderCellDef class="th-list-header roboto-bold" mat-sort-header>
+          {{ 'runWorkflow.mappedSamples.accessioningID' | translate }} 
+        </th>
+        <td mat-cell *matCellDef='let sample' class="roboto-regular text-header-color font-14"> {{sample.accessioningID}} </td>
+      </ng-container>
+
+      <!-- For Position Column -->
+      <ng-container matColumnDef='position'>
+        <th mat-header-cell *matHeaderCellDef class="th-list-header roboto-bold" mat-sort-header>
+          {{ 'runWorkflow.mappedSamples.position' | translate }} 
+        </th>
+        <td mat-cell *matCellDef='let sample' class="roboto-regular text-header-color font-14"> {{sample.position}} </td>
+      </ng-container>
+
+      <!-- For Assay Type Column -->
+      <ng-container matColumnDef='assayType'>
+        <th mat-header-cell *matHeaderCellDef class="th-list-header roboto-bold" mat-sort-header>
+            {{ 'runWorkflow.mappedSamples.assay' | translate }} 
+        </th>
+        <td mat-cell *matCellDef='let sample' class="roboto-regular text-header-color font-14"> {{ sample.assayType | translate }} </td>
+      </ng-container>
+
+      <!-- For Comments Column -->
+      <ng-container matColumnDef='comments'>
+        <th mat-header-cell *matHeaderCellDef class="th-list-header roboto-bold">
+          {{ 'runWorkflow.mappedSamples.comments' | translate }} 
+        </th>
+        <td mat-cell *matCellDef='let sample' class="roboto-regular text-header-color font-14">
+          <img src="assets/Images/comments.png" alt="comments">
+        </td>
+      </ng-container>
+
+      <!-- For navigation button Column -->
+      <ng-container matColumnDef='goTo'>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef='let sample' class='text-right'>
+            <img src="assets/Images/right-arrow.png" alt="navigate" (click)="goToOrderInfo(sample)">
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef='displayedColumns'></tr>
+      <tr mat-row *matRowDef='let row; columns: displayedColumns;'  (click)="goToOrderInfo(row)"></tr>
+    </table>
+
+  </div>
+</div>

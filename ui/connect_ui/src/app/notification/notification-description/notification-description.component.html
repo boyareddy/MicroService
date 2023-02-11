@@ -1,0 +1,80 @@
+<div class="description-container roboto-medium" [ngClass]="{'description-container-all-msg': selectedTab===1}">
+  <mat-card class="box-shadow">
+    <div *ngIf="notificationRes?.severity === 'Warning'" class="step-header bgcolor">
+      <div *ngIf="notificationRes?.severity === 'Warning'">
+        <img  src="assets/Images/warningblack.svg" alt="ongoing" height="32px">
+      </div>
+      <div>
+          <div class="roboto-bold font-12 list-headercolor">
+              {{ notificationRes.createdDateTime | date : "dd-MMM-yyy HH:mm:ss " | emptyDataCheck }}
+              <span [appDateTimeZone]='notificationRes.createdDateTime'></span>
+          </div> 
+        <div class="roboto-bold font-24 list-headercolor">{{notificationRes?.severity | translate}}</div>  
+      </div>
+    </div>
+    <div *ngIf="notificationRes?.severity === 'Error'" class="step-header bgcolorred">
+      <div *ngIf="notificationRes?.severity === 'Error'">
+        <img  src="assets/Images/errorwhite.svg" alt="ongoing" height="32px">
+      </div>
+      <div>
+          <div class="roboto-bold font-12 list-headercolorwhite">
+              {{ notificationRes.createdDateTime | date : "dd-MMM-yyy HH:mm:ss " | emptyDataCheck }}
+              <span [appDateTimeZone]='notificationRes.createdDateTime'></span>
+          </div> 
+        <div class="roboto-bold font-24 list-headercolorwhite">{{notificationRes?.severity | translate}}</div>  
+      </div>
+    </div>
+    <div *ngIf="notificationRes?.severity === 'Info'" class="step-header bgcolorgrey">
+      <div *ngIf="notificationRes?.severity === 'Info'">
+        <img  src="assets/Images/info-white.svg" alt="Info" height="32px">
+      </div>
+      <div>
+          <div class="roboto-regular font-12 list-headercolorwhite lineHeight1">
+              {{ notificationRes.createdDateTime | date : "dd-MMM-yyy HH:mm:ss " | emptyDataCheck }}
+              <span [appDateTimeZone]='notificationRes.createdDateTime'></span>
+          </div> 
+        <div class="roboto-bold font-24 list-headercolorwhite lineHeight2">{{notificationRes?.severity | translate}}</div>  
+      </div>
+    </div>
+    <div class="nt-msg-container" [ngClass]="{'nt-msg-container-all-msg': selectedTab===1}">
+      <div class="cont-container mt-20 mr-20 ml-20 mb-20">
+        <div class="small roboto-regular font-12 process-text-color">{{'notification.title' | translate}}</div>
+        <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.title ? notificationRes?.title : '-'}}</div>
+      </div>
+      <mat-divider class="mat-divider line-color"></mat-divider>
+      <div class="cont-container mt-20 mr-20 ml-20 mb-20">
+        <div class="small roboto-regular font-12 process-text-color">{{'notification.description' | translate}}</div>
+        <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.msg ? notificationRes?.msg : '-'}}</div>
+      </div>
+      <ng-container *ngIf="notificationRes?.title === HTPTRIGGEREDNF && notificationRes?.topic === 'Connections'">
+        <mat-divider class="mat-divider line-color"></mat-divider>
+        <div class="cont-container mt-20 mr-20 ml-20 mb-20">
+          <div class="small roboto-regular font-12 process-text-color">{{'notification.description' | translate}}</div>
+          <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.descriptionCode ? notificationRes?.descriptionCode : '-'}}</div>
+        </div>
+        <mat-divider class="mat-divider line-color"></mat-divider>
+        <div class="cont-container mt-20 mr-20 ml-20">
+          <div class="small roboto-regular font-12 process-text-color">{{'notification.instrumentType' | translate}}</div>
+          <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.deviceType ? notificationRes?.deviceType : '-'}}</div>
+        </div>
+        <div class="cont-container mt-20 mr-20 ml-20">
+          <div class="small roboto-regular font-12 process-text-color">{{'notification.instrumentName' | translate}}</div>
+          <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.deviceName ? notificationRes?.deviceName : '-'}}</div>
+        </div>
+        <div class="cont-container mt-20 mr-20 ml-20 mb-20">
+          <div class="small roboto-regular font-12 process-text-color">{{'notification.serialNumber' | translate}}</div>
+          <div class="small roboto-regular font-14 list-color word-break">{{notificationRes?.deviceSerialNumber ? notificationRes?.deviceSerialNumber : '-'}}</div>
+        </div>
+        <mat-divider class="mat-divider line-color"></mat-divider>
+        <div class="device-name-link-container mt-20 mr-20 mb-20">
+          <div class="device-name-link" (click)="gotoDeviceDetails(notificationRes?.deviceName)">
+            <a class="font-14 forgetPassword roboto-bold deviceName-link">
+              {{notificationRes?.deviceName ? notificationRes?.deviceName : '-'}}
+            </a>
+            <div class="redirect-btn"></div>
+          </div>
+        </div>
+      </ng-container>
+    </div>  
+  </mat-card>
+</div>

@@ -1,0 +1,105 @@
+<div *ngIf="toggleComponent" style="padding: 20px;background: #FFFFFF; border-left: 1px solid #d3d3d3;">
+    <div>
+        <div style="display: flex; flex-direction: row;justify-content: space-between;padding-bottom: 10px;">
+            <div style="font-size: 20px;color: #4d4d4d" class="roboto-bold"> {{'Filter' | translate}} </div>
+            <div>
+                <a *ngIf="filterResult?.filterCount !== 0" class="button-link-no-tooltip roboto-regular font-14" (click)="clearAllFilter()">{{'Clear all' | translate}}</a> 
+                <a *ngIf="filterResult?.filterCount === 0" class="button-link-disable-no-tooltip roboto-regular font-14">{{'Clear all' | translate}}</a>
+            </div>
+        </div>
+        <form [formGroup]="filterForm" class="outerfilter">
+            <div *ngFor="let filterOption of filterComponentJson.filterOptions">
+                <div class="roboto-bold" style="margin-top: 5px;margin-bottom: 10px;font-size: 16px;color: #191919"> {{filterOption.filterGroupName | translate}} </div>
+                <div *ngFor="let option of filterOption.options">
+                    <mat-form-field *ngIf="option.fieldType === 'dropdown'" appearance="fill" class="width-full roboto-regular">
+                        <mat-label>
+                            {{option.fieldName | translate}}
+                        </mat-label>
+                        <mat-select *ngIf="!option.isTranslationRequired" placeholder="" [formControlName]="option.fieldKey" (selectionChange)="onFieldChange()">
+                            <mat-option  [value]="null">{{option.fieldName | translate}}</mat-option>        
+                            <mat-option *ngFor="let dropDownOption of getDropDownOptions(option.fieldKey, filterResult && filterResult.unFilteredList ? filterResult.unFilteredList : entityList)" 
+                                                        [value]="dropDownOption">{{dropDownOption | translate}}</mat-option>
+                        </mat-select>
+                        <mat-select *ngIf="option.isTranslationRequired" placeholder="" [formControlName]="option.fieldKey" (selectionChange)="onFieldChange()">
+                            <mat-option  [value]="null">{{option.fieldName | translate}}</mat-option>        
+                            <mat-option *ngFor="let dropDownOption of getDropDownOptions(option.fieldKey, filterResult && filterResult.unFilteredList ? filterResult.unFilteredList : entityList)" 
+                                                        [value]="dropDownOption">
+                                <app-show-more [data]="dropDownOption" [isNotMaterialTooltip]="false" [tooltipValue]="dropDownOption"></app-show-more>       
+                            </mat-option>
+                        </mat-select>   
+                    </mat-form-field>
+                    <mat-form-field *ngIf="option.fieldType === 'date'" appearance="fill" class="width-full roboto-regular">
+                        <mat-label>
+                            {{option.fieldName | translate}}
+                        </mat-label>
+                        <input *ngIf="option.fieldKey === 'dateFrom'" matInput 
+                                        [matDatepicker]="date" 
+                                        placeholder="" 
+                                        [formControlName] = "option.fieldKey" [max]="startDateRange.toDate" [min]="startDateRange.fromDate" (dateChange)="onDateChange('endDateRange', 'fromDate', $event)" autocomplete="off" readonly>
+                        <input *ngIf="option.fieldKey === 'dateTo'" matInput 
+                                        [matDatepicker]="date" 
+                                        placeholder="" 
+                                        [formControlName] = "option.fieldKey" [max]="endDateRange.toDate" [min]="endDateRange.fromDate" (dateChange)="onDateChange('startDateRange', 'toDate', $event)" autocomplete="off" readonly>
+                        <mat-datepicker-toggle  matSuffix [for]="date" >
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #date (closed)="onFieldChange()">
+                        </mat-datepicker>
+                    </mat-form-field>
+                    <div *ngIf="option.fieldType === 'checkbox'">
+                        <mat-checkbox [formControlName] = "option.fieldKey" color="primary" (change)="onFieldChange()">
+                            <span class="special-check">
+                                {{option.fieldName | translate}}
+                            </span>
+                        </mat-checkbox>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- <div>
+    <div> Filter </div>
+    <div (click)="clearAllFilter()"> Clear All </div>
+</div>
+<form class="full-width" [formGroup]="filterForm">
+  <div *ngFor="let filterOption of filterComponentJson.filterOptions">
+    <div class="group-header"> {{filterOption.filterGroupName}} </div>
+    <mat-grid-list cols="1" rowHeight="72px" gutterSize="20px" class="acc-panel-body">
+        <mat-grid-tile *ngFor="let option of filterOption.options" [ngClass]="option.fieldType === 'checkbox' ? 'checkbox-tile' : ''" colspan="1" rowspan="1">
+            <mat-form-field *ngIf="option.fieldType === 'dropdown'" appearance="fill" class="width-full roboto-regular">
+                <mat-label>
+                    {{option.fieldName}}
+                </mat-label>
+                <mat-select placeholder="" [formControlName]="option.fieldKey" (selectionChange)="onFieldChange()">
+                    <mat-option  [value]="null">{{option.fieldName}}</mat-option>        
+                    <mat-option *ngFor="let dropDownOption of getDropDownOptions(option.fieldKey, filterResult && filterResult.unFilteredList ? filterResult.unFilteredList : entityList)" 
+                                        [value]="dropDownOption">{{dropDownOption}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field *ngIf="option.fieldType === 'date'" appearance="fill" class="width-full roboto-regular">
+                <mat-label>
+                    {{option.fieldName}}
+                </mat-label>
+                <input matInput 
+                        [matDatepicker]="date" 
+                        placeholder="" 
+                        [formControlName] = "option.fieldKey" autocomplete="off" readonly>
+                <mat-datepicker-toggle  matSuffix [for]="date" >
+                </mat-datepicker-toggle>
+                <mat-datepicker #date (closed)="onFieldChange()">
+                </mat-datepicker>
+            </mat-form-field>
+
+            <div *ngIf="option.fieldType === 'checkbox'">
+                <mat-checkbox [formControlName] = "option.fieldKey" color="primary" (change)="onFieldChange()">
+                    <span>
+                        {{option.fieldName}}
+                    </span>
+                </mat-checkbox>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</form> -->

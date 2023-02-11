@@ -1,0 +1,16 @@
+<mat-card style="height: 2em;">
+  <div style="display: flex;justify-content: space-between;">
+    <select (change)="onLangChange($event)">
+      <option value="null">
+        Chose language
+      </option>
+      <option *ngFor="let lang of langs" [value]="lang.code">
+        {{lang.lang}}
+      </option>
+    </select>
+    <button mat-stroked-button (click)="exportPDF()">Open PDF in new window</button>
+    <button mat-stroked-button (click)="openPdfInNewWindow()">Open PDF</button>
+    <button mat-stroked-button (click)="downloadPDF()">Download PDF</button>
+  </div>
+</mat-card>
+<object [attr.data]="pdf" type="application/pdf" style="width: 100%;margin-top: 0.4em;height: 564px;"></object>

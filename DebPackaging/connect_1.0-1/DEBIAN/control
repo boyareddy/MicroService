@@ -1,0 +1,10 @@
+Package: connect
+Version: 1.0-1097
+Section: java
+Priority: required
+Architecture: amd64
+Depends: curl, jq (>= 1.5+dfsg-2), bash (>= 2.05a-11), postgresql-9.6, rabbitmq-server (>= 3.6), tomcat8
+Maintainer: connectadmin <connectadmin@roche.com>
+Description: Roche Connect Workflow Manager
+ Installs Roche Connect Workflow Manager.
+ It is the debian version of Connect software(Ubuntu 18).

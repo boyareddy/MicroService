@@ -1,0 +1,18 @@
+MSH|^~\&|LIS Interface Quickstart^123456^M|LIS Simulator|LIS Interface Quickstart|LIS|20090507132310+0200||OML^O33^OML_O33|123456789|P|2.5.1|||ER|SU||UNICODE UTF-8
+PID|1||123456||Doe3^John^^^^^L|Mother of Doe3^^^^^^L|19550215|M
+SPM||5001481811252659-4|5001481811252659-5|SER^Serum^HL70487|||||||P||||||20090508135832||||||||||SC
+SAC||9955|5656|2223|||20110508135832|I|MC|50014|3|C|222235|1|localName||||||12.3|||MmolPerL^^UCUM|||||^1^:^3
+ORC|NW|14818112526593|||CM||||20090508152254
+TQ1|1||||||||R
+OBR|1|14818112526593||989^ctDNA-P1^99ROC|||||||A||||||||||||||O||||14818112526595|||||||||||||||||PlacerSupplementalServiceInfo
+TCD|989^SODIUM^99ROC|^1^:^3||||||D
+NTE|||This is a testorder comment.
+OBX|1|NM|989^SODIUM^99ROC|TestResultName|143.000|mmol/L||L^Low^LN~H^High^99ROC~LL~R|||F|||||responsibleActor||ISE|20090508141128
+TCD|989^SODIUM^99ROC|^1^:^3||||||D
+NTE|||This is a result comment.
+ORC|RP|14818112526594|||CM||||20090508152255
+TQ1|2||||||||R
+OBR|2|14818112526594||990^GLUC^99ROC|||||||A||||||||||||||O||||14818112526596|||||||||||||||||PlacerSupplementalServiceInfo
+TCD|990^GLUC^99ROCC|^1^:^4||||||D
+OBX|2|ST|990^GLUC^99ROC|TestResultName|resultInterpretationId~resultInterpretationPos|||L~H~LL~R|||F|||||responsibleActor||ISE|20090508141129
+TCD|990^GLUC^99ROC|^1^:^4||||||D

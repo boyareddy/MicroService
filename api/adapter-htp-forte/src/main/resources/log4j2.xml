@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Properties>
+				<Property name="LOG_PATH">${sys:user.home}</Property>
+		<Property name="LOG_FILE">pas.log</Property>
+		<Property name="LOG_PATTERN">[$$${ctx:moduleName}][$$${ctx:userName}][$$${ctx:tenantDomainName}][$$${ctx:sessionId}][$$${ctx:requestId}][%d{yyyy-MM-dd HH:mm:ss}][%t][%-5p][%c{1}:%L] - %msg%n</Property>
+		<Property name="moduleName">${artifactId}</Property>
+		<Property name="userName">SYSTEM</Property>
+		<Property name="tenantDomainName">SYSTEM</Property>
+		<Property name="sessionId">EMPTY</Property>
+		<Property name="requestId">EMPTY</Property>
+	</Properties>
+	<Appenders>
+				<!-- <GELF name="gelfAppender" server="graylogserver" port="12201" hostName="www.pas.com" 
+			protocol="tcp" /> -->
+				<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${sys:LOG_PATTERN}" />
+		</Console>
+
+		<RollingFile name="RollingFile" filename="${sys:LOG_PATH}/${sys:LOG_FILE}"
+			filepattern="${sys:LOG_PATH}/%d{ddMMyyyy}-${sys:LOG_FILE}">
+			<PatternLayout pattern="${sys:LOG_PATTERN}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"/>
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingFile>
+
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingFile" />
+						<!-- <AppenderRef ref="gelfAppender" /> -->
+			
+		</Root>
+	</Loggers>
+</Configuration>

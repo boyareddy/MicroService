@@ -1,0 +1,4 @@
+MSH|^~\&|MagnaPure24^MP0012-24^M|Roche Diagnostics|Connect|Roche Diagnostics|20190619123858||QBP^WOS^QBP_Q11|66f2f548-1297-4338-a|P|2.5.1||||||UNICODE UTF-8QPD|WOS^Work Order Step^IHE_LABTF|66f2f548-1297-4338-a|1112RCP|I||P
+
+MSH|^~\&|MagnaPure24^MP0012-24^M|Roche Diagnostics|Connect|Roche Diagnostics|20190619131455||QBP^WOS^QBP_Q11|baf94a86-279e-41de-b|P|2.5.1||||||UNICODE UTF-8QPD|WOS^Work Order Step^IHE_LABTF|baf94a86-279e-41de-b|1113RCP|I||P
+

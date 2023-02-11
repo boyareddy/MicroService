@@ -1,0 +1,48 @@
+[
+   {
+      "sampleResultId":1094,
+      "accesssioningId":"060920182341",
+      "orderId":10000357,
+      "outputContainerId":"166967620",
+      "outputContainerPosition":"g1",
+      "outputKitId":null,
+      "outputContainerType":"g9mmStrip",
+      "runResultId":1292,
+      "deviceId":"MP001-12",
+      "processStepName":"NA Extraction",
+      "runStatus":"Inprogress",
+      "runFlag":null,
+      "operatorName":"jimenj15",
+      "comments":"Comment on the sample result",
+      "updatedBy":"System",
+      "runStartTime":1536623055000,
+      "runCompletionTime":1536623061000,
+      "runRemainingTime":null,
+      "protocolName":[
+         "Cfna ss 2000"
+      ]
+   },
+   {
+      "sampleResultId":1100,
+      "accesssioningId":"060920182341",
+      "orderId":10000357,
+      "outputContainerId":"122306753",
+      "outputContainerPosition":"D1",
+      "outputKitId":null,
+      "outputContainerType":"g9mmStripg",
+      "runResultId":1293,
+      "deviceId":"LP001-12-Pre",
+      "processStepName":"Library Preparation",
+      "runStatus":"Inprogress",
+      "runFlag":null,
+      "operatorName":"jimenj15",
+      "comments":"Comment on the sample result",
+      "updatedBy":"System",
+      "runStartTime":1536623123000,
+      "runCompletionTime":1536623128000,
+      "runRemainingTime":null,
+      "protocolName":[
+         "LP24 Protocol"
+      ]
+     }
+ ]

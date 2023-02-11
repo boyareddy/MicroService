@@ -1,0 +1,14 @@
+[{
+		"assayType": "NIPTDPCR",
+		"deviceType": "LP",
+		"deviceName": "MP96",
+		"manualVerificationFlag": "Y",
+		"processStepSequence": "1",
+		"processStepName": "PrePCR",
+		"inputContainerType": "8 Tube Strip",
+		"outputContainerType": "96 well plate",
+		"sampleVolume": "200",
+		"eluateVolume": "50",
+		"reagent": "Cellular· RNA· LV;0.2"
+	}
+]

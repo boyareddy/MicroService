@@ -1,0 +1,27 @@
+<ng-container *ngIf="singleRow; else twoRows">
+  <div class="small roboto-regular font-14 process-text-color pb-6">
+    {{ 'runWorkflow.runSamplesuppliesCard.' + i18key | translate }}: 
+    <span *ngIf='isDate'>
+      {{ value ? (value | date:'dd-MMM-yyy HH:mm:ss') : '-'}} 
+      <span *ngIf='value' [appDateTimeZone]='value'> </span>
+    </span>
+    <span *ngIf='!isDate'> {{ value ? value : '-'}} </span>
+  </div>
+</ng-container>
+<ng-template #twoRows>
+  <div class="small roboto-regular font-12 process-text-color pb-6" *ngIf='inputFor === inputReagentCardKey'>
+    {{ 'runWorkflow.runSamplesuppliesCard.' + i18key | translate }}
+  </div>
+  <div class="small roboto-regular font-12 process-text-color pb-6" *ngIf='inputFor === inputSampleCardKey'>
+      {{ 'runWorkflow.runSamplecard.' + i18key | translate }}
+    </div>
+  <div class="small roboto-regular font-14 list-color">
+    <span *ngIf='isDate'>
+      {{ value ? (value | date:'dd-MMM-yyy HH:mm:ss') : '-'}}
+      <span *ngIf='value' [appDateTimeZone]='value'> </span>
+    </span>
+    <span *ngIf='!isDate'>
+      {{ value ? value : '-'}}
+    </span>
+  </div>
+</ng-template>

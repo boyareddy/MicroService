@@ -1,0 +1,3 @@
+MSH|^&~\|MagNA Pure 96||||20091126081114||ACK|MPCZC8380G5K|P|2.4|
+MSA|AA|Order790|
+ERR|||102^Data type error^HL70357|||||Data type error

@@ -1,0 +1,12 @@
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184935||ACK^U03^ACK|3aaf996a-807e-4830-9|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|3aaf996a-807e-4830-9
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184936||ACK^U03^ACK|86934440-4f68-4340-8|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|86934440-4f68-4340-8
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184937||ACK^U03^ACK|4e6c1bf5-8040-4a09-b|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|4e6c1bf5-8040-4a09-b
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184939||ACK^U03^ACK|43c584bf-cb7c-48ba-8|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|43c584bf-cb7c-48ba-8
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184940||ACK^U03^ACK|aabca692-8d06-4bbe-8|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|aabca692-8d06-4bbe-8
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184942||ACK^U03^ACK|69679012-1e1e-41dc-b|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|69679012-1e1e-41dc-b

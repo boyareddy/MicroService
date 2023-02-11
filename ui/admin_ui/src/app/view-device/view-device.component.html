@@ -1,0 +1,380 @@
+<div class="slideLftRgtCls">
+  <app-admin-ui-header class="no-shadow" [headerInfo]="headerInfo"></app-admin-ui-header>
+  
+  <div class="header" *ngIf="device && !isSequencer">
+          <div class="dev-det-cont">
+          <form class="dev-det-form" [formGroup]="deviceDetailForm">
+            <div class ="card-header-device" [ngClass]="{'add-green-bg' : device?.attributes?.deviceStatus === 'online', 'add-grey-bg' : device?.attributes?.deviceStatus === 'offline'}">
+                <!-- <div class="card-header-icon" [ngClass]="{'add-green-img' : device?.attributes?.deviceStatus === 'online', 'add-grey-img' : device?.attributes?.deviceStatus === 'offline'}"></div>
+                <div class="card-header-title-container">
+                  <div class="card-header-title1">{{ device && device.deviceType && device.deviceType.name ? device.deviceType.name : '-' }}</div>
+                    <div class="card-header-title2">{{ device.name | empty : '-' }}</div>
+                </div> -->
+                <div class="d-flex flex-align-center">
+                  <div class="card-header-icon" *ngIf='device?.attributes?.deviceStatus == "offline"'>
+                    <img [attr.src]="'assets/Images/devicelist/'+device?.deviceType?.name+''+'offline'+'.svg'" />
+                  </div>
+                  <div class="card-header-icon" *ngIf='device?.attributes?.deviceStatus == "online"'>
+                    <img [attr.src]="'assets/Images/devicelist/'+device?.deviceType?.name+''+'online'+'.svg'" />
+                  </div>
+                  <div class="card-header-title-container">
+                    <div class="card-header-title1">{{ device && device.deviceType && device.deviceType.name ? device.deviceType.name : '-' }}</div>
+                    <div class="card-header-title2">{{ device.name | empty : '-' }}</div>
+                  </div>
+                </div>
+            </div>
+            <div [ngClass]="{'line-green' : device?.attributes?.deviceStatus === 'online', 'line-grey' : device?.attributes?.deviceStatus === 'offline'}" ></div>
+            <div class="bg-wh">
+              <div [ngClass]="toggleEdit ? 'dev-ifo-cont dy-bt' : 'dev-ifo-cont'">
+                  <div class="roboto-regular dev-ifo-cell" *ngIf="!isTTV2Analysis">
+                    <div class="dev-cell-lb">{{'deviceMgmt.devSlNo' | translate}}</div>
+                    <div class="dev-cel-vl">
+                        <app-show-more [data]="device.serialNo" [tooltipValue]="device.serialNo" [displayFull]="true">{{'deviceMgmt.serialNo' | translate}}</app-show-more>
+                    </div>
+                  </div>
+                  <div *ngIf="!toggleInpIcon.name" class="roboto-regular dev-ifo-cell">
+                    <div class="dev-cell-lb">{{'deviceMgmt.devName' | translate}}</div>
+                    <div class="dev-cel-vl d-flex">
+                        <app-show-more [data]="device.name" [tooltipValue]="device.name" [displayFull]="true">{{ device && device.name ? device.name : '-' }}</app-show-more>
+                        
+                        <button mat-icon-button aria-label="Edit" 
+                                *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && !isTTV2Analysis" 
+                                (click)="toggleInputIcon('name')" class="mt-12n" >
+                          <mat-icon class="rc-icon rc-icon14" svgIcon="edit-gray" style="vertical-align: middle"></mat-icon>
+                        </button>
+
+                        <span 
+                        matTooltip="{{ 'common.accessRestricted' | translate}}"
+                        [matTooltipClass]="'tooltipDetails'"
+                        [matTooltipDisabled]="havingAccess">
+                          <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && !isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                        </span>
+                    </div>
+                  </div>
+                  <div *ngIf="toggleInpIcon.name" class="roboto-regular dev-ifo-cell">
+                    <mat-form-field appearance="fill" class="wd-80 font-14" #name>
+                      <mat-label class="roboto-regular">{{"Device name"}}</mat-label>
+                      <input matInput appMinMax [parentField]="name"  maxlength="64" placeholder="" formControlName="name" name="name" id="name" required="required" autocomplete="off" [autofocus]="toggleInpIcon.name" (blur)="saveFieldInfo('name')" (keyup.enter)="saveFieldInfo('name')">
+                      <mat-error *ngIf="deviceDetailForm.get('name').invalid">
+                        {{ deviceDetailForm.get('name').errors.errorCode | translate }}
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="roboto-regular dev-ifo-cell">
+                    <div class="dev-cell-lb">{{'deviceMgmt.devStatus' | translate}}</div>
+                    <div class="dev-cel-vl">{{ deviceCompleteStatus ? (deviceCompleteStatus | valueAlter:device.state:'INACTIVE') : '-' }}</div>
+                  </div>
+                  <div class="roboto-regular dev-ifo-cell" *ngIf="!isTTV2Analysis">
+                    <div class="dev-cell-lb">{{'deviceMgmt.devType' | translate}}</div>
+                    <div class="dev-cel-vl">{{ device && device.deviceType && device.deviceType.name ? device.deviceType.name : '-' }}</div>
+                  </div>
+              </div>
+
+              <div [ngClass]="toggleEdit ? 'dev-ifo-cont dy-bt' : 'dev-ifo-cont'"  class="remove-padding-top" *ngIf="isTTV2Analysis">
+
+                  <div *ngIf="!toggleInpIcon.url" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.url' | translate}}</div>
+                  <div class="dev-cel-vl d-flex">
+                      <div class="dev-info-value"
+                      matTooltip="{{ device && device.attributes && device.attributes.url ? device.attributes.url : '-' }}"
+                      [matTooltipClass]="'tooltipDetails'"
+                      [matTooltipDisabled]="!isEllipsisActive(url)"
+                      #url>
+                        {{ device && device.attributes && device.attributes.url ? device.attributes.url : '-' }}
+                      </div>
+                      
+                      <button mat-icon-button aria-label="Edit" *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && isTTV2Analysis" (click)="toggleInputIcon('url')">
+                        <mat-icon  class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+                      </button>
+                      <span 
+                      matTooltip="{{ 'common.accessRestricted' | translate}}"
+                      [matTooltipClass]="'tooltipDetails'"
+                      [matTooltipDisabled]="havingAccess">
+                        <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                      </span>
+                  </div>
+                </div>
+                <div *ngIf="toggleInpIcon.url" class="roboto-regular dev-ifo-cell">
+                  <mat-form-field appearance="fill" class="wd-50 font-14" #url>
+                    <mat-label class="roboto-regular">{{'deviceMgmt.url' | translate}}</mat-label>
+                    <input matInput placeholder="" formControlName="url" id="url" required="required" autocomplete="off" [autofocus]="toggleInpIcon.url"  (keyup.enter)="saveFieldInfo('url')" (blur)="saveFieldInfo('url')" >
+                    <mat-error *ngIf="deviceDetailForm.get('url').invalid">
+                      {{ deviceDetailForm.get('url').errors.errorCode | translate }}
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div *ngIf="!toggleInpIcon.clientCertificate" class="roboto-regular dev-ifo-cell">
+                    <div class="dev-cell-lb">{{'deviceMgmt.clientCertificate' | translate}}</div>
+                    <div class="dev-cel-vl d-flex">
+                        <div class="dev-info-value"
+                        matTooltip="{{ device && device.attributes && device.attributes.clientCertificate ? device.attributes.clientCertificate : '-' }}"
+                        [matTooltipClass]="'tooltipDetails'"
+                        [matTooltipDisabled]="!isEllipsisActive(clientCertificate)"
+                        #clientCertificate>
+                          {{ device && device.attributes && device.attributes.clientCertificate ? device.attributes.clientCertificate : '-' }}
+                        </div>
+                        <button mat-icon-button aria-label="Edit" 
+                                *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && isTTV2Analysis"
+                                (click)="toggleInputIcon('clientCertificate')" class="mt-12n" >
+                            <mat-icon class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+                        </button>
+                        
+                        <span 
+                        matTooltip="{{ 'common.accessRestricted' | translate}}"
+                        [matTooltipClass]="'tooltipDetails'"
+                        [matTooltipDisabled]="havingAccess">
+                          <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                        </span>
+                    </div>
+                  </div>
+                  <div *ngIf="toggleInpIcon.clientCertificate" class="roboto-regular dev-ifo-cell">
+                    <mat-form-field appearance="fill" class="wd-full font-14" #clientCertificate>
+                      <mat-label class="roboto-regular">{{'deviceMgmt.clientCertificate' | translate}}</mat-label>
+                      <input matInput placeholder="" formControlName="clientCertificate" id="clientCertificate" required="required" autocomplete="off" [autofocus]="toggleInpIcon.clientCertificate"  (keyup.enter)="saveFieldInfo('clientCertificate')" (blur)="saveFieldInfo('clientCertificate')" >
+                      <mat-error *ngIf="deviceDetailForm.get('clientCertificate').invalid">
+                        {{ deviceDetailForm.get('clientCertificate').errors.errorCode | translate }}
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+
+              </div>
+              
+              <div [ngClass]="toggleEdit ? 'dev-ifo-cont dy-bt' : 'dev-ifo-cont'" class="remove-padding-top" *ngIf="isTTV2Analysis">
+
+                  <div *ngIf="!toggleInpIcon.JWTCertificate" class="roboto-regular dev-ifo-cell">
+                      <div class="dev-cell-lb">{{'deviceMgmt.JWTCertificate' | translate}}</div>
+                      <div class="dev-cel-vl d-flex">
+                          <div class="dev-info-value"
+                          matTooltip="{{ device && device.attributes && device.attributes.JWTCertificate ? device.attributes.JWTCertificate : '-' }}"
+                          [matTooltipClass]="'tooltipDetails'"
+                          [matTooltipDisabled]="!isEllipsisActive(JWTCertificate)"
+                          #JWTCertificate>
+                              {{ device && device.attributes && device.attributes.JWTCertificate ? device.attributes.JWTCertificate : '-' }}
+                          </div>
+                          
+                          <button mat-icon-button aria-label="Edit" 
+                                  *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && isTTV2Analysis" 
+                                  (click)="toggleInputIcon('JWTCertificate')" class="mt-12n" >
+                            <mat-icon  class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+                          </button>
+                          <span 
+                          matTooltip="{{ 'common.accessRestricted' | translate}}"
+                          [matTooltipClass]="'tooltipDetails'"
+                          [matTooltipDisabled]="havingAccess">
+                            <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                          </span>
+                      </div>
+                    </div>
+                    <div *ngIf="toggleInpIcon.JWTCertificate" class="roboto-regular dev-ifo-cell">
+                      <mat-form-field appearance="fill" class="wd-full font-14" #JWTCertificate>
+                        <mat-label class="roboto-regular">{{'deviceMgmt.JWTCertificate' | translate}}</mat-label>
+                        <input matInput placeholder="" formControlName="JWTCertificate" id="JWTCertificate" required="required" autocomplete="off" [autofocus]="toggleInpIcon.JWTCertificate"  (keyup.enter)="saveFieldInfo('JWTCertificate')" (blur)="saveFieldInfo('JWTCertificate')" >
+                        <mat-error *ngIf="deviceDetailForm.get('JWTCertificate').invalid">
+                          {{ deviceDetailForm.get('JWTCertificate').errors.errorCode | translate }}
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+    
+                    <div *ngIf="!toggleInpIcon.sshCertificate" class="roboto-regular dev-ifo-cell">
+                      <div class="dev-cell-lb">{{'deviceMgmt.sshCertificate' | translate}}</div>
+                      <div class="dev-cel-vl d-flex">
+                          <div class="dev-info-value"
+                          matTooltip="{{ device && device.attributes && device.attributes.sshCertificate ? device.attributes.sshCertificate : '-' }}"
+                          [matTooltipClass]="'tooltipDetails'"
+                          [matTooltipDisabled]="!isEllipsisActive(sshCertificate)"
+                          #sshCertificate>
+                            {{ device && device.attributes && device.attributes.sshCertificate ? device.attributes.sshCertificate : '-' }}
+                          </div>
+
+                          <button mat-icon-button aria-label="Edit" 
+                                  *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && isTTV2Analysis" 
+                                  (click)="toggleInputIcon('sshCertificate')" class="mt-12n" >
+                            <mat-icon  class="rc-icon rc-icon14" svgIcon="edit-gray" ></mat-icon>
+                          </button>
+                          <span 
+                          matTooltip="{{ 'common.accessRestricted' | translate}}"
+                          [matTooltipClass]="'tooltipDetails'"
+                          [matTooltipDisabled]="havingAccess">
+                            <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                          </span>
+                      </div>
+                    </div>
+                    <div *ngIf="toggleInpIcon.sshCertificate" class="roboto-regular dev-ifo-cell">
+                      <mat-form-field appearance="fill" class="wd-full font-14" #sshCertificate>
+                        <mat-label class="roboto-regular">{{'deviceMgmt.sshCertificate' | translate}}</mat-label>
+                        <input matInput placeholder="" formControlName="sshCertificate" id="sshCertificate" required="required" autocomplete="off" [autofocus]="toggleInpIcon.sshCertificate" (blur)="saveFieldInfo('sshCertificate')" (keyup.enter)="saveFieldInfo('sshCertificate')">
+                        <mat-error *ngIf="deviceDetailForm.get('sshCertificate').invalid">
+                          {{ deviceDetailForm.get('sshCertificate').errors.errorCode | translate }}
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+               
+              </div>
+
+              <div [ngClass]="toggleEdit ? 'dev-ifo-cont dy-bt' : 'dev-ifo-cont'" class="remove-padding-top bottom-pd-16" *ngIf="isTTV2Analysis">
+                  <div *ngIf="!toggleInpIcon.ttv2OutputDirectory" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.ttv2OutputDirectory' | translate}}</div>
+                  <div class="dev-cel-vl d-flex">
+                      <div class="dev-info-value"
+                      matTooltip="{{ device && device.attributes && device.attributes.ttv2OutputDirectory ? device.attributes.ttv2OutputDirectory : '-' }}"
+                      [matTooltipClass]="'tooltipDetails'"
+                      [matTooltipDisabled]="!isEllipsisActive(ttv2OutputDirectory)"
+                      #ttv2OutputDirectory>
+                        {{ device && device.attributes && device.attributes.ttv2OutputDirectory ? device.attributes.ttv2OutputDirectory : '-' }}
+                      </div>
+                      <button mat-icon-button aria-label="Edit" 
+                              *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess && isTTV2Analysis"  
+                              (click)="toggleInputIcon('ttv2OutputDirectory')" class="mt-12n" >
+                        <mat-icon class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+                      </button>
+                      <span 
+                      matTooltip="{{ 'common.accessRestricted' | translate}}"
+                      [matTooltipClass]="'tooltipDetails'"
+                      [matTooltipDisabled]="havingAccess">
+                        <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess && isTTV2Analysis" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                      </span>
+                  </div>
+                </div>
+                <div *ngIf="toggleInpIcon.ttv2OutputDirectory" class="roboto-regular dev-ifo-cell">
+                  <mat-form-field appearance="fill" class="wd-full font-14" #ttv2OutputDirectory>
+                    <mat-label class="roboto-regular">{{'deviceMgmt.ttv2OutputDirectory' | translate}}</mat-label>
+                    <input matInput placeholder="" formControlName="ttv2OutputDirectory" id="ttv2OutputDirectory" required="required" autocomplete="off" [autofocus]="toggleInpIcon.ttv2OutputDirectory" (blur)="saveFieldInfo('ttv2OutputDirectory')" (keyup.enter)="saveFieldInfo('ttv2OutputDirectory')">
+                    <mat-error *ngIf="deviceDetailForm.get('ttv2OutputDirectory').invalid">
+                      {{ deviceDetailForm.get('ttv2OutputDirectory').errors.errorCode | translate }}
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+  
+              <div class="dev-ifo-cont remove-padding-top" *ngIf="!isTTV2Analysis">
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.model' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.model ? device.attributes.model : '-' }}</div>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.make' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.make ? device.attributes.make : '-' }}</div>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.ipAddress' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.ipAddress ? device.ipAddress : '-' }}</div>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.hostName' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.hostName ? device.attributes.hostName : '-' }}</div>
+                </div>
+              </div>
+  
+              <div class="dev-ifo-cont remove-padding-top" *ngIf="!isTTV2Analysis">
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.swVersion' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.swVersion ? device.attributes.swVersion : '-' }}</div>
+                </div>
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.hwVersion' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.hwVersion ? device.attributes.hwVersion : '-' }}</div>
+                </div>
+                <!-- <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.location' | translate}}</div>
+                  <div class="dev-cel-vl">
+                      <app-show-more [data]="device.attributes.location" [tooltipValue]="device.attributes.location" [displayFull]="true">{{ device && device.attributes && device.attributes.location ? device.attributes.location : '-' }}</app-show-more>
+                  </div>
+                </div> -->
+  
+                <div *ngIf="!toggleInpIcon.location" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.location' | translate}}</div>
+                  <div class="dev-cel-vl d-flex">
+                      <app-show-more [data]="device.attributes.location" [tooltipValue]="device.attributes.location" [displayFull]="true" [nullCheck]="true">{{ device.attributes.location }}</app-show-more>
+                      <button mat-icon-button aria-label="Edit" 
+                              *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess" 
+                              (click)="toggleInputIcon('location')" class="mt-12n" >
+                        <mat-icon class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+                      </button>
+                      <span 
+                      matTooltip="{{ 'common.accessRestricted' | translate}}"
+                      [matTooltipClass]="'tooltipDetails'"
+                      [matTooltipDisabled]="havingAccess">
+                        <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                      </span>
+                  </div>
+                </div>
+                <div *ngIf="toggleInpIcon.location" class="roboto-regular dev-ifo-cell">
+                  <mat-form-field appearance="fill" class="wd-80 font-14" #location>
+                    <mat-label class="roboto-regular">{{"Location"}}</mat-label>
+                    <input matInput appTrim appMinMax [parentField]="location"  maxlength="64" placeholder="" formControlName="location" name="location" id="location" autocomplete="off" [autofocus]="toggleInpIcon.location" (blur)="saveFieldInfo('location')" (keyup.enter)="saveFieldInfo('location')">
+                    <mat-error *ngIf="deviceDetailForm.get('location').invalid">
+                      {{ deviceDetailForm.get('location').errors.errorCode | translate }}
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+  
+                <div class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.protocol' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.protocol ? (device.attributes.protocol | wordSeparator:', ') : '-' }}</div>
+                </div>
+              </div>
+  
+              <div class="dev-ifo-cont remove-padding-top bottom-pd-16" *ngIf="!isTTV2Analysis">
+                <div *ngIf="device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === '')" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">{{'deviceMgmt.protocolVersion' | translate}}</div>
+                  <div class="dev-cel-vl">{{ device.attributes.protocolVersion === '' ? '-' : device.attributes.protocolVersion }}</div>
+                </div>
+  
+                <div *ngIf="device && device.attributes && (device.attributes.clientId || device.attributes.clientId === '')" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">Client ID</div>
+                  <div class="dev-cel-vl">{{ device.attributes.clientId === '' ? '--' : device.attributes.clientId }}</div>
+                </div>
+                <div *ngIf="device && device.attributes && (device.attributes.password || device.attributes.password === '')" class="roboto-regular dev-ifo-cell">
+                  <div class="dev-cell-lb">Password</div>
+                  <div class="dev-cel-vl">{{ '**********' }}</div>
+                </div>
+                <div *ngIf="!(device && device.attributes && (device.attributes.clientId || device.attributes.clientId === ''))" class="roboto-regular dev-ifo-cell">
+                </div>
+                <div *ngIf="!(device && device.attributes && (device.attributes.password || device.attributes.password === ''))" class="roboto-regular dev-ifo-cell">
+                </div>
+  
+                <div class="roboto-regular dev-ifo-cell">
+                </div>
+              </div>
+            </div>
+            <div class="p-bar-ht"></div>
+            <div class="footer-device">
+              <div style="padding-right: 20px;margin-top: 16px;">
+                  <a *ngIf="device.state !== 'INACTIVE' && havingAccess"
+                    class="edit-details roboto-bold font-14" 
+                    (click)="removeDevice()">
+                    {{'deviceMgmt.archive' | translate}}
+                  </a>
+                  <a *ngIf="device.state !== 'INACTIVE' && !havingAccess"
+                    class="edit-details roboto-bold font-14 disabled-text"
+                    matTooltip="{{ 'common.accessRestricted' | translate}}"
+                    [matTooltipClass]="'tooltipDetails'">
+                    {{'deviceMgmt.archive' | translate}}
+                  </a>
+                  <a *ngIf="device.state === 'INACTIVE' && havingAccess && canUnArchive" 
+                          class="edit-details roboto-bold font-14" 
+                          (click)="unarchiveDevice()">
+                          {{'deviceMgmt.unArchive' | translate}}
+                  </a>
+                  <a *ngIf="device.state === 'INACTIVE' && !havingAccess && canUnArchive" 
+                          class="edit-details roboto-bold font-14 disabled-text"
+                          matTooltip="{{ 'common.accessRestricted' | translate}}"
+                          [matTooltipClass]="'tooltipDetails'">
+                          {{'deviceMgmt.unArchive' | translate}}
+                  </a>
+                  <a *ngIf="device.state === 'INACTIVE' && havingAccess && !canUnArchive" 
+                          class="edit-details roboto-bold font-14 disabled-text"
+                          matTooltip="{{ 'deviceMgmt.validation.un_archive_TTv2_analysis_SW' | translate}}"
+                          [matTooltipClass]="'tooltipDetails'">
+                          {{'deviceMgmt.unArchive' | translate}}
+                  </a>
+              </div>
+            </div>
+          </form>
+        </div>
+  </div>
+  <div class="header" *ngIf="device && isSequencer">
+    <app-illumina-sequencer [device]="device"></app-illumina-sequencer>
+  </div>
+  </div>

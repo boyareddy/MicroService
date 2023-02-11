@@ -1,0 +1,46 @@
+<mat-card class="card-mg card-pd audit-box card-box">
+  <mat-card-header class="card-header-pd">
+    <mat-card-title class="roboto-bold font-16 card-titlle-mg card-title-lb-color"> {{ 'audit.auditLog' | translate }} </mat-card-title>
+  </mat-card-header>
+  <hr class="card-sp">
+  <mat-card-content class="content-ct mg-top">
+    <form [formGroup]="auditForm">
+      <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+        <mat-grid-tile class="card-datepic" colspan="1" rowspan="1">
+            <mat-form-field appearance="fill" style="width:100%;margin-left: 1.4em">
+                <mat-label> {{ "audit.startDate" | translate }}</mat-label>
+                <input [max]="startDateRange.toDate" [min]="startDateRange.fromDate" matInput [matDatepicker]="startDate" readonly formControlName="startDate" name="startDate" id="startDate" required (dateChange)="onDateChange('endDateRange', 'fromDate', $event)">
+                <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                <mat-datepicker #startDate ></mat-datepicker>
+                <mat-error *ngIf="auditForm.get('startDate').invalid">
+                    {{ auditForm.get('startDate').errors.errorCode | translate }}
+                </mat-error>
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile class="card-datepic" colspan="1" rowspan="1">
+            <mat-form-field appearance="fill" style="width:100%;margin-right: 1.4em">
+                <mat-label> {{ "audit.endDate" | translate }}</mat-label>
+                <input [max]="endDateRange.toDate" [min]="endDateRange.fromDate" matInput [matDatepicker]="endDate" readonly formControlName="endDate" name="endDate" id="endDate" required (dateChange)="onDateChange('startDateRange', 'toDate', $event)">
+                <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+                <mat-datepicker #endDate ></mat-datepicker>
+                <mat-error *ngIf="auditForm.get('endDate').invalid">
+                    {{ auditForm.get('endDate').errors.errorCode | translate }}
+                </mat-error>
+              </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="fm-btn-place" style="padding: 20px;">
+      <ng-container *ngIf="havingAccess">
+        <button mat-raised-button class="roboto-bold font-14 btn-bg-color" color="primary" (click) = "onDownloadingAudit()" [disabled]="auditForm.invalid">{{"audit.downloadAudit" | translate}}</button>
+      </ng-container>
+      <ng-container *ngIf="!havingAccess">
+        <span 
+        matTooltip="{{ 'common.accessRestricted' | translate}}"
+        [matTooltipClass]="'tooltipDetails'">
+          <button mat-raised-button class="roboto-bold font-14 btn-bg-color" color="primary"  [disabled]="!havingAccess">{{"audit.downloadAudit" | translate}}</button>
+        </span>
+      </ng-container>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

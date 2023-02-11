@@ -1,0 +1,4 @@
+MSH|^~\&|LP24^LP001-12-Pre^M|Roche Diagnostics|Connect|Roche Diagnostics|20190619125334||QBP^WOS^QBP_Q11|a057e028-c34d-4f82-a|P|2.5.1||||||UNICODE UTF-8QPD|WOS^Work Order Step^IHE_LABTF|a057e028-c34d-4f82-a|a0ee43670d_1RCP|I||P
+
+MSH|^~\&|LP24^LP001-12-Pre^M|Roche Diagnostics|Connect|Roche Diagnostics|20190619131744||QBP^WOS^QBP_Q11|68702b09-fe0c-495d-a|P|2.5.1||||||UNICODE UTF-8QPD|WOS^Work Order Step^IHE_LABTF|68702b09-fe0c-495d-a|1a5422cb22_1RCP|I||P
+

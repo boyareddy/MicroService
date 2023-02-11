@@ -1,0 +1,90 @@
+<!--/////////////////////////////////////// Admin UI Header //////////////////////////////////////////-->
+<app-admin-ui-header [headerInfo]="headerInfo"></app-admin-ui-header>
+
+<!--////////////////////////////////// Admin UI Settings tab group ///////////////////////////////////-->
+<div class="header">
+<mat-tab-group #tabs class="activeusers-page" [selectedIndex]="defaultTabIndex" (focusChange)="onTabChange($event)">
+  
+  <mat-tab [disabled]="!isHavingUserManagementAccess">
+    <ng-template mat-tab-label>
+          <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="isHavingUserManagementAccess">
+              {{'header.userManagement' | translate}}
+          </span>
+      </ng-template>
+
+      <ng-template matTabContent>
+          <app-user-list></app-user-list>
+      </ng-template>
+  </mat-tab>
+
+  <mat-tab [disabled]="!isHavingAuditAccess">
+      <ng-template mat-tab-label>
+          <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="isHavingAuditAccess">
+              {{'header.auditLog' | translate}}
+          </span>
+      </ng-template>
+    <app-audit-log></app-audit-log>
+  </mat-tab>
+
+  <mat-tab [disabled]="!isHavingAboutAccess">
+      <ng-template mat-tab-label>
+          <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="isHavingAboutAccess">
+              {{'header.about' | translate}}
+          </span>
+      </ng-template>
+    <div class="rc-card-wrap">
+      <mat-card class="rc-mat-card">
+        <mat-card-content>
+            <app-about></app-about>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-tab>
+
+  <mat-tab [disabled]="!isHavingBackupAccess"> 
+      <ng-template mat-tab-label>
+          <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="isHavingBackupAccess">
+              {{'header.backup' | translate}}
+          </span>
+      </ng-template>
+      <app-backupandrestore></app-backupandrestore>
+  </mat-tab> 
+
+  <mat-tab [disabled]="!ishavingAccess">
+      <ng-template mat-tab-label>
+          <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="ishavingAccess">
+              {{'header.problemReport' | translate}}
+          </span>
+      </ng-template>
+      <app-problem-report> </app-problem-report>
+  </mat-tab>
+
+  <mat-tab [disabled]="!islabSettinghavingAccess">
+    <ng-template mat-tab-label>
+      <span matTooltip="{{ 'common.accessRestricted' | translate}}" [matTooltipClass]="'tooltipDetails'"
+        [matTooltipDisabled]="islabSettinghavingAccess">
+        {{ "header.labSetting" | translate }}
+      </span>
+    </ng-template>
+    <app-lab-settings #labSettings></app-lab-settings>
+  </mat-tab>
+
+  <mat-tab [label]='"header.lisSettings" | translate' disabled> 
+  </mat-tab>
+</mat-tab-group>
+</div>

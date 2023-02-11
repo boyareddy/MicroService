@@ -1,0 +1,10 @@
+{
+  "plateId" : [ "c144444458c466a6"],
+  "queryMsgType" : "QBP",
+  "queryMsgEvent" : "Z01",
+  "queryProcessingId" : "P",
+  "versionId" : "2.5.1",
+  "sendingFacilityName" : "Roche Diagnostics",
+  "receivingFacilityName" : "Connect",
+  "receivingApplicationName" : "Connect"
+}

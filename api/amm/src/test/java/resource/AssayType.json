@@ -1,0 +1,68 @@
+{
+  "id": 1,
+  "assayTypeName": "NIPTDPCR",
+  "assayVersion": "V1",
+  "workflowDefFile": "NIPTDPCR_Wfm_v1.bpmn.xml",
+  "workflowDefVersion": "V1",
+  "activeFlag": "Y",
+  "samples": [
+    {
+      "id": 1,
+      "sampleTypeName": "Plasma",
+      "assayType": "NIPTDPCR",
+      "maxAgeDays": 7,
+      "activeFlag": "Y",
+      "assay": null
+    }
+  ],
+  "processStepActions": [
+    {
+      "id": 0,
+      "assayType": "NIPTDPCR",
+      "deviceType": "MP96",
+      "processStepName": "NA Extraction",
+      "inputContainerType": "96 Well plate",
+      "outputContainerType": "96 Well plate",
+      "manualVerificationFlag": "Y",
+      "activeFlag": "Y",
+      "processStepSeq": 1,
+      "sampleVolume": "200",
+      "eluateVolume": "50",
+      "reagent": "Cellular RNA LV",
+      "assay": null
+    }
+  ],
+  "testOptions": [
+    {
+      "id": 0,
+      "assayType": "NIPTDPCR",
+      "testName": "Harmony Prenatal Test (T21, T18, T13)",
+      "activeFlag": "Y",
+      "sequenceId": 5,
+      "testDescription": "Harmony Prenatal Test (T21, T18, T13)",
+      "assay": null
+    }
+  ],
+  "assayInputValidations": [
+    {
+      "id": 0,
+      "assayType": "NIPTDPCR",
+      "fieldName": "Maternal Age",
+      "minValue": 1,
+      "maxValue": 100,
+      "expression": "NA",
+      "activeFlag": "Y",
+      "assay": null
+    }
+  ],
+  "assayListData": [
+    {
+      "id": 0,
+      "listType": "ivf status",
+      "value": "Yes",
+      "assayType": "NIPTDPCR",
+      "activeFlag": "Y",
+      "assay": null
+    }
+  ]
+}

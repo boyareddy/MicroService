@@ -1,0 +1,39 @@
+{  
+   "order":{  
+      "orderId":"",
+      "accessioningId":"4132321",
+      "assayType":"NIPTDPCR",
+      "sampleType":"Plasma",
+      "retestSample":true,
+      "orderComments":"sada",
+      "reqFieldMissingFlag":true,
+      "priority":"high",
+      "assay":{  
+         "maternalAge":4,
+         "gestationalAgeWeeks":11,
+         "gestationalAgeDays":2,
+         "ivfStatus": "Yes",
+		 "eggDonorAge": 15,
+		 "eggDonor": "Self",
+         "fetusNumber":"2", 
+         "collectionDate":"2018-07-09T18:30:00.000Z",
+         "receivedDate":"2018-07-09T18:30:00.000Z",
+         "testOptions":{  
+            "Harmony":true,
+            "Scap":false,
+            "Fetal Sex":false,
+            "MX":false
+
+         }
+      },
+      "patient":{  
+         "patientLastName":"Choudhary",
+         "patientFirstName":"Sophia",
+         "patientMedicalRecNo":"2132131223abc",
+         "patientDOB":"2018-07-02T18:30:00.000Z",
+         "refClinicianName":"asdas",
+         "otherClinicianName":"edfsd",
+         "clinicName":"asdasda"
+      }
+   }
+ }

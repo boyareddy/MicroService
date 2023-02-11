@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportpreview" pageWidth="595" pageHeight="830" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0918e709-ffe9-43d2-a806-27ff36a16bf2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="rocheLogo" class="java.lang.String"/>
+	<parameter name="headerImage" class="java.io.InputStream"/>
+	<parameter name="textDescription" class="java.lang.String"/>
+	<parameter name="subReport2DS" class="java.util.List"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="subReport1" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subReport2" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="testResultsSubreportDS" class="java.util.List"/>
+	<parameter name="subReport4" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="dpcrSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="dpcrResultsData" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="assayType" class="java.lang.String"/>
+	<field name="completionDate" class="java.util.Date"/>
+	<field name="numOfSamples" class="java.lang.Long"/>
+	<field name="qcResult" class="java.lang.String"/>
+	<field name="samplesPassedQC" class="java.lang.String"/>
+	<field name="comments" class="java.lang.String"/>
+	<field name="naExtractionData" class="java.util.List"/>
+	<field name="qcResultsDTO" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="142">
+			<image>
+				<reportElement x="0" y="4" width="160" height="54" uuid="77405670-aa2b-446e-8eb9-d037661726a8"/>
+				<imageExpression><![CDATA[$P{headerImage}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="60" width="230" height="76" uuid="8002a478-dafd-4319-9b09-9235d9d70d93"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{textDescription}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="430" y="7" width="90" height="34" uuid="e5ff2586-d123-4a8d-ae29-ce41d9864373"/>
+				<imageExpression><![CDATA[$P{rocheLogo}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="331" splitType="Stretch"/>
+	</detail>
+	<summary>
+		<band splitType="Stretch">
+			<printWhenExpression><![CDATA[java.lang.Boolean.FALSE]]></printWhenExpression>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170" height="170" viewBox="0 0 170 170">
+  <defs>
+    <filter id="Ellipse_5" x="0" y="0" width="170" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="70" cy="70" r="70" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17004" data-name="Group 17004" transform="translate(10 10)">
+    <g transform="matrix(1, 0, 0, 1, -10, -10)" filter="url(#Ellipse_5)">
+      <g id="Ellipse_5-2" data-name="Ellipse 5" transform="translate(11 11)" fill="#fff" stroke="#abb7ca" stroke-width="6">
+        <circle cx="70" cy="70" r="70" stroke="none"/>
+        <circle cx="70" cy="70" r="73" fill="none"/>
+      </g>
+    </g>
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(1 1)" clip-path="url(#clip-path)">
+      <g id="squares" transform="translate(110.585 110.585) rotate(-90)">
+        <path id="Path" d="M27.02,0l-25,.9A2.017,2.017,0,0,0,0,2.913V27.777a2.017,2.017,0,0,0,2.022,2.01h25a2.017,2.017,0,0,0,2.022-2.01V2.913C29.043,1.8,28.137,0,27.02,0Z" fill="rgba(89,113,149,0.5)"/>
+      </g>
+      <g id="squares_copy" data-name="squares copy" transform="translate(75.585 110.585) rotate(-90)">
+        <path id="Path-2" data-name="Path" d="M27.02,0l-25,.9A2.017,2.017,0,0,0,0,2.913V27.777a2.017,2.017,0,0,0,2.022,2.01h25a2.017,2.017,0,0,0,2.022-2.01V2.913C29.043,1.8,28.137,0,27.02,0Z" fill="#597195"/>
+      </g>
+      <g id="squares_copy_2" data-name="squares copy 2" transform="translate(4.84 110.585) rotate(-90)">
+        <path id="Path-3" data-name="Path" d="M27.02,0l-25,.9A2.017,2.017,0,0,0,0,2.913V27.777a2.017,2.017,0,0,0,2.022,2.01h25a2.017,2.017,0,0,0,2.022-2.01V2.913C29.043,1.8,28.137,0,27.02,0Z" transform="translate(0 35)" fill="rgba(103,126,161,0.5)"/>
+        <path id="Path-4" data-name="Path" d="M27.02,0l-25,.9A2.017,2.017,0,0,0,0,2.913V27.777a2.017,2.017,0,0,0,2.022,2.01h25a2.017,2.017,0,0,0,2.022-2.01V2.913C29.043,1.8,28.137,0,27.02,0Z" fill="#597195"/>
+      </g>
+      <g id="Group_16763" data-name="Group 16763" transform="translate(-7.074 62.553)">
+        <line id="Line_556" data-name="Line 556" x2="130.319" transform="translate(0 4.84)" fill="none" stroke="rgba(89,113,149,0.5)" stroke-width="6"/>
+        <g id="Ellipse_202" data-name="Ellipse 202" transform="translate(92.713 1)" fill="#597195" stroke="#fff" stroke-width="4">
+          <circle cx="4" cy="4" r="4" stroke="none"/>
+          <circle cx="4" cy="4" r="6" fill="none"/>
+        </g>
+        <g id="Ellipse_203" data-name="Ellipse 203" transform="translate(56.968 1)" fill="#597195" stroke="#fff" stroke-width="4">
+          <circle cx="4" cy="4" r="4" stroke="none"/>
+          <circle cx="4" cy="4" r="6" fill="none"/>
+        </g>
+        <g id="Ellipse_204" data-name="Ellipse 204" transform="translate(21.223 1)" fill="#597195" stroke="#fff" stroke-width="4">
+          <circle cx="4" cy="4" r="4" stroke="none"/>
+          <circle cx="4" cy="4" r="6" fill="none"/>
+        </g>
+        <g id="Ellipse_205" data-name="Ellipse 205" transform="translate(127.713 1)" fill="#597195" stroke="#fff" stroke-width="4">
+          <circle cx="4" cy="4" r="4" stroke="none"/>
+          <circle cx="4" cy="4" r="6" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

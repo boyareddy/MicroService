@@ -1,0 +1,62 @@
+<mat-card>
+    <div class="d-flex flex-align-center pb-20">
+      <div class="img-right-16">
+        <img src="assets/Images/orderInfo.svg" alt="orderIcon" class="vertical-middle" height="44px" width="44px">
+      </div>
+      <div>
+        <div class="card-main-header-info">
+            {{ 'orders.orderCards.orderDetails.title' | translate }}
+        </div>
+      </div>
+    </div>
+    <mat-card-content *ngIf='orderDetails != null'>
+  
+      <app-shared-order-details [field1]="{'key': 'orderDetails.accessioningID', 'value': orderDetails.accessioningId }" [singleRow]='true'>
+      </app-shared-order-details>
+  
+      <!-- <app-shared-order-details [field1]="{'key': 'orderDetails.assayType', 'value': orderDetails.assayType }" [singleRow]='true'>
+      </app-shared-order-details> -->
+
+      <div class="pb-20 line-height">
+      <div class="label_name">
+        {{ 'orders.orderCards.orderDetails.assayType' | translate }}
+      </div>
+      <div class="label_value">
+        {{ orderDetails.assayType | translate }}
+      </div>
+    </div>
+  
+      <app-shared-order-details [field1]="{'key': 'orderDetails.sampleType', 'value': orderDetails.sampleType }"
+                                [field2]="{'key': 'orderDetails.priority', 'value': orderDetails?.priority }">
+      </app-shared-order-details>
+  
+      <app-shared-order-details [field1]="{'key': 'orderDetails.retestSampleAvailableTitle', 'value': orderDetails.retestSample ? 'Yes' : 'No' }"
+        [singleRow]='true'>
+      </app-shared-order-details>
+  
+      <app-shared-order-details [field1]="{'key': 'orderDetails.dateCreated', 'value': orderDetails.createdDateTime, 'isDate': 'true' }"
+        [singleRow]='true'>
+      </app-shared-order-details>
+  
+      <app-shared-order-details 
+      [field1]="{'key': 'orderDetails.comments', 'value': orderDetails.orderComments, 
+      'processStepName': processStepNameInfo,  'assayType':assayType, 'patientConfigFile': patientConfigFile, 'fieldName': comments }" [singleRow]='true'>
+      </app-shared-order-details>
+  
+      <mat-divider class="bottom-mat-divider"></mat-divider>
+  
+      <!-- Edit details link to navigating to order edit page-->
+  
+      <!-- <div class="edit-details roboto-bold font-14" (click)="editDetails()" *ngIf="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </div> -->
+
+      <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14" (click)="editDetails()" *ngIf="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+      <button mat-button color="primary" type="button" class="edit-details roboto-bold font-14 disabled-text" *ngIf="!havingAccess" matTooltip="{{ 'common.accessRestricted' | translate}}"
+      [matTooltipClass]="'tooltipDetails'" [matTooltipDisabled]="havingAccess">
+        {{ 'orders.naigationButtons.editDetails' | translate }}
+      </button>
+    </mat-card-content>
+  </mat-card>

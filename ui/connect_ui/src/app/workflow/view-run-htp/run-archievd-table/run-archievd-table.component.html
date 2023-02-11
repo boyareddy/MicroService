@@ -1,0 +1,43 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSortDisableClear='true' matSortDirection="desc" matSort>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="deviceRunId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header"> 
+        {{ 'runWorkflow.archived.runID' | translate }} </th>
+      <td mat-cell *matCellDef="let element" class="list-items"> {{element.deviceRunId}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="processStepName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header"> {{ 'runWorkflow.archived.workflowStep' | translate }} </th>
+      <td mat-cell *matCellDef="let element" class="list-items"> {{element.processStepName | translate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalSamplecount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header"> # {{ 'runWorkflow.archived.samplesHeading' | translate }} </th>
+      <td mat-cell *matCellDef="let element" class="list-items"> {{element.totalSamplecount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="operatorName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="list-header"> {{ 'runWorkflow.archived.user' | translate }} </th>
+      <td mat-cell *matCellDef="let element" class="list-items"> {{element.operatorName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="runCompletionTime">
+      <th mat-header-cell *matHeaderCellDef  mat-sort-header class="list-header"> {{ 'runWorkflow.archived.completed' | translate }} </th>
+      <td mat-cell *matCellDef="let element" class="list-items">
+          {{ element.runCompletionTime | date:'dd-MMM-yyy HH:mm:ss '}}
+          <span [appDateTimeZone]='element.runCompletionTime'></span>
+      </td>
+  </ng-container>
+
+  <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+          <img src="assets/Images/right-arrow.png" alt="navigate" (click)="showSelectedItem(element)">
+      </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" routerLink="/workflow/rundetails/{{row.runResultId}}" (click)="showSelectedItem(row)"></tr>
+</table>

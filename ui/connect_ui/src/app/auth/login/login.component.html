@@ -1,0 +1,67 @@
+<app-header [headerInfo]="headerInfo"></app-header>
+<form [formGroup]='loginFormGroup'>
+  <mat-card class="login-container">
+    <div class="d-flex flex-justify-between">
+      <div>
+        <div class="font-14 roboto-light d-flex flex-justify-between h-18 header-text ml-10">
+          <span>{{ 'loginScreen.WELCOME_MESSAGE' | translate }}</span>
+        </div>
+        <div class="logOnName card-main-header-info ml-10">
+          <span>{{'loginScreen.formTitle' | translate}}</span>
+        </div>
+      </div>
+      <div>
+        <!-- <mat-icon class="h-14 w-14 cursor">more_vert</mat-icon>  -->
+        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" class="mat-menu-btn">
+            <img src="assets/Images/logindots.svg" alt="Image" class="width-3 mat-menu-btn-img">
+        </button>
+        <mat-menu #menu="matMenu" class="mat-menu-decoration" [overlapTrigger]="false" [xPosition]="before">
+          <button mat-menu-item>
+            <span class="mat-menu-decoration-text">{{ 'RSR_LOGIN.RSR_Authentication' | translate }}</span>
+          </button>
+        </mat-menu> -->
+
+        <img src="assets/Images/logindots.svg" alt="rsrMenu" [mdePopoverTriggerFor]="rsrMenu"
+          mdePopoverTriggerOn="click" mdePopoverPositionX="-300" class="width-3 cursor mat-menu-btn-img">
+
+        <mde-popover #rsrMenu="mdePopover" class="rsrPopupover" style="padding-right:0 !important">
+          <div class="mat-menu-decoration-text" (click)="navToRSRLogin()">
+            {{ 'RSR_LOGIN.RSR_Authentication' | translate }}
+          </div>
+        </mde-popover>
+      </div>
+    </div>
+
+
+    <div class="formFields">
+      <mat-grid-list cols="1" rowHeight="73px" gutterSize="20px">
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="fill" class="width-full roboto-regular font-14 ml-10" hideRequiredMarker="true">
+            <mat-label>{{'loginScreen.userNameLabel' | translate}}</mat-label>
+            <input matInput appTrim placeholder="" id="userName" name="userName" formControlName="userName" type="text" autocomplete="off"
+              [errorStateMatcher]="matcher">
+            <mat-error *ngIf="loginFormGroup.get('userName').invalid">
+              {{ loginFormGroup.get('userName').errors.errorMsg | translate}}
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-margin">
+          <mat-form-field appearance="fill" class="width-full roboto-regular font-14 ml-10" hideRequiredMarker="true">
+            <mat-label>{{'loginScreen.passwordLabel' | translate}}</mat-label>
+            <input matInput placeholder="" name="password" formControlName="password" type="password" autocomplete="off" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="loginFormGroup.get('password').invalid">
+              {{ loginFormGroup.get('password').errors.errorMsg | translate}}
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <div class="form-control d-flex flex-justify-between flex-align-center mt-16">
+      <button mat-button color="primary" type="button" class="roboto-bold font-14" (click)="onFgtPwdclick()">
+        {{'loginScreen.forgotPwdLink' | translate}}
+      </button>
+      <!-- <a href="/admin_ui/#/forgot-password" class="font-14 forgetPassword roboto-bold">{{'loginScreen.forgotPwdLink' | translate}}</a> -->
+      <button mat-button mat-raised-button color="primary" class="roboto-bold no-shadow btn-bg-color" (click)="onLogin()" [disabled]="loginFormGroup.invalid">{{'loginScreen.logOnButton' | translate}}</button>
+    </div>
+  </mat-card>
+</form>

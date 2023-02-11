@@ -1,0 +1,83 @@
+.login-container{
+    width: 328px;
+    margin: auto;
+    margin-top: 11.1%;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+.logOnName{
+    padding: 0.750em 0em 0em 0em;
+}
+.formFields{
+    margin-top: 19px;
+}
+.mt-2{
+    margin-top: 2px;
+}
+a{
+    text-decoration: none;
+}
+.forgetPassword{
+    color: #004EA3;
+}
+
+.logon-btn{
+    padding: 0px 21px;
+    background-color: #004EA3;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.h-18 {
+    height: 18px !important;
+}
+
+.h-42 {
+    height: 42px !important;
+}
+
+.h-14 {
+    height: 14px !important;
+}
+
+.h-94 {
+    height: 94px !important;
+}
+
+.h-90 {
+    height: 90px !important;
+}
+
+.w-14 {
+    width: 14px !important;
+}
+
+.pl-26 {
+    padding-left: 26px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.width-fullbutton{
+    width: 103.3% !important;
+}
+
+.width-80{
+    width: 80% !important;
+}
+
+.width-3 {
+    width: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container{
+        margin-top: 45%;
+    }
+  }

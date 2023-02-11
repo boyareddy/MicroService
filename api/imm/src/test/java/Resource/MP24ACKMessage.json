@@ -1,0 +1,15 @@
+{
+  "status": "SUCCESS",
+  "error": [],
+  "response": {
+    "deviceSerialNumber": "MP001-12",
+    "sendingApplicationName": "MagNaPure24",
+    "receivingApplication": "LIS",
+    "dateTimeMessageGenerated": "20151020162814",
+    "messageType": "U03ACK",
+    "messageControlId": "123456789",
+    "accessioningId": "TIS0051039748",
+    "rspMessage": null,
+    "statusUpdate": null
+  }
+}

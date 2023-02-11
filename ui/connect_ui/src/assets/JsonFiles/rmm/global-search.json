@@ -1,0 +1,177 @@
+{
+    "orders": [
+        {
+                "runResultsId": "33",
+                "sampleResultId": "3",
+                "accessioningId": "808080",
+                "orderId": "34",
+                "status": "Completed",
+                "processStepName": "Library Preparation",
+                "flag": "F1",
+                "assayType": "NIPTDPCR",
+                "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        },{
+            "runResultsId": "33",
+            "sampleResultId": "3",
+            "accessioningId": "808080",
+            "orderId": "34",
+            "status": "Completed",
+            "processStepName": "Library Preparation",
+            "flag": "F1",
+            "assayType": "NIPTDPCR",
+            "sampleType": "Plasma"
+        }
+    ],
+    "runResults": [
+          {
+                "runResultId": "23",
+                "deviceName": "LP24",
+                "processStepName": "Library Preparation",
+                "deviceRunId": "RND192148973",
+                "runStatus": "Completed",
+                "operatorName": "Bikash",
+                "sampleCount": "3",
+                "runCompletionTime": "2018-10-17T05:44:06.067Z"
+          },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        },{
+            "runResultId": "23",
+            "deviceName": "LP24",
+            "processStepName": "Library Preparation",
+            "deviceRunId": "RND192148973",
+            "runStatus": "Completed",
+            "operatorName": "Bikash",
+            "sampleCount": "3",
+            "runCompletionTime": "2018-10-17T05:44:06.067Z"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<div class="tooltip" *ngIf="errorMsgArr">
+    <div class="tooltiptext">
+        <div *ngFor="let item of errorMsgArr" class="roboto-regular">
+            <span>
+                {{ item | translate}}
+            </span>
+        </div>
+    </div>
+</div>

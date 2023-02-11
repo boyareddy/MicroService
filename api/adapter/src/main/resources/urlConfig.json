@@ -1,0 +1,5 @@
+{
+	"appURLs": {
+		"sendRequest":"http://www.test-roche.com:98/imm/json/rest/api/messages"
+	}
+}

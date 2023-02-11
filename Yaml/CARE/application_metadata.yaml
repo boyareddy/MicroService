@@ -1,0 +1,326 @@
+#######################################################
+# configure the following parameters only when this is metadata-web app.
+# until a centralized config is created.
+#URLs DEFINED FOR INTERNAL WAR COMMUNICATION
+#######################################################
+pas:
+    #Permission for the User to access this microservice
+    microservice_permission: Access_Metadata
+    security.method.disable : false
+    
+    #Remote endpoints
+    security_endpoint: ${pas.security_remote_url}
+    
+    #application_location - values [default,distributed]
+    #If value is default, it is assumed that all microservices are running in same location (www.qa-rocheconnect.com is used through-out app)
+    application_location : default
+    
+    metadata_host_name : www.qa-rocheconnect.com
+    metadata_url : https://${pas.metadata_host_name}:91/metadata-web
+    
+    security_host_name : www.qa-rocheconnect.com
+    security_url : https://${pas.security_host_name}:90/security-web
+    
+    security_remote_host_name : www.qa-rocheconnect.com
+    security_remote_url : https://${pas.security_remote_host_name}:90/security-web
+
+    application_url : ${pas.metadata_url}
+
+    #default home page if none is given
+    defaultHomePage: ${pas.application_url}
+    
+    #accessDenied page
+    access_denied_url : /accessdenied.html
+    
+    # set allow origin
+    access_control_allow_origin : https://www.qa-rocheconnect.com:91,https://www.qa-rocheconnect.com:92,https://www.qa-rocheconnect.com:93,https://www.qa-rocheconnect.com:8080
+    
+    #service registry check - default value server change as client if service registry is enabled
+    service.discovery: server
+
+    #To enable and disable rabbitMQ- default value false
+    rabbitmq.enabled: false
+    #Auditable History enable or disable -defauls value is true
+    auditable_history: true
+    auditable_history_days: 30
+    #AuditTrail enable or disable -default value is false
+    audittrail: true
+    #routing_key_prefix: Roche.X800.DM.Audit
+    #routing_header_name: rabbitmq.ROUTING_KEY
+    #######################################################    
+    # if ssl is enabled configure the default port for http if required
+    #######################################################
+    support_for_http_and_https: false
+    http_port: 91
+
+    transaction.enabled: true
+
+    #######################################################    
+    #Data for Root Company creation
+    # Poll the following url for starting the deployment of the application. A get request will be issued to that page and a return value of "YES" or "yes" is required to proceed. 
+    # Till then application will loop without starting the initialization. After the expiry of number of attempts, application will throw an exception and exit without initialization. 
+    #######################################################
+    domainName : hcl.com
+    companyType : PASCOMPANY
+    poll_enabled : false
+
+    #######################################################
+    #Data for Application excel file Location
+    # excels can be loaded from either the classpath or from absolute path.
+    #######################################################
+    XL_Location :  file:///home/rconnect/roche/scripts/connect_yaml/excels
+    fileName_Prefix : brownstone_metadata_init
+    XL_Prefix : metadata
+
+    #######################################################
+    #Data for Keystore
+    ######################################################
+    keystore_location : keystore/pas.jceks
+    keystore_pass : pas123
+    keystore_type : jceks
+    token_private_key_pass : pas123
+    token_private_key_alias : pasprivatekey
+    token_public_key_alias : paspublickey
+    symmetric_key_alias : passymmetrickey
+    symmetric_key_pass : pas123
+    
+    
+    #Provide the applicable role which applicant can create user with that role 
+    #applicableRole:Admin
+    #######################################################
+    #https-configuring client side truststore and ketysore
+    #Enable this for protection of remote web services with protection
+    #client_keystore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+    #client_truststore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+    #cert_provider : SunX509
+    #cert_file_type : jks
+    #cert_password : changeit
+
+    #######################################################
+    # Default Time Zone
+    #Specific module name for logger
+    #######################################################
+    default_TimeZone : GMT
+    logged_module_name : metadata
+
+    #######################################################
+    #rabbitmq properties
+    #######################################################
+    rabbitmq:
+        exchangename : pasExchange
+        hierarchyqueuename : metadataHierarchyQueue
+        userqueuename : metadataUserQueue
+        userdeletequeuename : metadataUserdeleteQueue
+        userupdatedqueuename : metadataUserUpdatedQueue
+    
+    #######################################################
+    # Whitelist urls to be validated for application module domain
+    #e.g. for multiple domains to be seperated by commas whitelist_urls = www.pas.com,www.test.com,www.sample.com
+    #If empty all domains are allowed
+    #######################################################
+    whitelist_urls : 
+
+## Provide a valid class name if not using jndi. 
+## If not provided, spring boot's default connection pool datasource will be used.
+    datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource
+    
+    ###############################################
+    # Swagger documentation details. Right not these 
+    # are used for showing swagger rest documentation
+    ###############################################
+    version: 4.4 
+    title: ${pas.logged_module_name} - REST documentation
+    contact_email: PBASolutionsteam@hcl.in
+    api_description: These are the contracts for the rest services exposed in this ${pas.logged_module_name}.     
+
+    ###############################################
+    # Enable the Resource Monitoring for this Microservice 
+    # Values - true or false
+    # Duration - in seconds
+    ###############################################
+    monitor_service: false
+    monitor_service_duration: 300
+    
+#######################################################
+#spring boot properties
+#######################################################
+spring.main.show-banner: false
+endpoints.enabled: false
+spring.profiles.active: full,permission
+spring.cloud.consul.host: www.qa-rocheconnect.com
+spring.cloud.consul.port: 8500
+spring.application.name: metadata-web
+spring.cloud.consul.discovery.healthCheckPath: ${management.contextPath}
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.address: ${management.contextPath}
+spring.cloud.consul.discovery.instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+    contextPath: /metadata-web/poll
+    
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+
+logging.path: '/var/log/connect/log'
+logging.file: metadata.log
+logging.config: 'classpath:log4j2.xml'
+
+spring.rabbitmq.host : www.qa-rocheconnect.com
+spring.rabbitmq.port : 5672
+spring.rabbitmq.username : userone
+spring.rabbitmq.password : userone
+
+#######################################################       
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+#######################################################
+server:
+    port: 91
+    session-timeout: 600
+    context-path: /metadata-web
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.qa-rocheconnect.com
+
+######################################################    
+# DATABASE CONFIGURATIONS
+#######################################################
+spring.datasource.jdbcUrl : jdbc:postgresql://localhost:5432/pas-metadata
+spring.datasource.user : postgres
+spring.datasource.password : postgres123
+
+#Keep the consulConfigKeys value blank so that it won;t look into consul
+#else provide the structure like as in consul: config/common/data or config/security-web/data 
+pas.consulConfigUrl : localhost
+#pas.consulConfigKeys : common,security-web
+pas.consulConfigKeys : 
+pas.consulConfigKeysPrefix : config/
+pas.consulConfigKeysSuffix : /data
+pas.externalyaml : false
+
+#If you want to encrypt a field enclose with ENC() or OBF
+#Generate the string to encrypt using the utility and follow below sample convention
+#Also use normal text if applicable
+#spring.datasource.password : ENC(RhBRYm0ydOABAvR+hUAk6Q==)
+#spring.datasource.password : OBF(Bh/oZZalRbegEkHtWNYNyw==)
+
+#spring.datasource.jdbcUrl : jdbc:derby://localhost:1527/db_data/pas-metadata;create=true
+#spring.datasource.jdbcUrl : jdbc:derby:D:/PasDB/pas-metadata;create=true
+#spring.datasource.user : root
+#spring.datasource.password : root
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 50
+spring.datasource.maxIdleTime : 600
+spring.datasource.acquireIncrement : 1
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+
+#FOR POSTGRESQL
+spring.datasource.driverClass : org.postgresql.Driver
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+
+#FOR DERBY
+#spring.datasource.driverClass : org.apache.derby.jdbc.ClientDriver
+#spring.datasource.driverClass : org.apache.derby.jdbc.EmbeddedDriver
+#spring.jpa.database-platform : org.hibernate.dialect.DerbyTenSevenDialect
+#spring.jpa.database-platform : org.hibernate.dialect.DerbyTenSevenDialect
+
+#FOR SQL SERVER
+#spring.datasource.driverClass : com.microsoft.sqlserver.jdbc.SQLServerDriver
+#spring.jpa.database-platform : org.hibernate.dialect.SQLServerDialect
+#spring.datasource.jdbcUrl : jdbc:sqlserver://DS-SGH534RR38\\SQLEXPRESS:1433;DatabaseName=pas-metadata
+#spring.datasource.user : sa
+#spring.datasource.password : Password@123
+
+#COMMON
+spring.jpa.show-sql : false
+spring.jpa.hibernate.ddl-auto : update
+spring.jpa.generate-ddl : true
+
+#hibernate.default_schema : pas-metadata
+
+spring.jpa.properties.hibernate.cache.use_second_level_cache : true
+spring.jpa.properties.hibernate.cache.use_query_cache : true
+Spring.jpa.properties.hibernate.query.plan_cache_max_size : 256
+spring.jpa.properties.hibernate.cache.use_structured_entries : false
+spring.jpa.properties.hibernate.cache.use_minimal_puts : false
+spring.jpa.properties.hibernate.cache.generate_statistics : false
+spring.jpa.properties.hibernate.cache.provider_configuration : /ehcache.xml
+spring.jpa.properties.hibernate.cache.region.factory_class : org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode : ENABLE_SELECTIVE
+
+
+#spring.read.datasource.default.driverClass : com.mysql.jdbc.Driver
+#spring.read.datasource.default.jdbcUrl : jdbc:mysql://localhost:3307/pas-metadata?useUnicode=yes&characterEncoding=UTF-8
+#spring.read.datasource.default.user : root
+#spring.read.datasource.default.password : admin
+#spring.read.datasource.default.idleConnectionTestPeriod : 3000
+#spring.read.datasource.default.maxPoolSize : 5
+#spring.read.datasource.default.minPoolSize : 2
+#spring.read.datasource.default.testConnectionOnCheckout : true
+#spring.read.datasource.default.debugUnreturnedConnectionStackTraces : true
+
+#######################################################
+#Spring Profile    
+#######################################################
+#A YAML file is actually a sequence of documents separated by --- lines, and each document is parsed separately to a flattened map.
+#In this example the default port is 81, but if the Spring profile 'metadata' is active then the port is 86, and if 'development' is active then it is 87. 
+#e.x
+#---
+#spring:
+#    profiles: metadata
+#pas:
+#     metadata_host_name : www.qa-rocheconnect.com
+#     metadata_url : https://${pas.metadata_host_name}:86/metadata-web 
+#server:
+#    port: 86
+#---
+#spring:
+#    profiles: development
+#server:
+#    port: 87
+##################################### 
+#default value is false, change it to true if https is enabled
+https_enabled: true
+#######################################################
+#ssl configuration
+#######################################################
+ssl_disabled_protocols: SSL,SSLv2,SSLv2Hello,SSLv3,TLSv1,TLSv1.1
+ssl_included_ciphers: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+ssl_excluded_ciphers: SSL2_RC4_64_WITH_MD5
+#######################################################
+# liscense_property_path: C:\Softwares\License\License\gokilametadatalicense.properties
+license_property_path: /home/rconnect/roche/pas/commonlicense.properties
+#ancestor_data_acccess_disabled : true
+spring:
+  profiles: default
+---
+
+
+
+spring:
+
+    profiles: docker
+
+
+
+pas:
+
+    metadata_host_name : metadata
+
+    security_host_name : security
+
+    security_remote_host_name : security
+
+    whitelist_urls : 
+
+    access_control_allow_origin : '*'
+
+server:
+
+    port: 80    
+
+---
+ 

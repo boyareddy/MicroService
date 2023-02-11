@@ -1,0 +1,11 @@
+<ng-container>
+    <span class="box ellipsis reverse-ellipsis" *ngIf="position.placement === 'bottom'"
+        [tooltip]="tooltipValue" placement='bottom' hide-delay='0' animation-duration='0' tooltip-class='ng-tooltip-custom'>
+        {{ data }}
+    </span>
+    <span class="box ellipsis reverse-ellipsis" *ngIf="position.placement === 'top'"
+     [tooltip]="tooltipValue"
+        hide-delay='0' animation-duration='0' tooltip-class='ng-tooltip-custom'>
+        {{ data }}
+    </span>
+</ng-container>

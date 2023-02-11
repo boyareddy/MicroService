@@ -1,0 +1,170 @@
+$connected: rgba(0,153,102,0.15);
+$warning: rgba(255,196,20,0.23);
+$error: rgba(204,0,51,0.15);
+$offline: rgba(141,141,141,0.15);
+
+.online_box{
+    background: $connected;
+}
+
+.connected_idle_box{
+    background: $connected;
+}
+
+.connected_in_progress_box{
+    background: $connected;
+}
+
+.warning_idle_box{
+    background: $warning;
+}
+
+.warning_in_progress_box{
+    background: $warning;
+}
+
+.error_box{
+    background: $error;
+}
+
+.offline_box{
+    background: $offline;
+}
+
+.forgetPassword{
+    margin: 0.2em .9em 0;
+    color: #004EA3;
+    cursor: pointer;
+}
+
+.dev-det-cont{
+    padding: 5.3em 6em;
+}
+
+.dev-det-form{
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+}
+
+.dev-det-hd{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.dev-st-ico{
+    height: 40px;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+.dev-det-hd-ifo{
+    margin-left: 1em;
+}
+
+.lb-ifo-tp{
+    font-size: 1.125em;
+    color: #191919;
+}
+
+.lb-ifo-dn{
+    font-size: 14px;
+    color: #333333;
+}
+
+.bg-wh{
+    background: #fff;
+}
+
+.dev-ifo-cont{
+    display: flex;
+    padding: 20px;
+}
+
+.dev-ifo-cell{
+    flex: 1;
+}
+
+.dev-cell-lb{
+    font-size: 12px;
+    color: #8D8D8D;
+}
+
+.dev-cel-vl{
+    font-size: 14px;
+    color: #191919;
+}
+
+.disp-flx{
+    display: flex;
+}
+
+.aln-itm-ct{
+    align-items: center;
+}
+
+.mg-lt{
+    margin-left: 0.3em;
+}
+
+.wd-80{
+    width: 80%;
+}
+
+.dev-det-btn{
+    // padding: 1em;
+    // padding-left: 0.3em;
+    // padding-right: 0.3em;
+    border-top: 1px solid silver;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.btn{
+    color: #004EA3 !important;
+}
+
+.sv-btn{
+    height: 36px;
+    margin-top: 9px;
+    margin-right: 10px;
+}
+
+/deep/ a .font-14{
+    font-size: 12px !important;
+}
+
+/deep/ .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #E8E8E8;
+}
+
+.pd-lt-0{
+    padding-left: 0px;
+}
+
+.flt-rt{
+    float: right;
+}
+
+.flt-rt-pd{
+    padding-right: 1.3em;
+}
+
+.flt-rt-mg{
+    margin-right: 1.3em;
+}
+
+.flt-lt-pd{
+    padding-left: 1em;
+}
+
+.dy-bt{
+    padding-bottom: 0em;
+    padding-bottom: 0em;
+}
+
+.flex-cont-right{
+    justify-content: flex-end;
+}

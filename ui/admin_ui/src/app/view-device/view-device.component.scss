@@ -1,0 +1,23 @@
+@import '../device-detail/device-detail.component.scss';
+
+.icon-pd{
+    padding-left: 10px;
+}
+.wd-full{
+    width:96.6%;
+}
+.wd-50{
+    width:48.3%;
+}
+.dev-info-value{
+    max-width: 521px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.remove-padding-top{
+    padding-top: 0px !important;
+}
+.bottom-pd-16{
+    padding-bottom: 16px !important;
+}

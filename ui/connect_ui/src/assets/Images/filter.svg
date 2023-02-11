@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="12" viewBox="0 0 18 12">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_20187" data-name="Path 20187" d="M202-4639h4v-2h-4v2Zm-7-12v2h18v-2Zm3,7h12v-2H198v2Z" transform="translate(0 7115)" fill="#191919" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Filter" transform="translate(-195 -2464)" clip-path="url(#clip-path)">
+    <path id="Path_20186" data-name="Path 20186" d="M190-4656h28v22H190Z" transform="translate(0 7115)" fill="#191919"/>
+  </g>
+</svg>

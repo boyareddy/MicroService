@@ -1,0 +1,31 @@
+{
+"deviceId":"LP24",
+"processStepName":"Library Preparation",
+"deviceRunId":null,
+"runStatus":"completed",
+"dvcRunResult":null,
+"runFlag":null,
+"operatorName":"chan",
+"comments":"comment",
+"runStartTime":null,
+"runCompletionTime":null,
+"runRemainingTime":null,
+"verifiedDate":null,
+"verifiedBy":null,
+"updatedBy":null,
+"updatedDateTime":null,
+"sampleResults":[],
+"runReagentsAndConsumables":
+	[{"type":"R",
+	"attributeName":"Name",
+	"attributeValue":"xyz",
+	"updatedBy":"admin",
+	"updatedDateTime":""},
+	{"type":"C",
+	"attributeName":"Name",
+	"attributeValue":"xyz",
+	"updatedBy":"admin",
+	"updatedDateTime":""}
+	],
+	"runResultsDetail":[]
+}

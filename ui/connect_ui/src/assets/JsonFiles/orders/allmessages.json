@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "createdBy": null,
+      "createdDateTime": null,
+      "title": "Unregistered LP24 device1",
+      "message": "The LP24 device is not registered.",
+      "userId": null,
+      "viewed": null,
+      "viewedDateTime": null,
+      "severity": "Warning",
+      "topic": "Device"
+    },
+    {
+        "id": 2,
+        "createdBy": null,
+        "createdDateTime": null,
+        "title": "Unregistered LP24 device",
+        "message": "The LP24 device is not registered and is sending messages to Connect. Please register the device to proceed further.",
+        "userId": null,
+        "viewed": null,
+        "viewedDateTime": null,
+        "severity": "Warning",
+        "topic": "Workflow"
+      }
+  ]

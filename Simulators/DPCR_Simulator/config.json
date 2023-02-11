@@ -1,0 +1,12 @@
+{
+  "labsimulator" : {
+    "equipments" :[
+      {
+        "name": "Magna.Pure.96",
+        "serialNumber" : "MP001-12",
+        "type" : "MP96",
+        "class": "com.roche.connect.dpcr.sim.DPCRSimulator"
+      }
+   ]
+  }
+}

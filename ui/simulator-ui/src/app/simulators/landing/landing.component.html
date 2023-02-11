@@ -1,0 +1,52 @@
+<div class="d-flex align-center">
+  <div *ngFor="let device of devicesList">
+    <div class="text-center pointer" (click)="showInformation(device)">
+      <img [src]="device.imagePath" [alt]="device.deviceName" height="100px">
+      <div class="bold-data"> {{ device.deviceName }} </div>
+    </div>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" 
+    (click)="showHideAddDevice = !showHideAddDevice">
+    <ng-container *ngIf='!showHideAddDevice'> Show Add Device </ng-container>
+    <ng-container *ngIf='showHideAddDevice'> Hide Add Device </ng-container>
+  </button>
+  </div>
+</div>
+
+<div class="border-1 width-40" *ngIf='showHideAddDevice'>
+  <h2 class="text-center">Add Device</h2>
+  <form [formGroup]="deviceData" (ngSubmit)="AddDevice(deviceData)">
+    <div class="text-center">
+      <div class="m-2">
+        <mat-form-field appearance="fill" class="w-90">
+          <mat-label>Device Name</mat-label>
+          <input matInput type="text" formControlName="deviceName" autocomplete="off">
+          <mat-error *ngIf="deviceData.get('deviceName').invalid">
+            Please Enter Device Name
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill" class="w-90">
+          <mat-label>Process StepName</mat-label>
+          <input matInput type="text" formControlName="processStepName" autocomplete="off">
+          <mat-error *ngIf="deviceData.get('processStepName').invalid">
+              Please Enter Process StepName
+            </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill" class="w-90">
+          <mat-label>Image Path</mat-label>
+          <input matInput type="text" formControlName="imagePath" autocomplete="off">
+          <mat-error *ngIf="deviceData.get('imagePath').invalid">
+              Please Enter Online Image Path
+            </mat-error>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Add</button>
+    </div>
+  </form>
+
+</div>

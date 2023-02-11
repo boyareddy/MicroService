@@ -1,0 +1,61 @@
+{
+  "deviceSerialNumber": "MP001-22",
+  "sendingApplicationName": "MagnaPure24",
+  "receivingApplication": "LIS",
+  "dateTimeMessageGenerated": "20151020162814",
+  "messageType": "StatusUpdate",
+  "messageCotrolId": null,
+  "accessioningId": "8000",
+  "rspMessage": null,
+  "statusUpdate": {
+    "eventDate": "20151020170800",
+    "equipmentState": "OP",
+    "containerInfo": {
+      "containerPosition": "1",
+      "containerStatus": "Process Completed",
+      "carrierType": null,
+      "carrierBarcode": "A45678941",
+      "carrierPosition": "1",
+      "containerVolume": null,
+      "availableSpecimenVolume": null,
+      "initialSpecimenVolume": null,
+      "specimenEventDate": null,
+      "specimenVolume": null,
+      "unitofVolume": null
+    },
+    "protocolName": "DNA Blood LV",
+    "protocolVersion": "1.1",
+    "runResult": "PassedWithFlags",
+    "runStartTime": "20151020162814",
+    "runEndTime": "20151020172814",
+    "comment": null,
+    "sampleInfo": {
+      "sampleOutputId": "A45678941",
+      "sampleOutputPosition": "1",
+      "sampleType": "Whole blood",
+      "specimenSourceSite": null,
+      "specimenCollectionSite": null,
+      "specimenDescription": null,
+      "dateTimeSpecimenCollected": null,
+      "dateTimeSpecimenReceived": null,
+      "dateTimeSpecimenExpiration": null,
+      "containerType": null,
+      "specimenRole": "Patient"
+    },
+    "orderName": "Order123",
+    "orderResult": "passed",
+    "internalControls": null,
+    "processingCartridge": ";;00061",
+    "tipRack": ";;00040",
+    "reagentCassette": "DNA Blood LV;00000000;0040",
+    "reagent2mlTube": [
+      "MGP;00000001;00023"
+    ],
+    "reagent25mlTube": [
+      "Washbuffer;00000002;01001",
+      "Washbuffer;00000002;01002",
+      "Specimen Diluent;00000000;00033",
+      "Lysis;00000000;00001"
+    ]
+  }
+}

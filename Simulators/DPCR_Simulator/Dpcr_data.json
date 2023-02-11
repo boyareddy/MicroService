@@ -1,0 +1,80 @@
+{
+  "runId" : "RND19249180332",
+  "runResults" : "Passed",
+  "runNotes" : null,
+  "sendingFacility" : "Roche Diagnostics",
+  "recevingFacility" : "Connect",
+  "recevingApplication" : "Connect",
+  "hl7Version" : "2.5.1",
+  "ackMsgControlId" : "22ad3f58-3509-4f0d-b",
+  "sample" : [ {
+    "accessioningId" : "3500",
+    "inputchipId" : "806bbdd202",
+    "inputchipPosition" : "1",
+    "operatorName" : "Admin",
+    "flag" : null,
+    "assay" : [ {
+      "assayType" : "dPCRAnalyzerAssay1",
+      "assayVersion" : "1.0",
+      "analysisPackageName" : "AP1",
+      "masterMix" : "Lightcycler",
+      "quantitativeValue" : "2.6",
+      "quantitativeResult" : "F",
+      "qualitativeValue" : "Positive",
+      "qualitativeResult" : "F",
+      "kit" : "System fluid"
+    } ],
+    "partitionEngine" : [ {
+      "plateId" : "plateId",
+      "serialNumber" : "engineSN1",
+      "fluidId" : "fluidId1",
+      "dateandTime" : "20190424131323"
+    } ]
+  }, {
+    "accessioningId" : "3501",
+    "inputchipId" : "806bbdd202",
+    "inputchipPosition" : "2",
+    "operatorName" : "Admin",
+    "flag" : null,
+    "assay" : [ {
+      "assayType" : "dPCRAnalyzerAssay1",
+      "assayVersion" : "AP1",
+      "analysisPackageName" : "ap1",
+      "masterMix" : "Lightcycler",
+      "quantitativeValue" : "2.6",
+      "quantitativeResult" : "F",
+      "qualitativeValue" : "Positive",
+      "qualitativeResult" : "F",
+      "kit" : "System fluid"
+    } ],
+    "partitionEngine" : [ {
+      "plateId" : "plateId",
+      "serialNumber" : "engineSN1",
+      "fluidId" : "fluidId1",
+      "dateandTime" : "20190424131323"
+    } ]
+  }, {
+    "accessioningId" : "3502",
+    "inputchipId" : "806bbdd202",
+    "inputchipPosition" : "3",
+    "operatorName" : "Admin",
+    "flag" : null,
+    "assay" : [ {
+      "assayType" : "dPCRAnalyzerAssay1",
+      "assayVersion" : "AP1",
+      "analysisPackageName" : "ap1",
+      "masterMix" : "Lightcycler",
+      "quantitativeValue" : "2.6",
+      "quantitativeResult" : "X",
+      "qualitativeValue" : "Positive",
+      "qualitativeResult" : "X",
+      "kit" : "System fluid"
+    } ],
+    "partitionEngine" : [ {
+      "plateId" : "plateId",
+      "serialNumber" : "engineSN1",
+      "fluidId" : "fluidId1",
+      "dateandTime" : "20190424131323"
+    } ]
+  } ]
+}

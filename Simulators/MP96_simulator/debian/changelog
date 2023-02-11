@@ -1,0 +1,7 @@
+roche-swam-labsimulator (0.0.1~alpha1) testing; urgency=medium
+
+  * Set version to 0.0.1~alpha1
+  * Initial version
+
+ -- Martin Lustenberger <martin.lustenberger@roche.com>  Tue, 25 Oct 2016 11:53:37 -0700
+

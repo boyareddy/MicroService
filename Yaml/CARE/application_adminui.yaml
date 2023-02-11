@@ -1,0 +1,242 @@
+#######################################################
+#configure host name and url for this ApplicationUI
+#URLs DEFINED FOR BROWSER COMMUNICATION
+#urls to be configured when setting for https
+#######################################################
+pas:
+     #Permission for the User to access this microservice
+     microservice_permission: Access_Admin_UI
+     
+     #Remote endpoints
+     security_endpoint: ${pas.security_remote_url}
+     metadata_endpoint: ${pas.metadata_remote_url}
+     admin_api_endpoint: ${pas.application_api_remote_url}
+     email_endpoint: ${pas.email_remote_url}
+     locale_endpoint: ${pas.locale_service_remote_url}
+     application_api_endpoint: ${pas.application_api_remote_url}
+     
+     #application_location - values [default,distributed]
+     #If value is default, it is assumed that all microservices are running in same location (www.qa-rocheconnect.com is used through-out app)
+     application_location : default
+          
+     application_host_name : www.qa-rocheconnect.com
+     application_url : https://${pas.application_host_name}:93/admin-ui
+     
+     metadata_host_name : www.qa-rocheconnect.com
+     metadata_url : https://${pas.metadata_host_name}:91/metadata-web
+     
+     #configure host name and url for security web app.
+     security_host_name : www.qa-rocheconnect.com
+     security_url : https://${pas.security_host_name}:90/security-web
+
+     #URLs DEFINED FOR INTERNAL WAR COMMUNICATION
+     #urls to be configured when setting for https- incase internal war 
+     #communication also to be done through https
+     metadata_remote_host_name : www.qa-rocheconnect.com
+     metadata_remote_url : https://${pas.metadata_remote_host_name}:91/metadata-web
+
+     security_remote_host_name : www.qa-rocheconnect.com
+     security_remote_url : https://${pas.security_remote_host_name}:90/security-web
+
+     application_api_remote_host_name : www.qa-rocheconnect.com
+     application_api_remote_url : https://${pas.application_api_remote_host_name}:92/admin-api
+
+     #default home page if none is given
+     defaultHomePage: ${pas.application_url}/listuser.mvc
+     
+     #configure host name and url for Email API.    
+     email_remote_host_name : www.qa-rocheconnect.com
+     email_remote_url : https://${pas.email_remote_host_name}:94/email-web
+     
+     #CatchAllExceptionFilter Url
+     catchAllExceptionFilterUrl : allerror.jsp
+     
+     login_url : ${pas.application_url}/login.jsp
+      
+     locale_service_remote_url : ${pas.application_api_remote_url}
+     
+     #otp configurations
+     otp.enabled: false
+     otp.include_password_validation: false
+     
+     #service registry check - default value server change as client if service registry is enabled
+     service.discovery: server
+
+     #Auditable History enable or disable -defauls value is true
+     auditable_history: true
+     auditable_history_days: 30          
+     #AuditTrail enable or disable -default value is false
+     audittrail: true
+     #routing_key_prefix: Roche.X800.DM.Audit
+     #routing_header_name: rabbitmq.ROUTING_KEY
+#######################################################
+# if ssl is enabled configure the default port for http if required
+#######################################################
+     support_for_http_and_https: false
+     http_port: 90
+     
+     transaction.enabled: false
+     locale_country_code : US
+     locale_language_code : en
+     #accessDenied page
+     access_denied_url : /accessdenied.html
+     #######################################################     
+     #Root company 
+     #######################################################
+     companyName : root Company
+     description	: root company
+     domainName : hcl.com
+     companyType : PASCOMPANY
+
+     #######################################################
+     #Data for Keystore
+     #######################################################
+     keystore_location : keystore/pas.jceks
+     keystore_pass : pas123
+     keystore_type : jceks
+     token_private_key_pass : pas123
+     token_private_key_alias : pasprivatekey
+     token_public_key_alias : paspublickey
+     symmetric_key_alias : passymmetrickey
+     symmetric_key_pass : pas123
+     use_private_for_encryption : true
+ 
+     #######################################################
+     #Allowed File type for workflow, rules, reports
+     ####################################################### 
+     workflowAllowedContentType : text/*,application/*,image/*
+     ruleAllowedContentType : text/*,application/*,image/*
+     reportAllowedWorkflowContentType : text/*,application/*,image/*
+
+     #######################################################
+     # Poll the following url for starting the deployment of the application. A get request will be issued to that page and a return value of "YES" or "yes" is required to proceed. 
+     # Till then application will loop without starting the initialization. After the expiry of number of attempts, application will throw an exception and exit without initialization. 
+     #######################################################
+     poll_enabled : true
+     poll_attempts : 10
+     poll_attempts_delay_in_seconds : 30
+     poll_url : ${pas.application_api_remote_url}/poll
+
+     #######################################################
+     #https-configuring client side truststore and ketysore
+     #Enable this for protection of remote web services with protection
+     #######################################################
+     #client_keystore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+     #client_truststore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+     #cert_provider : SunX509
+     #cert_file_type : jks
+     #cert_password : changeit
+
+     #######################################################
+     #Specific module name for logger
+     #######################################################
+     logged_module_name : admin-ui
+     application_module_name : default
+
+     #######################################################
+     # Whitelist urls to be validated for application module domain
+     #e.g. for multiple domains to be seperated by commas whitelist_urls : www.pas.com,www.test.com,www.sample.com
+     #If empty all domains are allowed
+     #######################################################
+     whitelist_urls : 
+     
+     ###############################################
+     # Swagger documentation details. Right not these 
+     # are used for showing swagger rest documentation
+     ###############################################
+     version: 4.4 
+     title: ${pas.logged_module_name} - REST documentation
+     contact_email: PBASolutionsteam@hcl.in
+     api_description: These are the contracts for the rest services exposed in this ${pas.logged_module_name}.        
+
+     ###############################################
+     # Enable the Resource Monitoring for this Microservice 
+     # Values - true or false
+     # Duration - in seconds
+     ###############################################
+     monitor_service: false
+     monitor_service_duration: 300     
+
+     #Provide the applicable role which applicant can create user with that role 
+     #applicableRole:Admin	     
+#######################################################
+#spring boot properties
+#######################################################
+spring.main.show-banner: false
+endpoints.enabled: false
+spring.profiles.active: full
+
+
+
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+spring.application.name: admin-ui
+spring.cloud.consul.host: www.qa-rocheconnect.com
+spring.cloud.consul.port: 8500
+spring.cloud.consul.discovery.healthCheckPath: ${management.contextPath}
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.address: ${management.contextPath}
+spring.cloud.consul.discovery.instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+management:
+    contextPath: /admin-ui/poll
+
+
+spring.mvc.view.prefix : WEB-INF/jsp/
+spring.mvc.view.suffix : .jsp
+spring.messages.basename : properties/Application-I18N
+
+logging.path: '/var/log/connect/log'
+logging.file: adminui.log
+logging.config: 'classpath:log4j2.xml'
+
+#######################################################       
+# To disable the default configuration for the freemarker
+# configuration to search for the templates
+# TO BE IGNORED ALWAYS: Since String template loader is used
+#######################################################
+spring.freemarker.checkTemplateLocation: false
+
+#######################################################
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+#######################################################
+server:
+    port: 93
+    session-timeout: 600
+    context-path: /admin-ui
+    servlet-path : '*.mvc'
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.qa-rocheconnect.com
+    
+#######################################################
+#default value is false, enable if https is used
+https_enabled: true
+#######################################################
+#ssl configuration
+#######################################################
+ssl_enabled_protocols: TLSv1.2
+#######################################################
+license_property_path: /home/rconnect/roche/pas/commonlicense.properties
+#ancestor_data_acccess_disabled : true
+---
+
+spring:
+    profiles: docker
+
+pas:
+    email_remote_host_name : email
+    application_api_remote_host_name : adminapi
+    security_remote_host_name : security
+    metadata_remote_host_name : metadata
+    security_host_name : security
+    metadata_host_name : metadata
+    application_host_name : adminui
+    whitelist_urls : 
+server:
+    port: 80   
+ 
+---

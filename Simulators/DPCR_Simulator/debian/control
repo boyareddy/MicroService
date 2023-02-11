@@ -1,0 +1,20 @@
+Source: roche-swam-labsimulator
+Section: java
+Priority: optional
+Maintainer: Martin Lustenberger <martin.lustenberger@roche.com>
+Build-Depends: debhelper (>= 9), default-jdk (>= 1.8-57), openjfx, 
+  maven (>= 3.3.9), libmaven-resources-plugin-java (>= 2.6) , libmaven-compiler-plugin-java (>= 3.2),
+  libmaven-jar-plugin-java (>= 2.4), libmaven-clean-plugin-java (>= 2.5), libsurefire-java (>= 2.17),
+  libmaven-dependency-plugin-java (>= 2.8), libmaven-exec-plugin-java,
+  liblogback-java, roche-swam-thirdparty-libhapi-java
+Build-Depends-Indep: junit (>= 3.8.1),
+Standards-Version: 3.9.8
+Homepage: https://stash.intranet.roche.com/stash/projects/RSSSYSSW/repos/swam-backend/browse
+
+Package: roche-swam-labsimulator
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}, openjdk-8-jre, openjfx,
+  liblogback-java, roche-swam-thirdparty-libhapi-java,
+  libspring-core-java, libspring-context-java, libcommons-io-java
+Suggests: ${maven:OptionalDepends}
+Description: Roche Sequencing Solutions - Lab Simulator

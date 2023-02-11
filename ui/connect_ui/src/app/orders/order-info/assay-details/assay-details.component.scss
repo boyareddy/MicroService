@@ -1,0 +1,140 @@
+ssay-info-img {
+    background-image: url("../../../../assets/Images/assayDetails.svg");
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+}
+
+.output_cont_date {
+    padding-top: 29px !important;
+}
+
+.mat-chip-container-1 {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.w-62 {
+    width: 62%;
+}
+
+.main_title {
+    color: #191919;
+}
+
+.mat-chip-container-2 {
+    width: 100%;
+}
+
+.mat-chip-container-2 .q22 {
+    padding-left: 13px !important;
+}
+
+.mat-chip-container-2 .bg-lightMX {
+    margin-left: 10px !important;
+    padding-right: 9px !important;
+}
+
+// .last_column {
+//   padding-top: 31px !important;
+//   padding-left: 6px !important;
+// }
+
+.assay-details-card .edit-details {
+    margin-left: 5px;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle+span {
+    color: #000 !important;
+}
+
+.chip-color {
+    color: #343434;
+}
+
+.bg-light {
+    background-color: #D3D3D3 !important;
+}
+
+.bg-key {
+    background-color: #8D8D8D !important;
+}
+
+.bg-lightHarmony,
+.bg-lightharmony {
+    background-color: rgba(223, 86, 62, 0.25) !important;
+}
+
+.bg-Harmony,
+.bg-harmony {
+    background-color: #df563e !important;
+}
+
+.bg-lightFetalSex,
+.bg-lightfetalSex,
+.bg-lightfetalsex {
+    background-color: rgba(238, 161, 33, 0.25) !important;
+}
+
+[class*='bg-lightFetal'],
+[class*='bg-lightfetal'] {
+    background-color: rgba(238, 161, 33, 0.25) !important;
+}
+
+[class*='bg-Fetal'],
+[class*='bg-fetal'] {
+    background-color: #eea121 !important;
+}
+
+
+.bg-FetalSex,
+.bg-fetalsex,
+.bg-fetalSex {
+    background-color: #eea121 !important;
+}
+
+
+.bg-lightSCAP,
+.bg-lightscap {
+    background-color: rgba(141, 170, 76, 0.25) !important
+}
+
+.bg-SCAP,
+.bg-scap {
+    background-color: #8daa4c !important;
+}
+
+.bg-lightMX,
+.bg-lightmx {
+    background-color: rgba(68, 91, 103, 0.25) !important;
+}
+
+.bg-MX,
+.bg-mx {
+    background-color: #445b67 !important;
+}
+
+.assay-details-card {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16) !important;
+}
+
+.line-height {
+    line-height: 1;
+}
+
+.pb-6 {
+    padding-bottom: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .assay-details-card {
+        display: block;
+    }
+}

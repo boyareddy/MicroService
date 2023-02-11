@@ -1,0 +1,47 @@
+.plate-cont-header{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    background: #fff;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.info-buttom{
+    font-size: 1em;
+    font-size: 1.45em;
+}
+
+.samples-table{
+    width: 100%;
+}
+
+.mat-column-accessioningID{
+    width: 30%;
+}
+
+.list-header {
+    padding: 20px;
+}
+  
+.mr-20 {
+    margin-right: 20px;
+}
+  
+.text-color {
+    color: #333333;
+}
+
+.table-header{
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+.table-data{
+    font-size: 14px;
+    color: #191919;
+}

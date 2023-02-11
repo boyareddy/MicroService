@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none !important;
+}
+
+/* th.list-header {
+  padding-right: 200px !important;
+} */
+
+.list-header {
+  font-size: 16px;
+  color: #4d4d4d !important;
+  width: 24.6% !important;
+}
+
+.list-items {
+  font-size: 14px;
+  color: #191919 !important;
+}
+
+td {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  th.list-header {
+    padding-right: 0px !important;
+  }
+}

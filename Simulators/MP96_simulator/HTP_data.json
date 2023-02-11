@@ -1,0 +1,28 @@
+{
+  "samples" : [ {
+    "inputContainerId" : "156302959",
+    "inputPosition" : "",
+    "outputContainerId" : "",
+    "outputPosition" : "",
+    "sendingFacilityName" : "Roche Diagnostics",
+    "receivingFacilityName" : "Roche Diagnostics",
+    "receivingApplicationName" : "Connect",
+    "messageQueryName" : "WOS",
+    "messageType" : null,
+    "result" : "passedwithflag",
+    "internalControls" : null,
+    "processingCartridge" : null,
+    "tipRack" : null,
+    "plateType" : null,
+    "sampleComments" : null,
+    "consumables" : [ {
+      "consumableName" : "reagent25mlTube",
+      "value" : "Specimen Diluent;00000000;01234"
+    } ],
+    "flag" : null,
+    "versionId" : "2.5.1",
+    "processingId" : "P",
+    "messageTyep" : null,
+    "characterSet" : "UTF-8"
+  } ]
+}

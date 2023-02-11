@@ -1,0 +1,17 @@
+<app-header [headerInfo]="headerInfo" #header></app-header>
+<div class="d-flex" [style.width.%]="getWidth" style="margin-top:66px">
+  <ng-container *ngFor="let a of circles; index as i">
+    <app-icon
+      [IconDetails]="a"
+      (navigate)='navigateUrl($event)'
+      [ngClass]="{
+        'pl-100':
+          (i === 4 && circles.length === 7) ||
+          (i === 3 && circles.length === 5),
+        'pr-100':
+          (i === 6 && circles.length === 7) || (i === 4 && circles.length === 5)
+      }"
+    >
+    </app-icon>
+  </ng-container>
+</div>

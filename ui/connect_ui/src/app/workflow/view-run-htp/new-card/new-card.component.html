@@ -1,0 +1,147 @@
+<mat-card class="run-info-card mat-card" *ngIf="runCardInfo && runCardInfo?.totalSamplecount !== '0'" (click)="getRunID(runCardInfo)">
+  <ng-container *ngIf='runCardInfo?.wfmsflag?.toLowerCase() !== "pending"; else pendingCard'>
+      <div class="step-header" [ngClass]="runCardInfo?.colorCode?.color">
+          <div class="height-40">
+            <img src="assets/Images/{{runCardInfo?.imagePath}}" [alt]="runCardInfo?.runStatus" height="44px">
+          </div>
+          <div class="heading-data">
+            <div class="card-sub-header-info">
+              {{ runCardInfo?.assayType | translate }}
+            </div>
+            <div class="card-main-header-info">
+              {{ (runCardInfo?.processStepName ? runCardInfo?.processStepName : "-") | translate }}
+            </div>
+          </div>
+        </div>
+        <mat-progress-bar [value]="runCardInfo?.colorCode?.transistionValue" [mode]="runCardInfo?.colorCode?.transistionMode"
+          color='primary' [ngClass]="runCardInfo?.colorCode?.color">
+        </mat-progress-bar>
+        <div class="padding-20 pb-3em">
+          
+          <div [class.pb-2em]="runCardInfo?.updatedCode?.labelName"  
+                                *ngIf='runCardInfo?.wfmsflag?.toLowerCase() !== "pending"'
+              class='d-flex flex-justify-between'>
+            <div>
+              <div class="small roboto-regular font-12 process-text-color pb-6">
+                {{ runCardInfo?.runStatus | translate }}
+              </div>
+              <div class="small roboto-bold font-14 text-sub-color">
+                  {{ runCardInfo?.deviceRunId ? runCardInfo?.deviceRunId: '-'}} 
+              </div>
+            </div>
+            <div *ngIf="!runCardInfo?.updatedCode?.labelName">
+              <div class="small roboto-regular font-12 process-text-color pb-6">
+                {{ 'runWorkflow.cards.' + ('sample' | pluralCheck : (runCardInfo?.totalSamplecount ?
+                runCardInfo?.totalSamplecount : '0'))
+                |
+                translate}}
+              </div>
+              <div class="small roboto-bold font-14 text-sub-color text-right">
+                  {{ runCardInfo?.totalSamplecount - (runCardInfo?.totalSampleFailedCount ? runCardInfo?.totalSampleFailedCount : 0) }}
+              </div>
+            </div>
+          </div>
+      
+          <div class="ds-flex flex-justify-between flex-wrap" 
+              *ngIf="runCardInfo?.updatedCode?.labelName">
+            <div class="d-flex roboto-bold font-14 flex-align-center pr-20  text-sub-color">
+              <div>
+                <img [src]="runCardInfo?.updatedCode?.containerIcon" alt="icons" height="32px" class="containerIcon">
+              </div>
+              <div class="d-flex countInfo">
+                  <div *ngIf='runCardInfo?.updatedCode?.count > 1'>
+                      <span>{{ runCardInfo?.updatedCode?.count }}</span>
+                      <span style="padding:0 5px">x</span>
+                    </div>
+                  <div>
+                    {{ 'runWorkflow.cards.' + runCardInfo?.updatedCode?.labelName | translate }}
+                  </div>
+              </div>
+            </div>
+            <div>
+              <div class="small roboto-regular font-12 process-text-color pb-6">
+                {{ 'runWorkflow.cards.' + ('sample' | pluralCheck : (runCardInfo?.totalSamplecount ?
+                (runCardInfo?.totalSamplecount - (runCardInfo?.totalSampleFailedCount ? runCardInfo?.totalSampleFailedCount : 0)) : '0'))
+                |
+                translate}}
+              </div>
+              <div class="small roboto-bold font-14 text-sub-color text-right">
+                {{ runCardInfo?.totalSamplecount - (runCardInfo?.totalSampleFailedCount ? runCardInfo?.totalSampleFailedCount : 0) }}
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      
+        <div [class.sampleInfo]='runCardInfo?.totalSampleFailedCount > 0 || runCardInfo?.totalSampleFlagCount > 0'>
+          <div class="roboto-regular font-14 flag-text-color d-flex flagsDetails flex-align-center" *ngIf='runCardInfo?.totalSampleFailedCount'>
+            <img src="assets/Images/status/flags/error.svg" alt="aborted samples" height="16px" class="flagsInfoflag">
+            <ng-container *ngIf='(((runCardInfo?.processStepName?.toLowerCase().indexOf("extraction") !== -1) || (runCardInfo?.processStepName?.toLowerCase().indexOf("library") !== -1)) && runCardInfo?.assayType === "NIPTDPCR"); else remains'>
+              <span>
+                {{ runCardInfo?.totalSampleFailedCount }} {{(('sample' | pluralCheck:
+                (runCardInfo?.totalSampleFailedCount))+ ' failed') | translate }}
+              </span>
+            </ng-container>
+            <ng-template #remains>
+              <span>
+                {{ runCardInfo?.totalSampleFailedCount }} {{(('sample' | pluralCheck:
+                (runCardInfo?.totalSampleFailedCount))+ ' aborted') | translate }}
+              </span>
+            </ng-template>
+          </div>
+          <div class="roboto-regular font-14 flag-text-color d-flex flagsDetails flex-align-center" *ngIf='runCardInfo?.totalSampleFlagCount'>
+              <img [src]="'assets/Images/flag_' + flagIcon + '.svg'" alt="falgged samples" height="16px" class="flagsInfoflag">
+            <span>
+              {{ runCardInfo?.totalSampleFlagCount }} {{(('sample' | pluralCheck: (runCardInfo?.totalSampleFlagCount))+ '
+              flagged') | translate }}
+            </span>
+          </div>
+        </div>
+  </ng-container>
+  <ng-template #pendingCard>
+    <div class="padding-20 pb-3em">
+      <div class="pb-2em heading-data">
+        <div class="card-sub-header-info">
+          {{ runCardInfo?.assayType | translate }}
+        </div>
+        <div class="card-main-header-info"> 
+          {{ 'runWorkflow.cards.leftOver' | translate }} 
+        </div>
+      </div>
+      <div class="pb-2em">
+        <div class="roboto-regular font-14 process-text-color pb-6"> 
+          {{ 'runWorkflow.cards.pendingInfo' | translate }} 
+        </div>
+        <div class="roboto-bold font-14 text-sub-color">
+          {{ (runCardInfo?.nextProcessStepName ? runCardInfo?.nextProcessStepName : "-") | translate }} </div>
+      </div>
+      <div class="ds-flex flex-justify-between flex-wrap">
+        <div class="d-flex roboto-bold font-14 flex-align-center pr-20 text-sub-color">
+          <div>
+            <img [src]="runCardInfo?.updatedCode?.containerIcon" alt="icons" height="32px" class="containerIcon">
+          </div>
+          <div class="d-flex countInfo">
+            <div *ngIf='runCardInfo?.updatedCode?.count !== 1'>
+              <span>{{ runCardInfo?.updatedCode?.count }}</span>
+              <span style="padding:0 5px">x</span>
+            </div>
+            <div>
+              {{ 'runWorkflow.cards.' + runCardInfo?.updatedCode?.labelName | translate }}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="small roboto-regular font-12 process-text-color pb-6">
+            {{ 'runWorkflow.cards.' + ('sample' | pluralCheck : (runCardInfo?.totalSamplecount ?
+        runCardInfo?.totalSamplecount : '0'))
+        |
+        translate}}
+          </div>
+          <div class="small roboto-bold font-14 text-sub-color text-right">
+            {{ runCardInfo?.totalSamplecount }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>  
+</mat-card>

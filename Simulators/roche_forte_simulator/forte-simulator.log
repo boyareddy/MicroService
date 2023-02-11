@@ -1,0 +1,106 @@
+2019-04-26 18:10:38 INFO  ForteAnalyzerPanel:59 - Ping
+2019-04-26 18:10:38 INFO  ForteAnalyzerPanel:94 - FORTE Analyzer started ..
+
+
+2019-04-26 18:10:38 INFO  ForteAnalyzerPanel:96 - Requesting HELLO from FORTE...
+2019-04-26 18:10:38 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/hello
+2019-04-26 18:10:38 INFO  ForteAnalyzerPanel:78 - Pinging to CONNECT from FORTE ..
+2019-04-26 18:10:38 INFO  WebServicesClientResponse:29 - {"instance_id":"FORTE-01","forte_software_version":"v1"}
+2019-04-26 18:10:38 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/ping
+2019-04-26 18:10:38 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:10:40 ERROR WebServicesClientResponse:70 - java.net.ConnectException: Connection refused: connect
+2019-04-26 18:10:40 ERROR WebServicesClientResponse:70 - java.net.ConnectException: Connection refused: connect
+2019-04-26 18:10:40 ERROR ForteAnalyzerPanel:111 - 
+2019-04-26 18:10:40 ERROR ForteAnalyzerPanel:88 - 
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:78 - Pinging to CONNECT from FORTE ..
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:10:40 ERROR ForteAnalyzerPanel:88 - 
+2019-04-26 18:10:40 ERROR ForteAnalyzerPanelTest:181 - 
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:225 - Updating Job Done Details ........
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:118 - Get JOBQUEUE details......
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:119 - Current Thread: pool-1-thread-1
+2019-04-26 18:10:40 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/jobqueue
+2019-04-26 18:10:40 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:252 - secondary Path: C:/ips/FORTE-01/runs/190426_1/secondary/secondary_190426.fastq
+2019-04-26 18:10:40 INFO  ForteAnalyzerPanel:355 - Path: C:/ips/FORTE-01/runs/190426_1/secondary/secondary_190426.fastq
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:360 - Secondary Process:
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:276 - Entered in checkSum method 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:289 - Finished checkSum method 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:10:41 ERROR ForteAnalyzerPanel:271 - 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:307 - Updating Job Error Details ........
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:10:41 ERROR ForteAnalyzerPanel:320 - [Ljava.lang.StackTraceElement;@1bdafb01
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:206 - Updating Job Inprogress Details ........
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:10:41 ERROR ForteAnalyzerPanel:219 - [Ljava.lang.StackTraceElement;@500ec769
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:187 - Updating Job Start Details ........
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:10:41 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:10:41 ERROR ForteAnalyzerPanel:200 - [Ljava.lang.StackTraceElement;@7bce9ce4
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:10:41 INFO  WebServicesClientResponse:28 - 
+2019-04-26 18:10:41 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:33:02 INFO  ForteAnalyzerPanel:59 - Ping
+2019-04-26 18:33:02 INFO  ForteAnalyzerPanel:94 - FORTE Analyzer started ..
+
+
+2019-04-26 18:33:02 INFO  ForteAnalyzerPanel:78 - Pinging to CONNECT from FORTE ..
+2019-04-26 18:33:02 INFO  ForteAnalyzerPanel:96 - Requesting HELLO from FORTE...
+2019-04-26 18:33:02 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/ping
+2019-04-26 18:33:02 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:33:02 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/hello
+2019-04-26 18:33:02 INFO  WebServicesClientResponse:29 - {"instance_id":"FORTE-01","forte_software_version":"v1"}
+2019-04-26 18:33:04 ERROR WebServicesClientResponse:70 - java.net.ConnectException: Connection refused: connect
+2019-04-26 18:33:04 ERROR WebServicesClientResponse:70 - java.net.ConnectException: Connection refused: connect
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:88 - 
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:111 - 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:78 - Pinging to CONNECT from FORTE ..
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:88 - 
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanelTest:181 - 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:225 - Updating Job Done Details ........
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:252 - secondary Path: C:/ips/FORTE-01/runs/190426_1/secondary/secondary_190426.fastq
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:355 - Path: C:/ips/FORTE-01/runs/190426_1/secondary/secondary_190426.fastq
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:360 - Secondary Process:
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:118 - Get JOBQUEUE details......
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:119 - Current Thread: pool-1-thread-1
+2019-04-26 18:33:04 INFO  WebServicesClientResponse:28 - http://localhost:98/api/forte/jobqueue
+2019-04-26 18:33:04 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:276 - Entered in checkSum method 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:289 - Finished checkSum method 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:271 - 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:307 - Updating Job Error Details ........
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:320 - [Ljava.lang.StackTraceElement;@11cadb32
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:206 - Updating Job Inprogress Details ........
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:33:04 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:33:04 ERROR ForteAnalyzerPanel:219 - [Ljava.lang.StackTraceElement;@26f5e45d
+2019-04-26 18:33:05 INFO  ForteAnalyzerPanel:187 - Updating Job Start Details ........
+2019-04-26 18:33:05 INFO  ForteAnalyzerPanel:443 - Output from Server .... 
+2019-04-26 18:33:05 INFO  ForteAnalyzerPanel:444 - Response code: 200
+2019-04-26 18:33:05 ERROR ForteAnalyzerPanel:200 - [Ljava.lang.StackTraceElement;@37986daf
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - 
+2019-04-26 18:33:05 INFO  WebServicesClientResponse:28 - 
+2019-04-26 18:33:05 INFO  WebServicesClientResponse:29 - 
+2019-04-26 18:33:05 ERROR WebServicesClientResponse:70 - java.net.ConnectException: Connection refused: connect
+2019-04-26 18:33:05 ERROR ForteAnalyzerPanel:132 - 

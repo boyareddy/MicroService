@@ -1,0 +1,54 @@
+<!--///////////////////////// Users Group ( Active and Archive users list ) //////////////////////////-->
+<div class="activeusers-container">
+  <mat-accordion class="user-creation-accordion">
+      <mat-expansion-panel hideToggle="true" [expanded]="step === 0" (opened)="setStep(0)" (click)="accordionOpen()">
+            <mat-expansion-panel-header class="acc-panel-header" [collapsedHeight]="'44px'"
+            [expandedHeight]="'44px'">
+            <mat-panel-title class="active-user-panel">
+                <div class="active-user-panel-left">
+                  <img src="assets/Images/profileIcon.svg" alt="Image" height="44px">
+                  <div>
+                    <div class="font-14 header-name bg-headercolor pb-3">{{"users.userProfiles" | translate}}</div>
+                    <div class="roboto-medium font-14 header-name header-color">{{"users.activeUsers" | translate}} ({{userList.activeUser.length}})</div>
+                  </div>                  
+                </div>
+            </mat-panel-title>
+            <div>
+                <span 
+                matTooltip="{{ 'common.accessRestricted' | translate}}"
+                [matTooltipClass]="'tooltipDetails'"
+                [matTooltipDisabled]="havingAccess">
+                  <button mat-raised-button color="primary" (click)="onNavigatingToAddUser()" class="roboto-bold font-14 color-white no-shadow btn-bg-color" [disabled]="!havingAccess">
+                      {{"button.addUser" | translate}}
+                  </button>
+                </span>
+              </div>
+        </mat-expansion-panel-header>
+        <app-user-table [userList]="userList.activeUser" [archiveList]="'archive'" (onUserArchiving)="onUserArchiving($event)"></app-user-table>
+      </mat-expansion-panel>
+      <mat-expansion-panel hideToggle="true" [expanded]="step === 1" (opened)="setStep(1)" (click)="accordionOpen()">
+          <mat-expansion-panel-header class="acc-panel-header" [collapsedHeight]="'44px'"
+          [expandedHeight]="'44px'">
+              <mat-panel-title>
+                <div class="d-flex flex-align-center">
+                  <img src="assets/Images/profileIcon.svg" alt="Image" height="44px">
+                  <div>
+                  <div class="font-14 header-name bg-headercolor pb-3">{{"users.userProfiles" | translate}}</div>
+                  <div class="roboto-medium font-14 header-name header-color"> {{"users.archivedUsers" | translate}} ({{userList.archivedUser.length}}) </div>
+                </div>
+                </div>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-user-table [userList]="userList.archivedUser" [archiveList]="'unarchive'" (onUserArchiving)="onUserArchiving($event)"></app-user-table>
+        </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<app-response-progress *ngIf='isSprinerOn' 
+[diameterValue]='55' 
+[marginTop]='250' 
+[rectPro]='rectPro'
+[spOverlayHeight]="false"
+[spOverlayTop]="141"
+[spOverlayLeft]="0"
+[spOverlayRight]="20"
+></app-response-progress>

@@ -1,0 +1,16 @@
+[{
+  "accessioningID": "11112",
+  "containerType": "containertype",
+  "assayType": "NIPT",
+  "position": "p1",
+  "containerID": "A1",
+  "orderID":"123"
+}, 
+{
+  "accessioningID": "11113",
+  "containerType": "containertype",
+  "assayType": "NIPT",
+  "position": "p2",
+  "containerID": "A1",
+  "orderID":"1234"
+}]

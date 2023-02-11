@@ -1,0 +1,112 @@
+{
+  "runResultId": 56,
+  "deviceId": "LP24-Soorya",
+  "processStepName": "Library Preparation",
+  "deviceRunId": "RND73052a9119",
+  "runStatus": "Completed",
+  "dvcRunResult": null,
+  "runFlag": null,
+  "operatorName": "jimenj15",
+  "comments": null,
+  "assayType": "NIPTDPCR",
+  "totalSamplecount": null,
+  "wfmsflag": null,
+  "totalSampleFlagCount": null,
+  "totalSampleFailedCount": null,
+  "inputcontainerIds": [],
+  "outputcontainerIds": [],
+  "runStartTime": "2019-03-27T06:01:34.000Z",
+  "runCompletionTime": "2019-03-27T06:01:39.000Z",
+  "runRemainingTime": null,
+  "verifiedDate": null,
+  "verifiedBy": null,
+  "updatedBy": "System",
+  "updatedDateTime": "2019-03-27T04:21:46.120Z",
+  "createdBy": "System",
+  "createdDateTime": "2019-03-27T06:01:39.000Z",
+  "sampleResults": [
+    {
+      "runResultsId": 56,
+      "sampleResultId": 871,
+      "accesssioningId": "soorya60",
+      "orderId": 10000509,
+      "inputContainerId": "5ba382ae49",
+      "inputContainerPosition": "D2",
+      "inputKitId": null,
+      "outputContainerId": "13cd7dce7f",
+      "outputContainerPosition": "1",
+      "outputContainerType": "dPCR chip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Completed",
+      "result": "Passed",
+      "flag": null,
+      "assayType": "NIPTDPCR",
+      "sampleType": "Plasma",
+      "comments": null,
+      "createdBy": "admin#@#hcl.com",
+      "createdDateTime": "2019-03-27T06:01:39.000Z",
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2019-03-27T04:21:44.824Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8407,
+          "type": null,
+          "attributeName": "MasterMix",
+          "attributeValue": "Lightcycler;00000001;04193001",
+          "updatedBy": "System",
+          "updatedDateTime": "2019-03-27T04:21:44.824Z",
+          "createdBy": "admin#@#hcl.com",
+          "createdDateTime": null
+        }
+      
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 1049,
+          "protocolName": "LPdPCR",
+          "updatedBy": "System",
+          "updatedDateTime": "2019-03-27T04:21:44.824Z",
+          "createdBy": "admin#@#hcl.com",
+          "createdDateTime": "2019-03-27T06:01:39.000Z"
+        }
+      ],
+      "sampleResultsDetail": [
+        {
+          "sampleResultsDetailId": 5844,
+          "attributeName": "PI",
+          "attributeValue": "Valid",
+          "updatedBy": "System",
+          "updatedDateTime": "2019-03-27T04:21:44.824Z",
+          "createdBy": "admin#@#hcl.com",
+          "createdDateTime": "2019-03-27T06:01:39.000Z"
+        }
+      ],
+      "inputContainerType": null
+    }
+    
+  ],
+  "runReagentsAndConsumables": [
+    {
+      "runReagentsAndConsumablesId": 636,
+      "type": null,
+      "attributeName": "MasterMix",
+      "attributeValue": "Lightcycler;00000001;04193001",
+      "updatedBy": "System",
+      "updatedDateTime": "2019-03-27T04:21:44.145Z",
+      "createdBy": "admin#@#hcl.com",
+      "createdDateTime": null
+    }
+   
+  ],
+  "runResultsDetail": [],
+  "uniqueReagentsAndConsumables": [
+    {
+      "attributeName": "MasterMix",
+      "attributeValue": "Lightcycler;00000001;04193001"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<div class="footer">
+  <mat-toolbar class="header-mat-toolbar" *ngIf='allRecords != null'>
+    <button [disabled]="index == 0" (click)="findPrevNextOrders('prev')" class="prev_btn roboto-bold font-14" mat-raised-button>
+      {{'orders.naigationButtons.previousOrder' | translate}}
+    </button>
+    <span class="order-info">
+      {{allRecords.length}} {{ ('orders.' + ('order' | pluralCheck: (allRecords.length))) | translate }}
+    </span>
+    <!-- <span class="order-info">{{ (index + 1)+'/'+allRecords.length }} Orders</span> -->
+    <button [disabled]="index == (allRecords.length-1)" (click)="findPrevNextOrders('next')" class="next_btn roboto-bold font-14" mat-raised-button>
+      {{'orders.naigationButtons.nextOrder' | translate}}
+    </button>
+  </mat-toolbar>
+</div>

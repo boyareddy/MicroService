@@ -1,0 +1,52 @@
+<app-header [headerInfo]="headerInfo"></app-header>
+<mat-card class="rsr-login">
+  <div class="pd-lft">
+    <div class="font-14 roboto-light d-flex flex-justify-between h-18 header-text ml-10">
+      <span>{{ 'loginScreen.WELCOME_MESSAGE' | translate }}</span>
+    </div>
+    <div class="rsr-name card-main-header-info ml-10">
+      <span>{{ 'RSR_LOGIN.RSR_Authentication' | translate }}</span>
+    </div>
+  </div>
+  <form [formGroup]='rsrLogin'>
+    <div class="formFields pd-lft">
+      <!-- Roche ID -->
+      <mat-grid-list cols="1" rowHeight="73px" gutterSize="20px">
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="fill" class="width-full roboto-regular font-14 ml-10" hideRequiredMarker="true" #rocheId>
+            <mat-label> Roche ID </mat-label>
+            <input matInput id="rocheId" name="rocheId" formControlName="rocheId" type="text" autocomplete="off" appMinMax [parentField]="rocheId" maxlength="20">
+            <mat-error *ngIf="rsrLogin.get('rocheId').invalid">
+              {{ rsrLogin.get('rocheId').errors.errorCode | translate }}
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <!-- Token -->
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="fill" class="width-full roboto-regular font-14 ml-10" hideRequiredMarker="true" #token>
+            <mat-label> Token </mat-label>
+            <input matInput id="token" name="token" formControlName="token" type="password" autocomplete="off" appMinMax [parentField]="token" maxlength="30">
+            <mat-error *ngIf="rsrLogin.get('token').invalid">
+              {{ rsrLogin.get('token').errors.errorCode | translate }}
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </form>
+   
+  <div class="form-control d-flex flex-justify-between flex-align-center mt-20 mrg-lft-10">
+      <button mat-button color="primary" type="button" class="roboto-bold font-14" (click)="onBack()">
+        {{'button.back' | translate}}
+      </button>
+      <button mat-button mat-raised-button color="primary" class="roboto-bold no-shadow btn-bg-color" (click)="onLogin()" [disabled]="rsrLogin.invalid">{{'loginScreen.logOnButton' | translate}}</button>
+  </div>
+
+  <div *ngIf='successStatus || failedStatus' class="roboto-bold font-18" [ngClass]="{
+    'success-color': successStatus !== null,
+    'error-color': failedStatus !== null
+  }">
+    {{ successStatus ? successStatus : failedStatus }}
+  </div>
+</mat-card>

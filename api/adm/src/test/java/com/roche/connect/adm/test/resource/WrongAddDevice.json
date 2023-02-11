@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+{
+  "name": "MP24-003",
+  "description": "MagnaPure24-003",
+  "gatewayId": "",
+  "serialNo": "MP24-003",
+  "status": true,
+  "isRetired": "N",
+  "state": "NEW",
+  "site": "",
+  "ipAddress": ""
+=======
+{
+  "name": "MP24-003",
+  "description": "MagnaPure24-003",
+  "gatewayId": "",
+  "serialNo": "MP24-003",
+  "status": true,
+  "isRetired": "N",
+  "state": "NEW",
+  "site": "",
+  "ipAddress": ""
+>>>>>>> branch 'feature/development' of http://umashankar-d@ds-sgh343qh5g:7990/scm/rc/sourcecode.git
+}

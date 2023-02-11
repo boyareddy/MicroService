@@ -1,0 +1,76 @@
+<div class="slideLftRgtCls">
+  <app-header [headerInfo]="headerInfo"></app-header>
+
+  <div class="d-flex run-details-page" style="margin-top: 84px;">
+    <div class="progress">
+      <app-ongoing-progressbar *ngIf="runDetails?.isOngoingProgressbarRequired" 
+                                [progressbar]="runDetails">
+      </app-ongoing-progressbar>
+
+      <div class="d-flex">
+        <div class="sample-container">
+
+          <div *ngFor="let samplItem of runDetails?.runsampledetails" class="box-shadow">
+            <div class="list-header" *ngIf='!((runDetails.processStepName.toLowerCase() === "na extraction") &&
+                                              (runDetails.status.toLowerCase() === "ongoing") &&
+                                              (runDetails.assayType === "NIPTHTP"))'>
+              <div class="d-flex flex-align-center">
+                <div>
+                  <ng-container *ngIf='samplItem?.stripId ||
+                  ((runDetails?.processStepName.toLowerCase() === "sequencing" ||
+                  runDetails?.processStepName.toLowerCase() === "dpcr") &&
+                  (runDetails.status.toLowerCase().indexOf("completed") > -1 ||
+                  runDetails.status.toLowerCase() === "failed")); else abortedImage'>
+                    <img [src]="samplItem?.labelImage" [alt]="samplItem?.labelName" height="44px" class="vertical-middle img-right-16">
+                  </ng-container>
+                  <ng-template #abortedImage>
+                    <img src="assets/Images/run_aborted.png" alt="aborted" height="44px" class="vertical-middle img-right-16">
+                  </ng-template>
+                </div>
+                <div>
+                  <div class="card-sub-header-info">
+                    {{'runWorkflow.runSamplestable.sampleDetails' | translate}}: {{samplItem?.sampledetails?.length ?
+                    samplItem?.sampledetails?.length : "0"}} {{ ('runWorkflow.runSamplestable.' + ('sample' |
+                    pluralCheck: (samplItem?.sampledetails?.length ? samplItem?.sampledetails?.length : "0"))) |
+                    translate }}
+                  </div>
+                  <div class="card-main-header-info"
+                  *ngIf='!((runDetails?.processStepName.toLowerCase() === "dpcr") &&
+                                (runDetails.status.toLowerCase().indexOf("completed") > -1 ||
+                                  runDetails.status.toLowerCase() === "aborted" ||
+                                    runDetails.status.toLowerCase() === "failed"))'>
+                    <ng-container *ngIf='samplItem?.stripId ||
+                    (runDetails?.processStepName.toLowerCase() === "sequencing" &&
+                        (runDetails.status.toLowerCase().indexOf("completed") > -1 ||
+                          runDetails.status.toLowerCase() === "failed")); else abortedStatus'>
+                      {{'runWorkflow.runSamplestable.' + samplItem.labelName | translate}}:
+                      {{ samplItem?.stripId ? samplItem?.stripId : '-' }}
+                    </ng-container>
+                    <ng-template #abortedStatus>
+                      {{ ('runWorkflow.runSamplestable.' +
+                      ('abSample' | pluralCheck:(samplItem?.sampledetails?.length ?
+                      samplItem?.sampledetails?.length : "0"))) | translate }}
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <app-sample-list [displayedColumns]="displayedColumns" [columnsToDisplay]="columnsToDisplay" 
+                             [samplelist]="samplItem.sampledetails" [processStepName]="processStepName" 
+                             (commentsResponse)="updatedComments($event)">
+            </app-sample-list>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="runcard">
+      <app-sample-run-card [sampleruncard]="runDetails" (commentsResponse)="updatedComments($event)">
+      </app-sample-run-card>
+    </div>
+  </div>
+</div>
+<app-response-progress *ngIf='isSprinerOn' [diameterValue]='55' [marginTop]='250' [rectPro]='rectPro' [spOverlayHeight]="false"
+  [spOverlayTop]="64" [spOverlayLeft]="0" [spOverlayRight]="20"></app-response-progress>

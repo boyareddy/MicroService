@@ -1,0 +1,4 @@
+MSH|^~\&|||||20091126083614||ORM^O01|MPCZC8380G5K|P|2.4|
+ORC|1|Order790||||||||std
+OBR|1|Sample·ID·1|1234567890^A1|Cellular·RNA·LV^0.2|||||||||||Cellular·RNA·LV^0.6.4|||200|50|||
+NTE|1||Comment·Sample·1

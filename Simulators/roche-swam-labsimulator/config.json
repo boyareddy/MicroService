@@ -1,0 +1,28 @@
+{
+  "labsimulator" : {
+    "equipments" :[
+      {
+        "name": "MP24-1",
+        "serialNumber" : "MP0012-24",
+        "type" : "MP24",
+        "class": "com.roche.swam.labsimulator.mpx.MpxSimulator"
+      }, {
+        "name": "LP24PrePCR",
+        "serialNumber" : "LP001-12-Pre",
+        "type" : "LP34",
+        "class": "com.roche.swam.labsimulator.lpx.LpxPreProcessSimulator"
+      }, {
+        "name": "LP24PostPCR",
+        "serialNumber" : "LP001-12-Post",
+        "type" : "LP34",
+        "class": "com.roche.swam.labsimulator.lpx.LpxPostProcessSimulator"
+      }, {
+        "name": "LP24SeqPrep",
+        "serialNumber" : "LP001-12-Post",
+        "type" : "LP34",
+        "class": "com.roche.swam.labsimulator.lpx.LpxSeqPrepSimulator"
+      }
+
+   ]
+  }
+}

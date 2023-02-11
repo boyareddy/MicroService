@@ -1,0 +1,6 @@
+{
+	"run_status": "startplanned",
+	"sequencing_run_batch_size": 2,
+	"complex_ids": [ "complex_id0", "complex_id1" ],
+	"sequencing_protocols": [ "protocol0", "protocol1" ]
+}

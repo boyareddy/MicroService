@@ -1,0 +1,10 @@
+<svg id="error" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_3399" data-name="Path 3399" d="M65-5837a15.005,15.005,0,0,0-15,15,15.005,15.005,0,0,0,15,15,15.005,15.005,0,0,0,15-15,15.005,15.005,0,0,0-15-15Zm1.5,22.5h-3v-3h3v3Zm0-6h-3v-9h3v9Z" transform="translate(-50 5837)" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Info_filled" data-name="Info filled" clip-path="url(#clip-path)">
+    <path id="Path_3397" data-name="Path 3397" d="M45-5842H90v45H45Z" transform="translate(-52.5 5834.5)" fill="#c03"/>
+  </g>
+</svg>

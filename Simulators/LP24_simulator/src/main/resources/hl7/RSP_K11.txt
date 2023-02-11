@@ -1,0 +1,8 @@
+MSH|^~\&|MagNaPure24|LaboratoryName|LIS|LaboratoryName|20151020162814||RSP^WOS^RSP_K11|789456132|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|726f21e7-4728-4d03-9fcd-23a46000bfdf||
+QAK||OK||
+QPD|WOS^Work Order Step^IHE_LABTF||
+SPM||1234||WB||||||||||||||||||||||||||||||||||||
+SAC|||||||20090508152255|||||
+ORC|NW|123456|||||||20090508152255|
+OBR|1|123456||1010|||||||||||||||||||||S|||||

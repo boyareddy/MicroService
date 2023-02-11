@@ -1,0 +1,50 @@
+<!-- Please see below in blue for the Forte tertiary analysis XML file output. -->
+<linx task="Assess Aneuploidy 2" action="save">
+  <AppVersion>TheAssessor 4.1.8.17708</AppVersion>
+  <items>
+  <AOP>5505194350050012219490</AOP> <!--   the data set ID (bar code of the array plate) -->
+    <Lane>L002</Lane>               <!--   lane ID -->
+    <PassFail>Pass</PassFail>
+    <AssessFolder>\\SeqProc-2\Report\TheAssessor\180714_TD00000003-AGT_134255_5505194350050012219490\L002\</AssessFolder>  <!-- yellow-highlighted is a run name (includes Date and Time stamps, tool ID, and data set ID) -->
+  </items>
+  <data>
+    <QCPassFail>Pass</QCPassFail>
+    <LanePerformanceMetrics>
+      <LaneT13ReferenceLogRatio>-0.000428471918236142</LaneT13ReferenceLogRatio>
+      <LaneT13ReferenceLogRatioSE>0.000660249112784931</LaneT13ReferenceLogRatioSE>
+      <MedianFPPoly>0.107878086856877</MedianFPPoly>
+      <TSSamplesPassed>88</TSSamplesPassed>
+    </LanePerformanceMetrics> - about 70 lane metrics
+    <LaneQCMetrics>
+      <LaneNoise passfail="Pass">0.97419894331225865</LaneNoise>
+      <LaneSignalToNoise passfail="Pass">0.99289108698240969</LaneSignalToNoise>
+    </LaneQCMetrics>
+    <rows>
+      <TableRow>
+        <SampleId>AD02751498-BLD2</SampleId>
+        <PEGId>B01</PEGId>
+        <WellNumber>1</WellNumber>
+        <PassFail>Pass</PassFail>
+        <FailureReason></FailureReason>
+        <QCPassFail>Pass</QCPassFail>
+        <SamplePerformanceMetrics>
+
+          <FPPoly>0.199741617939172</FPPoly>
+          <FPPolyRSE>0.00971576931285948</FPPolyRSE>
+          <FracHom>0.302447552447552</FracHom>
+          <FracInfo>0.415540540540541</FracInfo>
+
+        </SamplePerformanceMetrics> <!--  around 170 metrics for that particular sample. They will be used for RA or AR -->
+        <SampleQCMetrics>
+          <FetalFractionQC passfail="Pass">0.199741617939172</FetalFractionQC>
+        </SampleQCMetrics> - 6 metrics
+        <SampleReportMetrics>
+          <FPYN>0</FPYN>
+          <FPYNVariance>0.00845543471302501</FPYNVariance>
+          <FSMaleLog10Likelihood>-INFINITY</FSMaleLog10Likelihood>
+        </SampleReportMetrics> - about 20 metrics
+      </TableRow>
+    </rows>  <!-- from 48 to 96 TableRows  -->
+  </data>
+</linx>
+ 

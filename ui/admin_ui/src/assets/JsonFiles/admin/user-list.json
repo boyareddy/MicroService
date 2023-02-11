@@ -1,0 +1,74 @@
+[
+    {
+      "firstName": "Maria",
+      "middleName": "",
+      "lastName": "Gonzales",
+      "userName": "MariaG", 
+      "email": "maria.g@lab.com", 
+      "userRole": "Lab operator",
+      "isActive": true
+    },
+    {
+       "firstName": "John",
+       "middleName": "",
+       "lastName": "Lafaye",
+       "userName": "JLafaye", 
+       "email": "lafaye.j@lab.com", 
+       "userRole": "Lab operator",
+       "isActive": false
+    },
+    {
+        "firstName": "Maria",
+        "middleName": "",
+        "lastName": "Gonzales",
+        "userName": "MariaG", 
+        "email": "maria.g@lab.com", 
+        "userRole": "Lab operator",
+        "isActive": true
+      },
+      {
+         "firstName": "John",
+         "middleName": "",
+         "lastName": "Lafaye",
+         "userName": "JLafaye", 
+         "email": "lafaye.j@lab.com", 
+         "userRole": "Lab operator",
+         "isActive": false
+      },
+      {
+        "firstName": "Maria",
+        "middleName": "",
+        "lastName": "Gonzales",
+        "userName": "MariaG", 
+        "email": "maria.g@lab.com", 
+        "userRole": "Lab operator",
+        "isActive": true
+      },
+      {
+         "firstName": "John",
+         "middleName": "",
+         "lastName": "Lafaye",
+         "userName": "JLafaye", 
+         "email": "lafaye.j@lab.com", 
+         "userRole": "Lab operator",
+         "isActive": false
+      },
+      {
+        "firstName": "Maria",
+        "middleName": "",
+        "lastName": "Gonzales",
+        "userName": "MariaG", 
+        "email": "maria.g@lab.com", 
+        "userRole": "Lab operator",
+        "isActive": true
+      },
+      {
+         "firstName": "John",
+         "middleName": "",
+         "lastName": "Lafaye",
+         "userName": "JLafaye", 
+         "email": "lafaye.j@lab.com", 
+         "userRole": "Lab operator",
+         "isActive": false
+      }
+]

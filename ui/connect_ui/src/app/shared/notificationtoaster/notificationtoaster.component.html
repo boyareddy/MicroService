@@ -1,0 +1,27 @@
+<div class="robot-regular font-14 nft-main-container" [class.errorColor]="data?.severity === 'Error'" (click)='gotoNotification(data)'>
+  <ng-container *ngIf="!isMultiple(data);else multiple">
+   <div class="nft-container">
+      <div class="nft-topic font-14 roboto-bold">
+        {{ data?.topic | translate}}
+      </div>
+      <div class="nft-ctn">
+        <span class="nft-severity font-14 roboto-regular text-ellipsis">
+            {{ (data?.severity | translate) +' - '+ data?.title }}
+        </span>
+      </div>
+   </div>
+  </ng-container>
+  <ng-template #multiple>
+    <div class="nft-container font-14 roboto-regular">
+      {{ data?.multmsg | translate}}
+    </div>
+  </ng-template>
+  <button mat-icon-button (click)='closeSnackbar($event)' class="nt-close m-20">
+      <ng-container *ngIf="data?.severity === 'Error';else warining">
+          <img src="assets/Images/closewhite.png" alt="close" height="10px" class="md-small">
+      </ng-container>
+      <ng-template #warining>
+          <img src="assets/Images/close.png" alt="close" height="10px" class="md-small">
+      </ng-template>
+  </button>
+</div>

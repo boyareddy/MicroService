@@ -1,0 +1,80 @@
+.conf-dlg-cont{
+    display: flex; 
+    flex-direction: column;
+    margin-right: -10px;
+}
+
+.aln-ct{
+    text-align: center;
+}
+
+.aln-lt{
+    text-align: left;
+}
+
+.conf-close-btn{
+    background-image: url('../../assets/Images/close.png');
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    cursor: pointer;
+    margin-top: -7px;
+    background-size: 10px 10px;
+    margin-right: -3px;
+}
+
+.conf-btn-cell{
+    display: flex; 
+    flex-direction: column;
+    flex-direction: row-reverse;
+    margin-top: 55px;
+}
+
+.ok-btn{
+    background-color:#004ea3
+}
+
+.warn-cont{
+    display: flex; 
+    flex-direction: column
+}
+
+.warn-btn-cell{
+    display: flex; 
+    flex-direction: column;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+.cnf-btn-rule{
+    color: #004EA3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cnf-dt{
+    font-size: 18;
+}
+
+.close-ico{
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-ico img{
+    height: 10px;
+    cursor: pointer;
+}
+
+.mg-rt-10{
+    margin-right: 10px;
+}
+
+.mg-lt-10{
+    margin-left: 10px;
+}
+
+.message{
+    color: #191919 !important;
+}

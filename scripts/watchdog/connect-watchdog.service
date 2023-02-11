@@ -1,0 +1,15 @@
+[Unit]
+Description=Watchdog Roche Connect services
+After=network.target
+
+[Service]
+User=root
+TimeoutStartSec=0
+ExecStart=/opt/roche/connect/scripts/watchdog/connect-watchdog.sh
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

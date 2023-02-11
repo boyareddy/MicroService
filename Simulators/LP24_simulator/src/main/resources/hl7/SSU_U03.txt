@@ -1,0 +1,23 @@
+MSH|^~\&|LP24^12345^M|Roche Diagnostics|Connect|Roche Diagnostics|20151020162814||SSU^U03^SSU_U03|54b325e8-8efd-4b37-8a29-cc62512da532|P|2.5.1||||||UNICODE UTF-8
+EQU|12345|20151020170800|OP
+SAC|||1|||||R^^99ROC|dPCR Chip|67891|1|||||||||||||ul
+OBX|1|CE|P^^99ROC|1|LP24_dPCR Protocol||||||F
+OBX|2|CE|PV^^99ROC|1|1.0||||||F
+OBX|3|CE|RES^^99ROC|1|Passed||||||F
+OBX|4|DR|RuntimeRange^RunExecutionTimeRange^99ROC|1|20151020162814^20151020172814||||||F
+NTE|1||Comment on the sample result
+SPM|1|67891_1|12345_1|PLAS^Plasma^HL70487|||||||P|||Plasma
+OBX|1|CE|OrderName^^99ROC|1|10172018_1540||||||F|||||jimenj15
+OBX|2|CE|OrderResult^^99ROC|1|Passed||||||F
+OBX|3|CE|IC^^99ROC|1|74586563||||||F
+OBX|4|CE|MasterMix^^99ROC|1|Lightcycler;00000001;04193001||||||F
+OBX|5|CE|Kit^^99ROC|1|mRNA Isolation;00000004;04001||||||F
+OBX|6|CE|Kit^^99ROC|2|System fluid;00000004;04002||||||F
+OBX|7|CE|PI^^99ROC|1|Valid||||||F
+OBX|8|CE|MRReagentCassette^^99ROC|1|DNA Blood LV;00000000;0040||||||F
+OBX|9|CE|SR2mlReagentTube^^99ROC|1|MGP;00000001;00023||||||F
+OBX|10|CE|SR2mlReagentTube ^^99ROC|1|Hexadecane;00000000;01991||||||F
+OBX|11|CE|SR25mlReagentTube^^99ROC|1|Washbuffer;00000002;01001||||||F
+OBX|12|CE|SR25mlReagentTube^^99ROC|1|Washbuffer;00000002;01002||||||F
+OBX|13|CE|SR25mlReagentTube^^99ROC|1|Specimen Diluent;00000000;00033||||||F
+OBX|14|CE|SR25mlReagentTube^^99ROC|1|Lysis;00000000;00001||||||F

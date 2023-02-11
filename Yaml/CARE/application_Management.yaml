@@ -1,0 +1,335 @@
+pas:
+    #Permission for the User to access this microservice
+    #microservice_permission: Access_DEVICE_MANAGEMENT
+    security.method.disable : false
+    
+    security_endpoint: ${pas.security_remote_url}
+    metadata_endpoint: ${pas.metadata_remote_url}
+    email_endpoint: ${pas.email_remote_url}
+    simple_api_endpoint : ${pas.application_remote_url}
+    locale_endpoint: ${pas.locale_service_remote_url}
+    
+    #application_location - values [default,distributed]
+    #If value is default, it is assumed that all microservices are running in same location (localhost is used through-out app)
+    application_location : default
+
+    application_host_name :  www.qa-rocheconnect.com
+    application_url : https://${pas.application_host_name}:85/device-management
+    
+    application_ui_host_name :  www.qa-rocheconnect.com
+    application_ui_url : https://${pas.application_ui_host_name}:85/device-management
+    
+    security_host_name :  www.qa-rocheconnect.com
+    security_url : https://${pas.security_host_name}:90/security-web
+    
+    metadata_host_name :  www.qa-rocheconnect.com
+    metadata_url : https://${pas.metadata_host_name}:91/metadata-web
+    
+    metadata_remote_host_name :  www.qa-rocheconnect.com
+    metadata_remote_url : https://${pas.metadata_remote_host_name}:91/metadata-web
+
+    security_remote_host_name :  www.qa-rocheconnect.com
+    security_remote_url : https://${pas.security_remote_host_name}:90/security-web
+
+    application_remote_host_name :  www.qa-rocheconnect.com
+    application_remote_url : https://${pas.application_remote_host_name}:85/device-management
+
+    admin_api_host_name :  www.qa-rocheconnect.com
+    admin_api_url : https://${pas.admin_api_host_name}:92/admin-api
+    
+    #login_url : ${pas.application_ui_url}/login.jsp
+    login_url : ${pas.application_ui_url}/login.html
+    
+    defaultHomePage : ${pas.application_ui_url}/index.html
+    
+    locale_service_remote_url : ${pas.admin_api_url}
+    
+    email_remote_host_name : www.qa-rocheconnect.com
+    email_remote_url : https://${pas.email_remote_host_name}:94/email-web
+
+    #access_denied_url : /accessdenied.jsp
+    #access_control_allow_origin: '*'
+    access_control_allow_origin : https://www.qa-rocheconnect.com:91,https://www.qa-rocheconnect.com:92,https://localhost:4200,https://www.qa-rocheconnect.com:8080,https://localhost:8080
+
+    #service registry check - default value server change as client if service registry is enabled
+    service.discovery: server
+    
+    #Auditable History enable or disable -defauls value is true
+    auditable_history: true
+    auditable_history_days: 30
+    #AuditTrail enable or disable -default value is false
+    audittrail: true
+    
+    #To enable and disable rabbitMQ- default value false
+    rabbitmq.enabled: false
+
+    support_for_http_and_https: false
+    http_port: 80
+    
+    transaction.enabled: true
+            
+    companyName : root Company
+    description	: root company
+    domainName : hcl.com
+    companyType : PASCOMPANY
+
+    encryption_salt : user@domain
+    encrypt_password : domain@user
+    no_of_iteration : 1
+
+    expiryValue : 5
+
+    keystore_location : keystore/pas.jceks
+    keystore_pass : pas123
+    keystore_type : jceks
+    token_private_key_pass : pas123
+    token_private_key_alias : pasprivatekey
+    token_public_key_alias : paspublickey
+    symmetric_key_alias : passymmetrickey
+    symmetric_key_pass : pas123
+    use_private_for_encryption : true
+
+    fileName_Prefix : brownstone_app_init
+    XL_Location :  file:///home/rconnect/roche/scripts/connect_yaml/excels
+    query_Location : generated-app/query 
+    XL_Prefix : app
+
+    poll_enabled : true
+    poll_attempts : 10
+    poll_attempts_delay_in_seconds : 30
+    poll_url : ${pas.security_remote_url}/poll
+
+    logged_module_name : device-management
+    application_module_name : device-management
+
+    rabbitmq:
+        exchangename : pasExchange
+        hierarchyqueuename : simpleAPIHierarchyQueue
+        userqueuename : simpleAPIUserQueue
+        userdeletequeuename : simpleAPIUserDeleteQueue
+        userupdatedqueuename : simpleAPIUserUpdatedQueue
+        datasource_changes_queue : applicationDatasourceChangeQueue        
+
+    hierarchy_sync_exclude : 
+
+    whitelist_urls : 
+
+    datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource
+    
+    version: 1.0.0 
+    title: ${pas.logged_module_name} - REST documentation
+    contact_email: PBASolutionsteam@hcl.in
+    api_description: These are the contracts for the rest services exposed in this ${pas.logged_module_name}.    
+    
+    customizableservice.metadata.capture: false
+    eventpublishing.queue.default_name: pasQueue
+    
+    certificateValidity : 60
+    encodingType : UTF-8
+    privatekeyFileName : ca/rootCAPrivateKey.pk8    
+    rootCertificateFileName : ca/rootCA.pem
+    
+spring.main.show-banner: false
+endpoints.enabled: false       
+spring.profiles.active: full,permission
+
+management:
+    contextPath: /device-management/poll
+
+spring.mvc.view.prefix : WEB-INF/jsp/
+spring.mvc.view.suffix : .jsp
+
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+
+spring.cloud.consul.host: www.qa-rocheconnect.com
+spring.cloud.consul.port: 8500
+spring.application.name: device-management
+spring.cloud.consul.discovery.healthCheckPath: ${management.contextPath}
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.address: ${management.contextPath}
+spring.cloud.consul.discovery.instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging.path: '/var/log/connect/log'
+logging.file: device-management.log
+logging.config: 'classpath:log4j2.xml'
+
+spring.rabbitmq.host : localhost
+spring.rabbitmq.port : 5672
+spring.rabbitmq.username : userone
+spring.rabbitmq.password : userone
+
+# To disable the default configuration for the freemarker
+# configuration to search for the templates
+# TO BE IGNORED ALWAYS: Since String template loader is used
+spring.freemarker.checkTemplateLocation: false
+
+server:
+    port: 85
+    session-timeout: 600
+    context-path: /device-management
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.qa-rocheconnect.com
+       
+
+spring.datasource.jdbcUrl : jdbc:postgresql://localhost:5432/pas-device
+spring.datasource.user : postgres
+spring.datasource.password : postgres123
+spring.datasource.driverClass : org.postgresql.Driver
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+
+#spring.datasource.jdbcUrl : jdbc:mysql://localhost:3306/pas-device
+#spring.datasource.user : root
+#spring.datasource.password : root
+#spring.datasource.driverClass : com.mysql.jdbc.Driver
+#spring.jpa.database-platform : org.hibernate.dialect.MySQL5Dialect
+
+#spring.datasource.jdbcUrl : jdbc:derby://localhost:1527/pas-device1;create=true
+#spring.datasource.user : root
+#spring.datasource.password : root
+#spring.datasource.driverClass : org.apache.derby.jdbc.ClientDriver
+#spring.jpa.database-platform : org.hibernate.dialect.DerbyTenSevenDialect
+
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 20
+spring.datasource.acquireIncrement : 1
+spring.datasource.maxIdleTime : 600
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+
+spring.jpa.show-sql : false
+spring.jpa.hibernate.ddl-auto : update
+spring.jpa.generate-ddl : true
+spring.jpa.properties.hibernate.cache.use_second_level_cache : true
+spring.jpa.properties.hibernate.cache.use_query_cache : true
+spring.jpa.properties.hibernate.cache.use_structured_entries : false
+spring.jpa.properties.hibernate.cache.use_minimal_puts : false
+spring.jpa.properties.hibernate.cache.generate_statistics : false
+spring.jpa.properties.hibernate.cache.provider_configuration : /ehcache.xml
+spring.jpa.properties.hibernate.cache.region.factory_class : org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode : ENABLE_SELECTIVE
+
+#default value is false, change it to true if https is enabled
+https_enabled: true
+
+#Apache Camel ActiveMQ Configuration
+local-activemq: tcp://localhost:61616
+remote-activemq: tcp://10.145.70.44:61616
+
+#Apache Camel ActiveMQ Configuration
+local-mqtt: tcp://test.mosquitto.org:1883
+remote-mqtt: tcp://test.mosquitto.org:1883
+
+#Available Mode of Command Invocation - local & cloud
+command-invocation-mode: cloud
+
+#Override the Default Gateway Name.,
+gateway-name: Gateway
+
+#Flag to enable/disable Authorization
+device-authorization.flag: false
+
+#Define the Device Authorization Token Validity in Minutes.
+device-provision.token.validity: 30
+
+#Define the Device Authorization Token Validity in days.
+device-authorization.token.validity: 30
+
+#Define the Device Authorization Token extension period in days.
+device-authorization.token.extension.period: 30
+
+#Define the Device Authorization Token Validity in days.
+device-provision.certificate.validity: 60
+
+#Define the Device Authorization Token extension period in days.
+device-provision.certificate.extension.period: 60
+
+#Define the Package Scanning for the reading the Device Type Implementations,
+#Default Package for scanning the Implementation is provided, multiple package can be provided as comma separated.
+device-scan-package: com.hcl.hmtp.device
+
+broker-secure-connection: false
+broker-ca-certificate-path: classpath:ca/rootCA.pem
+broker-certificate-path: file:D:/02-PAS/CERT/cloud/client.crt
+broker-certificate-key-path: file:D:/02-PAS/CERT/cloud/client.key
+
+#Mention the list of CA Certificates which needs to shared to the Gateway.
+#Mention more than one CA Certificate with comma separated values.
+ca-certificates: classpath:ca/rootCA.pem,file:D:/02-PAS/CERT/cloud/client.crt
+
+#### camel properties
+camel:
+  springboot:
+    name: device-management
+  servlet:
+    path: '/camel'
+quickstart:
+  generateOrderPeriod: 10s
+  processOrderPeriod: 30s
+
+#camel.springboot.xmlRoutes: classpath:camel/*routes.xml
+#camel.springboot.xmlRests: classpath:camel/*.xml
+
+camel.springboot.xmlRoutes: false
+camel.springboot.xmlRests: false
+
+camel.springboot.jmxEnabled: false
+
+#Multiple Locations can be specified with comma separated values.
+
+device-properties: file:C:/device-cloud.properties
+
+#Required for the File Upload Operations.,
+upload.directory: /opt/roche/connect
+
+#Required for the Temporary File Upload Operations.,
+temporary.upload.directory: /opt/roche/connect
+
+spring.servlet.multipart.enabled: false
+spring.servlet.multipart.max-file-size: 100MB
+spring.servlet.multipart.max-request-size: 100MB
+spring.http.multipart.enabled: false
+spring.http.multipart.max-file-size: 100MB
+spring.http.multipart.max-request-size: 100MB
+
+#Websocket Server.,
+#websocket-server: 10.145.70.44
+
+#socket-base-url: ws://localhost:8887/connect/
+
+#scheduler value
+cron.expression : 0 1 * * * ?
+
+#patch name
+patch_prefix : Patch_
+
+#filepath
+backup_folder : C:/backup
+script_file : C:/patchScript/script.txt
+patch_download_path : C:/Users/gokila.c/Downloads/xml
+
+pas.user.rest.service.value: true
+pas.i18n.rest.service.value: true
+pas.enumeration.rest.service.value: true
+pas.company.rest.service.value: true
+
+#Configure for running Additional Ports.
+#additional.ports : 8888
+#Remote audit log path
+Remotelog_file : D:/02-PAS/13-Devices/file-management/remoteauditlog.txt
+RemoteZip_file : D:/02-PAS/13-Devices/file-management
+RemoteZip_file_key : pas@123
+
+#Elastic Search Configurations:
+elasticsearch.host : localhost
+elasticsearch.cluster: elasticsearch 
+
+
+##Configuration for the Default DICOM Server Configuration.,
+care:
+  dicom:
+    config-location: dicom/configuration.json

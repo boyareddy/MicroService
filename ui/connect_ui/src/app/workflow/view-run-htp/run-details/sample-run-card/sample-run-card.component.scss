@@ -1,0 +1,261 @@
+.run-info-container-ongoing {
+    margin: 4.45% 2% 2% 2%;
+  }
+  
+  .procStepLabel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 9%;
+    width: 84.5%;
+  }
+  
+  .procStepLine-container {
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 11.5%;
+  }
+  
+  .procStepLine-ctn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .procStepLabel {
+    display: inline;
+  }
+  
+  .procStep-card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .procStep-second {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .procStepcard-container {
+      margin-left: 1%;
+      display: flex;
+  }
+  
+  .step-header {
+    height: 64px;
+      display: flex;
+      padding-left: 20px;
+      padding-right: 20px;
+      align-items: center;
+  }
+
+  .step-header1 {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+  }
+  
+  .padding-20 {
+      padding: 20px;
+  }
+  
+  .bg-step-NAExtraction {
+      background-color: #e8e8e8;
+  }
+  
+  .text-color {
+      color: #333333;;
+  }
+  
+  .bg-step-analysis {
+      background-color: rgba(0, 102, 204, 0.15); 
+      opacity: 15%; 
+  }
+
+  .mb-20{
+    margin-bottom: 20px;
+  }
+
+  .device-name, .sample-run-btn{
+    display: inline-block;
+}
+.run-info-card-title-txt{
+    margin-left: 20px;
+}
+.padding-right-txt{
+    padding-right: 12%;
+}
+.ml-20{
+    margin-left: 20px;
+}   
+.pl-10{
+    padding-left: 10px;
+}
+.mt-12{
+    margin-top: 12px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+
+.pl-20{
+    padding-left: 20px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.sample-run-btn{
+    background-image: url('../../../../../assets/Images/goto.png');
+      width: 17px;
+      height: 17px;
+  }
+
+.sample-run-comments-icon{
+    background-image: url('../../../../../assets/Images/comments.png');
+    width: 24px;
+    height: 24px;
+}
+
+.completed-icon {
+    height: 16px;
+    padding-right: 4px;
+}
+  
+.status-text-color{
+    color: #009966;
+}
+
+.supplies-card mat-card{
+    padding:0px !important;
+}
+
+.sample-run-bottom-conent{
+    margin-top: 7.1%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .status-text-green{
+    color: #009966;
+  }
+
+  .status-text-blue{
+    color:#2c45e0;
+  }
+
+  .list-headercolor {
+    color: #4d4d4d;
+  }
+  
+  .list-color {
+    color: #191919;
+  }
+
+  .procStep-card .bgblue{
+    background-color: rgba(0, 102, 204, 0.15); 
+    opacity: 15%; 
+  }
+
+  .procStep-card .bggreen{
+    background-color: rgba(0, 153, 102, 0.15); 
+    opacity: 15%; 
+  }
+  .progressbar{
+    height: 2px !important;
+  }
+  
+  .nm:last-child .no-margin1 {
+      padding-bottom: 20px !important;
+  }
+
+  .nm:last-child .no-margin {
+    margin-bottom: 0px !important;
+}
+
+ 
+  .forgetPassword{
+    //margin: 0 .9em 0;
+    color: #004EA3;
+  }
+
+  #view-device{
+    border-top: 1px solid silver;
+    padding: 8px 10px;
+  }
+
+  #view-device a{
+    margin-right: 10px;
+  }
+  
+  .vd-cont{
+      cursor: pointer;
+      //width: 104px;
+  }
+
+  .comments-code {
+      word-break: break-all;
+      cursor: pointer;
+  }
+  .margin-bottom-0 {
+    margin-bottom: 0px;
+  }
+
+  .padding-btm-20 {
+    padding-bottom: 20px;
+  }
+  .new-data .padding-btm-20:last-child, .new-data .padding-btm-20:first-child {
+    padding-bottom: 0px !important;
+  }
+
+  .dpcrAssay .mb-20:last-child {
+    margin-bottom: 0px !important;
+  }
+
+  .text-completed {
+    color: #009966;
+  }
+
+  .text-failed {
+    color: #CC0033;
+  }
+
+  .text-aborted {
+    color: #CC0033;
+  }
+
+  .text-ongoing {
+    color: #0066cc;
+  }
+
+  .pb-0 {
+    padding-bottom: 0px !important;
+  }
+
+  .pb-16 {
+    padding-bottom: 16px !important;
+  }
+
+  .height-36 {
+    height: 36px;
+  }
+
+  .status-data {
+    line-height: 1;
+  }
+
+  .pb-6 {
+    padding-bottom: 6px;
+  }
+
+  .mbc-16 {
+    margin-bottom: 16px;
+  }

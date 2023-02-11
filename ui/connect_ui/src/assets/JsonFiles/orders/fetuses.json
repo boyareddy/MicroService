@@ -1,0 +1,18 @@
+[
+    {
+        "listType": "Number of Fetus",
+        "value": "1"
+    },
+    {
+        "listType": "Number of Fetus",
+        "value": "2"
+    },
+    {
+        "listType": "Number of Fetus",
+        "value": ">2"
+    },
+    {
+        "listType": "Number of Fetus",
+        "value": "Missing"
+    }
+]

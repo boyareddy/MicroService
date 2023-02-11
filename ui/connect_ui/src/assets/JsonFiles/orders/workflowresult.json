@@ -1,0 +1,119 @@
+[
+  {
+     "sampleResultId":1106,
+     "accesssioningId":"060920182341",
+     "orderId":10000357,
+     "outputContainerId":"258776478",
+     "outputContainerPosition":"QAKSX",
+     "outputKitId":null,
+     "outputContainerType":"9mmStrip",
+     "runResultId":1295,
+     "deviceId":"LP001-12-SeqPrep",
+     "processStepName":"LP Sequencing Prep",
+     "runStatus":"Completed",
+     "runFlag":null,
+     "operatorName":"jimenj15",
+     "comments":"Comment on the sample result",
+     "updatedBy":"System",
+     "runStartTime":1536625080000,
+     "runCompletionTime":1536625085000,
+     "runRemainingTime":null,
+     "protocolName":[
+        "LP24 Protocol"
+     ]
+  },
+  {
+     "sampleResultId":1094,
+     "accesssioningId":"060920182341",
+     "orderId":10000357,
+     "outputContainerId":"166967620",
+     "outputContainerPosition":"2",
+     "outputKitId":null,
+     "outputContainerType":"9mmStrip",
+     "runResultId":1292,
+     "deviceId":"MP001-12",
+     "processStepName":"NA Extraction",
+     "runStatus":"Inprogress",
+     "runFlag":null,
+     "operatorName":"jimenj15",
+     "comments":"Comment on the sample result",
+     "updatedBy":"System",
+     "runStartTime":1536623055000,
+     "runCompletionTime":1536623061000,
+     "runRemainingTime":null,
+     "protocolName":[
+        "Cfna ss 2000"
+     ]
+  },
+  {
+     "sampleResultId":1100,
+     "accesssioningId":"060920182341",
+     "orderId":10000357,
+     "outputContainerId":"122306753",
+     "outputContainerPosition":"D1",
+     "outputKitId":null,
+     "outputContainerType":"9mmStrip",
+     "runResultId":1293,
+     "deviceId":"LP001-12-Pre",
+     "processStepName":"LP Pre PCR",
+     "runStatus":"Completed",
+     "runFlag":null,
+     "operatorName":"jimenj15",
+     "comments":"Comment on the sample result",
+     "updatedBy":"System",
+     "runStartTime":1536623123000,
+     "runCompletionTime":1536623128000,
+     "runRemainingTime":null,
+     "protocolName":[
+        "LP24 Protocol"
+     ]
+  },
+  {
+     "sampleResultId":1101,
+     "accesssioningId":"060920182341",
+     "orderId":10000357,
+     "outputContainerId":"191995578",
+     "outputContainerPosition":"QAKSX",
+     "outputKitId":null,
+     "outputContainerType":"9mmStrip",
+     "runResultId":1294,
+     "deviceId":"LP001-12-Post",
+     "processStepName":"LP Post PCR/Pooling",
+     "runStatus":"Completed",
+     "runFlag":null,
+     "operatorName":"jimenj15",
+     "comments":"Comment on the sample result",
+     "updatedBy":"System",
+     "runStartTime":1536623641000,
+     "runCompletionTime":1536623647000,
+     "runRemainingTime":null,
+     "protocolName":[
+        "LP24 Protocol"
+     ]
+  },
+  {
+     "sampleResultId":1109,
+     "accesssioningId":"060920182341",
+     "orderId":10000357,
+     "outputContainerId":null,
+     "outputContainerPosition":null,
+     "outputKitId":null,
+     "outputContainerType":null,
+     "runResultId":1298,
+     "deviceId":"HTP-01",
+     "processStepName":"Sequencing",
+     "runStatus":"Completed",
+     "runFlag":null,
+     "operatorName":"",
+     "comments":"Run information for HTP/Sequencing",
+     "updatedBy":"SYSTEM",
+     "runStartTime":1536398158000,
+     "runCompletionTime":null,
+     "runRemainingTime":201808,
+     "protocolName":[
+
+     ],
+     "plateType": "A",
+     "plateLocation": "A1"
+  }
+]

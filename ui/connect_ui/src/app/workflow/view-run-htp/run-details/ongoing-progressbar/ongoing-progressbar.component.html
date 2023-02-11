@@ -1,0 +1,26 @@
+<div class="procStep-card roboto-medium box-shadow">
+  <mat-card> 
+    <div class="step-header bg-step-analysis d-flex flex-justify-between">
+      <div class="d-flex">
+        <img src="assets/Images/inprogress.png" alt="completed" height="40px">
+        <div>
+            <div class="card-sub-header-info">
+              {{'runWorkflow.runOngoingcard.inprogress' | translate}}
+            </div>
+            <div class="card-main-header-info">
+              {{'runWorkflow.runOngoingcard.run' | translate}}_{{progressbar?.deviceRunId? progressbar?.deviceRunId : '-'}}
+            </div>
+        </div>
+      </div>
+      <div class="test" *ngIf="progressbar?.assayType?.toLowerCase().indexOf('htp') !== -1 || progressbar?.processStepName?.toLowerCase().indexOf('dpcr') !== -1">
+          <div class="card-sub-header-info">
+            {{'runWorkflow.runOngoingcard.remainingTime' | translate}}
+          </div>
+          <div class="card-main-header-info default-text-color">
+            {{progressbar?.runRemainingTime? progressbar?.runRemainingTime : '-' }}
+          </div>
+      </div>
+    </div>
+    <mat-progress-bar mode="indeterminate" value="70" color='primary' class="progressbar bgblue"></mat-progress-bar>
+  </mat-card>
+</div>

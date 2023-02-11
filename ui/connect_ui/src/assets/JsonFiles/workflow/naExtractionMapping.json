@@ -1,0 +1,20 @@
+[
+    {
+      "containertype": "96 well plate",
+      "devicerunid": "mp96-1",
+      "containerId": "1HAS",
+      "sampleCount": 2
+    },
+    {
+      "containertype": "96 well plate",
+      "devicerunid": "mp96-3",
+      "containerId": "UUUA2",
+      "sampleCount": 2
+    },
+    {
+      "containertype": "96 well plate",
+      "devicerunid": "mp96-4",
+      "containerId": "4KAS",
+      "sampleCount": 10
+    }
+  ]

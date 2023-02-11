@@ -1,0 +1,544 @@
+#######################################################
+#configure the following parameters only when this is security web app.
+#security properties
+#configure host name and url for this application
+#URLs DEFINED FOR BROWSER COMMUNICATION
+#urls to be configured when setting for https
+#######################################################
+pas:
+    #Permission for the User to access this microservice
+    microservice_permission: Access_Security
+    security.method.disable: false
+    
+    #Remote endpoints
+    security_endpoint: ${pas.security_url}
+    email_endpoint: ${pas.email_remote_url}
+    locale_endpoint : ${pas.locale_service_remote_url}
+    admin_api_endpoint : ${pas.application_api_remote_url}
+    
+    #application_location - values [default,distributed]
+    #If value is default, it is assumed that all microservices are running in same location (www.qa-rocheconnect.com is used through-out app)
+    application_location : default
+   
+    application_ui_host_name : www.qa-rocheconnect.com
+    application_ui_url : https://${pas.application_ui_host_name}:93/admin-ui
+    application_api_remote_host_name : www.qa-rocheconnect.com
+    application_api_remote_url : https://${pas.application_api_remote_host_name}:92/admin-api
+    security_host_name : www.qa-rocheconnect.com
+    security_url : https://${pas.security_host_name}:90/security-web
+    
+    #configure host name and url for Email API.    
+    email_remote_host_name : www.qa-rocheconnect.com
+    email_remote_url : https://${pas.email_remote_host_name}:94/email-web
+    
+    locale_service_remote_host_name : www.qa-rocheconnect.com
+    locale_service_remote_url : https://${pas.locale_service_remote_host_name}:92/admin-api
+    
+    password_reset_service_remote_host_name : www.qa-rocheconnect.com
+    password_reset_service_remote_url : https://${pas.password_reset_service_remote_host_name}:93/admin-ui/login.jsp
+    
+    windowauthlanding : 0
+    # 0 is admin, 1 is security, winssolanding for logout in sso mode.
+    admin_ui_landing : ${pas.application_ui_url}/listuser.mvc
+    security_ui_landing : https://${pas.security_host_name}/security-web/protected.html
+    winSSOLogoutlandingpage : ${pas.application_ui_url}/login.jsp
+    
+    #otp configurations
+    otp.enabled: false
+    otp.include_password_validation: false
+    otp.default_length: 6
+    otp.max_life_time: 5
+    
+    #enable login APIs with auth header- similar to OAuth
+    login.v2.enable: true
+    login.v2.jwt.token_type: jws 
+    login.v2.jwt.expiry_seconds: 120
+    #Enable setting custum properties in JWT token
+    login.v2.custum_props.enable: true
+    login.v2.jwt.props.urls: http://www.qa-rocheconnect.com:92/admin-api/anonymous/json/token/{domainName}/{userName}
+    
+    login_url : ${pas.application_ui_url}/login.jsp
+    #default home page if none is given
+    defaultHomePage: ${pas.application_ui_url}/listuser.mvc
+    auth_mode_url: ${application_ui_url}/authmode.jsp
+    
+    access_denied_url : /accessdenied.html
+    #access_control_allow_origin: '*'
+    
+    #service registry check - default value server change as client if service registry is enabled
+    service.discovery: server        
+    
+    #To enable and disable rabbitMQ- default value false
+    rabbitmq.enabled: false
+    #Auditable History enable or disable -defauls value is true
+    auditable_history: true
+    auditable_history_days: 30
+    #AuditTrail enable or disable -default value is false
+    audittrail: true
+    #routing_key_prefix: Roche.X800.DM.Audit
+    #routing_header_name: rabbitmq.ROUTING_KEY
+
+    password_expiry_notification: true
+    
+    password_expired_notification_job_cron : 0 1 * * * ?
+     
+    password_expiry_advance_notification_job_cron :  0 1 * * * ?  
+
+    # This is the name of your service name
+    pwdpluginserviceclass : pwdPluginManager
+
+    # This is the name of the method
+    pwdpluginservicemethod : validate
+
+    # This is to enable the password plugin. true means enabled & false means disabled
+    pwdpluginenable : true    
+    
+    #Enable this property to avail custom validation for password policy
+    #Validate if password has more than 6 upper case characters (error-code -11) ,more than 6 lower case characters(12)
+    #more than 6 digits(13) and more than 5 non alphanumeric characters (14)
+    default_custom_validation: false
+#######################################################
+# if ssl is enabled configure the default port for http if required
+#######################################################
+    support_for_http_and_https: false
+    http_port: 90
+    #login_http_url : https://${pas.application_ui_host_name}:93/admin-ui/login.jsp
+    
+    transaction.enabled: true  
+    
+    #default company Query for SQLdatabase
+    defaultCompanyQuery: insert into company (id, domainname, leftindex, rightindex, retired) values (-1, 'SYSTEM', -1, -1, false)
+    
+    #default company Query for mssql database
+    #defaultCompanyQuery: SET IDENTITY_INSERT company ON;insert into company (id, domainname, leftindex, rightindex) values (-1, 'SYSTEM', -1, -1);SET IDENTITY_INSERT company OFF;
+    
+    #######################################################
+    # Cookie / Session management.
+    # Cookie will removed on browser close. Idle time/active time will be managed in persistent login table.
+    # Cookie will be set to this domain.
+    #allow cookies only when accessing https pages. if false, http pages also will have access.
+    #######################################################
+    #cookie_domain : .pas.com
+    use_secure_cookie : false
+
+    #######################################################
+    #Don't allow java script to read the cookie. If false, it will allow the java script to read the cookie.
+    #Number of hours upto which the token will be active regardless of activity.
+    #Number of minutes (should be less than session validity) upto which token will be valid without active. 
+    ####################################################### 
+    http_only : false
+    session_validity_hours : 1
+    token_renew_before: 10
+
+    #######################################################
+    #Data for Keystore
+    #######################################################
+    keystore_location : keystore/pas.jceks
+    keystore_pass : pas123
+    keystore_type : jceks
+    token_private_key_pass : pas123
+    token_private_key_alias : pasprivatekey
+    token_public_key_alias : paspublickey
+    symmetric_key_alias : passymmetrickey
+    symmetric_key_pass : pas123
+    use_private_for_encryption : true
+    #jwt_token_type: jws
+    
+    #######################################################
+    #Data for Application excel file Location
+    # excels can be loaded from either the classpath or from absolute path.
+    #######################################################
+    XL_Location :  file:///home/rconnect/roche/scripts/connect_yaml/excels
+    fileName_Prefix : brownstone_sec_init
+    XL_Prefix : sec
+
+    #######################################################
+    #In mixed mode authentication, specify what is the authentication mode for the root company. Either saml or default.
+    # Poll the following url for starting the deployment of the application. A get request will be issued to that page and a return value of "YES" or "yes" is required to proceed. 
+    # Till then application will loop without starting the initialization. After the expiry of number of attempts, application will throw an exception and exit without initialization. 
+    #######################################################
+    root_auth_mode : default
+    poll_enabled : false
+
+    #######################################################
+    #Encryption Details- Security token(EmailCreation)
+    #######################################################
+    encryption_salt : user@domain
+    encrypt_password : domain@user
+    no_of_iteration : 1
+
+    #######################################################
+    # Default Time Zone
+    #PasswordReset for first time -Details
+    #expiry value in days
+    #Data for Root Domain creation
+    #######################################################
+    default_TimeZone : GMT
+    expiryValue : 5
+    domainName : hcl.com
+    # allow_cors_origin
+    access_control_allow_origin : https://www.qa-rocheconnect.com:91,https://www.qa-rocheconnect.com:92,https://www.qa-rocheconnect.com:93,https://www.qa-rocheconnect.com:8080,https://www.qa-rocheconnect.com:99,https://www.qa-rocheconnect.com:9090,https://www.qa-rocheconnect.com:86,https://www.qa-rocheconnect.com:88,https://www.qa-rocheconnect.com:96
+
+    #######################################################
+    # Authentication schemes  
+    # Possible Values : default, saml, mixed, ldap, activedirectory
+    # Set whether User name is unique across domains - true or false
+    # Default value : false
+    #######################################################
+    authentication_scheme : default
+    user_name_unique : false
+    
+    windows_auth_sso : false
+    useWindowsAuthSso : none
+    # ok or none
+    isWindowsAuthEnabled : false
+    #The domainwise auth becomes null & void if windows_auth_sso set to true currently. 
+    #use hcl.com=winid,pascm=default etc. Here winid indicates windows auth.
+    #Currently, windows sso - one mode & windowsauth+userdomain - another mode
+    #For Windows SSO : Use useWindowsAuthSso: ok & windows_auth_sso : true , isWindowsAuthEnabled : false, isDomainUserAuth : false
+    #domainwise_auth  : pascm=default,hcl.com=default, Below AuthProvider to none
+    #For WindowsAuth+UserDomain,  windows_auth_sso : false, useWindowsAuthSso : none, isDomainUserAuth : true, domainwise_auth  : hclaxon=ad,hcl.com=winid,
+    #dbAuthProvider : db, adAuthProvider : activedirectory,ldapAuthProvider : ldap
+    ######isDomainUserAuth : false 
+    ######domainwise_auth  : hcl.com=default,
+    ######dbAuthProvider : none 
+    ######adAuthProvider : none 
+    ######ldapAuthProvider : none
+    
+    isDomainUserAuth : false
+    domainwise_auth  : hcl.com=default,
+    dbAuthProvider : none
+    adAuthProvider : none
+    ldapAuthProvider : none
+    winidEqual : hcl.com=hcltech,
+    #if the auth_scheme is default then change the above provider to 'none' other than db
+    #windows_auth_sso : false       
+    #The domainwise auth becomes null & void if windows_auth_sso set to true currently.
+    #domainwise_auth  : hcl.com=ad,pascm=default
+    #dbAuthProvider : db 
+    #adAuthProvider : activedirectory
+    #ldapAuthProvider : ldap    
+    #if the auth_scheme is default then change the above provider to 'none' other than db
+
+    openam_conf_dir : /fedlet-conf
+    saml.error_page : ${pas.application_ui_url}/samlerror.jsp
+    #######################################################
+    # Include the attributes from assertion which should be included in the search for the user.
+    # Specify which of the attribute maps to domain of the user. If user name is unique, this property is ignored.
+    #######################################################
+    attributes_include_in_search : idpDomainName, loginName
+    domainName_Attribute : idpDomainName
+
+    #######################################################
+    #user attributes mapping
+    #######################################################
+    firstName_Attribute : idpFirstName
+    lastName_Attribute : idpLastName
+    loginName_Attribute : loginName
+
+    ####################################################### 
+    # Change this if you are providing a custom login page.
+    # if page in application is provided, exclude that resource from protection as in the following example
+    #  <security:http pattern="/sez-login.jsp" security="none" request-matcher="ant"/>
+    ####################################################### 
+
+    #######################################################
+    #https-configuring client side truststore and ketysore
+    #Enable this for protection of remote web services with protection
+    #client_keystore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+    #client_truststore : C:/Program Files/Java/jdk1.8.0_45/jre/lib/security/keystore.jks
+    #cert_provider : SunX509
+    #cert_file_type : jks
+    #cert_password : changeit
+
+    #######################################################
+    #Specific module name for logger
+    #######################################################
+    logged_module_name : security
+
+    #######################################################
+    #rabbitmq properties
+    #######################################################
+    rabbitmq:
+        exchangename : pasExchange
+        hierarchyqueuename : hierarchySecurityQueue
+        userqueuename : userSecurityQueue
+        userdeletequeuename : userSecurityDeleteQueue
+        userupdatedqueuename : userSecurityUpdateQueue
+       
+    #######################################################
+    #LDAP/AD properties
+    #######################################################
+    #This is for AD
+    #providerURL: ldap://CHN-HCLT-ADC08/
+    #userDn: test@hcl.com
+    #base: dc=HCLT,dc=CORP,dc=HCL,dc=IN
+    #password: test@2016
+    #userDNPatterns: uid={0}
+    #groupSearchBase: OU=CHN-CAMPUS,OU=CHN-USERS,OU=Users,OU=chennai
+    #groupRoleAttribute: cn
+    
+    #providerURL: ldap://10.145.90.212:10389/
+    #providerURL: ldap://localhost:10389/
+    #userDn: uid=admin,ou=system
+    #base: dc=hcl,dc=com
+    #password:   secret
+    #userDNPatterns: uid={0}
+    #groupSearchBase:
+    #groupRoleAttribute: cn
+    
+    #This is for LDAP
+    #working HCLT AD LDAP - 12/Nov/2018
+    providerURL: ldap://CHN-HCLT-ADC02.HCLT.CORP.HCL.IN:389    
+    userDn:  venkatesh.shankar@hcl.com
+    base:  DC=HCLT,DC=CORP,DC=HCL,DC=IN
+    #password: ENC(+WJtkWOSs4qv0i0A6H3L6w==)
+    password:  hcltpassword
+    userDNPatterns: uid={0}
+    groupSearchBase:  OU=CHN-CAMPUS,OU=CHN-USERS,OU=Users,OU=chennai
+    groupRoleAttribute: cn     
+    
+    #This is to enable multiple tenant or emaildomain where the AD/LDAP is configured. Here the underscore is the delimit
+    #tenant.domainName.hcl_com.providerURL: ldap://CHN-HCLT-ADC01.HCLT.CORP.HCL.IN:389
+    #tenant.domainName.hcl_com.userDn: gurusamyr@hcl.com
+    #tenant.domainName.hcl_com.base: DC=HCLT,DC=CORP,DC=HCL,DC=IN
+    #tenant.domainName.hcl_com.password: hcltpassword
+    #tenant.domainName.hcl_com.userDNPatterns: uid={0}
+    #tenant.domainName.hcl_com.groupSearchBase: OU=CHN-CAMPUS,OU=CHN-USERS,OU=Users,OU=chennai
+    #tenant.domainName.hcl_com.groupRoleAttribute: cn
+    
+    #######################################################
+    #LDAP/AD properties - Double hash won't work in yaml
+    #######################################################
+    #tenant.domainName.hcltech##com.providerURL: ldap://CHN-HCLT-ADC08/
+    #tenant.domainName.hcltech##com.userDn: test@hcl.com
+    #tenant.domainName.hcltech##com.base: dc=HCLT,dc=CORP,dc=HCL,dc=IN
+    #tenant.domainName.hcltech##com.password: test@2016
+    #tenant.domainName.hcltech##com.userDNPatterns: uid={0}
+    #tenant.domainName.hcltech##com.groupSearchBase: OU=CHN-AMB5,OU=CHN-USERS,OU=Users,OU=chennai
+    #tenant.domainName.hcltech##com.groupRoleAttribute: cn
+    #tenant.domainName.hcltech.providerURL: ldap://CHN-HCLT-ADC08/
+    #tenant.domainName.hcltech.userDn: test@hcl.com
+    #tenant.domainName.hcltech.base: dc=HCLT,dc=CORP,dc=HCL,dc=IN
+    #tenant.domainName.hcltech.password: test@2016
+    #tenant.domainName.hcltech.userDNPatterns: uid={0}
+    #tenant.domainName.hcltech.groupSearchBase: OU=CHN-ETA,OU=CHN-USERS,OU=Users,OU=chennai
+    #tenant.domainName.hcltech.groupRoleAttribute: cn
+
+    #######################################################
+    #security hibernate properties
+    #######################################################
+    # Non data source connection details for MySQL.
+    # Cache configuration
+    # Region factory : org.hibernate.cache.infinispan.InfinispanRegionFactory in case of tomcat
+    # Region factory : org.hibernate.cache.infinispan.JndiInfinispanRegionFactory in case of jboss
+    # Dialect details for MySQL.
+    # Other configurations
+    #######################################################
+    #Whitelist urls to be validated for application module domain
+    #e.g. for multiple domains to be seperated by commas whitelist_urls =    apollo.medscheme.com,www.test.com,www.sample.com
+    #If empty all domains are allowed
+    #######################################################
+    whitelist_urls : 
+
+    ## Provide a valid class name if not using jndi. 
+    ## If not provided, spring boot's default connection pool datasource will be used.
+    datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource
+    
+    ###############################################
+    # Swagger documentation details. Right not these 
+    # are used for showing swagger rest documentation
+    ###############################################
+    version: 4.4 
+    title: ${pas.logged_module_name} - REST documentation
+    contact_email: PBASolutionsteam@hcl.in
+    api_description: These are the contracts for the rest services exposed in this ${pas.logged_module_name}. 
+    
+    ###############################################
+    # Enable the Resource Monitoring for this Microservice 
+    # Values - true or false
+    # Duration - in seconds
+    ###############################################
+    monitor_service: false
+    monitor_service_duration: 300
+    
+    #pluginusernameprefix: roche_
+    #plugindomainname: hcl.com
+    #plugindomainnamenetwork: hcltech
+    #pluginrolename: Admin
+    #plugincompanyid: 1
+    #pluginusercreate: n
+    #pluginenable: false
+    #pluginserviceclass: authPluginManager
+    #pluginservicemethod: processAuth
+    
+    #true or false
+    #pwdpluginserviceclass : pwdPluginManager
+    #pwdpluginservicemethod : validate
+    #pwdpluginenable : false
+    #Provide the applicable role which applicant can create user with that role 
+    #applicableRole:Admin
+#Define the Role extending the Password.    
+role:
+
+    #Role 
+    Admin: 2.0
+    
+#######################################################
+#spring boot properties
+#######################################################
+spring.main.show-banner: false
+
+endpoints.enabled: false
+
+spring.profiles.active: full,permission
+
+
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+spring.cloud.consul.host: www.qa-rocheconnect.com
+spring.cloud.consul.port: 8500
+spring.application.name: security-web
+spring.cloud.consul.discovery.healthCheckPath: ${management.contextPath}
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.address: ${management.contextPath}
+spring.cloud.consul.discovery.instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+    contextPath: /security-web/poll
+
+
+logging.path: '/var/log/connect/log'
+logging.file: security.log
+logging.config: 'classpath:log4j2.xml'
+
+spring.rabbitmq.host : www.qa-rocheconnect.com
+spring.rabbitmq.port : 5672
+spring.rabbitmq.username : userone
+spring.rabbitmq.password : userone
+######################################################    
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+#######################################################
+server:
+    port: 90
+    session-timeout: 600
+    context-path: /security-web
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.qa-rocheconnect.com  
+
+######################################################    
+# DATABASE CONFIGURATIONS
+#######################################################
+spring.datasource.jdbcUrl : jdbc:postgresql://localhost:5432/pas-security
+spring.datasource.user : postgres
+spring.datasource.password : postgres123
+spring.datasource.driverClass : org.postgresql.Driver
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+
+
+
+#spring.datasource.driverClass : com.microsoft.sqlserver.jdbc.SQLServerDriver
+#spring.jpa.database-platform : org.hibernate.dialect.SQLServerDialect
+#spring.datasource.jdbcUrl : jdbc:sqlserver://DS-SGH534RR38\\SQLEXPRESS:1433;DatabaseName=pas-security
+#spring.datasource.user : sa
+#spring.datasource.password : Password@123
+
+
+
+#Keep the consulConfigKeys value blank so that it won;t look into consul
+#else provide the structure like as in consul: config/common/data or config/security-web/data 
+pas.consulConfigUrl : www.qa-rocheconnect.com
+#pas.consulConfigKeys : common,security-web
+pas.consulConfigKeys : 
+pas.consulConfigKeysPrefix : config/
+pas.consulConfigKeysSuffix : /data
+pas.externalyaml : false
+
+#If you want to encrypt a field enclose with ENC() or OBF
+#Generate the string to encrypt using the utility and follow below sample convention
+#Also use normal text if applicable
+#spring.datasource.password : ENC(RhBRYm0ydOABAvR+hUAk6Q==)
+#spring.datasource.password : OBF(Bh/oZZalRbegEkHtWNYNyw==)
+
+#spring.datasource.jdbcUrl : jdbc:derby://localhost:1527/db_data/pas-security;create=true
+#spring.datasource.jdbcUrl : jdbc:derby:D:/PasDB/pas-security;create=true
+#spring.datasource.user : root
+#spring.datasource.password : root
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 20
+spring.datasource.acquireIncrement : 1
+spring.datasource.maxIdleTime : 600
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+#spring.datasource.driverClass : org.apache.derby.jdbc.ClientDriver
+#spring.datasource.driverClass : org.apache.derby.jdbc.EmbeddedDriver
+
+#spring.jpa.database-platform : org.hibernate.dialect.DerbyTenSevenDialect
+spring.jpa.show-sql : false
+spring.jpa.hibernate.ddl-auto : update
+spring.jpa.generate-ddl : true
+spring.jpa.properties.hibernate.cache.use_second_level_cache : true
+spring.jpa.properties.hibernate.cache.use_query_cache : true
+Spring.jpa.properties.hibernate.query.plan_cache_max_size : 256
+spring.jpa.properties.hibernate.cache.use_structured_entries : false
+spring.jpa.properties.hibernate.cache.use_minimal_puts : false
+spring.jpa.properties.hibernate.cache.generate_statistics : false
+spring.jpa.properties.hibernate.cache.provider_configuration : /ehcache.xml
+spring.jpa.properties.hibernate.cache.region.factory_class : org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode : ENABLE_SELECTIVE
+
+#spring.read.datasource.default.driverClass : com.mysql.jdbc.Driver
+#spring.read.datasource.default.jdbcUrl : jdbc:mysql://localhost:3307/pas-security?useUnicode=yes&characterEncoding=UTF-8
+#spring.read.datasource.default.user : root
+#spring.read.datasource.default.password : root
+#spring.read.datasource.default.idleConnectionTestPeriod : 3000
+#spring.read.datasource.default.maxPoolSize : 5
+#spring.read.datasource.default.minPoolSize : 2
+#spring.read.datasource.default.testConnectionOnCheckout : true
+#spring.read.datasource.default.debugUnreturnedConnectionStackTraces : true
+#######################################################
+#default value is false, change it to true if https is enabled
+https_enabled: true
+#######################################################
+#ssl configuration
+#######################################################
+ssl_disabled_protocols: SSL,SSLv2,SSLv2Hello,SSLv3,TLSv1,TLSv1.1
+ssl_included_ciphers: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+ssl_excluded_ciphers: SSL2_RC4_64_WITH_MD5
+#######################################################
+#license_property_path: C:\Softwares\License\License\gokilasecuritylicense.properties
+license_property_path: /home/rconnect/roche/pas/commonlicense.properties
+#ancestor_data_acccess_disabled : true
+
+#ancestor_data_acccess_disabled : true
+---
+
+
+
+spring:
+
+    profiles: docker
+
+
+
+pas:
+
+    application_ui_host_name : adminui
+
+    application_api_remote_host_name : adminapi
+
+    security_host_name : security
+
+    email_remote_host_name : email
+
+    whitelist_urls : 
+
+server:
+
+    port: 80
+
+---

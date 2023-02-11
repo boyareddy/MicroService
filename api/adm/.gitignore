@@ -1,0 +1,7 @@
+/target
+/bin
+.classpath
+.factorypath
+.project
+/.settings
+/test-output

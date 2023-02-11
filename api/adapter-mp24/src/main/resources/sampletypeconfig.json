@@ -1,0 +1,40 @@
+{
+	"configType": [
+		{
+			"id" : "PLAS",
+			"name" : "Plasma",
+			"value" : "Plasma",
+			"encodingSystem" : "HL70487"
+		},
+		{
+			"id" : "WB",
+			"name" : "Whole Blood",
+			"value" : "Whole Blood",
+			"encodingSystem" : "HL70487"
+		},
+		{
+			"id" : "SER",
+			"name" : "Serum",
+			"value" : "Serum",
+			"encodingSystem" : "HL70487"
+		},
+	    {
+			"id" : "MP24",
+			"name" : "MagNA Pure 24 2ml",
+			"value" : "MP24-2-ml",
+			"encodingSystem" : "99ROC"
+		},
+		{
+			"id" : "441652008",
+			"name" : "FFPET",
+			"value" : "Formalin-fixed paraffin-embedded tissue specimen",
+			"encodingSystem" : "SCT"
+		},
+		{
+			"id" : "13100",
+			"name" : "13x100",
+			"value" : "13-100-mm",
+			"encodingSystem" : "99ROC"
+		}
+	]
+}

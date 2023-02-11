@@ -1,0 +1,51 @@
+{
+    "protocol": "https",
+    "host": "www.test-roche.com",
+    "appPort": "8080",
+    "contMapCSVPath": "ui-conf/NIPT_dPCR_CSV_Template.csv",
+    "bulkOrdCSVPath": "ui-conf/csv/NIPTDPCR/BulkOrderUpload/Bulk_upload_order_entry_NIPT_dPCR.csv",
+    "contMapCSVFile": "NIPT_dPCR_CSV_Template.csv",
+    "bulkOrdCSVFile": "Bulk_upload_order_entry_NIPT_dPCR.csv",
+    "dynamicTemplate": "Container_samples.csv",
+    "csvTemplateRoot": "ui-conf/csv",
+	"secApi": {
+		"module": "security-web",
+		"port": "90"
+	},
+    "rmmApi": {
+        "module": "rmm",
+        "port": 86
+    },
+    "ammApi": {
+        "module": "amm",
+        "port": 88
+    },
+    "ommApi": {
+        "module": "omm",
+        "port": 96
+    },
+    "dmmApi": {
+        "module": "device-management",
+        "port": 85
+    },
+    "admApi": {
+        "module": "admin-api",
+        "port": 92
+    },
+	"sessionTimeOut": 300,
+	"apiIntervalTime": 60000,
+	
+	"admin_ui": {
+		"API_PORT": "92",
+		"API_NAME": "admin-api/json/",
+		"SECURITY_API": "security-web/json/",
+		"DOMAIN": "hcl.com",
+		"ENTIRY_ID": "PASUSER",
+		"EMAIL_CODE": "/admin_ui/#/reset-password;code="
+    },
+    "csvConfig":{
+        "url": "",
+        "allowedMimeType": ["application/vnd.ms-excel"],
+        "maxFileSize": 5120
+    }
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.roche.connect.appinstaller.AppInstallerController">
+   <center>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="584.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" />
+                  <Button fx:id="cert_next_btn" mnemonicParsing="false" prefWidth="80.0" text="Next &gt;" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="584.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="189.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Certificate">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="195.0" layoutY="97.0" text="SSL Certificate">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sslKey" editable="false" layoutX="195.0" layoutY="126.0" prefHeight="25.0" prefWidth="232.0" promptText="PKCS12  format" />
+            <Button fx:id="pi_browse_btn" layoutX="442.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSSLBrowseButtonAction" text="..." />
+            <Text fx:id="certError" fill="#fc0303" layoutX="160.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font name="Roboto Light" size="12.0" />
+               </font>
+            </Text>
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+            <RadioButton layoutX="198.0" layoutY="201.0" mnemonicParsing="false" selected="true" text="Yes" />
+            <RadioButton layoutX="325.0" layoutY="201.0" mnemonicParsing="false" text="No" />
+            <Label layoutX="198.0" layoutY="239.0" prefHeight="20.0" prefWidth="165.0" text="SSL Certificate Password">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="sslPasword" layoutX="193.0" layoutY="267.0" prefHeight="29.0" prefWidth="200.0" />
+            <Label layoutX="203.0" layoutY="162.0" prefHeight="36.0" prefWidth="165.0" text="Password Authentication" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+</BorderPane>

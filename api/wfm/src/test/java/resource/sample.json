@@ -1,0 +1,19 @@
+{  
+   "accessioningId":"12345",
+   "deviceId":"12345",
+   "messageType":"12345",
+   "dateTimeMessageGenerated":"12345",
+   "messageCotrolId":"12345",
+   "batchId":"12345",
+   "containerId":"12345",
+   "sendLP24SeqPrepACKResponce":null,
+   "specimenStatusUpdateMessage":null,
+   "adaptorRequestMessage":null,
+   "htpStatusMessage":null,
+   "responseMessage":null,
+   "orderDetails":[  
+
+   ],
+   "qbpresponseMessage":null,
+   "u03ResponseMessage":null
+}

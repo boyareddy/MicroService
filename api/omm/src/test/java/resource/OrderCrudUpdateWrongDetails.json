@@ -1,0 +1,36 @@
+{  
+   "order":{  
+      "orderId":"000000",
+      "accessioningId":"8888",
+      "assayType":"NIPT",
+      "sampleType":"Plasma",
+      "retestSample":false,
+      "orderComments":"sada",
+      "priority":"high",
+      "assay":{  
+         "maternalAge":5,
+         "gestationalAgeWeeks":13,
+         "gestationalAgeDays":4,
+         "eggDonor":"Self",
+         "ivfStatus":"No",
+         "fetusNumber":"2",
+         "collectionDate":"2018-07-17T18:30:00.000Z",
+         "receivedDate":"2018-07-09T18:30:00.000Z",
+         "testOptions":{  
+            "harmony":false,
+            "scap":false,
+            "fetalSex":false,
+            "mx":true
+         }
+      },
+      "patient":{  
+         "patientLastName":"sanga",
+         "patientFirstName":"mithiran",
+         "patientMedicalRecNo":"213213123123123",
+         "patientDOB":"2018-07-02T18:30:00.000Z",
+         "refClinicianName":"asdas",
+         "otherClinicianName":"edfsd",
+         "clinicName":"asdasda"
+      }
+   }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="650.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutY="577.0" prefHeight="66.0" prefWidth="650.0" spacing="20.0" style=" -fx-border-color:lightgray; -fx-border-width: 1; -fx-border-style: solid;">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="&lt; Back" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Next &gt;" />
+                  <Button mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  <Button disable="true" mnemonicParsing="false" prefWidth="80.0" text="Help">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <ImageView fitHeight="577.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="resources/Installer.png" />
+               </image>
+            </ImageView>
+            <Text fill="#191919" layoutX="204.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language and localization">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="204.0" layoutY="98.0" text="System language" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="174.0" prefHeight="20.0" prefWidth="81.0" text="Date format" textFill="#191919">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="203.0" layoutY="124.0" prefHeight="25.0" prefWidth="213.0" />
+            <ComboBox layoutX="201.0" layoutY="200.0" prefHeight="25.0" prefWidth="217.0" />
+             <ImageView fitHeight="52.0" fitWidth="88.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="resources/roche.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+</BorderPane>

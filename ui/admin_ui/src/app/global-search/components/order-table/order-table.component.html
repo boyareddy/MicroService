@@ -1,0 +1,61 @@
+<table mat-table [dataSource]="dataSource" class="width-full search-table">
+
+    <!-- AccessioningId Column -->
+    <ng-container matColumnDef="accessioningId">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold main-left"> 
+         {{"runWorkflow.runSamplestable.accessioningID" | translate}}
+      </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular ord_row main-left" appHighlight [text]="element?.accessioningId" [matchedText]="searchQuery"> 
+        <!-- {{element?.accessioningId}}  -->
+      </td>
+    </ng-container>
+  
+    <!-- AssayType Column -->
+    <ng-container matColumnDef="assayType">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold"> 
+        {{"orders.tableHeaders.assayType" | translate}}
+       </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        {{element?.assayType | translate}} </td>
+    </ng-container>
+  
+    <!-- SampleType Column -->
+    <ng-container matColumnDef="sampleType">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold">
+        {{"orders.tableHeaders.sampleType" | translate}}
+        </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.sampleType  | translate}} </td>
+    </ng-container>
+
+    <!-- SampleType Column -->
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold">
+          {{"orders.tableHeaders.status" | translate}}
+          </th>
+        <td mat-cell *matCellDef="let element" class="list-items roboto-regular">
+          <app-status-icon [status]="element?.status"></app-status-icon> 
+          {{ element.processStepName ? element.processStepName : element.status }} 
+        </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="flag">
+      <th mat-header-cell *matHeaderCellDef class="list-header"> {{"orders.tableHeaders.flags" | translate}}
+      </th>
+        <td mat-cell *matCellDef="let element" class="list-items">
+            <app-flag-popup *ngIf="element.processStepName; else noFlags" [sampleInput]="element"></app-flag-popup>
+            <ng-template #noFlags>
+              <div>{{'-'}}</div>
+            </ng-template>
+        </td>        
+    </ng-container>
+  
+    <ng-container matColumnDef="Symbol">
+        <th mat-header-cell *matHeaderCellDef style="padding-right: 17px; width: 1px;"></th>
+        <td mat-cell *matCellDef="let element">
+            <img src="assets/Images/right-arrow.png" alt="navigate" (click)="showSelectedItem(element)">
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumns;" (click)="onNavigation(row)"></tr>
+  </table>

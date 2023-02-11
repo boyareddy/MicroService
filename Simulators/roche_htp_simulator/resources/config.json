@@ -1,0 +1,6 @@
+{
+	"tmpFolderPath": "C://ips/",
+	"statusTimeDelay":"15",
+	"fileType":["fastq.gz","PrimaryAnalysisVersionInfo.txt","metrics.txt","ExpState.json","ExpAnno.json"],
+  "hashingAlgorithm": "SHA1"
+}

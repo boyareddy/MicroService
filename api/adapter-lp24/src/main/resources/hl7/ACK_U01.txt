@@ -1,0 +1,2 @@
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP001-12^M|Roche Diagnostics|20151020162814|Roche Diagnostics|ACK^U01^ACK|789456132|P|2.5.1||||||UNICODE UTF-8
+MSA|AA|726f21e7-4728-4d03-9fcd-23a46000bfdf||

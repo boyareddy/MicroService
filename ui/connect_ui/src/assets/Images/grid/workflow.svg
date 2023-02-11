@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="16" cy="16" r="16" fill="#fff" stroke="#707070" stroke-width="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_17150" data-name="Group 17150" transform="translate(-962 -598)">
+    <g id="Group_17124" data-name="Group 17124">
+      <g id="Group_17074" data-name="Group 17074" transform="translate(190 158)">
+        <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(774 442)" fill="#fff" stroke="rgba(89,113,149,0.3)" stroke-width="2">
+          <circle cx="16" cy="16" r="16" stroke="none"/>
+          <circle cx="16" cy="16" r="17" fill="none"/>
+        </g>
+        <g id="Group_1" data-name="Group 1" transform="translate(774 442)" clip-path="url(#clip-path)">
+          <path id="Path_20864" data-name="Path 20864" d="M.468,0h30.4" transform="translate(-0.868 15.6)" fill="none" stroke="rgba(89,113,149,0.5)" stroke-width="2"/>
+          <g id="Group_17019" data-name="Group 17019" transform="translate(3.625 13.6)">
+            <circle id="Ellipse_202" data-name="Ellipse 202" cx="2" cy="2" r="2" transform="translate(16.374 0)" fill="#597195" stroke="#fff" stroke-width="2"/>
+            <circle id="Ellipse_203" data-name="Ellipse 203" cx="2" cy="2" r="2" transform="translate(8.204 0)" fill="#597195" stroke="#fff" stroke-width="2"/>
+            <circle id="Ellipse_204" data-name="Ellipse 204" cx="2" cy="2" r="2" transform="translate(0 0.102)" fill="#597195" stroke="#fff" stroke-width="2"/>
+            <circle id="Ellipse_205" data-name="Ellipse 205" cx="2" cy="2" r="2" transform="translate(24.374 0)" fill="#597195" stroke="#fff" stroke-width="2"/>
+          </g>
+          <rect id="Rectangle_1132" data-name="Rectangle 1132" width="6" height="6" rx="1" transform="translate(2 20)" fill="#597195"/>
+          <rect id="Rectangle_1133" data-name="Rectangle 1133" width="6" height="6" rx="1" transform="translate(10 20)" fill="#cbd4e2"/>
+          <rect id="Rectangle_1134" data-name="Rectangle 1134" width="6" height="6" rx="1" transform="translate(18 20)" fill="#597195"/>
+          <rect id="Rectangle_1135" data-name="Rectangle 1135" width="6" height="6" rx="1" transform="translate(26 20)" fill="#cbd4e2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

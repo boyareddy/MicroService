@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.camel</groupId>
+    <artifactId>camel-springboot-adapter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+            <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    <dependency>
+    		<groupId>org.codehaus.jackson</groupId>
+    		<artifactId>jackson-mapper-asl</artifactId>
+    		<version>1.9.13</version>
+		</dependency>
+        <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-hl7</artifactId>
+    <version>${camel.version}</version>
+    <!-- use the same version as your Camel core version -->
+	</dependency>
+	<dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-stream-starter</artifactId>
+      <version>${camel.version}</version>
+    </dependency>
+        <dependency>
+            <groupId>ca.uhn.hapi</groupId>
+            <artifactId>hapi-base</artifactId>
+            <version>${hapi.version}</version>
+                        <exclusions>
+		     	<exclusion>
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-api</artifactId>
+		     	</exclusion>
+     		</exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>ca.uhn.hapi</groupId>
+            <artifactId>hapi-structures-v251</artifactId>
+            <version>${hapi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-jackson-starter</artifactId>
+            <version>${camel.version}</version>
+                        <exclusions>
+		     	<exclusion>
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-api</artifactId>
+		     	</exclusion>
+     		</exclusions>
+        </dependency>
+         <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-swagger-java-starter</artifactId>
+            <version>${camel.version}</version>
+                        <exclusions>
+		     	<exclusion>
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-api</artifactId>
+		     	</exclusion>
+     		</exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+            <version>${camel.version}</version>
+      <exclusions>
+      <exclusion>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-logging</artifactId>
+      </exclusion>
+   </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+    		<groupId>org.apache.camel</groupId>
+    		<artifactId>camel-mina2</artifactId>
+    		<version>2.19.1</version>
+		</dependency>
+		
+		<dependency>
+		   <groupId>org.apache.logging.log4j</groupId>
+		   <artifactId>log4j-api</artifactId>
+		   <version>2.5</version>
+		</dependency>
+		<dependency>
+		   <groupId>org.apache.logging.log4j</groupId>
+		   <artifactId>log4j-core</artifactId>
+		   <version>2.5</version>
+		</dependency>
+		<dependency>
+		   <groupId>com.fasterxml.jackson.dataformat</groupId>
+		   <artifactId>jackson-dataformat-yaml</artifactId>
+		   <version>2.7.3</version>
+		</dependency>
+		<dependency>
+		   <groupId>com.fasterxml.jackson.core</groupId>
+		   <artifactId>jackson-databind</artifactId>
+		   <version>2.6.5</version>
+		</dependency>
+
+        
+    </dependencies>
+
+    <build>
+        <defaultGoal>spring-boot:run</defaultGoal>
+
+        <plugins>
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-starter.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <camel.version>2.19.1</camel.version>
+        <hapi.version>2.2</hapi.version>
+        <spring-boot-starter.version>1.5.4.RELEASE</spring-boot-starter.version>
+    </properties>
+
+</project>

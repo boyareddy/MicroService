@@ -1,0 +1,18 @@
+<div class="roboto-regular font-14 d-flex" style="flex-direction: column" cdkFocusInitial>
+  <div class="d-flex flex-justify-between">
+    <div class="roboto-regular font-16 content-text">
+      {{data?.message}}?
+    </div>
+    <div class="roboto-regular font-16 pointer" (click)="onNoClick()">
+      <img src="assets/Images/close.png" alt="close" height="10px">
+    </div>
+  </div>
+  <div class="button-row">
+    <button mat-button color="primary" (click)="onConfirm()" class="roboto-bold font-14 btn-color ml-5">
+      {{ 'orders.naigationButtons.Ok' | translate }}
+    </button>
+    <button mat-button color="primary" (click)="onNoClick()" class="roboto-bold font-14 btn-color mr-5">
+      {{'orders.naigationButtons.Cancel' | translate }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "userId": "1",
+  "templateType": "MP96-DATAMISSING",
+  "messageContents": [
+    "Mandatory information missing in result update message received from MP96 for string"
+  ]
+}

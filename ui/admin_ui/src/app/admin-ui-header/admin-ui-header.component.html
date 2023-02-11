@@ -1,0 +1,132 @@
+<div class="header">
+  <mat-toolbar class="header-mat-toolbar" [ngClass]="{'no-shadow': isShadowRequired}">
+
+    <div class="header-info">
+
+      <img *ngIf="headerInfo?.isBackRequired" src="assets/Images/backbutton.png" height="18px" alt="close"
+        (click)="goBack()" class="back-button">
+
+      <img *ngIf="!headerInfo.isLoginPage && !headerInfo.headerIcon && !headerInfo?.isBackRequired"
+        src="assets/Images/settings.png" alt="close" height="40px">
+
+      <img *ngIf="!headerInfo.isLoginPage && headerInfo.headerIcon" [src]="headerInfo.headerIcon"
+        [alt]="headerInfo?.headerIcon" height="44px" class="header-icon">
+
+      <span class="roboto-bold font-18 header-name text-header-color">
+     <!--    {{headerInfo.headerName ? headerInfo.headerName : "header.workflowManager" | translate}} -->
+     {{headerInfo?.headerName ? (headerInfo?.headerName | translate) : ("header.workflowManager" | translate)}}
+      </span>
+
+      <div *ngIf='headerInfo?.currPage' class="no-padding">
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+      </div>
+
+      <span *ngIf="!headerInfo.disableSubHeadLocalize" class="roboto-regular font-18 header-currentPage text-header-color">
+        {{headerInfo?.currPage | translate}}
+      </span>
+      <span *ngIf="headerInfo.disableSubHeadLocalize" class="roboto-regular font-18 header-currentPage text-header-color">
+        {{headerInfo?.currPage}}
+      </span>
+
+    </div>
+
+
+    <div class="header-info-right d-flex">
+
+      <!-- Search icon details -->
+      <div *ngIf='!headerInfo?.isLoginPage' class="iconsDetails">
+        <img src="assets/Images/header/Search.svg" alt="search" height='19.4px' (click)="onGlobalSearch()"
+          class="pointer">
+      </div>
+
+      <!-- Notification icon details -->
+      <div *ngIf='!headerInfo?.isLoginPage' class="iconsDetails">
+        <div style="position:relative">
+          <span *ngIf='viewedNotificationCount?.length > 0' class="roboto-regular" [class]="getNTColor()" #badge>
+            {{viewedNotificationCount?.length}}
+          </span>
+          <img src="assets/Images/header/notification.svg" alt="notification" (click)="goToNotification()"
+            class="pointer">
+        </div>
+      </div>
+
+      <!-- user profile icon -->
+      <div *ngIf='!headerInfo?.isLoginPage' class="iconsDetails">
+        <img src="assets/Images/header/userIcon.svg" alt="profile"
+        [mdePopoverTriggerFor]="userProf"
+          mdePopoverTriggerOn="click" 
+          class="pointer">
+
+        <mde-popover #userProf="mdePopover" class="header-mat-menu-item no-padding-right">
+          <div class="d-flex flex-align-center flex-column text-center content-text-color">
+            <div>
+              <img src="assets/Images/header/userIcon.svg" alt="userIcon" height="32px">
+            </div>
+            <div class="userProfile">
+              <div class="roboto-bold font-18 userName">
+                {{ userName }}
+              </div>
+              <div class="roboto-regular font-14">
+                {{ userRole }}
+              </div>
+            </div>
+            <div class="useractions">
+              <div class="font-14 roboto-regular manageProfile" (click)="onChangePassword($event)">
+                {{ "button.changePassword" | translate }}
+              </div>
+              <div class="font-14 roboto-regular manageProfile">
+                <app-logout></app-logout>
+              </div>
+            </div>
+          </div>
+        </mde-popover>
+      </div>
+
+      <!-- Apps Icon -->
+      <div *ngIf='!headerInfo?.isLoginPage' class="iconsDetails">
+        <img src="assets/Images/header/apps.svg" alt="apps" [mdePopoverTriggerFor]="appPopover"
+          mdePopoverTriggerOn="click" class="pointer">
+
+        <mde-popover #appPopover="mdePopover" class="popover">
+          <mat-card class="header-card apps-icon">
+            <mat-card-content class="card-content">
+              <div class="d-flex flex-align-center" (click)="onNavigate(null)">
+                <img src="assets/Images/grid/home.svg" alt="home" class="padding-r-10" height="32px">
+                <span class="roboto-bold font-14 content-text-color">
+                  {{ 'navigationMenu.home'| translate }}
+                </span>
+              </div>
+            </mat-card-content>
+            <ng-container *ngFor='let item of gridIcons'>
+              <mat-card-content class="card-content">
+                <div class="d-flex flex-justify-between lex-align-center"
+                  (click)="onNavigate(item)">
+                  <div class="d-flex flex-align-center">
+                    <img [src]="item.gridIcon" [alt]="item.name" class="padding-r-12" height="32px">
+                    <span class="roboto-bold font-14 content-text-color">
+                      {{ 'navigationMenu.' + item.localisationKey | translate }}
+                    </span>
+                  </div>
+                  <div>
+                    <div class="count roboto-bold font-12 NCWarning" *ngIf="item?.count > 0"
+                      [ngClass]="{'NCError': item?.severity === 'Error'}">
+                      {{ item?.count }}
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+            </ng-container>
+          </mat-card>
+        </mde-popover>
+      </div>
+
+      <!-- Roche logo icon -->
+      <div class="iconsDetails">
+        <img src="assets/Images/Roche.svg" alt="rochelogo" height="30px"
+          [style.cursor]="headerInfo?.isLoginPage ? 'auto' : 'pointer'" (click)='onNavigateHome()'>
+      </div>
+
+    </div>
+
+  </mat-toolbar>
+</div>

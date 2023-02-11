@@ -1,0 +1,56 @@
+{
+                "deviceId":"MP24",
+                "processStepName":"NA Extraction",
+                "deviceRunId":null,
+                "runStatus":"Complete",
+                "dvcRunResult":null,
+                "runFlag":null,
+                "operatorName":null,
+                "assayType":"NIPTHTP",
+                "comments":null,
+                "runStartTime":"2018-10-12T05:20:16.829Z",
+                "runCompletionTime":null,
+                "runRemainingTime":null,
+                "verifiedDate":"2018-10-12T05:20:16.829Z",
+                "verifiedBy":null,
+                "updatedBy":null,
+                "updatedDateTime":null,
+                "sampleResults":[],
+                "runReagentsAndConsumables":[ {
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+     "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    }
+],
+                "runResultsDetail":[
+                   {
+    
+      "attributeName": "Name",
+      "attributeValue": "xyz",
+      "updatedBy": "admin",
+      "updatedDateTime": ""
+    }
+                ]
+}

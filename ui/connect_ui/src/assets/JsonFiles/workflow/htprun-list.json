@@ -1,0 +1,1491 @@
+{
+  "runResultId": 2555,
+  "deviceId": "MP001-12",
+  "assayType": "NIPTDPCR",
+  "processStepName": "NA Extraction",
+  "deviceRunId": null,
+  "runStatus": "Completed",
+  "dvcRunResult": null,
+  "runFlag": null,
+  "operatorName": "jimenj15",
+  "comments": null,
+  "runStartTime": "2018-10-12T23:21:18.000Z",
+  "runCompletionTime": "2018-10-12T23:21:23.000Z",
+  "runRemainingTime": "",
+  "verifiedDate": null,
+  "verifiedBy": null,
+  "updatedBy": "System",
+  "updatedDateTime": "2018-10-12T06:51:24.353Z",
+  "createdBy": null,
+  "createdDateTime": null,
+  "sampleResults": [
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3605,
+      "accesssioningId": "1539320263877",
+      "orderId": 10001602,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539320263877",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Completed",
+      "result": null,
+      "flag": "F1",
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.991Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8314,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8315,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8316,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8317,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8318,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8319,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3558,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T04:59:03.991Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3606,
+      "accesssioningId": "1539320677389",
+      "orderId": 10001603,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539320677389",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Aborted",
+      "result": null,
+      "flag": "F1",
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.553Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8320,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8321,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8322,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8323,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8324,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8325,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3559,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:05:56.553Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3607,
+      "accesssioningId": "1539321193202",
+      "orderId": 10001604,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539321193202",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Aborted",
+     "result": null,
+      "flag": "F1,F2",
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.411Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8326,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8327,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8328,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8329,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8330,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8331,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3560,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:14:22.411Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3608,
+      "accesssioningId": "1539321547545",
+      "orderId": 10001605,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539321547545",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Aborted",
+      "result": null,
+      "flag": "F3",
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.915Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8332,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8333,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8334,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8335,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8336,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8337,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3561,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:20:16.915Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3609,
+      "accesssioningId": "1539322242933",
+      "orderId": 10001607,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539322242933",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Failed",
+     "result": null,
+      "flag": "F4",
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.274Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8338,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8339,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8340,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8341,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8342,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8343,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3562,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T05:31:52.274Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3610,
+      "accesssioningId": "1539324460185",
+      "orderId": 10001608,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539324460185",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Failed",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.806Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8344,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8345,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8346,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8347,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8348,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8349,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3563,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:08:52.806Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3611,
+      "accesssioningId": "1539326414004",
+      "orderId": 10001609,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539326414004",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Aborted",
+      "result": null,
+      "flag": "F1",
+      "comments": null,
+     "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:30.055Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8350,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8351,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8352,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8353,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8354,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8355,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3564,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:41:30.055Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3612,
+      "accesssioningId": "1539326782850",
+      "orderId": 10001610,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539326782850",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Completed",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.359Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8356,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8357,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8358,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8359,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+         "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8360,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8361,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3565,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:47:38.359Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    },
+    {
+      "runResultsId": 2555,
+      "sampleResultId": 3613,
+      "accesssioningId": "1539327009432",
+      "orderId": 10001611,
+      "assayType": "NIPTDPCR",
+      "inputContainerId": "1539327009432",
+      "inputContainerPosition": null,
+      "inputKitId": null,
+      "outputContainerId": "",
+      "outputContainerPosition": "1",
+      "outputContainerType": "9mmStrip",
+      "outputPlateType": null,
+      "outputKitId": null,
+      "status": "Completed",
+      "result": null,
+      "flag": null,
+      "comments": null,
+      "createdBy": null,
+      "createdDateTime": null,
+      "receivedDate": null,
+      "verifiedDate": null,
+      "verifiedBy": null,
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.413Z",
+      "sampleReagentsAndConsumables": [
+        {
+          "sampleReagentsAndConsumablesId": 8362,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00024",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8363,
+          "type": null,
+          "attributeName": "reagent2mlTube",
+          "attributeValue": "MGP;00000001;00023",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8364,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01001",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8365,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Washbuffer;00000002;01002",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8366,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;00233",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        },
+        {
+          "sampleReagentsAndConsumablesId": 8367,
+          "type": null,
+          "attributeName": "reagent25mlTube",
+          "attributeValue": "Specimen Diluent;00000000;01234",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleProtocol": [
+        {
+          "sampleProtocolId": 3566,
+          "protocolName": "Cfna ss 2000",
+          "updatedBy": "System",
+          "updatedDateTime": "2018-10-12T06:51:24.413Z",
+          "createdBy": null,
+          "createdDateTime": null
+        }
+      ],
+      "sampleResultsDetail": [],
+      "inputContainerType": null
+    }
+  ],
+  "runReagentsAndConsumables": [
+    {
+      "runReagentsAndConsumablesId": 9526,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9527,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9528,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9529,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9530,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9531,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T04:59:03.929Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9532,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9533,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9534,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9535,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+     "runReagentsAndConsumablesId": 9536,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9537,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:05:56.453Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9538,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9539,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9540,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9541,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9542,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9543,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:14:22.340Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9544,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9545,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9546,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9547,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9548,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9549,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:20:16.829Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9550,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9551,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9552,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9553,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9554,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9555,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T05:31:52.218Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9556,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9557,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9558,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9559,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9560,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9561,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:08:52.754Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9562,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9563,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9564,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9565,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9566,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9567,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:41:29.970Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9568,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9569,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+     "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9570,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9571,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9572,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9573,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:47:38.244Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9574,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00024",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9575,
+      "type": null,
+      "attributeName": "reagent2mlTube",
+      "attributeValue": "MGP;00000001;00023",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9576,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01001",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9577,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Washbuffer;00000002;01002",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9578,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;00233",
+      "updatedBy": "System",
+     "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    },
+    {
+      "runReagentsAndConsumablesId": 9579,
+      "type": null,
+      "attributeName": "reagent25mlTube",
+      "attributeValue": "Specimen Diluent;00000000;01234",
+      "updatedBy": "System",
+      "updatedDateTime": "2018-10-12T06:51:24.353Z",
+      "createdBy": null,
+      "createdDateTime": null
+    }
+  ],
+  "runResultsDetail": [],
+  "uniqueReagentsAndConsumables": [{
+    "attributeName": "reagent2mlTube",
+    "attributeValue": "MGP;00000001;00024"
+  },
+  {
+    "attributeName": "reagent2mlTube",
+    "attributeValue": "MGP;00000001;00023"
+  },
+  {
+    "attributeName": "reagent25mlTube",
+    "attributeValue": "Washbuffer;00000002;01001"
+  },
+  {
+    "attributeName": "reagent25mlTube",
+    "attributeValue": "Washbuffer;00000002;01002"
+  },
+  {
+    "attributeName": "reagent25mlTube",
+    "attributeValue": "Specimen Diluent;00000000;00233"
+  },
+  {
+    "attributeName": "reagent25mlTube",
+    "attributeValue": "Specimen Diluent;00000000;01234"
+  }
+]
+}

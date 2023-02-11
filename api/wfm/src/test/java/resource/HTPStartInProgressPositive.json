@@ -1,0 +1,21 @@
+{
+				"accessioningId":"8000",
+                "status":"InProgress",
+                "inputContainerId":"188827048",
+				"outputContainerId":"",
+                "runResultsId":"1234",
+				"orderId":"10000000",
+                "deviceRunId":"123456",
+                "reagents":"",
+                "consumables":"",
+				"processStepName":"HTP",
+                "deviceId":"HTP-1",
+                "deviceName":"HTP",
+                "sendingApplication":"HTP",
+                "sendingFacility":"Roche Diagnostics",
+                "receivingApplication":"Connect",
+                "receivingFacility":"Roche Diagnostics",
+                "sampleReagents":"",
+                "sampleConsumables":"",
+				"estimatedTimeRemaining":""
+}

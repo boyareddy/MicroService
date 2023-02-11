@@ -1,0 +1,77 @@
+[
+  {
+     "runResultId":52,
+     "deviceId":"MP001-12",
+     "processStepName":"NA Extraction",
+     "deviceRunId":"A111",
+     "runStatus":"Completed",
+     "dvcRunResult":null,
+     "runFlag":null,
+     "operatorName":"jimenj15",
+     "comments":null,
+     "assayType":"NIPTDPCR",
+     "totalSamplecount":"1",
+     "wfmsflag":"archived",
+     "inputcontainerIds":[
+        {
+           "stripId":"101010326",
+           "samplecounts":"1"
+        }
+     ],
+     "outputcontainerIds":[
+        {
+           "stripId":"362067364",
+           "samplecounts":"1"
+        }
+     ],
+     "runStartTime":"2018-08-31T18:30:00.000Z",
+     "runCompletionTime":"2018-12-31T18:30:00.000Z",
+     "runRemainingTime":null,
+     "verifiedDate":null,
+     "verifiedBy":null,
+     "updatedBy":"System",
+     "updatedDateTime":"2018-11-07T09:50:39.377Z",
+     "createdBy":null,
+     "createdDateTime":null,
+     "sampleResults":[
+        {
+           "runResultsId":52,
+           "sampleResultId":102,
+           "accesssioningId":"101010326",
+           "orderId":10000003,
+           "inputContainerId":"101010326",
+           "inputContainerPosition":null,
+           "inputKitId":null,
+           "outputContainerId":"362067364",
+           "outputContainerPosition":"1",
+           "outputContainerType":"9mmStrip",
+           "outputPlateType":null,
+           "outputKitId":null,
+           "status":"Completed",
+           "result":null,
+           "flag":null,
+           "comments":"Comment on the sample result",
+           "createdBy":null,
+           "createdDateTime":null,
+           "receivedDate":null,
+           "verifiedDate":null,
+           "verifiedBy":null,
+           "updatedBy":"System",
+           "updatedDateTime":"2018-11-07T09:50:39.585Z",
+           "sampleReagentsAndConsumables":null,
+           "sampleProtocol":null,
+           "sampleResultsDetail":null,
+           "inputContainerType":null
+        }
+     ],
+     "runReagentsAndConsumables":[
+
+     ],
+     "runResultsDetail":[
+
+     ],
+     "uniqueReagentsAndConsumables":[
+
+     ]
+  }
+]

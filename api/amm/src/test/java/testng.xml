@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="amm">
+  <test name="assaytest">
+  	 <parameter name="baseURI" value="http://localhost:88/amm/json/rest/api/v1"/>
+  	 <parameter name="assayTypeId" value="1"/>
+  	 <parameter name="deviceType" value="MP24"/> 
+  	 <parameter name="listType" value="ivf status"/>
+    <classes>   
+      <class name="com.roche.connect.amm.restassuredIT.AssayDataRestAssuredITTest" />  
+   </classes>
+ </test>
+</suite>

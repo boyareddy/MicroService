@@ -1,0 +1,73 @@
+/deep/ .mat-dialog-container{
+    padding: unset;
+}
+
+/deep/ .cdk-overlay-dark-backdrop{
+    background: rgba(0,0,0,.32);
+}
+
+.closebutton{
+    cursor: pointer;
+    height: 18px;
+    float: right;
+    // padding: 10px;
+    // padding-left: 10px;
+}
+
+.ad-dev-tp{
+    padding: 1.6em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+.devider{
+    border: 0.5px solid silver;
+}
+
+.disp-fx{
+    display: flex;
+}
+
+.ad-dev-cell{
+    padding: 1.097em;
+    flex: 2;
+}
+
+.ad-dev-cell-lb{
+    color: #8D8D8D;
+    font-size: 0.75em;
+}
+
+.ad-dev-cell-vl{
+    font-size: 0.875em;
+    color: #191919;
+}
+
+.ad-dev-cell-btn{
+    padding: 1em;
+    flex: 1;
+}
+
+.ad-dev-cell-ln{
+    border: 0.5px solid silver;
+}
+
+.ad-dev-spin{
+    margin:4em auto;
+}
+
+.no-data{
+    color: gray;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.ad-dev-btn{
+    font-size: 16px;
+    color: #191919
+}
+
+.reg-dev-btn{
+    font-size: 14px;
+    color: #004EA3;
+}

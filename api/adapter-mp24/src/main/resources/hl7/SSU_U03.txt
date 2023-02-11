@@ -1,0 +1,20 @@
+MSH|^~\&|MagNaPure24^123456789^M|LaboratoryABC|LIS|LaboratoryABC|20151020162814|LaboratoryABC|SSU^U03^SSU_U03|123456789|P|2.5.1||||||UNICODE·UTF-8
+EQU|123456789|20151020170800|OP
+SAC|||$12355555|||||R^^99ROC|||||||||||||12|10||ul
+OBX|1|CE|P^^99ROC|1|DNA Blood LV||||||F
+OBX|2|CE|PV^^99ROC|1|1.1||||||F
+OBX|3|CE|RES^^99ROC|1|PassedWithFlags||||||F
+OBX|4|DR|RuntimeRange^RunExecutionTimeRange^99ROC|1|20151020162814^20151020172814||||||F
+NTE|1||Comment on the sample result
+SPM|1|A45678941_1|$123456798|PL^Plasma^HL70487|||||||P|||Plasma
+OBX|1|CE|OrderName^^99ROC|1|Order123|||F1~F2|||F|||||jimenj15
+OBX|2|CE|OrderResult^^99ROC|1|Flagged||||||F
+OBX|3|CE|SCProcessingCartridge^^99ROC|1|;;00061||||||F
+OBX|4|CE|SCTipRack^^99ROC|1|;;00040||||||F
+OBX|5|CE|MRReagentCassette^^99ROC|1|DNA·Blood·LV;00000000;0040||||||F
+OBX|6|CE|SR2mlReagentTube^^99ROC|1|MGP;00000001;00023||||||F
+OBX|7|CE|SR2mlReagentTube ^^99ROC|1|Hexadecane;00000000;01991||||||F
+OBX|8|CE|SR25mlReagentTube^^99ROC|1|Washbuffer;00000002;01001||||||F
+OBX|9|CE|SR25mlReagentTube^^99ROC|1|Washbuffer;00000002;01002||||||F
+OBX|10|CE|SR25mlReagentTube^^99ROC|1|Specimen Diluent;00000000;00033||||||F
+OBX|11|CE|SR25mlReagentTube^^99ROC|1|Lysis;00000000;00001||||||F

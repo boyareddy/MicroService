@@ -1,0 +1,37 @@
+{  
+   "order":{  
+      "orderId":"10000027",
+      "accessioningId":"999999",
+      "assayType":"NIPTDPCR",
+      "sampleType":"Plasma",
+      "retestSample":true,
+      "orderComments":"first comment",
+      "reqFieldMissingFlag":true,
+      "priority":"high",
+      "assay":{  
+         "maternalAge":5,
+         "gestationalAgeWeeks":13,
+         "gestationalAgeDays":4,
+         "eggDonor":"Self",
+         "ivfStatus":"Yes",
+         "fetusNumber":"2",
+         "collectionDate":"2018-07-17T18:30:00.000Z",
+         "receivedDate":"2018-07-17T18:30:00.000Z",
+         "testOptions":{  
+            "harmony":false,
+            "scap":false,
+            "fetalSex":false,
+            "mx":true
+         }
+      },
+      "patient":{  
+         "patientLastName":"Ajay",
+         "patientFirstName":"Kumar",
+         "patientMedicalRecNo":"3423423433",
+         "patientDOB":"2018-07-02T18:30:00.000Z",
+         "refClinicianName":"apolo",
+         "otherClinicianName":"apolo",
+         "clinicName":"apolo"
+      }
+   }
+}

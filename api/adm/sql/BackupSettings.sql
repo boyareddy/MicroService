@@ -1,0 +1,2 @@
+insert into system_settings(id,active_flag,attribute_name,attribute_type,attribute_value,created_by,created_date_time, image, updated_by, updated_date_time, companyid) values (1,null, 'backup_interval', 'Backup','Weekly', null,null,null, null, null, 1);
+insert into system_settings(id,active_flag,attribute_name,attribute_type,attribute_value,created_by,created_date_time, image, updated_by, updated_date_time, companyid) values (5,null, 'systemLanguage', 'localisationSettings','en_US', null,null,null, null, null, 1);

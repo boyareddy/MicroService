@@ -1,0 +1,58 @@
+<app-header [headerInfo]="headerInfo"></app-header>
+<div class="header">
+  <mat-tab-group #workFlowManager class="workflow-orders" [selectedIndex]="defaultTabIndex">
+    <ng-container class="dahsboard-data1">
+      <mat-tab [label]="getTabName({key: 'unassigned', value: 'Unassigned'})">
+        <ng-template matTabContent>
+          <app-orders-unassigned class="order-list-container" [toggleUnassignedFilter]="toggleUnassignedFilter" [listCount]="getCount('unassigned')" (filterCountUpdate)="filterCountUpdate($event)">
+          </app-orders-unassigned>
+        </ng-template>
+      </mat-tab>
+      <mat-tab [label]="getTabName({key: 'inworkflow', value: 'In workflow'})">
+        <ng-template matTabContent>
+          <app-orders-inworkflow class="order-list-container" [toggleInworkflowFilter]="toggleInworkflowFilter" [listCount]="getCount('inworkflow')" (filterCountUpdate)="inworkflowFilterCountUpdate($event)">
+          </app-orders-inworkflow>
+        </ng-template>
+      </mat-tab>
+      <mat-tab [label]="getTabName({key: 'pendingrelease', value: 'Pending release'})" disabled>
+
+      </mat-tab>
+      <mat-tab [label]="getTabName({key: 'completed', value: 'Completed'})" disabled>
+
+      </mat-tab>
+    </ng-container>
+    <ng-container  class="dahsboard-data2">
+        <mat-tab *ngIf="workFlowManager.selectedIndex === 0" disabled>
+            <ng-template mat-tab-label>
+              <!-- <button class="mat-tab-search" mat-icon-button (clicK)="onSearchEvent()">
+                <div class="mat-tab-search-btn"> 
+                </div>
+              </button> -->
+              <span style="margin-right: 20px;"
+          matTooltip="{{ 'common.accessRestricted' | translate}}"
+          [matTooltipClass]="'tooltipDetails'"
+          [matTooltipDisabled]="havingAccess">
+            <button mat-raised-button color="primary" (click)="goToCreateOrder()" class="roboto-bold font-14 color-white no-shadow order-btn" [disabled]="!havingAccess">
+              {{ 'orders.unassignedTab.createOrderButton' | translate }}
+            </button>
+          </span>
+          <app-filter-icon [componentToToggle]="filterComponent" [optionCount] = "unassignedFilterCount" (onToggleFilterIcon)="onToggleFilterIcon($event)" [display]="getCount('unassigned') > 0"></app-filter-icon>
+            </ng-template>
+          </mat-tab>
+          <mat-tab *ngIf="workFlowManager.selectedIndex === 1" disabled>
+            <ng-template mat-tab-label>
+              <app-filter-icon [optionCount] = "inworkflowFilterCount" (onToggleFilterIcon)="onToggleInworkflowFilterIcon($event)" [display]="getCount('inworkflow') > 0"></app-filter-icon>
+            </ng-template>
+          </mat-tab>
+      <!-- <mat-tab [disabled]="true">
+        <ng-template mat-tab-label>
+          
+        </ng-template>
+      </mat-tab> -->
+      
+    </ng-container>
+  </mat-tab-group>
+</div>
+<!-- <div style="position: absolute;top: 70px;right: 0;z-index: 1;">
+  <input type="text">
+</div> -->

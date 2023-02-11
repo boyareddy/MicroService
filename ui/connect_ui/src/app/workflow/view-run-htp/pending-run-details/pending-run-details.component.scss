@@ -1,0 +1,43 @@
+.list-header {
+    padding: 20px;
+    padding-bottom: 0px;
+    background: #fff;
+}
+.sample-container{
+    width: 97.03%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.sample-title{
+    margin-left: 20px;
+}
+.sampleTitle{
+    color: #4d4d4d;
+}
+.sampleTitleStrip{
+    color: #333;
+}
+.run-link-container{
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1.53%;
+}
+.run-id-link{
+    font-size: 14px;
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.pending-run-container {
+    margin: 85px 20px 20px;
+}

@@ -1,0 +1,43 @@
+{  
+   "order":{  
+      "orderId":"",
+      "accessioningId":"101201",
+      "assayType":"NIPTDPCR",
+      "sampleType":"Plasma",
+      "retestSample":true,
+      "orderComments":"All information contained herein is, and remains the property of COMPANY",
+      "assay":{  
+         "maternalAge":"99",
+         "gestationalAgeWeeks":11,
+         "gestationalAgeDays":2,
+		 "ivfStatus": "Yes",
+		 "eggDonorAge": "35",
+		 "eggDonor": "Self",
+         "fetusNumber":"2",
+         "collectionDate":"2018-07-17T18:30:00.000Z",
+         "receivedDate":"2018-10-05T12:10:00.000Z",
+         "testOptions":{  
+            "Harmony":true,
+            "SCAP":true,
+            "FetalSex":false,
+            "MX":true
+
+         }
+      },
+      "patient":{  
+         "patientLastName":"connect",
+         "patientFirstName":"roche",
+         "patientGender":"Female",
+         "patientMedicalRecNo":"21321312312ABC",
+         "patientDOB":"2018-07-17T18:30:00.000Z",
+         "patientContactNo":"2132434342",
+         "treatingDoctorName":"asdasdasa",
+         "treatingDoctorContactNo":"+213232344242",
+         "refClinicianName":"asdassdsdfsfs san",
+         "refClinicianFaxNo":"+2132131231231",
+         "otherClinicianName":"edfsdsanda",
+         "otherClinicianFaxNo":"213213123123123",
+         "refClinicianClinicName":"asdasda san"
+      }
+   }
+}

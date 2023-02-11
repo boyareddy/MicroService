@@ -1,0 +1,157 @@
+[
+    {
+        "stripId":1234567,
+        "batchDetails":[
+            {
+                "sampleId" : 87654321,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654322,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654323,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654324,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654325,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654326,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654327,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654328,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654329,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            }                              
+        ]
+    },
+    {
+        "stripId":1234567,
+        "batchDetails":[
+            {
+                "sampleId" : 87654321,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654322,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654323,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654324,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654325,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654326,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654327,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654328,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            },
+            {
+                "sampleId" : 87654329,
+                "assay":"NIPT",
+                "step":"LP Pre PCR",
+                "status":"Ongoing",
+                "flags":"n/a",
+                "comments":""
+            }                              
+        ]
+    }
+
+]

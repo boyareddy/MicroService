@@ -1,0 +1,188 @@
+table {
+    width: 100%;
+    box-shadow: none!important;
+}
+  
+.admin-hyper{
+    text-decoration: none; 
+    color:#004ea3;
+    cursor: pointer;
+}
+
+.user-edit-icon{
+    cursor: pointer;
+}
+
+.list-header {
+    font-size: 16px;
+    color: #4d4d4d !important;
+    width: 21.250%;
+  }
+  
+.list-items {
+    font-size: 14px;
+    color: #191919 !important;
+    padding-right: 20px;
+}
+
+.ml-24 {
+    margin-left: 24px;
+}
+
+.archive {
+    width:18px;
+    height:18px;
+    display: inline-table;
+    background-image: url('../../assets/Images/archive.png');
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-origin: content-box;
+    padding: 10px;
+}
+
+.archive:hover {
+    background-image: url('../../assets/Images/archiveactive.png');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    /* background-color: gray; */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.unarchive {
+    width:20px;
+    height:20px;
+    background-size: contain;
+    display: inline-table;
+    background-image: url('../../assets/Images/unarchive.png');
+    background-repeat: no-repeat;
+}
+
+.unarchive:hover {
+    background-image: url('../../assets/Images/unarchiveactive.png');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    /* background-color: gray; */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.editicon {
+    width:20px;
+    height:18px;
+    background-image: url('../../assets/Images/edit.png');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding: 10px;
+    border-radius: 50%;
+    background-size: 18px;
+}
+
+.editicon:hover {
+    background-image: url('../../assets/Images/editactive.png');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    /* background-color: gray; */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.disabledEditicon {
+    width:20px;
+    height:18px;
+    background-image: url('../../assets/Images/disable-edit.png');
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
+.disableArchive {
+    background-image: url('../../assets/Images/disable-archive-user.png') !important;
+}
+
+.disableUnarchive {
+    background-image: url('../../assets/Images/disable-unarchive-user.png') !important;
+}
+
+/* .last{
+    text-align: right;
+} */
+
+.center {
+    text-align: center;
+}
+
+.pr-78 {
+    padding-right: 78px;
+}
+
+.archive {
+    display: none;
+}
+
+.unarchive {
+    display: none;
+}
+
+.editicon {
+    display: none;
+}
+
+.disabledEditicon {
+    display: none;
+}
+
+.pr-30 {
+      padding-right: 30px;
+}
+
+.pt-6 {
+    padding-top: 8px;
+}
+
+.verticle-middle {
+    vertical-align: middle;
+}
+
+.pl-8 {
+    padding-left: 8px;
+}
+
+.pr-8 {
+    padding-right: 8px;
+}
+
+.pr-28 {
+    padding-right: 28px;
+}
+
+.pr-24 {
+    padding-right: 24px;
+}
+
+.pr-36 {
+    padding-right: 36px;
+}
+
+.mr-25 {
+    margin-right: 12px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+.h-20 {
+    height:18px;
+}
+
+.pl-3 {
+    padding-left: 3px;
+}
+
+.pr-13 {
+    padding-right: 13px
+}

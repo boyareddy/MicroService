@@ -1,0 +1,7 @@
+{
+  "instrument_id": "HTP-01",
+  "software_version_nsp": "Software version of the NSP component",
+  "software_version_nse": "Software version of the NSE component",
+  "software_version_nsa": "Software version of the NSA component",
+  "software_version_nsc": "Software version of the NSC component"
+}

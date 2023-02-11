@@ -1,0 +1,8 @@
+[
+    {
+        "fieldName": "Maternal Age",
+        "minVal": 1,
+        "maxVal": 100,
+        "expression": "NA"
+    }
+]

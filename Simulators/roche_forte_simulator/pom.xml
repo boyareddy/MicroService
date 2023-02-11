@@ -1,0 +1,285 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.roche.forte.simulator</groupId>
+	<artifactId>roche_forte_simulator</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<java.version>1.8</java.version>
+		<sonar.host.url> http://localhost:9000/ </sonar.host.url>
+		<sonar.projectName>roche_forte_simulator</sonar.projectName>
+		<sonar.binaries>target/classes</sonar.binaries>
+		<sonar.tests>src/test/java</sonar.tests>
+		<sonar.sources>src/main/java</sonar.sources>
+		<sonar.verbose>true</sonar.verbose>
+		<jacoco.version>0.7.5.201505241946</jacoco.version>
+		<sonar.language>java</sonar.language>
+		<sonar.jacoco.reportPaths>target/jacoco.exec,target/failsafe-reports</sonar.jacoco.reportPaths>
+		<jacoco.data.file>target/jacoco.exec,target/failsafe-reports</jacoco.data.file>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.exclusions>**/ServerTrustManager.java</sonar.exclusions>
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<sourceDirectory>.</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>generated-app/entity</directory>
+			</resource>
+			<resource>
+				<directory>generated-app/service</directory>
+			</resource>
+			<resource>
+				<directory>generated-app</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+
+
+		</resources>
+		<plugins>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.4.0.905</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+
+					<!-- or whatever version you use -->
+					<source>1.8</source>
+					<target>1.8</target>
+
+					<includes>
+						<include>src/main/java/**/*.java</include>
+						<include>generated-app/entity/**/*.java</include>
+						<include>generated-app/service/**/*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>maven-processor-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<defaultOutputDirectory>${project.basedir}/generated</defaultOutputDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>process</id>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<phase>generate-sources</phase>
+					</execution>
+				</executions>
+
+			</plugin>
+			<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>maven-processor-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<sourceDirectory>${project.basedir}/generated-app/entity</sourceDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>process</id>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<phase>generate-sources</phase>
+					</execution>
+				</executions>
+
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+			</plugin>
+			<!-- Runs unit tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- Skips unit tests if the value of skip.unit.tests property is true -->
+					<skipTests>${skip.unit.tests}</skipTests>
+					<!-- Excludes integration tests when unit tests are run -->
+					<excludes>
+						<exclude>**/*IT*.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- Runs integration tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<executions>
+					<!-- Invokes both the integration-test and the verify goals of the Failsafe 
+						Maven plugin -->
+					<execution>
+						<id>integration-tests</id>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+						<configuration>
+							<!-- Skips integration tests if the value of skip.integration.tests 
+								property is true -->
+							<skipTests>${skip.integration.tests}</skipTests>
+							<includes>
+								<include>**/*IT*.java</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<destFile>target/jacoco.exec</destFile>
+							<reset>true</reset>
+							<dataFile>target/jacoco.exec</dataFile>
+							<outputDirectory>target/jacoco-ut</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<destFile>target/jacoco.exec</destFile>
+							<reset>true</reset>
+							<dataFile>target/jacoco.exec</dataFile>
+							<outputDirectory>target/jacoco-ut</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>post-unit-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<destFile>target/jacoco.exec</destFile>
+							<reset>true</reset>
+							<dataFile>target/jacoco.exec</dataFile>
+							<outputDirectory>target/jacoco-ut</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<systemPropertyVariables>
+						<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+					</systemPropertyVariables>
+					<destFile>target/jacoco.exec</destFile>
+					<append>true</append>
+				</configuration>
+			</plugin>
+			<plugin>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <configuration>
+    <archive>
+      <manifest>
+        <mainClass>com.roche.forte.simulator.ForteAnalyzerPanel</mainClass>
+      </manifest>
+    </archive>
+    <descriptorRefs>
+      <descriptorRef>jar-with-dependencies</descriptorRef>
+    </descriptorRefs>
+  </configuration>
+  <executions>
+    <execution>
+      <id>make-assembly</id> <!-- this is used for inheritance merges -->
+      <phase>package</phase> <!-- bind to the packaging phase -->
+      <goals>
+        <goal>single</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+			<plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>com.roche.forte.simulator.ForteAnalyzerPanel</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+		</plugins>
+	</build>
+</project>

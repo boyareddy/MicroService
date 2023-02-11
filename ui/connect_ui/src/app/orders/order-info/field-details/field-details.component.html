@@ -1,0 +1,32 @@
+<div>
+    <div class="label_name" *ngIf='!isOrderPage'>
+        {{ 'workflowPage.'+ labelName | translate }}
+    </div>
+    <div class="label_name" *ngIf='isOrderPage'>
+        {{ 'orders.orderCards.'+ labelName | translate }}
+    </div>
+    <div class="label_value">
+        <ng-container *ngIf='processStepName && (labelValue === null || labelValue === undefined || labelValue === "")'>
+            <app-warning-required
+                [processStepName]='processStepName'
+                [fieldName]='fieldName'
+                [fieldValue]='labelValue'
+                [assayType]='assayType'
+                [requiredMandatoryInfo]='patientConfigFile'>
+            </app-warning-required>
+        </ng-container>
+        
+        <ng-container *ngIf='isDate'>
+            <span>{{ labelValue ? (labelValue | date:'dd-MMM-yyy HH:mm:ss '): isMissingInfo ? missingText : '-'}}</span>
+            <span *ngIf='labelValue' [appDateTimeZone]='labelValue'> </span>
+        </ng-container>
+        <ng-container *ngIf='!isDate'>
+            <ng-container *ngIf='isOnlyDate'>
+                <span>{{ labelValue ? (labelValue | date : "dd-MMM-yyyy") : isMissingInfo ? missingText : '-' }}</span>
+            </ng-container>
+            <ng-container *ngIf='!isOnlyDate'>
+                <span>{{ labelValue ? labelValue : isMissingInfo ? missingText : '-' }}</span>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.audit-box{
+    width: 661px;
+    height: 228px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.mg-top{
+    margin-top: 1.4em;
+}
+
+.card-header-pd{
+    padding: 1.65em !important;
+    padding-left: 1em !important;
+}
+
+.fm-btn-place{
+    padding: 0.45em !important;
+    padding-right: 1.4em !important;
+}
+
+/deep/{
+    .mat-card-header-text{
+        margin: 0 5px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .audit-box{
+        width: 92%;
+    }
+  }

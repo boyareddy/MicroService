@@ -1,0 +1,4 @@
+MSH|^~\&|Connect|Roche Diagnostics|MagnaPure24|Roche Diagnostics|20181115122123||ACK^U03^ACK|154ab2a0-34a5-4f17-a|P|2.5.1||||||UNICODE UTF-8MSA|AA|154ab2a0-34a5-4f17-a
+
+MSH|^~\&|Connect|Roche Diagnostics|MagnaPure24|Roche Diagnostics|20181115122123||ACK^U03^ACK|3db1ad17-af4f-4446-8|P|2.5.1||||||UNICODE UTF-8MSA|AA|3db1ad17-af4f-4446-8
+

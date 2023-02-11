@@ -1,0 +1,26 @@
+<div cdkFocusInitial *ngIf="!data.onlyWarn" class="roboto-regular conf-dlg-cont cnf-dt">
+  <div class="aln-lt cnf-dt close-ico">
+    <span class="message">{{data.param ? data.param : data}}?</span>
+    <button mat-icon-button class="conf-close-btn" (click)="onNoClick()"></button>
+  </div>
+  <div class="button-row conf-btn-cell">
+    <button class="cnf-btn-rule mg-lt-10" mat-button color="primary" [mat-dialog-close]="data" (click)="onConfirm()">{{data.action? (data.action | translate) : ('common.ok' | translate)}}</button>
+    <button class="cnf-btn-rule" mat-button color="primary"  (click)="onNoClick()">{{'common.cancel' | translate}}</button>
+  </div>
+</div>
+<div *ngIf="data.onlyWarn" class="roboto-regular conf-dlg-cont cnf-dt">
+  <div class="aln-lt cnf-dt close-ico">
+    <span class="message">{{data.onlyWarn}}</span>
+    <button mat-icon-button class="conf-close-btn" (click)="onNoClick()"></button>
+  </div>
+  <div class="button-row conf-btn-cell">
+    <button class="cnf-btn-rule mg-lt-10" mat-button color="primary" [mat-dialog-close]="data" (click)="onConfirm()">{{'common.ok' | translate}}</button>
+  </div>
+</div>
+<!-- <div *ngIf="data.onlyWarn" class="roboto-regular font-14 warn-cont">
+  <div class="aln-ct">{{data.onlyWarn}}</div>
+  <img src="assets/Images/close.png" (click)="onNoClick()">
+  <div class="button-row warn-btn-cell">
+    <button class="cnf-btn-rule" mat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial (click)="onConfirm()">Ok</button>
+  </div> 
+</div> -->

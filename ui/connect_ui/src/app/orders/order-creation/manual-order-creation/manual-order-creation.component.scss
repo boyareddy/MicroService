@@ -1,0 +1,186 @@
+.accordion-container {
+    width: 83.1625%;
+    margin: 0 auto;
+    margin-top: 5.25em;
+    padding-bottom: 4.20em;
+    min-height: 74.7vh;
+}
+
+.accord-top {
+    margin-top: 8.95em !important;
+}
+
+.chip {
+    padding: 2px 7px;
+    border-radius: 24px;
+    background-color: #ddd;
+}
+
+.test-names {
+    padding-left:20px;
+}
+
+.test-names mat-checkbox {
+    margin: 0 .5em;
+    color: #191919 !important;
+}
+
+.testoptions-chips .test-heading {
+    margin: -8px 0 8px;
+}
+
+.navigation-buttons {
+    padding-right: 20px;
+}
+
+.acc-panel-header {
+    // border-bottom: 1px solid #ddd;
+    padding: 8px 10px 8px 10px;
+}
+
+.acc-panel-header img {
+    // border-radius: 50%;
+}
+
+// .acc-panel-body {
+//     margin: 29px auto auto;
+// }
+
+.order-creation-accordion .mat-expansion-panel-header-description {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.margin-tb-20 {
+    margin: 11px 0px -2px 0px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+// .bg-lightpink {
+//     background-color: #f7cce4 !important;
+// }
+
+// .bg-lightblue {
+//     background-color: #b6def1 !important;
+// }
+
+// .bg-lightgreen {
+//     background-color: #cde5e6 !important;
+// }
+
+// .bg-lightviolet {
+//     background-color: #ecddee !important;
+// }
+
+.bg-harmony {
+    background-color: rgba(223, 86, 62, 0.25) !important;
+}
+
+.bg-fetalsex {
+    background-color: rgba(238, 161, 33, 0.25) !important;
+}
+
+[class*='bg-fetal'], [class*='bg-Fetal'] {
+    background-color: rgba(238, 161, 33, 0.25) !important;
+}
+
+.bg-scap {
+    background-color: rgba(141, 170, 76, 0.25) !important
+}
+
+.bg-mx {
+    background-color: rgba(68, 91, 103, 0.25) !important;
+}
+
+.margin-5 {
+    margin: 0 5px;
+}
+
+a.disabled {
+    color: gray;
+    cursor: not-allowed;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #004ea3;
+    padding: 10px 0;
+}
+
+.m-2b {
+    margin: 0 10px;
+}
+
+.btn-color {
+    color: #004ea3 !important;
+}
+
+button {
+    border: 0px;
+    background-color: transparent;
+    color: #004ea3;
+    cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+    border: 0px;
+    background-color: transparent;
+    color: #666666;
+    cursor: default;
+}
+
+.update-order {
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.img-height {
+    height: 30px;
+}
+
+/* New added*/
+
+.pl-16 {
+    padding-left: 16px;
+}
+
+.mat-grid-tile-margin {
+    margin-top: -5px !important;
+}
+
+.mat-grid-tile-margin-10 {
+    margin-top: -10px !important;
+}
+
+.mat-grid-tile-margin-15 {
+    margin-top: -15px !important;
+}
+
+.mat-grid-tile-margin-20 {
+    margin-top: -20px !important;
+}
+
+.mat-grid-tile-margin-25 {
+    margin-top: -25px !important;
+}
+
+.mat-grid-tile-margin-30 {
+    margin-top: -30px !important;
+}
+
+.mat-action-row-margin-4 {
+    margin-top: -4px !important;
+}
+
+.box-shadowbottom {
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.16) !important;
+}

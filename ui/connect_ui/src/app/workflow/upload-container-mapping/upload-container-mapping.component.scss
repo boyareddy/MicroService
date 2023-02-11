@@ -1,0 +1,133 @@
+.mat-card{
+    padding: 0 !important;
+}
+
+.main-container{
+    margin: 5em 7% 0px 7%;
+}
+
+.download-header, .upload-header{
+    padding: 1em;
+}
+
+.header-up{
+    color: silver;
+    font-size: 0.8em;
+    font-size: 12px;
+    color: #8D8D8D;
+}
+
+.header-down{
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0.4em;
+    color: #191919;
+}
+
+.devider{
+    border: 0.03em solid silver;
+}
+
+.download-container{
+    padding: 2em;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.download-container a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #191919;
+}
+
+.upload-container{
+    margin: 1em 0 0 0;
+}
+
+.file-container{
+    padding: 2em;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 1.7em;
+    padding-top: 1.7em;
+}
+
+.file-browse-box{
+    border: 0.15em dashed silver; 
+    padding: 4.5em;
+}
+
+.header-drop{
+    padding-bottom: 1em; 
+    color: #8D8D8D;
+    font-size: 14px;
+}
+
+.header-or{
+    padding-bottom: 1em;
+    color: #191919;
+    font-size: 14px;
+}
+
+.file-browse-btn{
+    //font-weight: bold;
+    background-color: #004ea3;
+}
+
+.file-browse-container{
+    text-align: center;
+    font-size: 14px;
+}
+
+.nv-file-over{
+    border: 0.15em dashed #3f51b5;
+}
+
+.progress-bar{
+    margin-bottom: -2.85em;
+    margin-top: 0.4em;
+    font-family: roboto-regular;
+}
+
+.progress-bar div{
+    text-align: center;
+    padding: 0.4em;
+}
+
+.file-error-box{
+    border: 0.15em dashed red; 
+    padding: 0.6em;
+}
+
+.file-error-container{
+    text-align: center
+}
+
+.header-error{
+    padding-bottom: 1em;
+    color: red;
+}
+
+.error-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.error-container label{
+    font-size: 0.8em;
+    padding: 0.3em;
+}
+
+.file-retry-btn{
+    padding: 0.5em;
+    padding-top: 0.9em;
+}
+
+.pg-bar-rule{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.txt-color {
+    color: #191919;
+}

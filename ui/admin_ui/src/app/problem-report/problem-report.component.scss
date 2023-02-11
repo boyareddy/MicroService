@@ -1,0 +1,43 @@
+.problemreport-box{
+    width: 661px;
+    height: 224px;
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 4px;
+}
+
+.mg-top{
+    margin-top: 1.45em;
+}
+
+.date-widthleft {
+    width:100%;
+    margin-left: 20px;
+}
+
+.date-widthright {
+    width:100%;
+    margin-right: 20px;
+}
+
+.card-header-pd{
+    padding: 1.250em 1.250em 1.30em !important;
+    padding-left: 0.95em !important;
+}
+
+.fm-btn-place{
+    padding: 0.65em !important;
+    padding-right: 1.45em !important;
+}
+
+/deep/{
+    .mat-card-header-text{
+        margin: 0 5px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .problemreport-box{
+        width: 92%;
+    }
+}

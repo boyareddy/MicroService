@@ -1,0 +1,228 @@
+pas:
+ 
+
+###########################################TO BE CUSTOMIZED########################################
+    
+    application_location : default
+    application_host_name :  www.qa-rocheconnect.com   
+    application_ui_host_name :  ${pas.application_host_name}
+    administration_ui_host_name: ${pas.application_host_name}
+    application_api_remote_host_name : ${pas.application_host_name}    
+    security_host_name :  ${pas.application_host_name}   
+    locale_service_remote_host_name : ${pas.application_host_name}   
+    metadata_host_name :  ${pas.application_host_name}   
+    metadata_remote_host_name :  ${pas.application_host_name}
+    security_remote_host_name :  ${pas.application_host_name}
+    application_remote_host_name :  ${pas.application_host_name}
+    partitioned_application_host_name : ${pas.application_host_name}
+    admin_api_host_name :  ${pas.application_host_name}
+    password_reset_service_remote_host_name : ${pas.application_host_name}
+    device_host_name :  ${pas.application_host_name}
+    device_remote_host_name :  ${pas.application_host_name}
+    email_remote_host_name : ${pas.application_host_name}
+ 
+#############################################DEFAULTS##############################################
+    
+    security_endpoint: ${pas.security_remote_url}
+    metadata_endpoint: ${pas.metadata_remote_url}
+    email_endpoint: ${pas.email_remote_url}
+    simple_api_endpoint : ${pas.application_remote_url}
+    locale_endpoint: ${pas.locale_service_remote_url}
+    admin_api_endpoint : ${pas.application_api_remote_url}
+    application_api_remote_url : https://${pas.application_api_remote_host_name}:92/admin-api
+    security_url : https://${pas.security_host_name}:90/security-web
+    metadata_url : https://${pas.metadata_host_name}:91/metadata-web
+    metadata_remote_url : https://${pas.metadata_remote_host_name}:91/metadata-web
+    email_remote_url : https://${pas.email_remote_host_name}:94/email-web
+    admin_ui_landing : ${pas.application_ui_url}/listuser.mvc
+    security_ui_landing : https://${pas.security_host_name}/security-web/protected.html
+    authenticate_url: ${pas.security_url}/json/security/login
+    security_remote_url : https://${pas.security_remote_host_name}:90/security-web
+    amm_api_url: https://${pas.application_host_name}:88/amm
+    omm_api_url: https://${pas.application_host_name}:96/omm
+    winSSOLogoutlandingpage : ${pas.application_ui_url}/login.jsp
+    admin_api_url : https://${pas.admin_api_host_name}:92/admin-api
+    dmm_api_url: https://${pas.application_host_name}:85/device-management
+    application_ui_url : https://${pas.application_ui_host_name}:93/admin-ui
+    login_url : ${pas.application_ui_url}/login.jsp
+    support_for_https_and_https: false
+    https_port: 90
+    transaction.enabled: true          
+    companyName : root Company
+    domainName : hcl.com
+    companyType : PASCOMPANY
+    encryption_salt : user@domain
+    encrypt_password : domain@user
+    no_of_iteration : 1
+    expiryValue : 5
+    
+    keystore_location : keystore/pas.jceks
+    keystore_pass : pas123
+    keystore_type : jceks
+    token_private_key_pass : pas123
+    token_private_key_alias : pasprivatekey
+    token_public_key_alias : paspublickey
+    symmetric_key_alias : passymmetrickey
+    symmetric_key_pass : pas123
+    use_private_for_encryption : true
+   
+    XL_Location : excels
+    query_Location : generated-app/query 
+    XL_Prefix : app
+    access_control_allow_origin : https://${pas.application_host_name}:91,https://${pas.application_host_name}:92,https://${pas.application_host_name}:93,https://${pas.application_host_name}:8080,https://${pas.application_host_name}:99,https://${pas.application_host_name}:9090,https://${pas.application_host_name}:86,https://${pas.application_host_name}:88,https://${pas.application_host_name}:96
+    defaultHomePage : ${pas.application_ui_url}/listuser.mvc
+    device_url : https://${pas.device_host_name}:85/device-management
+    locale_service_remote_url : ${pas.admin_api_url}
+    auth_mode_url: ${application_ui_url}/authmode.jsp
+    device_remote_url : https://${pas.device_remote_host_name}:85/device-management
+    access_denied_url : /accessdenied.html
+    adm_notification_post_url : https://${pas.application_host_name}:97/adm 
+    audit_host_url: https://${pas.application_host_name}:73/audit-trail-boot
+    audit_create_url : ${pas.audit_host_url}/audittrail/create
+    #service registry check - default value server change as client if service registry is enabled
+    service.discovery: server
+    #Auditable History enable or disable -defauls value is true
+    auditable_history: true
+    auditable_history_days: 30    
+    #To enable and disable rabbitMQ- default value false
+    rabbitmq.enabled: false
+    rabbitmq:
+        exchangename : pasExchange
+        hierarchyqueuename : simpleAPIHierarchyQueue
+        userqueuename : simpleAPIUserQueue
+        userdeletequeuename : simpleAPIUserDeleteQueue
+        userupdatedqueuename : simpleAPIUserUpdatedQueue
+        datasource_changes_queue : applicationDatasourceChangeQueue        
+    hierarchy_sync_exclude : 
+    whitelist_urls : 
+    datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource    
+   
+       
+    customizableservice.metadata.capture: false
+    eventpublishing.queue.default_name: pasQueue
+    
+############################################CUSTOMIZABLE###########################################   
+    username: admin
+    password: pas123
+    org: hcl.com
+    login_entity: j_username=${pas.username}&j_password=${pas.password}&org=${pas.org}
+
+#Increase the lifetime of password by x factor (e.g. 2.0)    
+role:
+    #Role 
+    Admin: 2.0
+#############################################DEFAULTS##############################################
+spring.main.show-banner: false
+endpoints.enabled: false       
+spring.profiles.active: full,permission
+logging.path: '/var/log/connect/log'
+logging.config: 'classpath:log4j2.xml'
+server:
+    session-timeout: 600
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreType : PKCS12
+    ssl.keyAlias: www.qa-rocheconnect.com  
+spring.datasource.driverClass : org.postgresql.Driver
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+pas.consulConfigUrl : ${pas.application_host_name}
+pas.consulConfigKeys : 
+pas.consulConfigKeysPrefix : config/
+pas.consulConfigKeysSuffix : /data
+pas.externalyaml : false
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 20
+spring.datasource.acquireIncrement : 1
+spring.datasource.maxIdleTime : 600
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+
+spring.jpa.show-sql : false
+spring.jpa.hibernate.ddl-auto : update
+spring.jpa.generate-ddl : true
+spring.jpa.properties.hibernate.cache.use_second_level_cache : true
+spring.jpa.properties.hibernate.cache.use_query_cache : true
+Spring.jpa.properties.hibernate.query.plan_cache_max_size : 256
+spring.jpa.properties.hibernate.cache.use_structured_entries : false
+spring.jpa.properties.hibernate.cache.use_minimal_puts : false
+spring.jpa.properties.hibernate.cache.generate_statistics : false
+spring.jpa.properties.hibernate.cache.provider_configuration : /ehcache.xml
+spring.jpa.properties.hibernate.cache.region.factory_class : org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode : ENABLE_SELECTIVE
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+spring.cloud.consul.host: ${pas.application_host_name}
+spring.cloud.consul.port: 8500
+
+spring.cloud.consul.discovery.healthCheckPath: ${management.contextPath}
+spring.cloud.consul.discovery.healthCheckInterval: 15s
+spring.cloud.consul.discovery.address: ${management.contextPath}
+spring.cloud.consul.discovery.instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+spring.rabbitmq.host : ${pas.application_host_name}
+spring.rabbitmq.port : 5672
+spring.rabbitmq.username : userone
+spring.rabbitmq.password : userone
+
+# To disable the default configuration for the freemarker
+# configuration to search for the templates
+# TO BE IGNORED ALWAYS: Since String template loader is used
+spring.freemarker.checkTemplateLocation: false
+
+https_enabled: true
+
+license_property_path: /home/rconnect/roche/pas/commonlicense.properties
+connect:
+    omm_host_url: https://${pas.application_host_name}:96/omm
+    amm_host_name: ${pas.application_host_name}
+    amm_host_url: https://${pas.application_host_name}:88/amm
+    imm_host_url: https://${pas.application_host_name}:9090/imm
+    wfm_host_url: https://${pas.application_host_name}:99/wfm
+    adm_host_url: https://${pas.application_host_name}:97/adm
+    rmm_host_url: https://${pas.application_host_name}:86/rmm
+    dm_host_url: https://${pas.application_host_name}:85/device-management
+    mp96_adaptor_host_url: https://${pas.application_host_name}:79/mp96-adapter
+    mp24_adaptor_host_url: https://${pas.application_host_name}:87/roche_camel_adapter
+    lp24_adaptor_host_url: https://${pas.application_host_name}:89/roche_lpcamel_adapter 
+    dpcr_analyzer_adaptor_host_url: https://${pas.application_host_name}:76/adapter-dpcr
+    
+ ###########################################TO BE CUSTOMIZED########################################   
+    db_host_name: ${pas.application_host_name}
+    db_port: 5432
+    db_user_name: postgres
+    db_password: root
+    mp24_camel_port: 4444
+    lp24_camel_port: 4445
+    mp96_adaptor_port: 4447
+    dpcr_camel_port: 4448 
+    htp-camel_port: 5432
+    
+problemReport:
+    dailyReportPath: 'C://dailyProblemReport//'
+    problemReportPath: 'C://problemReportPath//'
+    tempReportPath: 'C://tempReportPath//'
+    cron_time: 0 59 23 * * ?
+    monthLimit: 6
+    dateRange: 21
+    
+backup:
+      adm_notification_uri : /json/rest/api/v1/notification
+      fileBackupScriptLocation : /home/rconnect/roche/Backup_scripts/backup.sh
+      resultFileLocation : /home/rconnect/roche/ips/test.log
+      backupCron: '0 0 23 * * ?'
+      statusCheckCron: '0 0 */5 * * ?'
+      defaultBackupLocation: /home/rconnect/roche/ips
+      # should be in gb
+      requiredSpace: 5
+      # day_of_month(any number between 1-31), day_of_week(any number between 1-7)
+      day_of_quarter: 1
+      day_of_month: 1
+      day_of_week : 1
+
+mailSender:
+    server : 10.98.11.10
+    port : 25
+    username : admin@agora.in
+    password : admin
+    ses_sender_mail_address: admin@agora.in

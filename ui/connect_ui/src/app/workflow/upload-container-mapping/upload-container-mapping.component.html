@@ -1,0 +1,62 @@
+<div class="slideBtmTopCls">
+  <!---//////////////////////// Header ////////////////////////////-->
+
+    <app-header [headerInfo]="headerInfo"></app-header>
+
+  <!---/////////////////////// Header End /////////////////////////-->
+
+  <div class="main-container">
+    <mat-card class="custom-card">
+      <div class="download-header">
+        <h4 class="header-up roboto-regular">{{"containersamples.step" | translate}} 1</h4>
+        <h4 class="header-down roboto-regular">{{"containersamples.downloadLabel" | translate}}</h4>
+      </div>
+      <hr class="devider" />
+      <div class="download-container">
+        <!-- not displayed story moved to backlog -->
+        <mat-form-field appearance="fill" class="roboto-regular font-14 pr-20" *ngIf='false'>
+            <mat-label>
+                {{ 'orders.orderForm.orderDetails.assayType' | translate }}
+            </mat-label>
+            <mat-select [(value)]='assayTypeDefault'>
+              <mat-option *ngFor="let assay of assayTypeList" [value]='assay.assayType'>
+                  {{ assay.assayType | translate }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <a class="roboto-regular" mat-raised-button (click)="donwloadConatinerMappingTemplate()">
+          {{"containersamples.downloadBtn" | translate}}
+        </a>
+      </div>
+    </mat-card>
+
+    <mat-card class="custom-card upload-container">
+      <div class="upload-header">
+        <h4 class="header-up roboto-regular">{{"containersamples.step" | translate}} 2</h4>
+        <h4 class="header-down roboto-regular">{{"containersamples.uploadLabel" | translate}}</h4>
+      </div>
+      <hr class="devider" />
+      <div *ngIf="!isAnyUploadError" class="file-container">
+        <div class="file-browse-box" ng2FileDrop
+        [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+        (fileOver)="fileOverBase($event)"
+        (onFileOver) = "onFileOver($event)"
+        [uploader]="uploader"
+        (drop) = "onDrop($event)">
+          <div *ngIf="!isUploadInProgress" class="file-browse-container">
+            <h5 class="header-drop roboto-bold">{{"containersamples.dropFile" | translate}}</h5>
+            <h5 class="header-or roboto-bold"> {{"containersamples.or" | translate}} </h5>
+            <input type='file' ng2FileSelect accept=".csv" [uploader]="uploader" hidden #uploadFIle (change)="onFileUpload(uploader)"/>
+            <button color="primary" class="file-browse-btn roboto-bold" mat-raised-button (click)="uploadFIle.click()">{{"containersamples.browseFile" | translate}}</button>
+          </div>
+          <div class="progress-bar" style="margin-bottom: 3em; margin-top: 3.1em;" *ngIf="isUploadInProgress">
+            <div class="roboto-regular font-14 txt-color">{{"containersamples.uploadProgress" | translate}}</div>
+            <mat-progress-bar class="pg-bar-rule" mode="indeterminate"></mat-progress-bar>
+            
+          </div>
+        </div>
+      </div>
+      <app-upload-error *ngIf="isAnyUploadError" (onReTrying)="onReTrying($event)" [errors]="uploadErrors"></app-upload-error>
+    </mat-card>
+  </div>
+</div>

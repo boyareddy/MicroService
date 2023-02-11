@@ -1,0 +1,245 @@
+pas:
+    #Permission for the User to access this microservice
+    #microservice_permission: Access_adm
+    security.method.disable : false
+    
+    security_endpoint: ${pas.security_remote_url}
+    metadata_endpoint: ${pas.metadata_remote_url}
+    email_endpoint: ${pas.email_remote_url}
+    simple_api_endpoint : ${pas.application_remote_url}
+    locale_endpoint: ${pas.locale_service_remote_url}
+    
+    #application_location - values [default,distributed]
+    #If value is default, it is assumed that all microservices are running in same location (localhost is used through-out app)
+    application_location : default
+
+    application_host_name :  www.qa-rocheconnect.com
+    application_url : https://${pas.application_host_name}:7070/adm
+    
+    application_ui_host_name :  www.qa-rocheconnect.com
+    application_ui_url : https://${pas.application_ui_host_name}:93/admin-ui
+    
+    security_host_name :  www.qa-rocheconnect.com
+    security_url : https://${pas.security_host_name}:90/security-web
+    
+    metadata_host_name :  www.qa-rocheconnect.com
+    metadata_url : https://${pas.metadata_host_name}:91/metadata-web
+    
+    metadata_remote_host_name :  www.qa-rocheconnect.com
+    metadata_remote_url : https://${pas.metadata_remote_host_name}:91/metadata-web
+
+    security_remote_host_name :  www.qa-rocheconnect.com
+    security_remote_url : https://${pas.security_remote_host_name}:90/security-web
+
+    application_remote_host_name :  www.qa-rocheconnect.com
+    application_remote_url : https://${pas.application_remote_host_name}:7070/adm
+
+    audittrail_remote_host_name : www.qa-rocheconnect.com
+    audittrail_remote_url : https://${pas.audittrail_remote_host_name}:73/audit-trail-boot
+
+    admin_api_host_name :  www.qa-rocheconnect.com
+    admin_api_url : https://${pas.admin_api_host_name}:92/admin-api
+
+    dm_host_name: www.qa-rocheconnect.com
+    dm_host_url: https://${pas.dm_host_name}:85/device-management
+
+    amm_host_name: www.qa-rocheconnect.com
+    amm_host_url: https://${pas.amm_host_name}:88/amm
+    roche_image_url: https://www.qa-rocheconnect.com:8080/ui-conf/Roche.png
+
+    rmm_host_name: www.qa-rocheconnect.com
+    rmm_host_url: https://${pas.rmm_host_name}:86/rmm
+
+    authenticate_url: ${pas.security_url}/json/security/login
+    username: admin
+    password: pas123
+    org: hcl.com
+    login_entity: j_username=${pas.username}&j_password=${pas.password}&org=${pas.org}
+    
+    login_url : ${pas.application_ui_url}/login.jsp
+    
+    defaultHomePage : ${pas.application_ui_url}/listuser.mvc
+    
+    locale_service_remote_url : ${pas.admin_api_url}
+    
+    email_remote_host_name : www.qa-rocheconnect.com
+    email_remote_url : https://${pas.email_remote_host_name}:94/email-web
+    senderName : Connect Admin
+    senderEmail : mailer@rconnect.com
+    replyTo : mailer@rconnect.com
+    
+    default_company_for_user_provisioning : hcl.com
+    access_control_allow_origin : https://www.qa-rocheconnect.com:98,https://localhost:4200,https://www.qa-rocheconnect.com:88,https://www.qa-rocheconnect.com:8080
+    
+    #access_denied_url : /accessdenied.jsp
+    
+    #access_control_allow_origin : '*'
+    
+    #service registry check - default value server change as client if service registry is enabled
+    service.discovery: server
+    
+    #Auditable History enable or disable -defauls value is true
+    auditable_history: true
+    auditable_history_days: 30
+    audittrail: true
+    
+    #To enable and disable rabbitMQ- default value false
+    rabbitmq.enabled: false
+
+    support_for_http_and_https: false
+    http_port: 80
+    
+    transaction.enabled: true
+            
+    companyName : root Company
+    description	: root company
+    domainName : hcl.com
+    companyType : PASCOMPANY
+
+    encryption_salt : user@domain
+    encrypt_password : domain@user
+    no_of_iteration : 1
+
+    expiryValue : 5
+
+    keystore_location : keystore/pas.jceks
+    keystore_pass : pas123
+    keystore_type : jceks
+    token_private_key_pass : pas123
+    token_private_key_alias : pasprivatekey
+    token_public_key_alias : paspublickey
+    symmetric_key_alias : passymmetrickey
+    symmetric_key_pass : pas123
+
+
+    fileName_Prefix : brownstone_app_init
+    XL_Location : file:///opt/roche/connect/yaml_runtime/excels
+    query_Location : generated-app/query 
+    XL_Prefix : app
+
+    poll_enabled : true
+    poll_attempts : 10
+    poll_attempts_delay_in_seconds : 30
+    poll_url : ${pas.metadata_remote_url}/poll, ${pas.security_remote_url}/poll
+
+    logged_module_name : adm
+    application_module_name : adm
+
+    rabbitmq:
+        exchangename : pasExchange
+        hierarchyqueuename : simpleAPIHierarchyQueue
+        userqueuename : simpleAPIUserQueue
+        userdeletequeuename : simpleAPIUserDeleteQueue
+        userupdatedqueuename : simpleAPIUserUpdatedQueue
+        datasource_changes_queue : applicationDatasourceChangeQueue        
+
+    hierarchy_sync_exclude : 
+
+    whitelist_urls : 
+
+    datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource
+    
+    version: 0.0.1-SNAPSHOT
+    title: ${pas.logged_module_name} - REST documentation
+    contact_email: PBASolutionsteam@hcl.in
+    api_description: These are the contracts for the rest services exposed in this ${pas.logged_module_name}.    
+    
+    customizableservice.metadata.capture: false
+    eventpublishing.queue.default_name: pasQueue
+    
+spring.main.show-banner: false
+endpoints.enabled: false       
+spring.profiles.active: full,permission
+
+management:
+    contextPath: /adm/poll
+
+#Make it true if service registry is required, default value is false 
+spring.cloud.consul.enabled: false
+
+logging.path: '/var/log/connect/log'
+logging.file: adm.log
+logging.config: 'classpath:log4j2.xml'
+
+spring.rabbitmq.host : localhost
+spring.rabbitmq.port : 5672
+spring.rabbitmq.username : userone
+spring.rabbitmq.password : userone
+
+# To disable the default configuration for the freemarker
+# configuration to search for the templates
+# TO BE IGNORED ALWAYS: Since String template loader is used
+spring.freemarker.checkTemplateLocation: false
+
+server:
+    port: 7070
+    session-timeout: 600
+    context-path: /adm
+    ssl.enabled : true
+    ssl.key-store: /home/rconnect/roche/crts/KeyStore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.qa-rocheconnect.com
+       
+
+spring.datasource.jdbcUrl : jdbc:postgresql://www.qa-rocheconnect.com:5432/connect-adm
+spring.datasource.user : postgres
+spring.datasource.password : postgres123
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 20
+spring.datasource.acquireIncrement : 1
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+spring.datasource.maxIdleTime : 600
+spring.datasource.driverClass : org.postgresql.Driver
+
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql : false
+spring.jpa.hibernate.ddl-auto : update
+spring.jpa.generate-ddl : true
+spring.jpa.properties.hibernate.cache.use_second_level_cache : true
+spring.jpa.properties.hibernate.cache.use_query_cache : true
+spring.jpa.properties.hibernate.cache.use_structured_entries : false
+spring.jpa.properties.hibernate.cache.use_minimal_puts : false
+spring.jpa.properties.hibernate.cache.generate_statistics : false
+spring.jpa.properties.hibernate.cache.provider_configuration : /ehcache.xml
+spring.jpa.properties.hibernate.cache.region.factory_class : org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+spring.jpa.properties.javax.persistence.sharedCache.mode : ENABLE_SELECTIVE
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans : true
+
+#default value is false, change it to true if https is enabled
+https_enabled: true
+
+#Manifest file path for about page
+manifest_file_path : build.properties
+
+auditLog:
+    #Acceptedvalues:id,companydomainname,messagecode,newnessflag,objectnewvalue,objectoldvalue,params,systemid,systemmodulename,timestamp,userid,message,title,ownerPropertyName,ipaddress
+    requiredColumns: 'id,companydomainname,messagecode,newnessflag,objectnewvalue,objectoldvalue,params,systemid,systemmodulename,timestamp,userid,ipaddress'
+    folderPath: '/var/log/connect/auditLog/'
+    limit: 10000
+
+problemReport:
+    dailyReportPath: '/var/log/connect/admreport/dailyProblemReport/'
+    problemReportPath: '/var/log/connect/admreport/problemReportPath/'
+    tempReportPath: '/var/log/connect/admreport/tempReportPath/'
+    cron_time: 0 59 23 * * ?
+    monthLimit: 6
+    dateRange: 21
+
+backup:
+    adm_notification_uri : /json/rest/api/v1/notification
+    fileBackupScriptLocation : /opt/roche/connect/scripts/Backup_scripts/backup.sh
+    resultFileLocation : /opt/roche/connect/scripts/Backup_scripts/result.log
+    backupCron: '0 0 23 * * ?'
+    statusCheckCron: '*/5 * * * * ?'
+    defaultBackupLocation: /home/rconnect/roche/ips
+    # should be in gb
+    requiredSpace: 5
+    # day_of_month(any number between 1-31), day_of_week(any number between 1-7),hour(any number between 1-24), minute & second(any number between 0-59)
+    day_of_quarter: 1
+    day_of_month: 1
+    day_of_week : 1
+    
+websocketRateLimiting: 5    

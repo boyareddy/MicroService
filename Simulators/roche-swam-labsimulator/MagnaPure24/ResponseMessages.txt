@@ -1,0 +1,4 @@
+MSH|^~\&|Connect|Roche Diagnostics|MagnaPure24^MP0012-24^M|Roche Diagnostics|20190619123911||RSP^WOS^RSP_K11|66f2f548-1297-4338-a|P|2.5.1||||||UNICODE UTF-8MSA|AA|66f2f548-1297-4338-aQAK||OKQPD|WOS^Work Order Step^IHE_LABTFSPM||1112||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||1112||||20190619123911ORC|NW|1112|||SC||||20190619123911OBR|1|1112||Cfna ss 2000^Cfna ss 2000^99ROC||||||||||||0|||||||||S||||0
+
+MSH|^~\&|Connect|Roche Diagnostics|MagnaPure24^MP0012-24^M|Roche Diagnostics|20190619131530||RSP^WOS^RSP_K11|baf94a86-279e-41de-b|P|2.5.1||||||UNICODE UTF-8MSA|AA|baf94a86-279e-41de-bQAK||OKQPD|WOS^Work Order Step^IHE_LABTFSPM||1113||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||1113||||20190619131531ORC|NW|1113|||SC||||20190619131531OBR|1|1113||Cfna ss 2000^Cfna ss 2000^99ROC||||||||||||0|||||||||S||||0
+

@@ -1,0 +1,53 @@
+{  
+   "orderId" : "",
+   "samples":[  
+      {  
+         "sampleId":"sampleID1",
+		 "inputContainerId":"ABC",
+		 "inputPosition":"A1",
+         "sampleComments":"SAmple from test server",
+		 "reagentName": "Cellular RNA LV",
+		 "reagentVersion" : "0.2",
+		 "protocolName":"Cellular RNA LV",
+		 "protocolVersion":"0.6.4",
+		 "sampleVolume":"200",
+		 "eluateVolume":"50"
+     },
+	 {  
+         "sampleId":"sampleID2",
+		 "inputContainerId":"ABC",
+		 "inputPosition":"B1",
+         "sampleComments":"SAmple from test server",
+		 "reagentName": "Cellular RNA LV",
+		 "reagentVersion" : "0.2",
+		 "protocolName":"Cellular RNA LV",
+		 "protocolVersion":"0.6.4",
+		 "sampleVolume":"200",
+		 "eluateVolume":"50"
+     },
+     {  
+         "sampleId":"sampleID2",
+		 "inputContainerId":"ABC",
+		 "inputPosition":"B1",
+         "sampleComments":"SAmple from test server",
+		 "reagentName": "Cellular RNA LV",
+		 "reagentVersion" : "0.2",
+		 "protocolName":"Cellular RNA LV",
+		 "protocolVersion":"0.6.4",
+		 "sampleVolume":"200",
+		 "eluateVolume":"50"
+     },
+     {  
+         "sampleId":"sampleID2",
+		 "inputContainerId":"ABC",
+		 "inputPosition":"B1",
+         "sampleComments":"SAmple from test server",
+		 "reagentName": "Cellular RNA LV",
+		 "reagentVersion" : "0.2",
+		 "protocolName":"Cellular RNA LV",
+		 "protocolVersion":"0.6.4",
+		 "sampleVolume":"200",
+		 "eluateVolume":"50"
+     }
+   ]
+}

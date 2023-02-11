@@ -1,0 +1,87 @@
+<app-header [headerInfo]="headerInfo"></app-header>
+<div class="run-info-tab expansion-data">
+  <mat-tab-group #workflowTabGroup [selectedIndex]="selectedIndex" [ngClass]="workflowTabGroup.selectedIndex === 1 ? 'workflow-orders' : ''">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{ 'tabHeaders.ongoing' | translate }}
+      </ng-template>
+      <div class="run-info-container-ongoing">
+        <div class="procStepLabel-container" [class.marginDPRC]='assayType?.toLowerCase().indexOf("dpcr") !== -1'
+          [class.marginHTP]='assayType?.toLowerCase().indexOf("htp") !== -1'>
+          <div class="procStepLabel roboto-bold font-16" *ngFor="let labelName of labelNames; let i = index;"
+            [class.text-center]="i == 2 || i == 3">
+            {{ labelName | translate }}
+          </div>
+        </div>
+        <div class="procStepLine-container">
+          <div class="procStepLine-ctn" *ngFor="let labelName of labelNames; let ind = index;">
+            <div class="procStep-circle" [class.nomargin]='ind == 0'></div>
+            <ng-container *ngIf="ind != labelNames.length - 1">
+              <div class="run-info-mat-divider-container">
+              </div>
+            </ng-container>
+
+          </div>
+        </div>
+        <!-- Run card details-->
+        <div class="htprun-card-main-container">
+          <div class="htprun-card-container_1" *ngFor="let procStepName of labelNames">
+            <ng-container *ngFor="let runByProcItem of objectKeys(runDetails)">
+              <ng-container *ngIf="runByProcItem.startsWith(procStepName)">
+                <app-new-card *ngFor="let runCard of runDetails[runByProcItem]" [runCardInfo]='runCard'>
+                </app-new-card>
+              </ng-container>
+            </ng-container>
+            <div *ngIf='procStepName?.toLowerCase().indexOf("extraction") !==-1 && havingAccess'>
+              <div class="upload-button">
+                <button mat-raised-button class="roboto-bold" (click)='goTocontainerSamples()'>
+                  {{ 'runWorkflow.dashboard.uploadContainerMapping' | translate }}
+                </button>
+              </div>
+            </div>
+
+            <div *ngIf='procStepName?.toLowerCase().indexOf("extraction") !==-1 && !havingAccess'>
+              <div class="upload-button">
+                <span matTooltip="{{ 'common.accessRestricted' | translate}}" [matTooltipClass]="'tooltipDetails'" [matTooltipDisabled]="havingAccess">
+                  <button mat-raised-button class="roboto-bold" [disabled]="!havingAccess">
+                    {{ 'runWorkflow.dashboard.uploadContainerMapping' | translate }}
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab [disabled]="isRunCompletedAvail">
+      <ng-template mat-tab-label>
+          {{ 'tabHeaders.completed' | translate }}
+      </ng-template>
+      <div class="run-info-container-completed" style="display: flex;flex-direction: row;">
+          <!-- Run card details-->
+          <app-run-archieved *ngIf="completedtabList.length > 0"
+                              [runArchiveDetailsRes]="completedtabList | filter:filterOption">
+          </app-run-archieved>
+          <app-filter #filterComponent [entityList] = "completedtabList" (onFilter)="onFilter($event)" (onFilterOptionCount)="onFilterOptionCount($event)"></app-filter>
+      </div>
+      <div class="no-data-container" *ngIf="!isSprinerOn && completedtabList.length == 0">
+          <div  class="no-data">{{'No run is available to show' | translate }}</div>
+      </div>
+      
+  </mat-tab>
+  <mat-tab *ngIf="workflowTabGroup.selectedIndex === 1" disabled>
+    <ng-template mat-tab-label>
+      <app-filter-icon [componentToToggle]="filterComponent" [optionCount] = "filterOptionCount" [display] = "completedtabList.length > 0"></app-filter-icon>
+    </ng-template>
+  </mat-tab>
+  </mat-tab-group>
+</div>
+<app-response-progress *ngIf='isSprinerOn' 
+                        [diameterValue]='55' 
+                        [marginTop]='200' 
+                        [rectPro]='rectPro'
+                        [spOverlayHeight]="false"
+                        [spOverlayTop]="120"
+                        [spOverlayLeft]="0"
+                        [spOverlayRight]="20">
+</app-response-progress>

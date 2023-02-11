@@ -1,0 +1,3 @@
+MSH|^~\&|||||||ACK^U03^ACK||P|2.5.1||||||UNICODE UTF-8
+MSA||||
+ERR||||||||

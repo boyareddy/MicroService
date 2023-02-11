@@ -1,0 +1,130 @@
+.description-container .bgblue{
+  background-color: rgba(0, 102, 204, 0.15); 
+  opacity: 15%; 
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8D8D8D; 
+}
+.step-header {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    align-items: center;
+}
+.step-header img {
+    margin-right: 16px;
+}
+.cont-container{
+  display: inline-block;
+}
+.list-headercolor {
+    color: #191919;
+  }
+
+.list-headercolorwhite {
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+  }
+.lineHeight1{
+  line-height: 12px;
+}
+.lineHeight2{
+  line-height: 20px;
+}
+  .padding-20 {
+    padding: 20px;
+}
+
+.list-color {
+    color: #191919;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.ml-20{
+  margin-left: 20px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.mt-35{
+  margin-top: 35px;
+}
+.mt-40{
+  margin-top: 40px;
+}
+.mt-15{
+  margin-top: 15px;
+}
+
+.line-color {
+    color: #d3d3d3;
+}
+
+.description-container mat-card{
+    padding:0px !important;
+    height: 434px;
+}
+
+.description-container-all-msg mat-card{
+  height: 75vh;
+}
+
+.bgcolor {
+  background-color: #ffc414;
+}
+
+.bgcolorred {
+  background-color: #cc0033;
+}
+
+.bgcolorgrey {
+  background-color: #8d8d8d;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
+.device-name-link{
+  display: flex;
+  cursor: pointer;
+}
+.deviceName-link{
+  margin-left: 10px;
+  line-height: 10px;
+  margin-top: 2.5px;
+  margin-right: 5px;
+}
+.nt-msg-container{
+  height: 362px;
+  overflow-y: auto;
+}
+
+.nt-msg-container-all-msg{
+  height: 63.7vh;
+}
+.device-name-link-container{
+  display: flex;
+  justify-content: flex-end;
+}

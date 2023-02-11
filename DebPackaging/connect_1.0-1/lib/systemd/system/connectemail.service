@@ -1,0 +1,16 @@
+[Unit]
+Description=Connect email service
+After=syslog.target
+
+[Service]
+User=root
+TimeoutStartSec=0
+ExecStart=/usr/bin/java -jar -Xms128M -Xmx256M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application_email.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/CARE/email-api-boot-4.4.jar
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

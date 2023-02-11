@@ -1,0 +1,16 @@
+[Unit]
+Description=Connect device audittrail service
+After=syslog.target
+
+[Service]
+User=root
+TimeoutStartSec=0
+ExecStart=/usr/bin/java -jar -Xms512M -Xmx1024M -Dspring.config.location=/opt/roche/connect/yaml_runtime/application_audit.yaml,/opt/roche/connect/yaml_runtime/application-connectcommon.yaml /opt/roche/connect/bin/CARE/audit-trail-boot-4.4.jar
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

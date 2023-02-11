@@ -1,0 +1,108 @@
+{
+                "deviceId":"MP24",
+                "processStepName":"dPCR",
+                "deviceRunId":null,
+                "runStatus":"Complete",
+                "dvcRunResult":null,
+                "runFlag":null,
+                "operatorName":null,
+                "assayType":"NIPTDPCR",
+                "comments":null,
+                "runStartTime":"2018-10-12T05:20:16.829Z",
+                "runCompletionTime":null,
+                "runRemainingTime":null,
+                "verifiedDate":"2018-10-12T05:20:16.829Z",
+                "verifiedBy":null,
+                "updatedBy":null,
+                "updatedDateTime":null,
+                "sampleResults":[{"accesssioningId":"9092",
+"orderId":"10003953",
+"inputContainerId":"8tubeid_2222",
+"inputContainerPosition":"7",
+"sampleType":"Blood",
+"outputPlateType":"A",
+"inputKitId":null,
+"outputContainerId":"container3",
+"outputContainerPosition":"7",
+"outputContainerType":"molecularId",
+"outputKitId":null,
+"status":"Completed",
+"result":"on-going",
+"flag":"n/a",
+"comments":"comments",
+"createdBy":"admin",
+"receivedDate":null,
+"verifiedDate":null,
+"verifiedBy":"admin",
+"updatedBy":"admin",
+"createdDateTime":"2018-1-17T05:44:06.067Z",
+"updatedDateTime":"2018-10-17T05:44:06.067Z",
+"runResultsId":"3702",
+"sampleReagentsAndConsumables":
+	[
+	{"type":"Type1",
+	"attributeName":"Name",
+	"attributeValue":"xxxx",
+	"updatedBy":"admin",
+	"updatedDateTime":null
+	},
+	{"type":"Type1",
+	"attributeName":"Volume",
+	"attributeValue":"12",
+	"updatedBy":"admin",
+	"updatedDateTime":null
+	}
+	],
+"sampleProtocol":[
+	{"protocolName":"P_1",
+	"updatedBy":"admin",
+	"updatedDateTime":null
+	},
+	{"protocolName":"P_2",
+	"updatedBy":"admin",
+	"updatedDateTime":null}
+	],
+	"sampleResultsDetail":
+	[{"attributeName":"abc",
+	"attributeValue":"abcValue",
+	"updatedBy":"admin",
+	"updatedDateTime":null
+	},
+	{"attributeName":"xyz",
+	"attributeValue":"xyzValue",
+	"updatedBy":"admin",
+	"updatedDateTime":null
+	}
+	]
+}],
+                "uniqueReagentsAndConsumables":[ {
+    "attributeName":"reagentVesion",
+    "attributeValue":"1.0"
+    },
+    {
+    "attributeName":"reagentKitName",
+    "attributeValue":"kit"
+    },
+    {
+    "attributeName":"fluidId",
+    "attributeValue":"f1"
+    },
+    {
+    "attributeName":"serialNumber",
+    "attributeValue":"sn1"
+    },
+    {
+    "attributeName":"dateandTime",
+    "attributeValue":"01-01-2018"
+    }
+],
+                "runResultsDetail":[
+                   {
+    
+      "attributeName": "Name",
+      "attributeValue": "xyz",
+      "updatedBy": "admin",
+      "updatedDateTime": ""
+    }
+                ]
+}

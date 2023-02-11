@@ -1,0 +1,179 @@
+<div class="mt-28">
+  <form [formGroup]="labSettingsInfo">
+    <mat-card style="width:40%; margin: 20px auto; padding: 20px;" class="rc-card-box-shadow">
+
+      <div class="roboto-bold font-16 content-text-color pb-20">
+        {{ 'labSettings.localization' | translate }}
+        
+      </div>
+      <div>
+        <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px" formGroupName='localisationSettings'>
+          <mat-grid-tile colspan='1' rowspan='1'>
+
+            <mat-form-field appearance="fill" class="width-full font-14">
+              <mat-label class="roboto-regular">
+                  {{ 'labSettings.systemLanguage' | translate }}
+               
+              </mat-label>
+
+              <mat-select [(value)]="selectedLang.value" placeholder="systemLanguage" name="systemLanguage" id="systemLanguage" formControlName="systemLanguage" >
+
+                <mat-option *ngFor="let lang of sysLang" [value]="lang.value">{{lang.dec}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan='1' rowspan='1'>
+
+            <mat-form-field appearance="fill" class="width-full font-14">
+              <mat-label class="roboto-regular">
+                  {{ 'labSettings.dateFormat' | translate }}
+                
+              </mat-label>
+              <mat-select [(value)]="selectedDateFormat" placeholder="dateFormat" name="dateFormat" id="dateFormat" formControlName="dateFormat" >
+               
+                <mat-option *ngFor="let datefmt of sysDateFormat" [value]="datefmt">{{datefmt}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan='1' rowspan='1'>
+
+            <mat-form-field appearance="fill" class="width-full font-14">
+              <mat-label class="roboto-regular">
+                  {{ 'labSettings.timeFormat' | translate }}                
+              </mat-label>
+              <mat-select [(value)]="selectedTimeFormat" placeholder="timeFormat" name="timeFormat" id="timeFormat" formControlName="timeFormat" >
+               
+                  <mat-option *ngFor="let timefmt of sysTimeFormat" [value]="timefmt">{{timefmt}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-card>
+
+    <mat-card style="width:40%; margin: 28px auto; margin-bottom: 80px;" class="rc-card-box-shadow">
+      <div class="roboto-bold font-16 content-text-color pb-20">
+        {{ 'labSettings.reportSettings' | translate }}
+      </div>
+      <div class="">
+        <ng-container formGroupName='reportSettings'>
+
+          <mat-grid-list cols="2" rowHeight="73px" gutterSize="20px">
+            <mat-grid-tile colspan='1' rowspan='1'>
+
+              <mat-form-field appearance="fill" class="width-full font-14">
+                <mat-label class="roboto-regular">
+                  {{ 'labSettings.labName' | translate }}
+                </mat-label>
+                <input matInput formControlName="labName" name="labName" id="labName" autocomplete="off" appTrim>
+              </mat-form-field>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan='1' rowspan='1'>
+              <mat-form-field appearance="fill" class="width-full font-14" #phoneNumber>
+                <mat-label class="roboto-regular">
+                  {{ 'labSettings.phoneNumber' | translate }}
+                </mat-label>
+                <input matInput formControlName="phoneNumber" name="phoneNumber" id="phoneNumber" autocomplete="off" appMinMax [parentField]="phoneNumber"
+                  maxlength="20" appTrim>
+                <mat-error *ngIf="labSettingsInfo.get('reportSettings.phoneNumber').invalid">
+                  {{ 'labSettings.' + labSettingsInfo.get('reportSettings.phoneNumber').errors.errorMsg | translate }}
+                </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan='1' rowspan='1'>
+              <mat-form-field appearance="fill" class="width-full font-14" #labAddress1>
+                <mat-label class="roboto-regular">
+                  {{ 'labSettings.labAddress1' | translate }}
+                </mat-label>
+                <input matInput formControlName="labAddress1" name="labAddress1" id="labAddress1" autocomplete="off" appTrim appMinMax
+                [parentField]="labAddress1" maxlength="100">
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan='1' rowspan='1'>
+              <mat-form-field appearance="fill" class="width-full font-14" #labAddress2>
+                <mat-label class="roboto-regular">
+                  {{ 'labSettings.labAddress2' | translate }}
+                </mat-label>
+                <input matInput formControlName="labAddress2" name="labAddress2" id="labAddress2" autocomplete="off" appTrim appMinMax
+                [parentField]="labAddress2" maxlength="100">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="2" [rowHeight]="(fileName || errorMsg) ? '95px' : '73px'" gutterSize="20px" style="margin-top:20px" >
+            <mat-grid-tile colspan='1' rowspan='1' class="labAddress3">
+              <mat-form-field appearance="fill" class="width-full font-14" #labAddress3>
+                <mat-label class="roboto-regular">
+                  {{ 'labSettings.labAddress3' | translate }}
+                </mat-label>
+                <input matInput formControlName="labAddress3" name="labAddress3" id="labAddress3" autocomplete="off" appTrim appMinMax
+                [parentField]="labAddress3" maxlength="100">
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan='1' rowspan='1' class="labInfo">
+              <div class="width-full d-flex flex-justify-between">
+                <div class="roboto-bold font-14 content-text-color">
+                  {{ 'labSettings.labLogo' | translate }}
+                </div>
+                <div>
+                  <a href="javascript:void(0)" (click)="file.click()" class="roboto-bold font-14" style="text-decoration: none">
+                    {{ 'labSettings.choose' | translate }}...
+                  </a>
+                  <input type="file" #file style="display:none;" (click)="file.value = null" (change)="onFileChange($event)" accept=".png, .jpg, .jpeg"
+                  />
+                </div>
+              </div>
+              <div style="margin-top: 10px">
+                <div *ngIf='errorMsg' class="font-12 roboto-regular mat-error">
+                  {{ errorMsg }}
+                </div>
+                <div *ngIf='fileName'>
+                  <div class="d-flex flex-justify-between">
+                    <div class="font-14 roboto-regular card-title-lb-color">
+                      <app-show-more [data]="fileName" [tooltipValue]="fileName" [preCheck]='true'>
+                      </app-show-more>
+                      <!-- <app-reverse-show-more [data]="fileName" [tooltipValue]="fileName">
+                    </app-reverse-show-more> -->
+                    </div>
+                    <div>
+                      <a class="roboto-bold font-14" style="text-decoration: none" (click)="deleteFileInfo()">
+                        {{ 'labSettings.delete' | translate }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div style="margin-top: 10px">
+
+                  <a class="roboto-bold font-14" style="text-decoration: none" [class.disabled]="labSettingsInfo.get('reportSettings').invalid || !error"
+                    (click)="getLabInfoPreview(labSettingsInfo)">
+                    {{ 'labSettings.previewReport' | translate }}
+                  </a>
+                </div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+        </ng-container>
+
+      </div>
+    </mat-card>
+    <div class="footer">
+      <mat-toolbar class="header-mat-toolbar">
+        <button mat-raised-button (click)='saveLabSettings(labSettingsInfo)' color="primary"  class="roboto-bold font-14"
+        [disabled]="labSettingsInfo.get('reportSettings').invalid || !error">
+          {{ 'labSettings.save' | translate }}
+        </button>
+      </mat-toolbar>
+    </div>
+  </form>
+</div>

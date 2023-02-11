@@ -1,0 +1,210 @@
+<div class="dev-det-cont">
+  <form class="dev-det-form" [formGroup]="deviceDetailForm">
+    <div class ="card-header-container" [ngClass]="{'add-green-bg' : device?.attributes?.deviceStatus === 'online', 'add-grey-bg' : device?.attributes?.deviceStatus === 'offline'}">
+        <div class="d-flex flex-align-center">
+            <div class="card-header-icon" *ngIf='device?.attributes?.deviceStatus == "offline"'>
+              <img [attr.src]="'assets/Images/devicelist/'+device?.deviceType?.name+''+'offline'+'.svg'" />
+            </div>
+            <div class="card-header-icon" *ngIf='device?.attributes?.deviceStatus == "online"'>
+              <img [attr.src]="'assets/Images/devicelist/'+device?.deviceType?.name+''+'online'+'.svg'" />
+            </div>
+            <div class="card-header-title-container">
+              <div class="card-header-title1">{{ device && device.deviceType && device.deviceType.name ? device.deviceType.name : '-' }}</div>
+              <div class="card-header-title2">{{ device.name | empty : '-' }}</div>
+            </div>
+          </div>
+        <!-- <div class="card-header-icon" [ngClass]="{'add-green-img' : device?.attributes?.deviceStatus === 'online', 'add-grey-img' : device?.attributes?.deviceStatus === 'offline'}"></div>
+        <div class="card-header-title-container">
+          <div class="card-header-title1">{{ device && device.deviceType && device.deviceType.name ? device.deviceType.name : '-' }}</div>
+            <div class="card-header-title2">{{ device.name | empty : '-' }}</div>
+        </div> -->
+    </div>
+    <div [ngClass]="{'line-green' : device?.attributes?.deviceStatus === 'online', 'line-grey' : device?.attributes?.deviceStatus === 'offline'}" ></div>
+    <div class="bg-wh">
+      <div class="dev-ifo-cont">
+        <div class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.devSlNo' | translate}}</div>
+          <div class="dev-cel-vl">
+            <app-show-more [data]="device.serialNo" [tooltipValue]="device.serialNo" [displayFull]="true">{{'deviceMgmt.serialNo' | translate}}</app-show-more>
+          </div>
+        </div>
+        <div *ngIf="!toggleFields.name" class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.devName' | translate}}</div>
+          <div style="display: flex">
+            <div class="dev-cel-vl">
+              <app-show-more [data]="device.name" [tooltipValue]="device.name" [displayFull]="true">{{ device && device.name ? device.name : '-' }}</app-show-more>
+            </div>
+            <button mat-icon-button aria-label="Edit" 
+                    *ngIf="device.state !== 'INACTIVE' && !isDeviceRunInProgress && havingAccess"  
+                    (click)="toggleControl('name')" class="mt-12n">
+              <mat-icon  class="rc-icon  rc-icon14" svgIcon="edit-gray"></mat-icon>
+            </button>
+            <span 
+                matTooltip="{{ 'common.accessRestricted' | translate}}"
+                [matTooltipClass]="'tooltipDetails'"
+                [matTooltipDisabled]="havingAccess">
+                <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceRunInProgress && !havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+            </span>
+          </div>
+        </div>
+        <div *ngIf="toggleFields.name" class="roboto-regular dev-ifo-cell">
+          <mat-form-field appearance="fill" class="wd-80 font-14" #name>
+            <mat-label class="roboto-regular">{{'deviceMgmt.devName' | translate}}</mat-label>
+            <input matInput appTrim appMinMax [parentField]="name"  maxlength="64" placeholder="" formControlName="name" name="name" id="name" autocomplete="off" [autofocus]="true" (blur)="toggleControl('name')" (keyup.enter)="toggleControl('name')">
+            <mat-error *ngIf="deviceDetailForm.get('name').invalid">
+              {{ deviceDetailForm.get('name').errors.errorCode | translate }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="dev-ifo-cont bottom-pd-16 remove-padding-top">
+        <div *ngIf="!toggleFields.outputDirectory" class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.outputDir' | translate}}</div>
+          <div style="display: flex">
+            <div class="dev-cel-vl">
+              <app-show-more [data]="device.attributes.outputDirectory" [tooltipValue]="device.attributes.outputDirectory" [displayFull]="true" [nullCheck]="true">{{ device.attributes.outputDirectory }}</app-show-more>
+            </div>
+            <button mat-icon-button aria-label="Edit" class="mt-12n" 
+                    *ngIf="device.state !== 'INACTIVE' && !isDeviceRunInProgress && havingAccess"  
+                    (click)="toggleControl('outputDirectory')">
+              <mat-icon class="rc-icon rc-icon14" svgIcon="edit-gray"></mat-icon>
+            </button>
+            <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="havingAccess">
+              <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+            </span>
+          </div>
+        </div>
+        <div *ngIf="toggleFields.outputDirectory" class="roboto-regular dev-ifo-cell">
+          <mat-form-field appearance="fill" class="wd-80 font-14" #outputDirectory>
+            <mat-label class="roboto-regular">{{'deviceMgmt.outputDir' | translate}}</mat-label>
+            <input matInput appTrim appMinMax [parentField]="outputDirectory"  maxlength="64" placeholder="" formControlName="outputDirectory" name="outputDirectory" id="outputDirectory" autocomplete="off" [autofocus]="true" (blur)="toggleControl('outputDirectory')" (keyup.enter)="toggleControl('outputDirectory')">
+            <mat-error *ngIf="deviceDetailForm.get('outputDirectory').invalid">
+              {{ deviceDetailForm.get('outputDirectory').errors.errorCode | translate }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="roboto-regular dev-ifo-cell">
+
+            <div *ngIf="!toggleFields.location" class="roboto-regular dev-ifo-cell">
+                <div class="dev-cell-lb">{{'deviceMgmt.location' | translate}}</div>
+                <div class="dev-cel-vl d-flex">
+                    <app-show-more [data]="device.attributes.location" [tooltipValue]="device.attributes.location" [displayFull]="true" [nullCheck]="true">{{ device.attributes.location }}</app-show-more>
+                    <button mat-icon-button aria-label="Edit" class="mt-12n"  
+                            *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess" 
+                            (click)="toggleControl('location')">
+                      <mat-icon class="rc-icon  rc-icon14" svgIcon="edit-gray"></mat-icon>
+                    </button>
+                    <span 
+                    matTooltip="{{ 'common.accessRestricted' | translate}}"
+                    [matTooltipClass]="'tooltipDetails'"
+                    [matTooltipDisabled]="havingAccess">
+                      <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+                    </span>
+                </div>
+              </div>
+              <div *ngIf="toggleFields.location" class="roboto-regular dev-ifo-cell">
+                <mat-form-field appearance="fill" class="wd-80 font-14" #location>
+                  <mat-label class="roboto-regular">{{"Location"}}</mat-label>
+                  <input matInput appTrim appMinMax [parentField]="location"  maxlength="64" placeholder="" formControlName="location" name="location" id="location" autocomplete="off" [autofocus]="toggleFields.location" (blur)="toggleControl('location')" (keyup.enter)="toggleControl('location')" [required]="(selectedDeviceType?.name === qiaSymphony) ? 'required' : false">
+                  <mat-error *ngIf="deviceDetailForm.get('location').invalid">
+                    {{ deviceDetailForm.get('location').errors.errorCode | translate }}
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+        </div>
+      </div>
+
+      <!-- <div class="dev-ifo-cont">
+        <div class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.swVersion' | translate}}</div>
+          <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.swVersion ? device.attributes.swVersion : '-' }}</div>
+        </div>
+        <div class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.hwVersion' | translate}}</div>
+          <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.hwVersion ? device.attributes.hwVersion : '-' }}</div>
+        </div>
+        <div class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.location' | translate}}</div>
+          <div class="dev-cel-vl d-flex">
+              <app-show-more [data]="device.attributes.location" [tooltipValue]="device.attributes.location" [displayFull]="true" [nullCheck]="true">{{ device.attributes.location }}</app-show-more>
+              <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray" (click)="toggleInputIcon('location')"></mat-icon>
+              <span 
+              matTooltip="{{ 'common.accessRestricted' | translate}}"
+              [matTooltipClass]="'tooltipDetails'"
+              [matTooltipDisabled]="havingAccess">
+                <mat-icon *ngIf="device.state !== 'INACTIVE' && !isDeviceInProgress && !havingAccess" class="rc-icon icon-pd" svgIcon="edit-gray"></mat-icon>
+              </span>
+          </div>
+        </div>
+        <div *ngIf="toggleInpIcon.location" class="roboto-regular dev-ifo-cell">
+          <mat-form-field appearance="fill" class="wd-80 font-14" #location>
+            <mat-label class="roboto-regular">{{"Location"}}</mat-label>
+            <input matInput appTrim appMinMax [parentField]="location"  maxlength="64" placeholder="" formControlName="location" name="location" id="location" autocomplete="off" [autofocus]="toggleInpIcon.location" (blur)="saveFieldInfo('location')" (keyup.enter)="saveFieldInfo('location')">
+            <mat-error *ngIf="deviceDetailForm.get('location').invalid">
+              {{ deviceDetailForm.get('location').errors.errorCode | translate }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.protocol' | translate}}</div>
+          <div class="dev-cel-vl">{{ device && device.attributes && device.attributes.protocol ? (device.attributes.protocol | wordSeparator:', ') : '-' }}</div>
+        </div>
+      </div> -->
+
+      <!-- <div class="dev-ifo-cont">
+        <div *ngIf="device && device.attributes && (device.attributes.protocolVersion || device.attributes.protocolVersion === '')" class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">{{'deviceMgmt.protocolVersion' | translate}}</div>
+          <div class="dev-cel-vl">{{ device.attributes.protocolVersion === '' ? '-' : device.attributes.protocolVersion }}</div>
+        </div>
+
+        <div *ngIf="device && device.attributes && (device.attributes.clientId || device.attributes.clientId === '')" class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">Client ID</div>
+          <div class="dev-cel-vl">{{ device.attributes.clientId === '' ? '--' : device.attributes.clientId }}</div>
+        </div>
+        <div *ngIf="device && device.attributes && (device.attributes.password || device.attributes.password === '')" class="roboto-regular dev-ifo-cell">
+          <div class="dev-cell-lb">Password</div>
+          <div class="dev-cel-vl">{{ '**********' }}</div>
+        </div>
+        <div *ngIf="!(device && device.attributes && (device.attributes.clientId || device.attributes.clientId === ''))" class="roboto-regular dev-ifo-cell">
+        </div>
+        <div *ngIf="!(device && device.attributes && (device.attributes.password || device.attributes.password === ''))" class="roboto-regular dev-ifo-cell">
+        </div>
+
+        <div class="roboto-regular dev-ifo-cell">
+        </div>
+      </div> -->
+    </div>
+    <div class="p-bar-ht"></div>
+    <div style="height: 54px;background: #FFFFFF;display: flex;justify-content: flex-end;">
+      <div style="padding-right: 20px;margin-top: 16px;">
+          <a *ngIf="device.state !== 'INACTIVE' && havingAccess"
+            class="edit-details roboto-bold font-14" 
+            (click)="removeDevice()">
+            {{'deviceMgmt.archive' | translate}}
+          </a>
+          <a *ngIf="device.state !== 'INACTIVE' && !havingAccess"
+            class="edit-details roboto-bold font-14 disabled-text"
+            matTooltip="{{ 'common.accessRestricted' | translate}}"
+            [matTooltipClass]="'tooltipDetails'">
+            {{'deviceMgmt.archive' | translate}}
+          </a>
+          <a *ngIf="device.state === 'INACTIVE' && havingAccess" 
+                  class="edit-details roboto-bold font-14" 
+                  (click)="unarchiveDevice()">
+                  {{'deviceMgmt.unArchive' | translate}}
+          </a>
+          <a *ngIf="device.state === 'INACTIVE' && !havingAccess" 
+                  class="edit-details roboto-bold font-14 disabled-text"
+                  matTooltip="{{ 'common.accessRestricted' | translate}}"
+                  [matTooltipClass]="'tooltipDetails'">
+                  {{'deviceMgmt.unArchive' | translate}}
+          </a>
+      </div>
+    </div>
+  </form>
+</div>

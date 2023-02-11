@@ -1,0 +1,6 @@
+<span *ngIf="(!tooltipValue) || (tooltipValue && tooltipValue.length < dataLength)">
+  {{data ? data : "-"}}
+</span>
+<span *ngIf="tooltipValue && tooltipValue.length >= dataLength" [matTooltip]="tooltipValue" [matTooltipClass]="displayFull ? 'tool-full' : null">
+  {{data}}
+</span>

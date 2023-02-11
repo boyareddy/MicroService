@@ -1,0 +1,26 @@
+.nft-topic, .nft-ctn {
+    width: 100%;
+}
+.nft-ctn{
+    margin-top: 5px;
+}
+.nft-container {
+    display: inline-block;
+    width: 93%;
+}
+.nft-main-container {
+    display: flex;
+    width: 538px;
+    color: #191919;
+    padding: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-right: 10px;
+    align-items: center;
+}
+.errorColor{
+    color: #fff !important;
+}
+.nt-close{
+    vertical-align: top !important;
+}

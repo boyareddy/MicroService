@@ -1,0 +1,158 @@
+<app-header [headerInfo]="headerInfo" #header></app-header>
+<mat-tab-group class="tabindex" (selectedTabChange)="onTabChanged($event)" [selectedIndex]="selectedIndex">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      {{'notification.newMessages' | translate}} ({{notificationList?.length ? notificationList?.length : 0}})
+    </ng-template>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      {{'notification.allMessages' | translate}} ({{dataSourceViewed?.length ? dataSourceViewed?.length : 0}})
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+<mat-divider></mat-divider>
+<div class="dropdown notification-dropdown">
+
+  <mat-form-field appearance="fill" class="selectDropdown">
+      <mat-label>Topic</mat-label>
+   <!-- <mat-label class="roboto-regular font-12 header-data">Select</mat-label> -->
+    <mat-select (selectionChange)="onChangeTopic($event)" disableOptionCentering panelClass="nt-dropdown" [(value)]="selected" style="width:152px">
+      <!-- <mat-option class="roboto-regular font-14 header-data" value="All">All</mat-option> -->
+      <mat-option class="roboto-regular font-14 header-data" *ngFor="let dropdown of dropdownResp" [value]="dropdown">{{dropdown | translate}}</mat-option>
+      <!-- <mat-option class="roboto-regular font-14 header-data" value="Workflow">Workflow</mat-option>
+      <mat-option class="roboto-regular font-14 header-data" value="Device">Device</mat-option>
+      <mat-option class="roboto-regular font-14 header-data" value="Orders">Orders</mat-option>
+      <mat-option class="roboto-regular font-14 header-data" value="Analysis">Analysis</mat-option> -->
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<!-- <ng-container *ngIf='((dropResponse?.length === 0 && selectedTab === 0) || (dropResponse?.length === 0 && selectedTab === 1)); else showTable'>
+  <div class="unassigned-container">
+    <ng-container *ngIf='dropResponse?.length === 0; else nodropdowndata' class="no-data">
+      {{'notification.noRecords' | translate}}
+    </ng-container>
+    <ng-template #nodropdowndata class="no-data">
+      {{'notification.noRecords' | translate}}
+    </ng-template>
+  </div>
+  </ng-container> -->
+  <!-- <ng-template #showTable> -->
+  <div class="d-flex notification-container">
+
+      <div class="notification-table-main">
+          <div class="notification-table-1" [ngClass]="{ 'notification-table-withCheck': selectedTab !== 1}">
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortDisableClear='true'>
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="select" *ngIf='selectedTab !== 1'>
+                  <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox color='primary' (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()" [disabled]="isHTPDeviceMSGT">
+                    </mat-checkbox>
+                  </th>
+                </ng-container>
+      
+                <!-- Position Column -->
+                <ng-container matColumnDef="severity">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="roboto-bold font-16 header-color">{{'notification.severity' | translate}}</th>
+                </ng-container>
+      
+                <!-- Name Column -->
+                <ng-container matColumnDef="topic">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="roboto-bold font-16 header-color">{{'notification.topic' | translate}}</th>
+                </ng-container>
+      
+                <ng-container matColumnDef="createdDateTime">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="roboto-bold font-16 header-color"> {{'notification.dateTime' | translate}} </th>
+                </ng-container>
+      
+                <ng-container matColumnDef="title">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="roboto-bold font-16 header-color"> {{'notification.title' | translate}} </th>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+              </table>
+          </div>
+     
+        <div class="notification-table" [ngClass]="{ 'notification-table-withCheck': selectedTab !== 1, 'nt-default-height': selectedTab !== 1, 'nt-All-Msg-height': selectedTab !== 0}">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortDisableClear='true'>
+              <!-- Checkbox Column -->
+              <ng-container matColumnDef="select" *ngIf='selectedTab !== 1'>
+                <td mat-cell *matCellDef="let row">
+                  <mat-checkbox color='primary' (click)="$event.stopPropagation()" (change)="$event ? getCode(row) : null" [checked]="selection.isSelected(row)" [disabled]="row.title === HTPTRIGGEREDNF">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+    
+              <!-- Position Column -->
+              <ng-container matColumnDef="severity">
+                <td mat-cell *matCellDef="let element" class="roboto-regular font-14 row-color" #severity >
+                  <div class="img-contentalign">
+                    <img src="assets/Images/{{element.severity.toLowerCase()}}.svg" class="notification-icons">
+                    <span> {{element.severity | translate}} </span>
+                  </div>
+                </td>
+              </ng-container>
+    
+              <!-- Name Column -->
+              <ng-container matColumnDef="topic">
+                <td mat-cell *matCellDef="let element" class="roboto-regular font-14 row-color" > {{element.topic | translate}} </td>
+              </ng-container>
+    
+              <ng-container matColumnDef="createdDateTime">
+                <td mat-cell *matCellDef="let element" class="roboto-regular font-14 row-color" [class.pl-32]='element.createdDateTime == null'>
+                  {{ element.createdDateTime | date : "dd-MMM-yyy HH:mm:ss " | emptyDataCheck }}
+                  <span [appDateTimeZone]='element.createdDateTime'></span>
+                </td>
+              </ng-container>
+    
+              <ng-container matColumnDef="title">
+                <td mat-cell *matCellDef="let element" class="roboto-re	gular font-14 row-color" >
+                  <div *ngIf="emptyCheck(element?.title); else show">
+                    -
+                  </div>
+                  <ng-template #show>
+                    <app-show-more [data]="element?.title" [tooltipValue]="element?.title">
+                    </app-show-more>
+                  </ng-template>
+                </td>
+              </ng-container>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;" [class.selectedrow] = "selectedNotfication === row" (click)="getRowData(row)"></tr>
+            </table>
+        </div>
+      </div>
+    <!-- </div> -->
+    <div class="notification-description">
+      
+      <ng-container *ngIf='((dropResponse?.length === 0 && selectedTab === 0) || (dropResponse?.length === 0 && selectedTab === 1)); else showDesc'>
+          <mat-card class="cardempty roboto-regular font-14 noMSGToDisplay">
+              {{'notification.noMSGToDisplay' | translate}}
+          </mat-card>
+      </ng-container>
+      <ng-template #showDesc>
+          <ng-container *ngIf='selectedTab === 1; else showNotificationCard'>
+              <app-notification-description *ngIf='selectedTab === 1 && rowData' [notificationRes]='rowData' [selectedTab]="selectedTab" class="cardfixed">
+              </app-notification-description>
+            </ng-container>
+            <ng-template #showNotificationCard>
+              <app-notification-description *ngIf='rowData && (selectedTab !== 1) && !isCheckBoxClicked'
+                [notificationRes]='rowData'  [selectedTab]="selectedTab" class="cardfixed">
+              </app-notification-description>
+              <mat-card class="cardempty" *ngIf='(selection?.selected?.length > 1) && (selectedTab !== 1) && isCheckBoxClicked'>
+                {{selection?.selected?.length}} {{ 'message' | pluralCheck:selection?.selected?.length }} {{'notification.selected' | translate}}
+              </mat-card>
+            </ng-template>
+      </ng-template>
+    </div>
+  </div>
+<!-- </ng-template> -->
+
+  <div class="footer" *ngIf='selectedTab !== 1'>
+    <mat-toolbar class="header-mat-toolbar notification-footer">
+      <!-- <span class="order-info">{{ (index + 1)+'/'+allRecords.length }} Orders</span> -->
+      <button class="next_btn roboto-bold font-14" [disabled]='!selection?.selected?.length' (click)="onConfirming()"
+        mat-raised-button>
+        {{'notification.confirm' | translate}}
+      </button>
+    </mat-toolbar>
+  </div>

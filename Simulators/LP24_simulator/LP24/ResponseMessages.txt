@@ -1,0 +1,6 @@
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184723||RSP^WOS^RSP_K11|a6b98a96-7b94-4df9-b|P|2.5.1||||||UNICODE UTF-8MSA|AA|a6b98a96-7b94-4df9-bQAK|1|OKQPD|WOS^Work Order Step^IHE_LABTF|1SPM|1|50fa14db6b_B1||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||50fa14db6b_B1||||20190416184723ORC|NW|3501|||SC||||20190416184723OBR|1|0||LPdPCR^^99ROC||||||||||||0|||||||||S||||0
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184726||RSP^WOS^RSP_K11|3d92dee7-89cc-4557-9|P|2.5.1||||||UNICODE UTF-8MSA|AA|3d92dee7-89cc-4557-9QAK|1|OKQPD|WOS^Work Order Step^IHE_LABTF|1SPM|1|50fa14db6b_C1||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||50fa14db6b_C1||||20190416184726ORC|NW|3502|||SC||||20190416184726OBR|1|0||LPdPCR^^99ROC||||||||||||0|||||||||S||||0
+
+MSH|^~\&|Connect|Roche Diagnostics|LP24^LP24-sarath^M|Roche Diagnostics|20190416184728||RSP^WOS^RSP_K11|81e00d64-2e48-4f1f-9|P|2.5.1||||||UNICODE UTF-8MSA|AA|81e00d64-2e48-4f1f-9QAK|1|OKQPD|WOS^Work Order Step^IHE_LABTF|1SPM|1|50fa14db6b_A1||PLAS^Plasma^HL70487|||||||P|||PlasmaSAC|||50fa14db6b_A1||||20190416184728ORC|NW|3500|||SC||||20190416184728OBR|1|0||LPdPCR^^99ROC||||||||||||0|||||||||S||||0
+

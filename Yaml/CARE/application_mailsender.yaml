@@ -1,0 +1,118 @@
+######################################################
+# in seconds
+######################################################
+pas: 
+   sleeptime : 10
+   server : 10.98.11.10
+   port : 25
+   timeout : 3000
+   requiresauthentication : false
+   username : admin@agora.in
+   password : admin
+   supportssl : false
+   
+   transaction.enabled: true
+   
+   logged_module_name : mailsender
+   ###########################
+   #aws ses config
+   ses_enabled: false
+   ses_sender_mail_address: admin@agora.in
+   ses_sender_display_name: 'pas admin'
+   ###########################
+   #aws sns config
+   sns_enabled: false
+   sns_sender_id: senderId
+   sns_max_price: 0.50
+   sns_sms_type: Transactional
+   
+   #Auditable History enable or disable -defauls value is true
+   auditable_history: true
+   auditable_history_days: 30
+## Provide a valid class name if not using jndi. 
+## If not provided, spring boot's default connection pool datasource will be used.
+   datasource.class : com.mchange.v2.c3p0.ComboPooledDataSource
+   
+   #######################################################
+   #Data for Keystore
+   #######################################################
+   keystore_location : keystore/pas.jceks
+   keystore_pass : pas123
+   keystore_type : jceks
+   token_private_key_pass : pas123
+   token_private_key_alias : pasprivatekey
+   token_public_key_alias : paspublickey
+   symmetric_key_alias : passymmetrickey
+   symmetric_key_pass : pas123
+   
+   #Root company 
+   #######################################################
+   domainName : hcl.com
+
+   ###############################################
+   # Enable the Resource Monitoring for this Microservice 
+   # Values - true or false
+   # Duration - in seconds
+   ###############################################
+   monitor_service: false
+   monitor_service_duration: 300   
+   
+#######################################################       
+#spring boot properties
+#######################################################
+spring.main.show-banner: false
+endpoints.enabled: false
+spring.profiles.active: full
+
+logging.path: '${user.home}/LOGS'
+logging.file: mailsender.log
+logging.config: 'classpath:log4j2.xml'
+       
+#######################################################       
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+#######################################################
+server:
+    port: 0
+    session-timeout: 600
+    context-path: /mailsender
+    ssl.enabled : false
+    ssl.key-store: C:/Program Files (x86)/Java/jdk1.7.0_80/jre/lib/security/keystore.jks
+    ssl.key-store-password: changeit
+    ssl.keyStoreProvider : SUN
+    ssl.keyStoreType : JKS
+    ssl.keyAlias: www.pas.com
+
+#######################################################
+#Mailsender hibernate properties
+#####################################
+
+
+#If you want to encrypt a field enclose with ENC() or OBF
+#Generate the string to encrypt using the utility and follow below sample convention
+#Also use normal text if applicable
+#spring.datasource.password : ENC(RhBRYm0ydOABAvR+hUAk6Q==)
+#spring.datasource.password : OBF(Bh/oZZalRbegEkHtWNYNyw==)
+
+spring.datasource.jdbcUrl : jdbc:postgresql://localhost:5432/pas-email
+spring.datasource.user : postgres
+spring.datasource.password : postgres123
+spring.datasource.driverClass : org.postgresql.Driver
+spring.jpa.database-platform : org.hibernate.dialect.PostgreSQLDialect
+
+spring.jpa.hibernate.ddl-auto : validate
+#spring.datasource.jdbcUrl : jdbc:mysql://localhost/pas-email
+#spring.datasource.jdbcUrl : jdbc:derby://localhost:1527/db_data/pas-email;
+#spring.datasource.user : root
+#spring.datasource.password : root
+spring.datasource.minPoolSize : 5
+spring.datasource.maxPoolSize : 20
+spring.datasource.acquireIncrement : 1
+spring.datasource.idleConnectionTestPeriod : 3000
+spring.datasource.testConnectionOnCheckout : true
+#spring.datasource.driverClass : com.mysql.jdbc.Driver
+#spring.datasource.driverClass : org.apache.derby.jdbc.ClientDriver
+#spring.jpa.database-platform : org.hibernate.dialect.DerbyTenSevenDialect
+#service registry check - default value server change as client if service registry is enabled
+service.discovery: server
+#######################################################
+license_property_path: /home/rconnect/roche/pas/commonlicense.properties

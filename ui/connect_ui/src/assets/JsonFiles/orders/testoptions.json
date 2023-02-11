@@ -1,0 +1,26 @@
+[
+    {
+        "testName": "Harmony",
+        "testProtocol": "Cfna ss 2000",
+        "testDescription": "Harmony",
+        "sequenceId": 1
+    },
+    {
+        "testName": "SCAP",
+        "testProtocol": "Cfna ss 2000",
+        "testDescription": "SCAP",
+        "sequenceId": 2
+    },
+    {
+        "testName": "FetalSex",
+        "testProtocol": "Cfna ss 2000",
+        "testDescription": "Fetal Sex",
+        "sequenceId": 3
+    },
+    {
+        "testName": "MX",
+        "testProtocol": "Cfna ss 2000",
+        "testDescription": "MX",
+        "sequenceId": 4
+    }
+]

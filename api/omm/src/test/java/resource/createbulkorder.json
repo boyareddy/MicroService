@@ -1,0 +1,104 @@
+{
+   "orderParentDTO":[
+      {
+         "order":{
+            "orderId":null,
+            "patientId":null,
+            "patientSampleId":null,
+            "accessioningId":"AXPE1212-121",
+            "orderStatus":null,
+            "assayType":"NIPTDPCR",
+            "sampleType":"Plasma",
+            "retestSample":true,
+            "orderComments":"asjkfhasj hasflashfh asihflasfh ashfaslfhal lashfklasfh lasihfaslfhlash lashflasfhl lashflasfh lashflask fhlashfaslhf aslhfaslkh flashflas lshflashfs",
+            "activeFlag":null,
+            "createdBy":null,
+            "createdDateTime":null,
+            "updatedBy":null,
+            "updatedDateTime":null,
+            "assay":{
+               "patientAssayid":null,
+               "maternalAge":40,
+               "gestationalAgeWeeks":13,
+               "gestationalAgeDays":5,
+               "ivfStatus":"Yes",
+               "eggDonorAge":25,
+               "eggDonor":"Self",
+               "fetusNumber":"2",
+               "collectionDate":"2019-01-31T18:30:00.000Z",
+               "receivedDate":"2019-02-04T18:30:00.000Z",
+               "testOptions":{
+                  "Harmony Prenatal Test (T21, T18, T13)":true,
+                  "Fetal Sex":false
+               }
+            },
+            "patient":{
+               "patientId":null,
+               "patientLastName":"asdfas fasfasf asfasfasfasfasa",
+               "patientFirstName":"asdfas fasfasf asfasfasfasfasa",
+               "patientGender":"Female",
+               "patientMedicalRecNo":"10000000",
+               "patientDOB":"1/10/2010",
+               "patientContactNo":"10000000",
+               "treatingDoctorName":"asdfas fasfasf asfasfasfasfasa",
+               "treatingDoctorContactNo":"993858580",
+               "refClinicianName":"asdfas fasfasf asfasfasfasfasa",
+               "refClinicianFaxNo":"993858580",
+               "otherClinicianName":"asdfas fasfasf asfasfasfasfasa",
+               "otherClinicianFaxNo":"8456546000",
+               "refClinicianClinicName":"asdfas fasfasf asfasfasfasfasa"
+            }
+         }
+      },
+      {
+         "order":{
+            "orderId":null,
+            "patientId":null,
+            "patientSampleId":null,
+            "accessioningId":"AXP123232-221",
+            "orderStatus":null,
+            "assayType":"NIPTDPCR",
+            "sampleType":"Plasma",
+            "retestSample":true,
+            "orderComments":"asjkfhasj hasflashfh asihflasfh ashfaslfhal lashfklasfh lasihfaslfhlash lashflasfhl lashflasfh lashflask fhlashfaslhf aslhfaslkh flashflas lshflashfs",
+            "activeFlag":null,
+            "createdBy":null,
+            "createdDateTime":null,
+            "updatedBy":null,
+            "updatedDateTime":null,
+            "assay":{
+               "patientAssayid":null,
+               "maternalAge":25,
+               "gestationalAgeWeeks":15,
+               "gestationalAgeDays":5,
+               "ivfStatus":"Yes",
+               "eggDonorAge":28,
+               "eggDonor":"Self",
+               "fetusNumber":"2",
+               "collectionDate":"2019-01-08T18:30:00.000Z",
+               "receivedDate":"2019-01-17T18:30:00.000Z",
+               "testOptions":{
+                  "Harmony Prenatal Test (T21, T18, T13)":false,
+                  "Fetal Sex":true
+               }
+            },
+            "patient":{
+               "patientId":null,
+               "patientLastName":"asdfas fasfasf asfasfasfasfasa",
+               "patientFirstName":"asdfas fasfasf asfasfasfasfasa",
+               "patientGender":"Female",
+               "patientMedicalRecNo":"10000000",
+               "patientDOB":"1/11/2010",
+               "patientContactNo":"10000000",
+               "treatingDoctorName":"asdfas fasfasf asfasfasfasfasa",
+               "treatingDoctorContactNo":"993858580",
+               "refClinicianName":"asdfas fasfasf asfasfasfasfasa",
+               "refClinicianFaxNo":"993858580",
+               "otherClinicianName":"asdfas fasfasf asfasfasfasfasa",
+               "otherClinicianFaxNo":"8456546000",
+               "refClinicianClinicName":"asdfas fasfasf asfasfasfasfasa"
+            }
+         }
+      }
+   ]
+}

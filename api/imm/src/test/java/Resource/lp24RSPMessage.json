@@ -1,0 +1,19 @@
+
+{
+   "status":"SUCCESS",
+   "errors":null,
+   "deviceSerialNumber":"LP001-12",
+   "sendingApplicationName":"CONNECT",
+   "receivingApplication":"LP24",
+   "dateTimeMessageGenerated":"20181113184009",
+   "messageType":"ResponseMessage",
+   "accessioningId":"707075",
+   "containerId":"6e75e9b8_A1",
+   "position":null,
+   "lp24Protocol":null,
+   "sampleType":"Plasma",
+   "specimenDescription":"Plasma",
+   "queryResponseStatus":null,
+   "orderControl":null,
+   "protocolName":"LPdPCR"
+}

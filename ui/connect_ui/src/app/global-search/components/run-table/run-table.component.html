@@ -1,0 +1,65 @@
+<table mat-table [dataSource]="dataSource" class=" width-full search-table">
+
+    <!-- AccessioningId Column -->
+    <ng-container matColumnDef="runResultId">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold main-left"> 
+        {{"runWorkflow.archived.runID" | translate}}
+      </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular main-left ord_row" appHighlight [text]="element?.deviceRunId" [matchedText]="searchQuery"> 
+        <!-- {{element?.accessioningId}}  -->
+      </td>
+    </ng-container>
+  
+    <!-- AssayType Column -->
+    <ng-container matColumnDef="processStepName">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold"> 
+        {{"runWorkflow.archived.workflowStep" | translate}}
+       </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> 
+        <app-status-icon [status]="element?.runStatus"></app-status-icon> 
+        {{element?.processStepName | translate}} </td>
+    </ng-container>
+  
+    <!-- SampleType Column -->
+    <ng-container matColumnDef="deviceName">
+      <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold">
+        {{"runWorkflow.runSamplesuppliesCard.device" | translate}}
+        </th>
+      <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.device  | translate}} </td>
+    </ng-container>
+
+    <!-- SampleType Column -->
+    <ng-container matColumnDef="sampleCount">
+        <th mat-header-cell *matHeaderCellDef class="list-header roboto-bold">
+            {{"runWorkflow.runSamplesuppliesCard.sampleNo" | translate}}
+          </th>
+        <td mat-cell *matCellDef="let element" class="list-items roboto-regular"> {{element?.sampleCount}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="runCompletionTime">
+      <th mat-header-cell *matHeaderCellDef class="list-header"> {{"runWorkflow.runSamplecard.completionTime" | translate}} </th>
+        <td mat-cell *matCellDef="let element" class="list-items">
+            <!-- <app-flag-popup [sampleInput]="element"></app-flag-popup> -->
+            {{ element?.runCompletionTime | date : "dd-MMM-yyy HH:mm:ss " }}
+            <span *ngIf='element?.runCompletionTime' [appDateTimeZone]='element?.runCompletionTime'></span>
+        </td>        
+    </ng-container>
+
+    <ng-container matColumnDef="operatorName">
+        <th mat-header-cell *matHeaderCellDef class="list-header"> {{"runWorkflow.runSamplecard.userName" | translate}} </th>
+          <td mat-cell *matCellDef="let element" class="list-items">
+              <!-- <app-flag-popup [sampleInput]="element"></app-flag-popup> -->
+              {{element?.operatorName}}
+          </td>        
+    </ng-container>
+    
+    <ng-container matColumnDef="Symbol">
+        <th mat-header-cell *matHeaderCellDef style="padding-right: 17px; width: 1px;"></th>
+        <td mat-cell *matCellDef="let element">
+            <img src="assets/Images/right-arrow.png" alt="navigate" (click)="onNavigation(element)">
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumns;" (click)="onNavigation(row)"></tr>
+  </table>
